@@ -56,8 +56,6 @@
                             <td>Title</td>
                             <td>Body</td>
                             <td>Category</td>
-                            <td>Sub_Category</td>
-                            <td>Extra_Sub_Category</td>
                             <td>Language</td>
                             <td>Create Time</td>
                             <td>Modify Time</td>
@@ -80,9 +78,11 @@
                                     </td>
                                     <td>{{ $data->title }}</td>
                                     <td>{{ $data->body }}</td>
-                                    <td>{{ $data->category() }}</td>
-                                    <td>{{ $data->sub_category() }}</td>
-                                    <td>{{ $data->extra_sub_category() }}</td>
+                                    <td>
+                                        {{ $data->category() }}
+                                        {{ $data->sub_category()}}
+                                        {{ $data->extra_sub_category() }}
+                                    </td>
                                     <td>{{ $data->lang() }}</td>
                                     <td>{{ $data->created_at }}</td>
                                     <td>{{ $data->updated_at }}</td>

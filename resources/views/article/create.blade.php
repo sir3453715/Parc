@@ -37,6 +37,16 @@
                 <label for="Title">Title:</label>
                 <input type="text" class="form-control" id="title" name="title" required>
             </div>
+            {{-- Description --}}
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" class="form-control"></textarea>
+            </div>
+            {{-- Author --}}
+            <div class="form-group">
+                <label for="author">Author:</label>
+                <input type="text" class="form-control" id="author" name="author">
+            </div>
             {{-- Body --}}
             <div class="form-group">
                 <label for="body">Body:</label>
@@ -48,10 +58,20 @@
                 <input type="text" class="form-control" id="tags" name="tags" 
                 placeholder="mytag1,mytag2">
             </div>
+            {{-- Date --}}
+            <div class="form-group">
+                <label for="expiry_date">Expiry Date:</label>
+                <input type="date" id="expiry_date" name="expiry_date" class="form-control">
+            </div>
             {{-- Lock --}}
             <div class="form-group">
                 <label for="Lock">Lock:</label>
                 <input name="lock" type="checkbox" id="lock">
+            </div>
+            {{-- Display --}}
+            <div class="form-group">
+                <label for="display">Display:</label>
+                <input name="display" type="checkbox" id="display">
             </div>
             {{-- Lang --}}
             <div class="form-group">
@@ -66,6 +86,11 @@
             <div class="form-group">
                 <label for="pic">Upload your picture</label>
                 <input type="file" class="form-control-file" name="pic" id="pic">
+            </div>
+            {{-- Video URL --}}
+            <div class="form-group">
+                <label for="video_url">Video URL:</label>
+                <input type="text" class="form-control" id="video_url" name="video_url">
             </div>
             <button type="button" class="btn btn-default " onclick="history.back()">Back</button>
             <button type="submit" class="btn btn-primary">Publish</button>

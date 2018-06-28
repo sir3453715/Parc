@@ -74,6 +74,14 @@ class CategoryRepository{
                 $extra_sub_category->name=$request->input('extra_sub_category_input');
                 $extra_sub_category->en_name=$request->input('extra_sub_category_input_english');
                 $extra_sub_category->sub_category_id=$request->input('sub_category');
+                $extra_sub_category->description=$request->input('extra_sub_category_description');
+                $extra_sub_category->order=$request->input('order');
+                if($request->pic){
+                    $upload_image=$request->pic;
+                    $picName = time().'.'.$upload_image->getClientOriginalName();
+                    $upload_image->storeAs('public', $picName);
+                    $extra_sub_category->pic=$picName;
+                }
                 $extra_sub_category->save();
             }
             else{
@@ -87,6 +95,14 @@ class CategoryRepository{
                     $extra_sub_category->name=$request->input('extra_sub_category_input');
                     $extra_sub_category->en_name=$request->input('extra_sub_category_input_english');
                     $extra_sub_category->sub_category_id=$sub_category->id;
+                    $extra_sub_category->description=$request->input('extra_sub_category_description');
+                    $extra_sub_category->order=$request->input('order');
+                    if($request->pic){
+                        $upload_image=$request->pic;
+                        $picName = time().'.'.$upload_image->getClientOriginalName();
+                        $upload_image->storeAs('public', $picName);
+                        $extra_sub_category->pic=$picName;
+                    }
                     $extra_sub_category->save();
                 }
                 else{
@@ -114,6 +130,14 @@ class CategoryRepository{
                     $extra_sub_category->name=$request->input('extra_sub_category_input');
                     $extra_sub_category->en_name=$request->input('extra_sub_category_input_english');
                     $extra_sub_category->sub_category_id=$sub_category->id;
+                    $extra_sub_category->description=$request->input('extra_sub_category_description');
+                    $extra_sub_category->order=$request->input('order');
+                    if($request->pic){
+                        $upload_image=$request->pic;
+                        $picName = time().'.'.$upload_image->getClientOriginalName();
+                        $upload_image->storeAs('public', $picName);
+                        $extra_sub_category->pic=$picName;
+                    }
                     $extra_sub_category->save();
                 }
             }
@@ -137,6 +161,15 @@ class CategoryRepository{
         $extra_sub_category->active=request('active')? 1:0;
         $extra_sub_category->name=request('name');
         $extra_sub_category->en_name=request('en_name');
+        $extra_sub_category->description=request('extra_sub_category_description');
+        $extra_sub_category->pic=request('pic');
+        if($request->pic){
+            $upload_image=$request->pic;
+            $picName = time().'.'.$upload_image->getClientOriginalName();
+            $upload_image->storeAs('public', $picName);
+            $extra_sub_category->pic=$picName;
+        }
+        $extra_sub_category->order=request('order');
         $extra_sub_category->save();
     }
     public function delete_selected(Request $request){

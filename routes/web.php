@@ -87,6 +87,8 @@ Route::group(['middleware' => 'web', 'prefix' => 'backend'], function () {
         Route::post('/lecturer/create','LecturerController@store');
         Route::get('/lecturer/edit/{lecturer}','LecturerController@edit');
         Route::post('/lecturer/edit/{lecturer}','LecturerController@update');
+        Route::get('/lecturer/order','LecturerController@order');
+        Route::post('/lecturer/order','LecturerController@order_update');
         Route::delete('/lecturer/delete/{lecturer}','LecturerController@destroy');
 
         Route::get('/contact_form','ContactFormController@index');
@@ -119,6 +121,15 @@ Route::group(['middleware' => 'web', 'prefix' => 'backend'], function () {
         Route::get('/donate/create','DonateController@create');
         Route::post('/donate/create','DonateController@store');
         Route::delete('/donate/delete/{donate}','DonateController@destroy');
+
+        Route::get('/partner','PartnerController@index');
+        Route::get('/partner/create','PartnerController@create');
+        Route::get('/partner/edit/{partner}','PartnerController@edit');
+        Route::post('/partner/edit/{partner}','PartnerController@update');
+        Route::post('/partner/create','PartnerController@store');
+        Route::get('/partner/order','PartnerController@order');
+        Route::post('/partner/order','PartnerController@orderUpdate');
+        Route::delete('/partner/delete/{partner}','PartnerController@destroy');
         
     });
 });

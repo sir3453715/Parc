@@ -7,11 +7,11 @@
                 <div class="panel-heading">
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="panel-title">Manage Lecturer</div>
+                            <div class="panel-title">Manage Partners</div>
                         </div>
                         <div class="col-md-6" style="text-align: right">
-                            <a class="btn btn-darkblue btn-xs" href="{{ url('backend/lecturer/order') }}"><strong>Order</strong></a>
-                            <a class="btn btn-darkblue btn-xs" href="{{ url('backend/lecturer/create') }}"><strong>Add</strong></a>
+                            <a class="btn btn-darkblue btn-xs" href="{{ url('backend/partner/order') }}"><strong>Order</strong></a>
+                            <a class="btn btn-darkblue btn-xs" href="{{ url('backend/partner/create') }}"><strong>Add</strong></a>
                         </div>
                     </div>
                 </div>
@@ -20,10 +20,9 @@
                         <tr>
                             <td>#</td>
                             <td>有效否</td>
-                            <td>姓名</td>
-                            <td>頭銜</td>
-                            <td>內文</td>
-                            <td>語言</td>
+                            <td>Order</td>
+                            <td>Title</td>
+                            <td>Pic</td>
                             <td>Created Time</td>
                             <td>Modify Time</td>
                             <td></td>
@@ -36,15 +35,14 @@
                                     <td>
                                         <input type="checkbox" disabled {{ ($data->active == 1) ? "checked" : "" }}>
                                     </td>
-                                    <td>{{ $data->name }}</td>
+                                    <td>{{ $data->order }}</td>
                                     <td>{{ $data->title }}</td>
-                                    <td>{{ $data->body }}</td>
-                                    <td>{{ $data->lang() }}</td>
+                                    <td><img src="/storage/{{$data->pic}}" height="100"></td>
                                     <td>{{ $data->created_at }}</td>
                                     <td>{{ $data->updated_at }}</td>
                                     <td style="text-align: right">
-                                        <form method="post" action="{{ url('/backend/lecturer/delete/'.$data->id) }} ">
-                                            <a class="btn btn-xs btn-success" href="{{ url('/backend/lecturer/edit/'.$data->id) }}">Edit</a>
+                                        <form method="post" action="{{ url('/backend/partner/delete/'.$data->id) }} ">
+                                            <a class="btn btn-xs btn-success" href="{{ url('/backend/partner/edit/'.$data->id) }}">Edit</a>
                                             {{ csrf_field() }}
                                             {{ method_field('DELETE') }}
                                             <button type="submit" class="btn btn-danger btn-xs" onclick="return confirm('Are you sure?')"><strong>Delete</strong></button>

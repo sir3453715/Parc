@@ -73,6 +73,26 @@
 											</div>
 										</td>
                                     </tr>
+                                    <!-- 欄位：Description -->                                    
+                                    <tr>
+                                        <td class="col-lg-2">Description</td>
+                                        <td>
+                                            <div class="col-lg-3 nopadding">
+                                                <textarea name="description" id="description" class="form-control">{!! $datas["article"]->description !!}</textarea>
+                                                <label class="error" for="description"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <!-- 欄位：Author -->
+									<tr>
+										<td class="header-require col-lg-2">Author</td>
+										<td>
+											<div class="col-lg-3 nopadding">
+													<input name="author" type="text" value="{{ $datas["article"]->author }}"  id="author" class="form-control">
+												<label class="error" for="author"></label>
+											</div>
+										</td>
+                                    </tr>
 									<!-- 欄位：body -->                                    
                                     <tr>
                                         <td class="col-lg-2">Body</td>
@@ -99,6 +119,16 @@
                                             </div>
                                         </td>
                                     </tr>
+                                    <!-- 欄位：Video URL -->
+									<tr>
+                                        <td class="header-require col-lg-2">Video URL</td>
+                                        <td>
+                                            <div class="col-lg-3 nopadding">
+                                                    <input name="video_url" type="text" value="{{ $datas["article"]->video_url }}"  id="video_url" class="form-control">
+                                                <label class="error" for="video_url"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
                                     <!-- 欄位：tags -->
 									<tr>
                                         <td class="header-require col-lg-2">Tags</td>
@@ -106,6 +136,16 @@
                                             <div class="col-lg-3 nopadding">
                                                     <input name="tags" type="text" value="{{ $datas["article"]->tagsname() }}"  id="tags" class="form-control">
                                                 <label class="error" for="tags"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <!-- 欄位：Expiry Date -->
+									<tr>
+                                        <td class="header-require col-lg-2">Expiry Date:</td>
+                                        <td>
+                                            <div class="col-lg-3 nopadding">
+                                                <input name="expiry_date" type="date" value="{{ $datas["article"]->expiry_date }}"  id="expiry_date" class="form-control">
+                                                <label class="error" for="expiry_date"></label>
                                             </div>
                                         </td>
                                     </tr>
@@ -133,7 +173,17 @@
                                                 <label class="error" for="lock"></label>
                                             </div>
                                         </td>
-                                    </tr>                                                                                                          
+                                    </tr>
+                                    <!-- 欄位：display -->
+									<tr>
+                                        <td class="header-require col-lg-2">Display</td>
+                                        <td>
+                                            <div class="col-lg-3 nopadding">
+                                                <input name="display" type="checkbox" id="display" class="form-control" {{($datas["article"]->display == 1) ? "checked" : "" }}>
+                                                <label class="error" for="display"></label>
+                                            </div>
+                                        </td>
+                                    </tr>                                                                                                             
 									<!-- 欄位：time -->                                    
                                     <tr>
                                         <td class="col-lg-2">Create Time</td>

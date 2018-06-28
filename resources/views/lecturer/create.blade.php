@@ -18,20 +18,10 @@
                 <label for="name">Name:</label>
                 <input type="text" class="form-control" id="name" name="name">
             </div>
-            {{-- Category --}}
+            {{-- Title --}}
             <div class="form-group">
-                <label for="category">Category:</label>
-                <textarea id="category" name="category" class="form-control"></textarea>
-            </div>
-            {{-- Category Detail --}}
-            <div class="form-group">
-                <label for="category_detail">Category Detail:</label>
-                <textarea id="category_detail" name="category_detail" class="form-control"></textarea>
-            </div>
-            {{-- Job Title --}}
-            <div class="form-group">
-                <label for="job_title">Job Title:</label>
-                <textarea id="job_title" name="job_title" class="form-control"></textarea>
+                <label for="title">Title:</label>
+                <textarea id="title" name="title" class="form-control"></textarea>
             </div>
             {{-- Body --}}
             <div class="form-group">

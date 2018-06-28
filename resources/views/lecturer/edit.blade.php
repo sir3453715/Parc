@@ -44,33 +44,13 @@
 											</div>
 										</td>
 									</tr>
-                                    <!-- 欄位：Category -->
-									<tr>
-										<td class=" col-lg-2">Category</td>
-										<td>
-											<div class="col-lg-8 nopadding">
-											<textarea name="category" type="text" id="category" class="form-control">{!! $datas["lecturer"]->category !!}</textarea>
-												<label class="error" for="category"></label>
-											</div>
-										</td>
-									</tr>
-									<!-- 欄位：Category Detail -->
-									<tr>
-										<td class=" col-lg-2">Category Detail</td>
-										<td>
-											<div class="col-lg-8 nopadding">
-												<textarea name="category_detail" type="text"  id="category_detail" class="form-control">{!! $datas["lecturer"]->category_detail !!}</textarea>
-												<label class="error" for="category_detail"></label>
-											</div>
-										</td>
-									</tr>	
 									<!-- 欄位：Job Title -->
 									<tr>
 										<td class="col-lg-2">Job title</td>
 										<td>
 											<div class="col-lg-8 nopadding">
-												<textarea name="job_title" type="text" id="job_title" class="form-control">{!! $datas["lecturer"]->job_title !!}</textarea>
-												<label class="error" for="job_title"></label>
+												<textarea name="title" type="text" id="title" class="form-control">{!! $datas["lecturer"]->title !!}</textarea>
+												<label class="error" for="title"></label>
 											</div>
 										</td>
 									</tr>	

@@ -24,7 +24,7 @@ class LecturerController extends Controller
         $datas=$this->lecturerRepository->index();
         return view('lecturer.index',
         [
-            'datas' => $datas,
+            'datas' => $datas->sortBy("order"),
         ]);
     }
     public function create(){
@@ -53,5 +53,15 @@ class LecturerController extends Controller
         $lecturer->delete();
         Session::flash('msg', 'Lecturer Deleted');
         return back();
+    }
+    public function order(){
+        return view('lecturer.order',
+        [
+            'datas'=> lecturer::all()->sortBy("order"),
+        ]);
+    }
+    public function order_update(Request $request){
+        $this->lecturerRepository->order_update($request);
+        return redirect('/backend/lecturer')->with('success','Order Updated');;
     }
 }

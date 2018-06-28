@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateExtraSubCategoriesTable extends Migration
+class CreatePartnersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreateExtraSubCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('extra_sub_category', function (Blueprint $table) {
-            $table->tinyIncrements('id');
-            $table->tinyInteger('sub_category_id');
-            $table->string('name',15);
-            $table->string('en_name',50)->nullable();
-            $table->string('description',200);
+        Schema::create('partners', function (Blueprint $table) {
+            $table->increments('id');
             $table->tinyInteger('active')->default('1');
+            $table->string('title');
             $table->string('pic',250)->nullable();
             $table->tinyInteger('order')->nullable();
             $table->timestamps();
@@ -33,6 +30,6 @@ class CreateExtraSubCategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('extra_sub_category');
+        Schema::dropIfExists('partners');
     }
 }

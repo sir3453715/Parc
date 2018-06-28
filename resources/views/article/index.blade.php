@@ -53,7 +53,9 @@
                             <td></td>
                             <td>#</td>
                             <td>Active</td>
+                            <td>Display</td>
                             <td>Title</td>
+                            <td>Author</td>
                             <td>Body</td>
                             <td>Category</td>
                             <td>Language</td>
@@ -76,7 +78,11 @@
                                     <td>
                                         <input type="checkbox" disabled {{ ($data->active == 1) ? "checked" : "" }}>
                                     </td>
+                                    <td>
+                                        <input type="checkbox" disabled {{ ($data->display == 1) ? "checked" : "" }}>
+                                    </td>
                                     <td>{{ $data->title }}</td>
+                                    <td>{{ $data->author }}</td>
                                     <td>{{ $data->body }}</td>
                                     <td>
                                         {{ $data->category() }}

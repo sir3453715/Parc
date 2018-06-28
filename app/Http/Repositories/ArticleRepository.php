@@ -64,12 +64,17 @@ class ArticleRepository{
 
         $article->active=               request('active')? 1:0;
         $article->title=                request('title');
+        $article->description=          request('description');
+        $article->author=               request('author');
         $article->body=                 request('body');
         $article->category=             request('category');
         $article->sub_category=         request('sub_category');
         $article->extra_sub_category=   request('extra_sub_category') ?: 0;
         $article->lang=                 request('lang');
+        $article->display=              request('display')? 1:0;
         $article->user_id=              auth()->id();
+        $article->expiry_date=          request('expiry_date');
+        $article->video_url=            request('video_url');
 
         //save pic path
         if($request->pic){
@@ -119,6 +124,8 @@ class ArticleRepository{
     public function store(Request $request){
         $article=article::create([
             'title'                     =>request('title'),
+            'description'               =>request('description'),
+            'author'                    =>request('author'),
             'body'                      =>request('body'),
             'category'                  =>request('category'),
             'sub_category'              =>request('sub_category'),
@@ -126,7 +133,10 @@ class ArticleRepository{
             'user_id'                   =>auth()->id(),
             'lock'                      =>request('lock') ? 1:0,
             'lang'                      =>request('lang'),
-            'active'                    =>request('active') ? 1:0
+            'active'                    =>request('active') ? 1:0,
+            'display'                   =>request('display') ? 1:0,
+            'expiry_date'               =>request('expiry_date'),
+            'video_url'                 =>request('video_url'),
         ]);
         //save pic path
         if($request->pic){

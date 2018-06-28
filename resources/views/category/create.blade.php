@@ -26,8 +26,12 @@
                                                             @endforeach
                                                         </select>
                                                         <button type="button" name="create_category" id="create_category" class="btn btn-primary btn-xs" onclick="category_function()">New</button>
-                                                        <input type="hidden" class="form-control" id="category_input" name="category_input" placeholder="Input category name">
-                                                        <input type="hidden" class="form-control" id="category_input_english" name="category_input_english" placeholder="Input english category name">
+                                                        <div id="category_hide" style="display: none;">
+                                                            <label for="category_input">category_input:</label>
+                                                            <input type="text" class="form-control" id="category_input" name="category_input" placeholder="Input category name">
+                                                            <label for="category_input_english">category_input_english:</label>
+                                                            <input type="text" class="form-control" id="category_input_english" name="category_input_english" placeholder="Input english category name">
+                                                        </div>
                                                     </div>
                                             </div>
                                         </td>
@@ -42,11 +46,13 @@
                                                         <select size="6" class="custom-select" name="sub_category" id="sub_category">
                                                             
                                                         </select>
-                                                        {{-- btn btn-primary btn-xs --}}
-                                                        {{-- <p id="choose_category_hint"><strong>Choose category first!</strong></p> --}}
                                                         <button type="button" name="create_sub_category" id="create_sub_category" class="btn btn-primary btn-xs" onclick="sub_category_function()">New</button>
-                                                        <input type="hidden" class="form-control" id="sub_category_input" name="sub_category_input" placeholder="Input Sub_category name">
-                                                        <input type="hidden" class="form-control" id="sub_category_input_english" name="sub_category_input_english" placeholder="Input english sub_category name">
+                                                        <div id="sub_hide" style="display: none;">
+                                                            <label for="sub_category_input">sub_category_input:</label>
+                                                            <input type="text" class="form-control" id="sub_category_input" name="sub_category_input" placeholder="Input Sub_category name">
+                                                            <label for="sub_category_input_english">sub_category_input_english:</label>
+                                                            <input type="text" class="form-control" id="sub_category_input_english" name="sub_category_input_english" placeholder="Input english sub_category name">
+                                                        </div>
                                                     </div>
                                             </div>
                                         </td>
@@ -57,12 +63,28 @@
                                         <td>
                                             <div class="col-lg-3 nopadding">
                                                     <div class="form-group">
-                                                            <select size="6" class="custom-select" name="extra_sub_category">
+                                                            <select size="6" class="custom-select" id="extra_sub_category" name="extra_sub_category">
                                                                     <option value="" selected disabled hidden>其他分類</option>
                                                                 </select>
                                                         <button type="button" name="create_extra_sub_category" id="create_extra_sub_category" class="btn btn-primary btn-xs" onclick="extra_sub_category_function()">New</button>
-                                                        <input type="hidden" class="form-control" id="extra_sub_category_input" name="extra_sub_category_input" placeholder="Input Extra_Sub_category name">
-                                                        <input type="hidden" class="form-control" id="extra_sub_category_input_english" name="extra_sub_category_input_english" placeholder="Input english extra sub category name">
+                                                        <br>
+                                                        <div id="extra_hide" style="display: none;">
+
+                                                            <label for="extra_sub_category_input">extra_sub_category_input:</label>
+                                                            <input type="text" class="form-control" id="extra_sub_category_input" name="extra_sub_category_input" placeholder="Input Extra_Sub_category name">
+                                                            
+                                                            <label for="extra_sub_category_input_english">extra_sub_category_input_english:</label>
+                                                            <input type="text" class="form-control" id="extra_sub_category_input_english" name="extra_sub_category_input_english" placeholder="Input english extra sub category name">
+                                                            
+                                                            <label for="extra_sub_category_description">extra_sub_category_description:</label>
+                                                            <textarea id="extra_sub_category_description" name="extra_sub_category_description" form="form_category_create" placeholder="Descripition here"></textarea>
+                                                            
+                                                            <label for="pic">Upload your picture</label>
+                                                            <input type="file" class="form-control-file" name="pic" id="pic">
+
+                                                            <label for="order">Order</label>
+                                                            <input type="number" class="form-control" name="order" id="order" value="0">
+                                                        </div>
                                                     </div>
                                             </div>
                                         </td>
@@ -136,15 +158,16 @@
     //button 與 select 顯示邏輯
     function category_function(){
         //
-        var check=document.getElementById("category_input").getAttribute("type");
-        if(check=="hidden"){
+        $("#category_hide").toggle();
+        var check=$('#category_hide').css('display');
+        if(check=="block"){
             document.getElementById("category_select").selectedIndex=-1;
             document.getElementById("category_select").setAttribute("class","hidden");
-            document.getElementById("category_input").setAttribute("type","text");
             document.getElementById("sub_category").setAttribute("class","hidden");
-            document.getElementById("category_input_english").setAttribute("type","text");
             document.getElementById("create_category").innerHTML="Choose";
+            
             $('select[name="sub_category"]').empty();
+            
             $('select[name="extra_sub_category"]').empty();
 
         }
@@ -152,29 +175,27 @@
             document.getElementById("category_select").selectedIndex=-1;
             document.getElementById("category_select").setAttribute("class","custom-select");
             document.getElementById("sub_category").setAttribute("class","custom-select");
+            
             $('select[name="sub_category"]').empty();
-            document.getElementById("category_input").setAttribute("type","hidden");
-            document.getElementById("category_input_english").setAttribute("type","hidden");
+
             document.getElementById("create_category").innerHTML="New";
             document.getElementById("category_input").value="";
             document.getElementById("category_input_english").value="";
         }
     }
     function sub_category_function(){
-        var check=document.getElementById("sub_category_input").getAttribute("type");
-        if(check=="hidden"){
+        $("#sub_hide").toggle();
+        var check=$('#sub_hide').css('display');
+        if(check=="block"){
             document.getElementById("sub_category").selectedIndex=-1;
             document.getElementById("sub_category").setAttribute("class","hidden");
-            document.getElementById("sub_category_input").setAttribute("type","text");
-            document.getElementById("sub_category_input_english").setAttribute("type","text");
             document.getElementById("create_sub_category").innerHTML="Clear";
+
             $('select[name="extra_sub_category"]').empty();
         }
         else{
             document.getElementById("sub_category").selectedIndex=-1;
             document.getElementById("sub_category").setAttribute("class","custom-select");
-            document.getElementById("sub_category_input").setAttribute("type","hidden");
-            document.getElementById("sub_category_input_english").setAttribute("type","hidden");
             document.getElementById("create_sub_category").innerHTML="New";
             document.getElementById("sub_category_input").value="";
             document.getElementById("sub_category_input_english").value="";
@@ -182,20 +203,18 @@
     } 
     function extra_sub_category_function(){
         //
-        var check=document.getElementById("extra_sub_category_input").getAttribute("type");
-        if(check=="hidden"){
+        $("#extra_hide").toggle();
+        var check=$('#extra_hide').css('display');
+        if(check=="block"){
             //document.getElementById("extra_sub_category").selectedIndex=-1;
-            document.getElementById("extra_sub_category_input").setAttribute("type","text");
-            document.getElementById("extra_sub_category_input_english").setAttribute("type","text");
             document.getElementById("create_extra_sub_category").innerHTML="Clear";
         }
         else{
             //document.getElementById("extra_sub_category").selectedIndex=-1;
-            document.getElementById("extra_sub_category_input").setAttribute("type","hidden");
-            document.getElementById("extra_sub_category_input_english").setAttribute("type","hidden");
             document.getElementById("create_extra_sub_category").innerHTML="New";
             document.getElementById("extra_sub_category_input").value="";
             document.getElementById("extra_sub_category_input_english").value="";
+            document.getElementById("extra_sub_category_description").value="";
         }
     }     
     </script>
@@ -211,8 +230,9 @@
                         dataType: "json",
                         success:function(data) {
     
-                            
+                           
                             $('select[name="sub_category"]').empty();
+
                             $('select[name="extra_sub_category"]').empty()
                             $.each(data, function(key, value) {
                                 $('select[name="sub_category"]').append('<option id="'+ value +'" value="'+ key +'">'+ value +'</option>');
@@ -220,6 +240,7 @@
                         }
                     });
                 }else{
+
                     $('select[name="sub_category"]').empty();
                 }
             });

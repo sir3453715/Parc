@@ -16,13 +16,12 @@ class CreateLecturerTable extends Migration
         Schema::create('lecturer', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('category')->nullable();
-            $table->string('category_detail')->nullable();
-            $table->string('job_title')->nullable();
+            $table->string('title')->nullable();
             $table->text('body')->nullable();
             $table->string('pic',250)->nullable();
             $table->tinyInteger('lang')->default('0');
             $table->tinyInteger('active')->default('1');
+            $table->tinyInteger('order')->nullable();
             $table->timestamps();
         });
     }

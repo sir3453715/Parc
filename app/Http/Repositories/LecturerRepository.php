@@ -24,9 +24,7 @@ class LecturerRepository{
         $lecturer=lecturer::create([
             'active'           =>request('active') ? 1:0,
             'name'             =>request('name'),
-            'category'         =>request('category'),
-            'category_detail'  =>request('category_detail'),
-            'job_title'        =>request('job_title'),
+            'title'        =>request('title'),
             'body'             =>request('body'),
             'lang'             =>request('lang'),
         ]);
@@ -49,9 +47,7 @@ class LecturerRepository{
     public function update(Request $request,lecturer $lecturer){
         $lecturer->active           = request('active')? 1:0 ;
         $lecturer->name             = request('name');
-        $lecturer->category         = request('category');
-        $lecturer->category_detail  = request('category_detail');
-        $lecturer->job_title        = request('job_title');
+        $lecturer->title            = request('title');
         $lecturer->body             = request('body');
         $lecturer->lang             = request('lang');
 
@@ -65,6 +61,18 @@ class LecturerRepository{
         }
         else{
             $lecturer->save();
+        }
+    }
+    public function order_update(Request $request){
+        if($request->order){
+            $orders = explode(',', $request->order);
+            $i=0;
+            foreach($orders as $order){
+                $temp = Lecturer::find($order);
+                $temp->order=$i;
+                $i++;
+                $temp->save();
+            } 
         }
     }
 }

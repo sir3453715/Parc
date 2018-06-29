@@ -4,6 +4,7 @@ namespace App\Http\Repositories;
 use App\Lecturer;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class LecturerRepository{
     protected $lecturer;

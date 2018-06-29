@@ -5,6 +5,7 @@ use App\article;
 use App\category;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 use Cookie;
 use Session;
@@ -181,6 +182,9 @@ class ArticleRepository{
         }
     }
     public function destroy(article $article){
+        if($article->pic){
+            Storage::delete('public/'.$article->pic);
+        }
         $article->delete();
         $article->tags()->detach();
     }

@@ -29,7 +29,7 @@ class CreateArticlesTable extends Migration
             $table->tinyInteger('lock')->default('0');
             $table->tinyInteger('active')->default('1');
             $table->tinyInteger('display')->default('0');
-            $table->date('expiry_date');
+            $table->date('expiry_date')->nullable();
             $table->timestamps();	
         });
     }

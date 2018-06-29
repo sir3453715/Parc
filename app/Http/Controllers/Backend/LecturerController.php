@@ -6,6 +6,7 @@ use App\lecturer;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Repositories\LecturerRepository;
 
 use App\Http\Controllers\Controller;
@@ -50,6 +51,9 @@ class LecturerController extends Controller
     }
     public function destroy(lecturer $lecturer)
     {
+        if($lecturer->pic){
+            Storage::delete('public/'.$lecturer->pic);
+        }
         $lecturer->delete();
         Session::flash('msg', 'Lecturer Deleted');
         return back();

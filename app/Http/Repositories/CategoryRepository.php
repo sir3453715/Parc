@@ -3,6 +3,8 @@ namespace App\Http\Repositories;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+
 
 use Cookie;
 
@@ -194,6 +196,9 @@ class CategoryRepository{
         if($request->extra_sub_category_delete_id){
             foreach($request->extra_sub_category_delete_id as $data){
                 $extra_sub_category= extra_sub_category::find($data);
+                if($extra_sub_category->pic){
+                    Storage::delete('public/'.$extra_sub_category->pic);
+                }
                 $extra_sub_category->delete();
                 $count++;
 

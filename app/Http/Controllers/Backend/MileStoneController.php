@@ -6,6 +6,7 @@ use App\MileStone;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Repositories\MileStoneRepository;
 
 use App\Http\Controllers\Controller;
@@ -61,6 +62,9 @@ class MileStoneController extends Controller
         return redirect('/backend/milestone');
     }
     public function destroy(milestone $milestone){
+        if($milestone->pic){
+            Storage::delete('public/'.$milestone->pic);
+        }
         $milestone->delete();
         Session::flash('msg', 'Milestone Deleted');
         return redirect('/backend/milestone');

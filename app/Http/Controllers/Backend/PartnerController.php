@@ -6,6 +6,7 @@ use App\partner;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Repositories\PartnerRepository;
 
 use Session;
@@ -105,7 +106,9 @@ class PartnerController extends Controller
      */
     public function destroy(partner $partner)
     {
-        //
+        if($partner->pic){
+            Storage::delete('public/'.$partner->pic);
+        }
         $partner->delete();
         return redirect('/backend/partner')->with('success','Logo Deleted');
     }

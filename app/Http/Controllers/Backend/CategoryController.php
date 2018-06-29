@@ -9,6 +9,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Storage;
+
 use Session;
 
 use App\category;
@@ -187,6 +189,9 @@ class CategoryController extends Controller
         return back();
     }
     public function destroyExtraSubCategory(extra_sub_category $extra_sub_category){
+        if($extra_sub_category->pic){
+            Storage::delete('public/'.$extra_sub_category->pic);
+        }
         $extra_sub_category->delete();
         Session::flash('msg', 'Extra Sub Category Deleted');
         return back();

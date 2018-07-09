@@ -25,7 +25,7 @@
                                                                 <option id="{{$category->name}}" value="{{$category->id}}">{{$category->name}}</option>
                                                             @endforeach
                                                         </select>
-                                                        <button type="button" name="create_category" id="create_category" class="btn btn-primary btn-xs" onclick="category_function()">New</button>
+                                                        {{-- <button type="button" name="create_category" id="create_category" class="btn btn-primary btn-xs" onclick="category_function()">New</button> --}}
                                                         <div id="category_hide" style="display: none;">
                                                             <label for="category_input">category_input:</label>
                                                             <input type="text" class="form-control" id="category_input" name="category_input" placeholder="Input category name">

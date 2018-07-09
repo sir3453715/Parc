@@ -82,7 +82,7 @@
                                                 <a class="btn btn-xs btn-success" href="{{ url('/backend/category/category/edit/'.$data->id) }}">Edit</a>
                                                 {{ csrf_field() }}
                                                 {{ method_field('DELETE') }}
-                                                <button type="submit" class="btn btn-danger btn-xs" onclick="return confirm('Are you sure?')"><strong>Delete</strong></button>
+                                                {{-- <button type="submit" class="btn btn-danger btn-xs" onclick="return confirm('Are you sure?')"><strong>Delete</strong></button> --}}
                                             </form>
                                         </td>
                                     </tr>

@@ -57,7 +57,6 @@ class ArticleController extends Controller
         return view('article.create', [
             'datas' => $datas,
         ]);
-        return redirect('/backend/article');
     }
     public function sub_menu_ajax($category_id)
     {
@@ -92,7 +91,7 @@ class ArticleController extends Controller
         }
         else{
             $this->articleRepository->store($request);   
-            return redirect('/backend/article');
+            return redirect('/backend/article/'.$request->segment(3));
         }
     }
 
@@ -112,7 +111,7 @@ class ArticleController extends Controller
      * @param  \App\article  $article
      * @return \Illuminate\Http\Response
      */
-    public function edit(article $article)
+    public function edit($category=null,article $article)
     {
         $datas=$this->articleRepository->edit($article);
         return view('article.edit',[
@@ -127,7 +126,7 @@ class ArticleController extends Controller
      * @param  \App\article  $article
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, article $article)
+    public function update(Request $request, $category=null, article $article)
     {
         $messages = [
             'pic.image' => '上傳檔案非圖片',
@@ -145,7 +144,7 @@ class ArticleController extends Controller
         }
         else{
             $this->articleRepository->update($request,$article);
-            return redirect('/backend/article');
+            return redirect('/backend/article/'.$request->segment(3));
         }
     }
 

@@ -5,7 +5,7 @@
 
 	<div class="row">
 		<div class="col-lg-12">
-			<form id="EditForm" enctype="multipart/form-data" class="form-horizontal" method="post" action="/backend/article/edit/{{$datas["article"]->id}}">
+			<form id="EditForm" enctype="multipart/form-data" class="form-horizontal" method="post" action="/backend/article/{{Request::segment(3)}}/edit/{{$datas["article"]->id}}">
 				{{ csrf_field() }}
 				<div class="panel panel-primary">
 					<div class="panel-heading">
@@ -40,14 +40,14 @@
                                         <td>
                                             <div class="col-lg-3 nopadding">
                                                     <div class="form-group">
-                                                        <select size="6" name="category" class="custom-select">
+                                                        <select size="6" name="category" class="custom-select" hidden>
                                                             <option selected disabled hidden>主分類</option>
                                                             @foreach($datas["categories"] as $category)
                                                                 <option id="{{$category->name}}" value="{{$category->id}}">{{$category->name}}</option>
                                                             @endforeach
                                                         </select>
                                                         <select size="6" class="custom-select" name="sub_category">
-                                                            <option value=""  >次分類</option>
+                                                            <option value="">次分類</option>
                                                             @foreach($datas["sub_categories"] as $sub_category)
                                                                 <option id="{{$sub_category->name}}" value="{{$sub_category->id}}">{{$sub_category->name}}</option>
                                                             @endforeach
@@ -115,20 +115,22 @@
                                                 @else 
                                                     you no pic!
                                                 @endif
-                                                <input type="file" class="form-control-file with-preview" name="pic" id="pic">
+                                                <input type="file" class="form-control-file multi with-preview" name="pic" id="pic">
                                             </div>
                                         </td>
                                     </tr>
                                     <!-- 欄位：Video URL -->
-									<tr>
-                                        <td class="header-require col-lg-2">Video URL</td>
-                                        <td>
-                                            <div class="col-lg-3 nopadding">
-                                                    <input name="video_url" type="text" value="{{ $datas["article"]->video_url }}"  id="video_url" class="form-control">
-                                                <label class="error" for="video_url"></label>
-                                            </div>
-                                        </td>
-                                    </tr>
+                                    @if(Request::segment(3)=="event")
+                                        <tr>
+                                            <td class="header-require col-lg-2">Video URL</td>
+                                            <td>
+                                                <div class="col-lg-3 nopadding">
+                                                        <input name="video_url" type="text" value="{{ $datas["article"]->video_url }}"  id="video_url" class="form-control">
+                                                    <label class="error" for="video_url"></label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    @endif
                                     <!-- 欄位：tags -->
 									<tr>
                                         <td class="header-require col-lg-2">Tags</td>
@@ -140,15 +142,17 @@
                                         </td>
                                     </tr>
                                     <!-- 欄位：Expiry Date -->
-									<tr>
-                                        <td class="header-require col-lg-2">Expiry Date:</td>
-                                        <td>
-                                            <div class="col-lg-3 nopadding">
-                                                <input name="expiry_date" type="date" value="{{ $datas["article"]->expiry_date }}"  id="expiry_date" class="form-control">
-                                                <label class="error" for="expiry_date"></label>
-                                            </div>
-                                        </td>
-                                    </tr>
+                                    @if(Request::segment(3)=="event")
+                                        <tr>
+                                            <td class="header-require col-lg-2">Expiry Date:</td>
+                                            <td>
+                                                <div class="col-lg-3 nopadding">
+                                                    <input name="expiry_date" type="date" value="{{ $datas["article"]->expiry_date }}"  id="expiry_date" class="form-control">
+                                                    <label class="error" for="expiry_date"></label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    @endif
                                     <!-- 欄位：lang -->
 									<tr>
                                         <td class="header-require col-lg-2">Languages</td>
@@ -165,15 +169,17 @@
                                         </td>
                                     </tr>
                                     <!-- 欄位：lock -->
-									<tr>
-                                        <td class="header-require col-lg-2">Lock</td>
-                                        <td>
-                                            <div class="col-lg-3 nopadding">
-                                                <input name="lock" type="checkbox" id="lock" class="form-control" {{($datas["article"]->lock == 1) ? "checked" : "" }}>
-                                                <label class="error" for="lock"></label>
-                                            </div>
-                                        </td>
-                                    </tr>
+                                    @if(Request::segment(3)=="story")
+                                        <tr>
+                                            <td class="header-require col-lg-2">Lock</td>
+                                            <td>
+                                                <div class="col-lg-3 nopadding">
+                                                    <input name="lock" type="checkbox" id="lock" class="form-control" {{($datas["article"]->lock == 1) ? "checked" : "" }}>
+                                                    <label class="error" for="lock"></label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    @endif
                                     <!-- 欄位：display -->
 									<tr>
                                         <td class="header-require col-lg-2">Display</td>
@@ -203,8 +209,8 @@
 										<td>&nbsp;</td>
 										<td>
 											<div style="text-align: right">
-													<input type="submit" name="btnUpdate_foot" value="Modify" id="btnUpdate_foot" class="btn btn-primary btn-xs" onclick="submitForm();">
-												<input type="button" name="btnBackTo2_foot" value="Back" id="btnBackTo2_foot" class="btn btn-default btn-xs">
+                                                <input type="button" name="btnBackTo2_foot" value="Back" id="btnBackTo2_foot" class="btn btn-default btn-xs">
+												<input type="submit" name="btnUpdate_foot" value="Modify" id="btnUpdate_foot" class="btn btn-primary btn-xs" onclick="submitForm();">
 											</div>
 										</td>
 									</tr>
@@ -226,10 +232,10 @@
 	$(document).ready(function() {
 		//Back
 		$("#btnBackTo2").click(function() {
-			location.href='{{ url('backend/article') }}';
+			location.href='{{url()->previous()}}';
 		});
 		$("#btnBackTo2_foot").click(function() {
-			location.href='{{ url('backend/article') }}';
+			location.href='{{url()->previous()}}';
 		});
 		//初始化需要偵錯的表格
 		$('#EditForm').validate();

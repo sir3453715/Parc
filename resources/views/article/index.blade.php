@@ -10,30 +10,20 @@
                             <div class="panel-title">Manage Articles</div>
                         </div>
                         <div class="col-md-6" style="text-align: right">
-                            <a class="btn btn-darkblue btn-xs" href="{{ url('backend/article/create') }}"><strong>Add</strong></a>
+                            <a class="btn btn-darkblue btn-xs" href="{{ url('backend/article/'.Request::segment(3).'/create') }}"><strong>Add</strong></a>
                         </div>
                         <div class="form-inline">
-                                <form method="post" action="{{ url('/backend/article') }}">
+                                <form method="post" action="{{ url('/backend/article/'.Request::segment(3).'/create') }}">
                                     {{ csrf_field() }}
                                     <div class="form-group" >
-                                        <label class="control-label" style="color:white;">選擇主分類</label>
-                                        <select name="category" class="form-control" id="filter_value">
-                                            @if(!empty($datas["cookie"]["category"]))
-                                                <option value="{{$datas["cookie"]["category"]}}" hidden>{{$datas["cookie"]->session()->get('category_name')}}</option>
-                                            @endif
-                                            <option value="0">全部</option>
-                                            @foreach($datas["category"] as $data)
-                                                <option value="{{$data->id}}">{{$data->name}}</option>
-                                            @endforeach
-                                        </select>
-                                            <label class="control-label" style="color:white;">Title</label>
-                                            <input name="title"  type="text" class="form-control" value="">
+                                        <label class="control-label" style="color:white;">Title</label>
+                                        <input name="title"  type="text" class="form-control" value="">
 
-                                            <label class="control-label" style="color:white;">Date Start</label>
-                                            <input name="date_start"  type="date" class="form-control" value="">
-                                            ~
-                                            <label class="control-label" style="color:white;">Date End</label>
-                                            <input name="date_end" type="date" class="form-control" value="">
+                                        <label class="control-label" style="color:white;">Date Start</label>
+                                        <input name="date_start"  type="date" class="form-control" value="">
+                                        ~
+                                        <label class="control-label" style="color:white;">Date End</label>
+                                        <input name="date_end" type="date" class="form-control" value="">
                                     </div>
                                     <div class="form-group" >
                                         <button type="submit" class="btn btn-danger btn-xs" class="form-control">
@@ -58,7 +48,7 @@
                             <td>Author</td>
                             <td>Body</td>
                             <td>Category</td>
-                            <td>Language</td>
+                            <td>Picture</td>
                             <td>Create Time</td>
                             <td>Modify Time</td>
                             <td></td>
@@ -85,17 +75,23 @@
                                     <td>{{ $data->author }}</td>
                                     <td>{{ $data->body }}</td>
                                     <td>
-                                        {{ $data->category() }}
                                         {{ $data->sub_category()}}
+                                        <br>
                                         {{ $data->extra_sub_category() }}
                                     </td>
-                                    <td>{{ $data->lang() }}</td>
+                                    <td>
+                                        @if($data->pic)
+                                            <img src="/storage/{{$data->pic}}" height="100">
+                                        @else
+                                            <p>no pic</p>
+                                        @endif
+                                    </td>
                                     <td>{{ $data->created_at }}</td>
                                     <td>{{ $data->updated_at }}</td>
                                     <td style="text-align: right">
                                         <form method="post" action="{{ url('/backend/article/delete/'.$data->id) }} ">
-                                            <a class="btn btn-xs btn-primary" href="{{ url('/backend/article/'.$data->id) }}">Details</a>
-                                            <a class="btn btn-xs btn-success" href="{{ url('/backend/article/edit/'.$data->id) }}">Edit</a>
+                                            {{-- <a class="btn btn-xs btn-primary" href="{{ url('/backend/article/'.$data->id) }}">Details</a> --}}
+                                            <a class="btn btn-xs btn-success" href="{{ url('/backend/article/'.Request::segment(3).'/edit/'.$data->id) }}">Edit</a>
                                             {{ csrf_field() }}
                                             {{ method_field('DELETE') }}
                                             <button type="submit" class="btn btn-danger btn-xs" onclick="return confirm('Are you sure?')"><strong>Delete</strong></button>

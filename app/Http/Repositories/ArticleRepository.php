@@ -19,17 +19,29 @@ class ArticleRepository{
     }
     public function index(Request $request){
         $condition=article::select('*');
-        if($request->category!=0){
-            $condition=$condition->where('category',$request->category);
-            $category_name=category::where('id',$request->category)->value('name');
-            //Cookie::queue('category_name', $category_name, 60);
-            Session::put('category_name', $category_name);
+        switch($request->segment(3)){
+            case "story":
+                $category=1;
+                break;
+            case "event":
+                $category=2;
+                break;
+            case "law":
+                $category=3;
+                break;
+            case "trend":
+                $category=4;
+                break;
+            case "news":
+                $category=5;
+                break;
         }
+        $condition=$condition->where('category',$category);
         if($request->date_start){
-            $condition=$condition->where('transaction_time','>',$request->date_start);
+            $condition=$condition->where('created_at','>',$request->date_start);
         }
         if($request->date_end){
-            $condition=$condition->where('transaction_time','<',$request->date_end);
+            $condition=$condition->where('created_at','<',$request->date_end);
         }
         if($request->title){
             $condition=$condition->where('title',$request->title);

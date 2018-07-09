@@ -56,13 +56,26 @@ Route::group(['middleware' => 'web', 'prefix' => 'backend'], function () {
         Route::delete('/Funmenus/{menuid}/delete/{id}', 'FunmenusDetailController@delete');
 
         Route::get('/article', 'ArticleController@index');
+        Route::get('/article/story', 'ArticleController@index');
+        Route::get('/article/event', 'ArticleController@index');
+        Route::get('/article/law', 'ArticleController@index');
+        Route::get('/article/trend', 'ArticleController@index');
+        Route::get('/article/news', 'ArticleController@index');
+
         Route::post('/article', 'ArticleController@index');
+        Route::post('/article/story', 'ArticleController@index');
+        Route::post('/article/event', 'ArticleController@index');
+        Route::post('/article/law', 'ArticleController@index');
+        Route::post('/article/trend', 'ArticleController@index');
+        Route::post('/article/news', 'ArticleController@index');
+
         Route::get('/article/create', 'ArticleController@create');
-        Route::post('/article/create', 'ArticleController@store');
+        Route::get('/article/{category}/create', 'ArticleController@create');
+        Route::post('/article/{category}/create', 'ArticleController@store');
         Route::get('/article/create/ajax/{category_id}','ArticleController@sub_menu_ajax');
         Route::get('/article/create/ajax/{category_id}/{sub_category_id}','ArticleController@extra_sub_menu_ajax');
-        Route::get('/article/edit/{article}', 'ArticleController@edit');
-        Route::post('/article/edit/{article}', 'ArticleController@update');
+        Route::get('/article/{category}/edit/{article}', 'ArticleController@edit');
+        Route::post('/article/{category}/edit/{article}', 'ArticleController@update');
         Route::delete('/article/delete/{article}', 'ArticleController@destroy');
         Route::delete('/article/delete_selected', 'ArticleController@delete_selected');
 

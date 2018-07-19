@@ -1,0 +1,132 @@
+@charset "UTF-8";
+.photo {
+  &-x3 {
+    margin-bottom: 90px;
+    &__item {
+      position: relative;
+      overflow: hidden;
+      @include img-scale(3, 2);
+      &:hover {
+        .photo-x3{
+          &__img {
+            transform: scale(1.05);
+          }
+          &__title {
+            background: rgba(0, 0, 0, 0.75);
+          }
+        }
+      }
+    }
+    &__img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: all 0.8s ease-in-out;
+    }
+    &__title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.25);
+      padding: 12px;
+      font-size: 17px;
+      font-weight: bolder;
+      color: $color-white;
+      line-height: 1.3;
+      letter-spacing: 1px;
+      width: 100%;
+      height: 58px;
+      transition: all 0.5s ease-in-out;
+      @include ellipsis(100%, 2);
+    }
+
+    .owl{
+      &-nav{
+        position: absolute;
+        width: 100%;
+        top:50%;
+        font-size:em(50); 
+        line-height: 1;
+        color: $color-orange;
+        margin-top: -25px;
+      }
+      &-prev{
+        position: absolute;
+        left:-25px;       
+      }
+      &-next{
+        position: absolute;
+        right:-25px;
+      }
+    }
+  }
+}
+
+@media (min-width: $media-lg) {
+  .photo {
+    &-x3 {
+      margin-bottom: 90px;
+      &__item {
+        position: relative;
+        overflow: hidden;
+        @include img-scale(3, 2);
+        &:hover {
+          .photo-x3{
+            &__img {
+              transform: scale(1.05);
+            }
+            &__title {
+              background: rgba(0, 0, 0, 0.75);
+            }
+          }
+        }
+      }
+      &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: all 0.8s ease-in-out;
+      }
+      &__title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.25);
+        padding: 12px;
+        font-size: 17px;
+        font-weight: bolder;
+        color: $color-white;
+        line-height: 1.3;
+        letter-spacing: 1px;
+        width: 100%;
+        height: 58px;
+        transition: all 0.5s ease-in-out;
+        @include ellipsis(100%, 2);
+      }
+  
+      .owl{
+        &-nav{
+          position: absolute;
+          width: 100%;
+          top:50%;
+          font-size:em(50); 
+          line-height: 1;
+          color: $color-orange;
+          margin-top: -25px;
+        }
+        &-prev{
+          position: absolute;
+          left:-25px;       
+        }
+        &-next{
+          position: absolute;
+          right:-25px;
+        }
+      }
+    }
+  }
+}

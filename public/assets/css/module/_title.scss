@@ -1,0 +1,20 @@
+@charset "UTF-8";
+.title {
+  line-height: 1;
+  font-size: 25px;
+  font-weight: bolder;
+  color: $color-dark-bule;
+  letter-spacing: 5px;
+}
+
+@media (min-width: $media-lg) {
+  .title {    
+    line-height: 1;
+    font-size: 25px;
+    font-weight: bolder;
+    color: $color-dark-bule;
+    letter-spacing: 5px;
+    margin: 50px auto;
+    text-align: center;
+  }
+}

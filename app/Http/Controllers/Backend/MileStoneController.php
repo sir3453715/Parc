@@ -7,7 +7,7 @@ use App\MileStone;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
-use App\Http\Repositories\MileStoneRepository;
+use App\Http\Repositories\Backend\MileStoneRepository;
 
 use App\Http\Controllers\Controller;
 use Session;
@@ -24,14 +24,14 @@ class MileStoneController extends Controller
     //
     public function index(){
         $datas=$this->mileStoneRepository->index();
-        return view('milestone.index',
+        return view('backend.milestone.index',
         [
             'datas' => $datas,
         ]);
     }
     public function create(){
         $datas=$this->mileStoneRepository->create();
-        return view('milestone.create',
+        return view('backend.milestone.create',
         [
             'datas' => $datas,
         ]);
@@ -42,13 +42,13 @@ class MileStoneController extends Controller
     }
     public function edit(milestone $milestone){
         $datas = $this->mileStoneRepository->edit($milestone);
-        return view('milestone.edit',
+        return view('backend.milestone.edit',
         [
             'datas' => $datas,
         ]);
     }
     public function order(){
-        return view('milestone.order',
+        return view('backend.milestone.order',
         [
             'datas'=> Milestone::all()->sortBy("order"),
         ]);

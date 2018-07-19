@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+$media-xs: 0 !default;
+$media-sm: 576px !default;
+$media-md: 768px !default;
+$media-lg: 992px !default;
+$media-xl: 1200px !default;
+
+
+/* Color palette */
+
+$color-white-two: #e5e5e5;
+$color-greyish:#ababab;
+$color-warm-grey-two: #9b9b9b;
+$color-greyish-brown: #4a4a4a ;
+$color-black: #000000;
+$color-dull-orange: #c99a32;
+$color-brownish-orange: #b5861f;
+$color-hazel: #8e7614;
+$color-claret: #590405;
+
+
+$color-white: #ffffff;
+$color-warm-grey: #999999;
+$color-grey: #666666;
+$color-dark-bule : #434e58;
+$color-charcoal-grey: #302f30;
+$color-orange: #f58764; // rgba(245,135,100,1)
+$color-rosy-pink: #f16670;
+$color-rouge: #e3556d;  // rgba(241,102,112,1)
+$color-blood: #b03857;
+
+
+/* Font */
+@import url(//fonts.googleapis.com/css?family=Cormorant+Infant);
+$font-family-base: 'Arial', 'Cormorant Infant','PingFangTC', 'Microsoft JhengHei', 'sans-serif';
+
+

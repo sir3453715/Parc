@@ -11,9 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['namespace' => 'Frontend'], function () {
+    Route::get('/', 'IndexController@index');
 });
+
+// Route::get('/', function () {
+//     return view('index');
+// });
 
 
 
@@ -55,8 +59,18 @@ Route::group(['middleware' => 'web', 'prefix' => 'backend'], function () {
         Route::post('/Funmenus/{menuid}/store', 'FunmenusDetailController@store');
         Route::delete('/Funmenus/{menuid}/delete/{id}', 'FunmenusDetailController@delete');
 
+        Route::get('/indexKV/kv','IndexKvController@kvIndex');
+        Route::get('/indexKV/quote','IndexKvController@quoteIndex');
+        Route::get('/indexKV/kv/create','IndexKvController@create');
+        Route::get('/indexKV/quote/create','IndexKvController@create');
+        Route::post('/indexKV/{type}/create','IndexKvController@store');
+        Route::get('/indexKV/{type}/edit/{indexKV}','IndexKvController@edit');
+        Route::post('/indexKV/{type}/edit/{indexKV}','IndexKvController@update');
+        Route::delete('/indexKV/delete/{indexKV}','IndexKvController@destroy');
+
         Route::get('/article', 'ArticleController@index');
         Route::get('/article/story', 'ArticleController@index');
+        Route::get('/article/story/special', 'ArticleController@special');
         Route::get('/article/event', 'ArticleController@index');
         Route::get('/article/law', 'ArticleController@index');
         Route::get('/article/trend', 'ArticleController@index');
@@ -145,4 +159,6 @@ Route::group(['middleware' => 'web', 'prefix' => 'backend'], function () {
         Route::delete('/partner/delete/{partner}','PartnerController@destroy');
         
     });
+    //前台專區
+    
 });

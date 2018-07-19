@@ -7,7 +7,7 @@ use App\partner;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
-use App\Http\Repositories\PartnerRepository;
+use App\Http\Repositories\Backend\PartnerRepository;
 
 use Session;
 use App\Http\Controllers\Controller;
@@ -28,7 +28,7 @@ class PartnerController extends Controller
     {
         //
         $datas=$this->partnerRepository->index();
-        return view('partner.index',
+        return view('backend.partner.index',
         [
             'datas' => $datas,
         ]);
@@ -42,7 +42,7 @@ class PartnerController extends Controller
     public function create()
     {
         //
-        return view('partner.create');
+        return view('backend.partner.create');
     }
 
     /**
@@ -78,7 +78,7 @@ class PartnerController extends Controller
     public function edit(partner $partner)
     {
         //
-        return view('partner.edit',
+        return view('backend.partner.edit',
         [
             'datas' => $partner
         ]);
@@ -113,7 +113,7 @@ class PartnerController extends Controller
         return redirect('/backend/partner')->with('success','Logo Deleted');
     }
     public function order(){
-        return view('partner.order',
+        return view('backend.partner.order',
         [
             'datas'=> partner::all()->sortBy("order"),
         ]);

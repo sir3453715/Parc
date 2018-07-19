@@ -7,7 +7,7 @@ use App\lecturer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
-use App\Http\Repositories\LecturerRepository;
+use App\Http\Repositories\Backend\LecturerRepository;
 
 use App\Http\Controllers\Controller;
 use Session;
@@ -23,21 +23,21 @@ class LecturerController extends Controller
     }
     public function index(){
         $datas=$this->lecturerRepository->index();
-        return view('lecturer.index',
+        return view('backend.lecturer.index',
         [
             'datas' => $datas->sortBy("order"),
         ]);
     }
     public function create(){
         $datas=$this->lecturerRepository->create();
-        return view('lecturer.create', [
+        return view('backend.lecturer.create', [
             'datas' => $datas,
         ]);
         return redirect('/backend/lecturer/create');
     }
     public function edit(lecturer $lecturer){
         $datas=$this->lecturerRepository->edit($lecturer);
-        return view('lecturer.edit',[
+        return view('backend.lecturer.edit',[
             'datas'=>$datas,
         ]);
     }
@@ -59,7 +59,7 @@ class LecturerController extends Controller
         return back();
     }
     public function order(){
-        return view('lecturer.order',
+        return view('backend.lecturer.order',
         [
             'datas'=> lecturer::all()->sortBy("order"),
         ]);

@@ -16,7 +16,7 @@ use Cookie;
 
 
 
-use App\Http\Repositories\ArticleRepository;
+use App\Http\Repositories\Backend\ArticleRepository;
 
 
 
@@ -42,7 +42,16 @@ class ArticleController extends Controller
         //     Cookie::queue('category_name', $category_name, 60);
         //     dd($request);
         // }
-        return view('article.index', [
+        return view('backend.article.index', [
+            'datas' => $datas,
+        ]);
+    }
+
+    public function special(Request $request)
+    {
+        $datas = $this->articleRepository->special($request);
+
+        return view('backend.article.special', [
             'datas' => $datas,
         ]);
     }
@@ -54,7 +63,7 @@ class ArticleController extends Controller
     public function create()
     {
         $datas=$this->articleRepository->create();
-        return view('article.create', [
+        return view('backend.article.create', [
             'datas' => $datas,
         ]);
     }
@@ -114,7 +123,7 @@ class ArticleController extends Controller
     public function edit($category=null,article $article)
     {
         $datas=$this->articleRepository->edit($article);
-        return view('article.edit',[
+        return view('backend.article.edit',[
             'datas'=>$datas,
         ]);
     }

@@ -1,0 +1,29 @@
+@charset "UTF-8";
+.pagination{
+  font-size: 16px;
+  color: $color-black;
+  .page-item{
+    &.active{
+      .page-link{
+        color:$color-white;
+        background: $color-grapefruit;
+        border-color: $color-grapefruit;
+      }
+    }
+    .page-link{
+      color: $color-black;
+      padding: 0.5rem 1rem;
+      .fa{
+        color:$color-grapefruit;
+      }
+      &:hover{
+        color:$color-white;
+        background: $color-grapefruit;
+        border-color: $color-grapefruit;
+        .fa{
+          color:$color-white;
+        }
+      }
+    }
+  }
+}

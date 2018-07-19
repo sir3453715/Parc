@@ -6,7 +6,7 @@ use App\Donate;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\DB;
-use App\Http\Repositories\DonateRepository;
+use App\Http\Repositories\Backend\DonateRepository;
 
 use App\Http\Controllers\Controller;
 use Maatwebsite\Excel\Facades\Excel;
@@ -34,7 +34,7 @@ class DonateController extends Controller
         
         $datas=$this->donateRepository->index($request);
                 
-        return view('donate.index', [
+        return view('backend.donate.index', [
             'datas' => $datas,
             'cookie'=> $request,
         ]);
@@ -47,7 +47,7 @@ class DonateController extends Controller
      */
     public function create()
     {
-        return view('donate.create');
+        return view('backend.donate.create');
     }
 
     /**

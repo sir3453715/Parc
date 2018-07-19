@@ -1,0 +1,135 @@
+@charset "UTF-8";
+.content{
+  &__box{
+    margin:5px 5px 20px 5px;
+    padding: 5px;
+    border: none;
+    &--gray{
+      border:none;
+      background: $color-white-two;
+    }
+    &--shadow{
+      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.19);
+    }
+  }
+  &__user{
+    line-height: 22px;
+    font-size: 16px;
+    color: $color-charcoal-grey;
+  }
+  &__no{
+    color:$color-grapefruit;
+  }
+  &__title{
+    line-height: 32px;
+    font-size: 23px;
+    font-weight: 300;
+    color: $color-black;
+    margin-bottom: 20px;
+    &--line{
+      font-size: 16px;
+      font-weight: bolder;
+      color: $color-black;
+      border-bottom: 2px solid $color-white-three;
+      padding: 10px 0;
+      margin: 10px 0;
+    }
+  }
+  &__subtitle{
+    line-height: 22px;
+    font-size: 16px;
+    font-weight: bold;
+    color: $color-black;
+    margin: 10px 0;
+    span{
+      font-size: 13px;
+      font-weight:normal;
+    }
+  }
+  &__txt-bg-gary{
+    margin-bottom: 20px;
+    padding: 10px;
+    background: $color-white-two;
+    line-height: 18px;
+    font-size: 13px;
+    color: $color-charcoal-grey;
+  }
+  &__txt-red{
+    margin-bottom: 20px;
+    line-height: 22px;
+    font-size: 16px;
+    color: $color-grapefruit;
+  }
+  &__link{
+    color: $color-algae;
+    text-decoration: underline;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  &__info{
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.6px;
+    color: $color-black;
+    margin-bottom: 10px;
+    width: 100%;
+    &--list{
+      padding-left: 1.2rem;
+      color: $color-charcoal-grey;
+      a{
+        display: block;
+        color: $color-algae;
+      }
+    }
+  }
+  &__help{
+    font-size: 13px;
+    color: $color-charcoal-grey;
+    margin-bottom: 20px;
+  }
+  &__search{
+    background: $color-white;
+    border: solid 1px $color-greyish-brown;
+    margin-bottom: 10px;
+    input{
+      width: 100%;
+      border: none;
+      font-size: 13px;
+      line-height: 13px;
+      padding: 9px 24px 9px 12px;
+      background: transparent;
+      outline-color: transparent;
+    }
+    .fa-search{
+      position: absolute;
+      cursor: pointer;
+      right: 15px;
+      top: 10px;
+    }
+
+  }
+  &__select{
+    padding: 8px;
+    font-size: 13px;
+    background: $color-white;
+    border: solid 1px $color-white-three;
+  }
+  &__item-img{
+    @include img-scale();
+    border: solid 1px $color-white-three;
+  }
+  &__item-name{
+    @include ellipsis(auto,1);
+  }
+}
+
+@media (min-width: $media-lg) {
+  .content{
+    &__box{
+      border: solid 1px $color-white-three;
+      padding: 20px;
+      background: $color-white;
+    }
+  }
+}

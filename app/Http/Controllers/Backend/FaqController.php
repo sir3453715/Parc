@@ -6,7 +6,7 @@ use App\faq;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Http\Repositories\FaqRepository;
+use App\Http\Repositories\Backend\FaqRepository;
 
 use App\Http\Controllers\Controller;
 use Session;
@@ -23,14 +23,14 @@ class FaqController extends Controller
     //
     public function index(){
         $datas=$this->faqRepository->index();
-        return view('faq.index',
+        return view('backend.faq.index',
         [
             'datas' => $datas,
         ]);
     }
     public function create(){
         $datas=$this->faqRepository->create();
-        return view('faq.create',
+        return view('backend.faq.create',
         [
             'datas' => $datas,
         ]);
@@ -41,7 +41,7 @@ class FaqController extends Controller
     }
     public function edit(faq $faq){
         $datas=$this->faqRepository->edit($faq);
-        return view('faq.edit',
+        return view('backend.faq.edit',
         [
             'datas' => $datas,
         ]);
@@ -51,7 +51,7 @@ class FaqController extends Controller
         return redirect('/backend/faq');
     }
     public function order(){
-        return view('faq.order',
+        return view('backend.faq.order',
         [
             'datas'=> faq::all()->sortBy("order"),
         ]);

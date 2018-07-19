@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+//vendors (Other Sass Framework, 主要的用途是用來整合第三方的 plugin 與 Framework)
+@import 
+// "vendor/font-awesome/scss/fontawesome",
+// "vendor/bootstrap/bootstrap",
+"vendor/bootstrap-datepicker/bootstrap-datepicker",
+"vendor/owl.carousel/owl.carousel",
+"vendor/animate/animate";
+
+//module  (模組元件)
+@import
+"module/base",
+"module/px2em",       //px2em
+"module/ellipsis",    //ellipsis
+"module/img-scale",   //img-scale
+"module/breadcrumb",  //麵包削
+"module/title",
+"module/banner",        
+"module/photo",
+"module/tvcf",
+
+// "module/btn",
+
+
+// "module/booking",
+
+// "module/css-table",   //css-tables
+//"module/pagination",  //pagination
+//"module/form",        //form
+//"module/tab",       //tab
+//"module/content",     //content
+//"module/product-item";//product-item
+"module/modal";       //modal
+
+//layout  (共用版型)
+@import
+"layout/body",
+"layout/header",
+"layout/footer";
+
+//page    (各頁面主要內容)
+@import
+"page/index";

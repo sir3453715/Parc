@@ -18,7 +18,7 @@ use App\sub_category;
 use App\extra_sub_category;
 
 
-use App\Http\Repositories\CategoryRepository;
+use App\Http\Repositories\Backend\CategoryRepository;
 
 class CategoryController extends Controller
 {
@@ -31,7 +31,7 @@ class CategoryController extends Controller
     public function create()
     {
         $datas=$this->categoryRepository->create();
-        return view('category.create', [
+        return view('backend.category.create', [
             'datas'            => $datas,
         ]);
         return redirect('/backend/category');
@@ -84,25 +84,25 @@ class CategoryController extends Controller
     }
     public function index(Request $request){
         $datas=$this->categoryRepository->index($request);
-        return view('category.index',[
+        return view('backend.category.index',[
             'datas'     =>$datas,
         ]);
     }
     public function editCategory(category $category)
     {
-        return view('category.editCategory',[
+        return view('backend.category.editCategory',[
             'category'=>$category,
         ]);
     }
     public function editSubCategory(sub_category $sub_category)
     {
-        return view('category.editSubCategory',[
+        return view('backend.category.editSubCategory',[
             'sub_category'=>$sub_category,
         ]);
     }
     public function editExtraSubCategory(extra_sub_category $extra_sub_category)
     {
-        return view('category.editExtraSubCategory',[
+        return view('backend.category.editExtraSubCategory',[
             'extra_sub_category'=>$extra_sub_category,
         ]);
     }

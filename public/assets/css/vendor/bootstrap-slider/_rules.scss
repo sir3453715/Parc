@@ -160,7 +160,7 @@ input {
     background: transparent none;
     &::before{
       line-height: $slider-line-height;
-      font-size: 20px;
+      font-size: em(20);
       content: '\2605'; //unicode star character
       color: #726204;
     }
@@ -187,7 +187,7 @@ input {
     background: transparent none;
     &::before{
       line-height: $slider-line-height;
-      font-size: 20px;
+      font-size: em(20);
           content: '\2605'; //unicode star character
           color: #726204;
         }

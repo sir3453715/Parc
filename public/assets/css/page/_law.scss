@@ -1,0 +1,27 @@
+@charset "UTF-8";
+.law{
+    background: $color-white;
+    padding: 50px;
+    margin-bottom: 50px;
+    &__title{
+        position: relative;
+        font-size: em(32);
+        font-weight: bolder;
+        margin-bottom: 30px;
+        line-height: 1;
+
+        &:before{
+            position: absolute;
+            content: "";
+            top:0;
+            left: -50px;
+            width: 10px;
+            height: 32px;
+            background: linear-gradient(55deg, #f58764 40%, #f16670 50%);
+        }
+    }
+    &__content{
+        font-size: em(18);
+        line-height: 1.1;
+    }
+}

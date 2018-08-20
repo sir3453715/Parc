@@ -39,7 +39,7 @@
                         <select size="6" class="custom-select" name="sub_category">
                             <option value="" selected disabled hidden>次分類</option>
                         </select>
-                        <select size="6" class="custom-select" name="extra_sub_category">
+                        <select size="6" id="extra_sub_category" class="custom-select" name="extra_sub_category" hidden>
                             <option value="" selected disabled hidden>其他分類</option>
                         </select>
                     </div>
@@ -60,15 +60,15 @@
                         <select size="6" class="custom-select" name="sub_category2">
                             <option value="" selected disabled hidden>次分類</option>
                         </select>
-                        <select size="6" class="custom-select" name="extra_sub_category2">
+                        <select size="6" id="extra_sub_category2" class="custom-select" name="extra_sub_category2" hidden>
                             <option value="" selected disabled hidden>其他分類</option>
                         </select>
                     </div>
                 </div>
             </div>
-
+            @if(Request::segment(3)!="news")
             <button type="button" id="add_to_news_button" onClick="toggle_add_to_news()" class="btn btn-primary btn-sm">新增至最新消息</button>
-
+            @endif
 
             {{-- Title --}}
             <div class="form-group">
@@ -209,16 +209,23 @@
                         dataType: "json",
                         success:function(data) {
                             $('select[name="extra_sub_category"]').empty();
+                            // $('#extra_sub_category').removeAttr("hidden");
                             $.each(data, function(key, value) {
                                 $('select[name="extra_sub_category"]').append('<option value="'+ key +'">'+ value +'</option>');
                             });
 
+                            if ($('#extra_sub_category').children().length > 0 ) {
+                                $('#extra_sub_category').removeAttr("hidden");
+                            }
+                            else{
+                                $('#extra_sub_category').attr("hidden","");
+                            }
                         }
                     });
                 }else{
                     $('select[name="extra_sub_category"]').empty();
                 }
-                
+                  
             });
 
             // 2 category
@@ -257,6 +264,12 @@
                             $.each(data, function(key, value) {
                                 $('select[name="extra_sub_category2"]').append('<option value="'+ key +'">'+ value +'</option>');
                             });
+                            if ($('#extra_sub_category2').children().length > 0 ) {
+                                $('#extra_sub_category2').removeAttr("hidden");
+                            }
+                            else{
+                                $('#extra_sub_category2').attr("hidden","");
+                            }
 
                         }
                     });

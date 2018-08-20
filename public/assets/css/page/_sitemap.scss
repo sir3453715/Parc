@@ -1,0 +1,33 @@
+@charset "UTF-8";
+.sitemap{
+    background: $color-white;
+    padding: 20px 0;
+    &__item{
+        margin: 5px 0;
+        padding: 5px 0 5px 30px;
+        font-size: em(20);
+        font-weight: 400;
+        border: 1px solid transparent;
+        &:hover{
+            text-decoration: none;
+            color: $color-rouge;            
+        }
+    }
+    &__title{
+        margin: 20px 0 10px 0;
+        padding: 15px 30px;        
+        display: block;
+        line-height: 1;
+        font-size: em(25);
+        font-weight: bolder;
+        color: $color-white;
+        background: linear-gradient(8deg, $color-rosy-pink 22%, $color-orange 98%);
+        border-bottom-right-radius: 30px;
+        &:hover{
+            color: $color-white;
+        }
+    }
+}
+@media (min-width: $media-lg) {
+    
+}

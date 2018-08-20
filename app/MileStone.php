@@ -15,4 +15,10 @@ class MileStone extends Model
         $name= DB::table('lang')->where('id',$this->lang)->value('name');
         return $name;
     }
+    public function getDates()
+    {
+        //define the datetime table column names as below in an array, and you will get the
+        //carbon objects for these fields in model objects.
+        return array('created_at', 'updated_at', 'date');
+    }
 }

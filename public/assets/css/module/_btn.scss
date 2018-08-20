@@ -1,5 +1,69 @@
 @charset "UTF-8";
 
 .btn{
-  
+  &-more{
+      position: relative;
+      padding: 5px 10px;
+      border: 2px solid $color-rouge;
+      color:$color-rouge;
+      background: $color-white;
+      margin: 0 auto;
+      &:hover{
+          text-decoration: none;
+          color:$color-white;
+          background: $color-rouge;
+      }
+      &-line{
+        position: relative;
+        text-align: center;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        &::before{
+            position: absolute;
+            left: 0;
+            top:50%;
+            content: '';
+            width: 100%;
+            height: 2px;
+            background: $color-rouge;
+        }
+      }
+      &-law{
+        position: relative;
+        padding: 5px 10px;
+        border: 2px solid $color-rouge;
+        color:$color-rouge;
+        background: $color-white;
+        margin: 0 auto;
+        display: none;
+        &.collapsed{
+            display: inline-block;
+        }
+      }
+  }
+  &-more2{
+      position: relative;
+      display: block;
+      text-align: right;
+      color:$color-rouge;
+  }
+  &-line{
+      display: inline-block;
+      color: $color-rouge;
+      background: $color-white;
+      font-size: em(20);
+      padding: 9px;
+      border: 2px solid $color-rouge;
+      margin-bottom: 20px;
+      width: 100%;
+      height: 50px;
+      text-align: center;
+      @include ellipsis('100%',1);
+      &.active,
+      &:hover{
+        color: $color-white;
+        background: $color-rouge;
+        text-decoration: none;
+      }
+  }
 }

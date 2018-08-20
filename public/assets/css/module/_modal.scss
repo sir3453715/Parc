@@ -42,7 +42,7 @@
     }
     &-title{
       font-weight: 300;
-      font-size: 28px;
+      font-size: em(28);
       line-height: 28px;
       margin-bottom: 40px;
     }
@@ -51,7 +51,7 @@
       &-prev{
         display: block;
         text-align: center;
-        font-size: 14px;
+        font-size: em(14);
         color: $color-white;
         background: $color-dull-orange;
         padding: 20px 0;
@@ -63,7 +63,7 @@
       &-next{
         display: block;
         text-align: center;
-        font-size: 14px;
+        font-size: em(14);
         color: $color-white;
         background: $color-brownish-orange;
         padding: 20px 0;
@@ -75,14 +75,14 @@
       &-close{
         display: block;
         text-align: center;
-        font-size: 14px;
+        font-size: em(14);
         color: $color-white;
         background: $color-brownish-orange;
         padding: 20px 0;
         width: 100%;
       }
       &-close-popup{
-        font-size: 20px;
+        font-size: em(20);
         line-height: 28px;
         color: $color-white;
         float: right;
@@ -111,7 +111,7 @@
         }
       }
       input{
-        font-size: 14px;
+        font-size: em(14);
         background: transparent;
         color: $color-greyish-brown;
         border: none;
@@ -124,10 +124,10 @@
       }
     }
     &__title{
-      font-size: 12px;
+      font-size: em(12);
     }
     &__text{
-      font-size: 14px;
+      font-size: em(14);
       margin-bottom: 10px;
     }
   }
@@ -144,13 +144,13 @@
   }
   &__title{
     line-height: 25px;
-    font-size: 18px;
+    font-size: em(18);
     font-weight: 300;
     margin: 10px 0;
   }
   &__text{
     line-height: 25px;
-    font-size: 14px;
+    font-size: em(14);
     margin-bottom: 10px;
   }
   &__hr{
@@ -159,7 +159,7 @@
   &__link{
     display: inline-block;
     color: $color-white;
-    font-size: 14px;
+    font-size: em(14);
     margin-right: 30px;
     margin-bottom: 10px;
 
@@ -177,7 +177,7 @@
     background: $color-hazel;
     padding: 15px 20px;
     line-height: 20px;
-    font-size: 14px;
+    font-size: em(14);
     .icon {
       margin-right: 10px;
     }
@@ -190,7 +190,7 @@
     &-nav{
       position: absolute;
       color: $color-white;
-      font-size: 40px;
+      font-size: em(40);
       width: 100%;
       top:50%;
       margin-top: -30px;
@@ -220,7 +220,7 @@
     &-nav{
       position: absolute;
       color: $color-white;
-      font-size: 40px;
+      font-size: em(40);
       width: 100%;
       top:50%;
       margin-top: -30px;
@@ -241,7 +241,7 @@
     position: relative;
     color: $color-white;
     line-height: 20px;
-    font-size: 14px;
+    font-size: em(14);
     font-weight: 300;
     text-align: center;
     z-index: 1;

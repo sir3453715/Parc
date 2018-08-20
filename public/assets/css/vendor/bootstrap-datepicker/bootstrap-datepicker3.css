@@ -1,33 +1,27 @@
 /*!
- * Datepicker for Bootstrap v1.7.1 (https://github.com/uxsolutions/bootstrap-datepicker)
+ * Datepicker for Bootstrap v1.6.4 (https://github.com/eternicode/bootstrap-datepicker)
  *
+ * Copyright 2012 Stefan Petre
+ * Improvements by Andrew Rowls
  * Licensed under the Apache License v2.0 (http://www.apache.org/licenses/LICENSE-2.0)
  */
-
 .datepicker {
-  border-radius: 0;
+  border-radius: 4px;
   direction: ltr;
 }
 .datepicker-inline {
   width: 220px;
 }
-.datepicker-rtl {
+.datepicker.datepicker-rtl {
   direction: rtl;
 }
-.datepicker-rtl.dropdown-menu {
-  left: auto;
-}
-.datepicker-rtl table tr td span {
+.datepicker.datepicker-rtl table tr td span {
   float: right;
 }
 .datepicker-dropdown {
   top: 0;
   left: 0;
   padding: 4px;
-
-  background: #FFF !important;
-  padding: 15px !important;
-  border-radius: 0 !important;
 }
 .datepicker-dropdown:before {
   content: '';
@@ -90,7 +84,7 @@
   text-align: center;
   width: 30px;
   height: 30px;
-  border-radius: 0;
+  border-radius: 4px;
   border: none;
 }
 .table-striped .datepicker table tr td,
@@ -449,22 +443,22 @@ fieldset[disabled] .datepicker table tr td.selected.highlighted.focus {
 .datepicker table tr td.active.focus,
 .datepicker table tr td.active.highlighted.focus {
   color: #fff;
-  background-color: #c99a32;
-  border-color: #c99a33;
+  background-color: #286090;
+  border-color: #122b40;
 }
 .datepicker table tr td.active:hover,
 .datepicker table tr td.active.highlighted:hover {
   color: #fff;
-  background-color: #c99a32;
-  border-color: #c99a33;
+  background-color: #286090;
+  border-color: #204d74;
 }
 .datepicker table tr td.active:active,
 .datepicker table tr td.active.highlighted:active,
 .datepicker table tr td.active.active,
 .datepicker table tr td.active.highlighted.active {
   color: #fff;
-  background-color: #c99a32;
-  border-color: #c99a33;
+  background-color: #286090;
+  border-color: #204d74;
 }
 .datepicker table tr td.active:active:hover,
 .datepicker table tr td.active.highlighted:active:hover,
@@ -479,8 +473,8 @@ fieldset[disabled] .datepicker table tr td.selected.highlighted.focus {
 .datepicker table tr td.active.active.focus,
 .datepicker table tr td.active.highlighted.active.focus {
   color: #fff;
-  background-color: #c99a33;
-  border-color: #c99a33;
+  background-color: #204d74;
+  border-color: #122b40;
 }
 .datepicker table tr td.active.disabled:hover,
 .datepicker table tr td.active.highlighted.disabled:hover,
@@ -511,7 +505,7 @@ fieldset[disabled] .datepicker table tr td.active.highlighted.focus {
   float: left;
   margin: 1%;
   cursor: pointer;
-  border-radius: 0;
+  border-radius: 4px;
 }
 .datepicker table tr td span:hover,
 .datepicker table tr td span.focused {
@@ -541,16 +535,16 @@ fieldset[disabled] .datepicker table tr td.active.highlighted.focus {
 .datepicker table tr td span.active.disabled.focus,
 .datepicker table tr td span.active.disabled:hover.focus {
   color: #fff;
-  background-color: #c99a32;
-  border-color: #c99a33;
+  background-color: #286090;
+  border-color: #122b40;
 }
 .datepicker table tr td span.active:hover,
 .datepicker table tr td span.active:hover:hover,
 .datepicker table tr td span.active.disabled:hover,
 .datepicker table tr td span.active.disabled:hover:hover {
   color: #fff;
-  background-color: #c99a32;
-  border-color: #c99a33;
+  background-color: #286090;
+  border-color: #204d74;
 }
 .datepicker table tr td span.active:active,
 .datepicker table tr td span.active:hover:active,
@@ -561,8 +555,8 @@ fieldset[disabled] .datepicker table tr td.active.highlighted.focus {
 .datepicker table tr td span.active.disabled.active,
 .datepicker table tr td span.active.disabled:hover.active {
   color: #fff;
-  background-color: #c99a32;
-  border-color: #c99a33;
+  background-color: #286090;
+  border-color: #204d74;
 }
 .datepicker table tr td span.active:active:hover,
 .datepicker table tr td span.active:hover:active:hover,
@@ -589,8 +583,8 @@ fieldset[disabled] .datepicker table tr td.active.highlighted.focus {
 .datepicker table tr td span.active.disabled.active.focus,
 .datepicker table tr td span.active.disabled:hover.active.focus {
   color: #fff;
-  background-color: #c99a33;
-  border-color: #c99a33;
+  background-color: #204d74;
+  border-color: #122b40;
 }
 .datepicker table tr td span.active.disabled:hover,
 .datepicker table tr td span.active:hover.disabled:hover,
@@ -649,10 +643,6 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.focus {
 .datepicker .next:hover,
 .datepicker tfoot tr th:hover {
   background: #eeeeee;
-}
-.datepicker .prev.disabled,
-.datepicker .next.disabled {
-  visibility: hidden;
 }
 .datepicker .cw {
   font-size: 10px;

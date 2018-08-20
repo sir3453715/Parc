@@ -1,7 +1,231 @@
 @charset "UTF-8";
-@media (min-width: $media-lg) {
+.banner {
+  &-main {
+    margin-bottom: 30px;
+    padding: 0;
+    &__item {
+      position: relative;
+      color: $color-white;
+      @include img-scale(960, 460);
+      &:hover {
+        color: $color-white;
+      }
+    }
+    &__label {
+      position: absolute;
+      padding-left: 10px;
+      width: 50%;
+      bottom: 0;      
+    }
+    &__title {
+      font-size: em(18);
+      font-weight: 500;
+      line-height: 1.2;      
+      @include ellipsis(auto, 1);
+      margin: 0 0 10px 0;
+    }
+    &__subtitle {
+      display: none;
+    }
+    .owl {
+      &-dots {
+        position: absolute;
+        right: 20px;
+        top: auto;
+        bottom: 0;
+      }
+      &-dot {
+        display: inline-block;
+        margin: 4px;
+        width: 10px;
+        height: 10px;
+        background: linear-gradient(55deg, $color-orange, $color-rosy-pink 50%);
+        border-radius: 47%;
+        border: 1px solid transparent;
+        &.active {
+          border: 1px solid $color-white;
+        }
+      }
+    }
+  }
+  &-icon {
+    text-align: center;
+    margin-bottom: 30px;
+    &__img {
+      margin: 0 auto;
+      width: 80px;
+      @include img-scale(1, 1);
+    }
+    &__title {
+      margin: 10px auto;
+      font-size: em(16);
+      font-weight: bold;
+      line-height: 1;
+      @include ellipsis(100%, 1);
+    }
+    &__subtitle {
+      font-size: em(12);
+      font-weight: normal;
+      @include ellipsis(100%, 2);
+    }
+  }
+  &-sponsor {
+    margin-bottom: 50px;
+    &__item {
+      width: 100%;
+      margin: 0 auto;
+      @include img-scale(1, 1);
+    }
+  }
+  &-lector {
+    margin-bottom: 30px;
+    &__item {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      &:hover {
+        text-decoration: none;
+        .banner-lector__img{
+          transform: scale(1.05);
+        }
+      }
+    }
+    &__img {
+      width: 100%;
+      @include img-scale(2, 1);
+      transition: all 0.8s ease-in-out;
+    }
+    &__box {
+      width: 100%;
+      @include img-scale(1, 1);
+      padding: 15px;
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+    &__title {
+      font-size: em(18);
+      font-weight: bolder;
+      line-height: 1.2;
+      border-left: 10px solid $color-orange;
+      padding-left: 10px;
+      margin-bottom: 10px;
+    }
+    &__name {
+      text-align: left;
+      font-size: em(18);
+      line-height: 1.2;
+      padding-left: 20px;
+    }
+    .owl {
+      &-nav{
+        position: absolute;
+        width: 100%;
+        top:25vw;
+        font-size:em(50); 
+        line-height: 1;
+        color: $color-white;
+        margin-top: -25px;
+      }
+      &-prev{
+        position: absolute;
+        left:0;       
+      }
+      &-next{
+        position: absolute;
+        right:0;
+      }
+      &-dots {
+        position: absolute;
+        right: 10px;
+        top: auto;
+        bottom: 0;
+      }
+      &-dot {
+        display: inline-block;
+        margin: 4px;
+        width: 10px;
+        height: 10px;
+        background: linear-gradient(55deg, $color-orange, $color-rosy-pink 50%);
+        border-radius: 47%;
+        border: 1px solid transparent;
+        &.active {
+          border: 1px solid $color-white;
+        }
+      }
+    }
+  }
+  &-single{
+    @include img-scale(2,1);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    &__title{
+      position: absolute;
+      display: inline-block;
+      color: $color-white;
+      font-size: em(20);
+      text-align: center;
+      top:50%;
+      margin: -15px auto;      
+      &-tl{
+        position: absolute;
+        display: inline-block;
+        color: $color-rouge;
+        font-size: em(25);
+        font-weight: bolder;
+        text-align: center;
+        top:0;
+        left:15px;
+        padding: 35px 40px 60px 40px;
+        background-image: linear-gradient(180deg, rgba(229, 228, 228, 0.99) 42%, rgba(255,255,255,0) 100%);
+      }
+    }
+    &__subtitle{
+      position: absolute;
+      display: inline-block;
+      color: $color-white-two;
+      font-size: em(15);
+      text-align: center;
+      top:60%;
+      margin: -15px auto;      
+    }
+  }
+  &-right{
+    display: flex;
+    &__box{
+      width: 27%;      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom-left-radius: 36px;
+      background: linear-gradient(147deg, #f58764, #f16670 73%);
+    }
+    &__title{
+      color: $color-white;
+      font-size: em(18);      
+    }
+    &__img{
+      width: 73%;      
+      @include img-scale(700,400);
+    }
+  }
+  &-donate{
+    @include img-scale(2880,1105);
+    display: flex;
+    justify-content: center;
+    &__bg{      
+      background-image: linear-gradient(55deg, #f58764, #f16670 50%);
+    }
+    
+  }  
+}
+@media (min-width: $media-md) {
   .banner {
     &-main {
+      padding: 0;
       &__item {
         position: relative;
         color: $color-white;
@@ -26,7 +250,7 @@
         }
       }
       &__title {
-        font-size: 28px;
+        font-size: em(28);
         font-weight: 500;
         line-height: 1.2;
         height: 33px;
@@ -34,7 +258,7 @@
         margin: 10px 0 15px 0;
       }
       &__subtitle {
-        font-size: 17px;
+        font-size: em(17);
         font-weight: 500;
         line-height: 1.2;
         height: 60px;
@@ -72,12 +296,12 @@
       }
       &__title {
         margin: 50px auto 10px auto;
-        font-size: 21px;
+        font-size: em(21);
         line-height: 1;
         @include ellipsis(100%, 1);
       }
       &__subtitle {
-        font-size: 16px;
+        font-size: em(16);
         font-weight: 300;
         @include ellipsis(100%, 2);
       }
@@ -91,8 +315,10 @@
       }
     }
     &-lector {
+      margin-bottom: 0;
       &__item {
         display: flex;
+        flex-direction: row;
         width: 100%;
         &:hover {
           text-decoration: none;
@@ -107,7 +333,7 @@
         transition: all 0.8s ease-in-out;
       }
       &__box {
-        width: 33%;
+        width: 34%;
         @include img-scale(1, 1);
         color: $color-white;
         background-image: linear-gradient(55deg, $color-orange, $color-rosy-pink 47%);
@@ -119,7 +345,7 @@
         }
       }
       &__title {
-        font-size: 25px;
+        font-size: em(25);
         font-weight: bolder;
         line-height: 1.2;
         border-left: 10px solid $color-orange;
@@ -128,7 +354,7 @@
       }
       &__name {
         text-align: right;
-        font-size: 25px;
+        font-size: em(25);
         line-height: 1.2;
       }
       .owl {
@@ -152,6 +378,55 @@
           }
         }
       }
+    }
+    &-single{
+      @include img-scale(960,275);
+      display: flex;
+      justify-content: center;
+      &__title{
+        position: absolute;
+        display: inline-block;
+        color: $color-white;
+        font-size: em(30);
+        text-align: center;
+        top:50%;
+        margin: -15px auto;        
+      }
+      &__subtitle{
+        position: absolute;
+        display: inline-block;
+        color: $color-white-two;
+        font-size: em(20);
+        text-align: center;
+        top:65%;
+        margin: -15px auto;        
+      }
+    }
+    &-right{
+      display: flex;
+      &__box{
+        width: 27%;      
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom-left-radius: 36px;
+        background: linear-gradient(147deg, #f58764, #f16670 73%);
+      }
+      &__title{
+        color: $color-white;
+        font-size: em(24);
+        letter-spacing: 2px;
+      }
+      &__img{
+        width: 73%;      
+        @include img-scale(700,400);
+      }
+    }
+    &-donate{
+      @include img-scale(2880,1105);
+      display: flex;
+      justify-content: center;
+      
     }
   }
 }

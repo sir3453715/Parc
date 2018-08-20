@@ -104,8 +104,14 @@ class ArticleRepository{
         $article->display=              request('display')? 1:0;
         $article->user_id=              auth()->id();
         $article->expiry_date=          request('expiry_date');
-        $article->video_url=            request('video_url');
+        // $article->video_url=            request('video_url');
 
+        // get youtube video id
+        if($request->video_url){
+            $url = $request->video_url;
+            parse_str( parse_url( $url, PHP_URL_QUERY ), $youtube );
+            $article->video_url = $youtube['v'];
+        }
         //save pic path
         if($request->pic){
             $upload_image=$request->pic;
@@ -232,8 +238,14 @@ class ArticleRepository{
             'order'                     =>request('order') ? 0:1,
             'display'                   =>request('display') ? 1:0,
             'expiry_date'               =>request('expiry_date'),
-            'video_url'                 =>request('video_url'),
+            // 'video_url'                 =>request('video_url'),
         ]);
+        //get youtube video id
+        if($request->video_url){
+            $url = $request->video_url;
+            parse_str( parse_url( $url, PHP_URL_QUERY ), $youtube );
+            $article->video_url = $youtube['v'];
+        }
         //save pic path
         if($request->pic){
             $upload_image=$request->pic;

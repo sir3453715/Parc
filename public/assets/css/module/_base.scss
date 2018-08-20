@@ -13,7 +13,7 @@ $media-xl: 1200px !default;
 
 /* Color palette */
 
-$color-white-two: #e5e5e5;
+
 $color-greyish:#ababab;
 $color-warm-grey-two: #9b9b9b;
 $color-greyish-brown: #4a4a4a ;
@@ -25,12 +25,14 @@ $color-claret: #590405;
 
 
 $color-white: #ffffff;
+$color-white-two: #e5e5e5;
 $color-warm-grey: #999999;
 $color-grey: #666666;
 $color-dark-bule : #434e58;
 $color-charcoal-grey: #302f30;
 $color-orange: #f58764; // rgba(245,135,100,1)
 $color-rosy-pink: #f16670;
+$color-pink: #EA686A;
 $color-rouge: #e3556d;  // rgba(241,102,112,1)
 $color-blood: #b03857;
 
@@ -39,4 +41,31 @@ $color-blood: #b03857;
 @import url(//fonts.googleapis.com/css?family=Cormorant+Infant);
 $font-family-base: 'Arial', 'Cormorant Infant','PingFangTC', 'Microsoft JhengHei', 'sans-serif';
 
-
+.text-rosy-pink{
+    color: $color-rosy-pink;
+}
+.bg-white{
+    background: $color-white;
+  }
+  
+  .ul-dot{
+    list-style: none; /* Remove list bullets */
+      padding: 0;
+      margin: 0;
+  
+    li{
+      padding-left: 16px; 
+      text-indent: -8px;
+      &::before {
+        content: '\f111'; 
+        color: $color-rouge;      
+        margin-left: -1em;
+        font: normal normal normal 14px/1 FontAwesome;
+        background-image: linear-gradient(147deg, #f58764, #f16670 73%);
+        margin-right: 10px;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }

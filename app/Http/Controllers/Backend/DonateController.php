@@ -76,7 +76,7 @@ class DonateController extends Controller
         }
         else{
             $count=$this->donateRepository->store($request);
-            return redirect('/backend/donate')->with('success',$count.' records added');
+            return redirect('/backend/donate')->with('success','新增'.$count['new_count'].'筆紀錄'.' 覆蓋'.$count['modify_count'].'筆紀錄');
         }
     }
 
@@ -99,7 +99,7 @@ class DonateController extends Controller
      */
     public function edit(Donate $donate)
     {
-        //
+        return view('backend.donate.edit')->with('donate', $donate);
     }
 
     /**
@@ -112,6 +112,8 @@ class DonateController extends Controller
     public function update(Request $request, Donate $donate)
     {
         //
+        $this->donateRepository->update($request,$donate);
+        return redirect('/backend/donate');
     }
 
     /**

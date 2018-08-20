@@ -1,0 +1,73 @@
+@extends('frontend.master.master')
+@section('main')
+<!--main-->
+<main class="container">
+
+    <!--breadcrumb-->
+    <ol class="breadcrumb container">
+        <li class="breadcrumb-item">
+            <a href="#C" title="中央內容區塊" id="AC" accesskey="C" name="C">:::</a>
+            <a href="{{ url('')}}" title="首頁">首頁</a>
+        </li>
+        <li class="breadcrumb-item">
+            <a href="{{ url('/law')}}" title="法規政策">法規政策</a>
+        </li>
+        <li class="breadcrumb-item">
+            <a href="{{ url('/law/policy')}}" title="政策研究">政策研究</a>
+        </li>
+        <li class="breadcrumb-item active" id="active_breadcrumb"></li>
+    </ol>
+
+    <!-- banner-main -->
+    <div class="banner-single owl-carousel px-0" title="政策研究" style="background: url({{ asset('assets/images/photo/banner-law-1.jpg') }}) no-repeat center;background-size: cover;">
+        <h2 class="banner-single__title">政策研究</h2>
+    </div>
+
+    <!-- tabs -->
+    <ul class="nav justify-content-center">
+        @foreach($policy_extra_sub_category as $category)
+        <li class="nav-item">
+            <a class="nav-link" id="nav-{{ $category->en_name }}" href="{{ url('law/policy/'.$category->en_name) }}" title="{{ $category->name }}">{{$category->name}}</a>
+        </li>
+        @endforeach
+    </ul>
+
+    <div class="row">
+        <p class="col-12 text-center py-4">
+            @foreach($policy_extra_sub_category as $category)
+            @if($type == $category->en_name)
+                {{$category->description}}
+                @break
+            @endif
+            @endforeach
+        </p>
+        @foreach($article_list as $data)
+        <div class="col-12 col-lg-4">
+            <a href="{{ url('/'. $data->category_en(). '/'. $data->sub_category_en() .'/article/'. $data->id) }}" class="item photo-x6__item" title="{{ $data->title }}">
+                <div class="photo-x6__box">
+                    <div class="photo-x6__img" alt="{{ $data->title }}" style="background: url(/storage/{{$data->pic}}) no-repeat center; background-size: cover;"></div>
+                </div>
+                <div class="photo-x6__title">{{ $data->title }}</div>
+                <div class="photo-x6__text">
+                    {{$data->description}}
+                </div>
+            </a>
+        </div>
+        @endforeach
+    </div>
+    <!-- pagination -->
+    <nav>
+        {{$article_list->links()}}
+    </nav>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            @foreach($policy_extra_sub_category as $category)
+            @if($type == $category->en_name)
+            $("#active_breadcrumb").append("{{$category->name}}");
+            $("#nav-{{ $category->en_name }}").addClass("active");
+                @break
+            @endif
+            @endforeach
+        });
+    </script>
+@endsection

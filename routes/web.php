@@ -11,8 +11,41 @@
 |
 */
 
+    //前台專區
 Route::group(['namespace' => 'Frontend'], function () {
-    Route::get('/', 'IndexController@index');
+    Route::get('/' , 'IndexController@index');
+    Route::get('/story/{type?}' , 'IndexController@storyIndex');
+    Route::get('/{category}/{sub_category}/article/{id}' , 'ArticleController@getArticleDetail');
+    Route::get('/event' , 'IndexController@eventIndex');
+    Route::get('/event/course/{type?}' , 'IndexController@eventCourseIndex');
+    Route::get('/event/lecturer/' , 'IndexController@eventLecturerIndex');
+    Route::post('/event/lecturer/' , 'IndexController@eventLecturerPost');
+    Route::get('/event/video/{type?}' , 'IndexController@eventVideoIndex');
+    Route::get('/event/lohas/{type?}' , 'IndexController@eventLohasIndex');
+    Route::get('/law/policy/{type?}' , 'IndexController@lawPolicyIndex');
+    Route::get('/law' , 'IndexController@lawIndex');
+    Route::get('/law/act/{type?}' , 'IndexController@lawActIndex');
+    Route::get('/law/policy/' , 'IndexController@lawPolicyIndex');
+    Route::get('/trend' , 'IndexController@trendIndex');
+    Route::get('/trend/international' , 'IndexController@trendInternationalIndex');
+    Route::get('/trend/exchange' , 'IndexController@trendExchangeIndex');
+    Route::get('/trend/ngo' , 'IndexController@trendNgoIndex');
+    Route::get('/trend/world' , 'IndexController@trendWorldIndex');
+    // Route::get('/trend/{type}/article/{id}' , 'ArticleController@getArticleDetail');
+    Route::get('/news/{type?}' , 'IndexController@newsIndex');
+    // Route::get('/news/{type}/article/{id}' , 'ArticleController@getArticleDetail');
+    Route::get('/faq' , 'IndexController@faq');
+    Route::get('/sitemap' , 'IndexController@sitemap');
+    Route::get('/exercise', 'IndexController@exercise');
+    Route::get('/donate', 'IndexController@donate');
+    Route::get('/donate/story', 'IndexController@donateStory');
+    Route::get('/donate/inquiry', 'IndexController@donateInquiry');
+    Route::post('/donate/inquiry', 'IndexController@donateInquiryPost');
+    Route::get('/about', 'IndexController@about');
+    Route::get('/about/ceo', 'IndexController@aboutCeo');
+    Route::get('/about/history', 'IndexController@aboutHistory');
+    Route::get('/about/organization', 'IndexController@aboutOrganization');
+    
 });
 
 // Route::get('/', function () {
@@ -147,6 +180,8 @@ Route::group(['middleware' => 'web', 'prefix' => 'backend'], function () {
         Route::post('/donate','DonateController@index');
         Route::get('/donate/create','DonateController@create');
         Route::post('/donate/create','DonateController@store');
+        Route::get('/donate/edit/{donate}','DonateController@edit');
+        Route::post('/donate/edit/{donate}','DonateController@update');
         Route::delete('/donate/delete/{donate}','DonateController@destroy');
 
         Route::get('/partner','PartnerController@index');
@@ -159,6 +194,5 @@ Route::group(['middleware' => 'web', 'prefix' => 'backend'], function () {
         Route::delete('/partner/delete/{partner}','PartnerController@destroy');
         
     });
-    //前台專區
     
 });

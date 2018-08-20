@@ -39,6 +39,6 @@
 
     <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
     <script>
-        //CKEDITOR.replace( 'body' );
+        CKEDITOR.replace( 'answer' );
     </script>
 @endsection

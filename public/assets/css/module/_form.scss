@@ -1,7 +1,7 @@
 @charset "UTF-8";
 .form{
   line-height: 17px;
-  font-size: 12px;
+  font-size: em(12);
   color: $color-greyish-brown;
 
   &__border {
@@ -11,7 +11,7 @@
   &__title{
     margin-top: 5px;
     margin-bottom: 15px;
-    font-size: 18px;
+    font-size: em(18);
     line-height: 25px;
     font-weight: 600;
     color: $color-black;
@@ -24,12 +24,12 @@
       cursor: pointer;
       text-align: center;
       line-height: 16px;
-      font-size: 16px;
+      font-size: em(16);
       color: $color-black;
     }
     &--submit{
       cursor: pointer;
-      font-size: 16px;
+      font-size: em(16);
       font-weight: 600;
       color: $color-white;
       background: $color-grapefruit;
@@ -46,7 +46,7 @@
     }
     &--reset{
       cursor: pointer;
-      font-size: 16px;
+      font-size: em(16);
       font-weight: 600;
       color: $color-grapefruit;
       background: transparent;
@@ -64,7 +64,7 @@
     }
     &--secend{
       cursor: pointer;
-      font-size: 13px;
+      font-size: em(13);
       text-align: center;
       color: $color-algae !important;
       text-decoration: underline;
@@ -83,7 +83,7 @@
       display: block;
       padding: 13px 0;
       line-height: 22px;
-      font-size: 16px;
+      font-size: em(16);
       font-weight: 600;
       text-align: center;
       color: $color-grapefruit;
@@ -97,11 +97,11 @@
   &__help{
     margin-top: 5px;
     line-height: 18px;
-    font-size: 13px;
+    font-size: em(13);
     color: $color-greyish-brown;
     .fa-info-circle{
       position: relative;
-      font-size: 18px;
+      font-size: em(18);
       color: $color-tea;
       &:before{
         position: absolute;
@@ -114,7 +114,7 @@
     }
   }
   &__note{
-    font-size: 13px;
+    font-size: em(13);
     color: $color-tea;
     ol{
       padding-left: 1rem;
@@ -130,7 +130,7 @@
   &-control{
     height: 50px;
     padding: 11px;
-    font-size: 12px;
+    font-size: em(12);
     line-height: 17px;
     margin-bottom: 10px;
   }
@@ -147,7 +147,7 @@
 @media (min-width: $media-lg) {
   .form{
     line-height: 18px;
-    font-size: 13px;
+    font-size: em(13);
     &__border {
       border: 1px solid $color-white-three;
       margin-right: -5px;
@@ -158,12 +158,12 @@
     }
     &__title{
       margin-top: 20px;
-      font-size: 23px;
+      font-size: em(23);
       line-height: 32px;
     }
     &-control{
       padding: 15px;
-      font-size: 13px;
+      font-size: em(13);
       line-height: 18px;
     }
   }

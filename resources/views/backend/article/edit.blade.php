@@ -74,7 +74,7 @@
                                                                 <option id="{{$sub_category->name}}" value="{{$sub_category->id}}">{{$sub_category->name}}</option>
                                                             @endforeach
                                                         </select>
-                                                        <select size="6" class="custom-select" name="extra_sub_category">
+                                                        <select size="6" class="custom-select" id="extra_sub_category" name="extra_sub_category" hidden>
                                                             <option value="" selected disabled hidden>其他分類</option>
                                                             @foreach($datas["extra_sub_categories"] as $extra_sub_category)
                                                                 <option id="{{$extra_sub_category->name}}" value="{{$extra_sub_category->id}}">{{$extra_sub_category->name}}</option>
@@ -86,7 +86,7 @@
                                         </td>
                                     </tr>
                                     @if($datas["copy"]!=null)
-                                    <!-- 欄位：category -->
+                                    <!-- 欄位：category2 -->
 									<tr>
                                         <td class="header-require col-lg-2">Category2</td>
                                         <td>
@@ -104,7 +104,7 @@
                                                                 <option id="{{$sub_category2->name}}" value="{{$sub_category2->id}}">{{$sub_category2->name}}</option>
                                                             @endforeach
                                                         </select>
-                                                        <select size="6" class="custom-select" name="extra_sub_category2">
+                                                        <select size="6" class="custom-select" id="extra_sub_category2" name="extra_sub_category2" hidden>
                                                             <option value="" selected disabled hidden>其他分類</option>
                                                             @foreach($datas["extra_sub_categories"] as $extra_sub_category2)
                                                                 <option id="{{$extra_sub_category2->name}}" value="{{$extra_sub_category2->id}}">{{$extra_sub_category2->name}}</option>
@@ -373,6 +373,12 @@
                             $.each(data, function(key, value) {
                                 $('select[name="extra_sub_category"]').append('<option id="'+ value +'" value="'+ key +'">'+ value +'</option>');
                             });
+                            if ($('#extra_sub_category').children().length > 0 ) {
+                                $('#extra_sub_category').removeAttr("hidden");
+                            }
+                            else{
+                                $('#extra_sub_category').attr("hidden","");
+                            }
                             //set category default value
                             @if($datas["article"]->extra_sub_category())
                             document.getElementById("{{$datas["article"]->extra_sub_category()}}").selected = "true";
@@ -429,6 +435,12 @@
                             $.each(data, function(key, value) {
                                 $('select[name="extra_sub_category2"]').append('<option id="'+ value +'" value="'+ key +'">'+ value +'</option>');
                             });
+                            if ($('#extra_sub_category2').children().length > 0 ) {
+                                $('#extra_sub_category2').removeAttr("hidden");
+                            }
+                            else{
+                                $('#extra_sub_category2').attr("hidden","");
+                            }
                             //set category default value
                             @if($datas["copy"]->extra_sub_category())
                             document.getElementById("{{$datas["copy"]->extra_sub_category()}}").selected = "true";

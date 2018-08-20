@@ -14,7 +14,7 @@
   }
   &__user{
     line-height: 22px;
-    font-size: 16px;
+    font-size: em(16);
     color: $color-charcoal-grey;
   }
   &__no{
@@ -22,12 +22,12 @@
   }
   &__title{
     line-height: 32px;
-    font-size: 23px;
+    font-size: em(23);
     font-weight: 300;
     color: $color-black;
     margin-bottom: 20px;
     &--line{
-      font-size: 16px;
+      font-size: em(16);
       font-weight: bolder;
       color: $color-black;
       border-bottom: 2px solid $color-white-three;
@@ -37,12 +37,12 @@
   }
   &__subtitle{
     line-height: 22px;
-    font-size: 16px;
+    font-size: em(16);
     font-weight: bold;
     color: $color-black;
     margin: 10px 0;
     span{
-      font-size: 13px;
+      font-size: em(13);
       font-weight:normal;
     }
   }
@@ -51,13 +51,13 @@
     padding: 10px;
     background: $color-white-two;
     line-height: 18px;
-    font-size: 13px;
+    font-size: em(13);
     color: $color-charcoal-grey;
   }
   &__txt-red{
     margin-bottom: 20px;
     line-height: 22px;
-    font-size: 16px;
+    font-size: em(16);
     color: $color-grapefruit;
   }
   &__link{
@@ -69,7 +69,7 @@
   }
   &__info{
     font-weight: 600;
-    font-size: 16px;
+    font-size: em(16);
     letter-spacing: 0.6px;
     color: $color-black;
     margin-bottom: 10px;
@@ -84,7 +84,7 @@
     }
   }
   &__help{
-    font-size: 13px;
+    font-size: em(13);
     color: $color-charcoal-grey;
     margin-bottom: 20px;
   }
@@ -95,7 +95,7 @@
     input{
       width: 100%;
       border: none;
-      font-size: 13px;
+      font-size: em(13);
       line-height: 13px;
       padding: 9px 24px 9px 12px;
       background: transparent;
@@ -111,7 +111,7 @@
   }
   &__select{
     padding: 8px;
-    font-size: 13px;
+    font-size: em(13);
     background: $color-white;
     border: solid 1px $color-white-three;
   }

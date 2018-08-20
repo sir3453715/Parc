@@ -1,9 +1,110 @@
 ﻿$(function () {
+    //bannerMainCarousel
+    bannerMainCarousel();
 
+    // photoX3Carousel
+    photoX3Carousel();
+
+    // lectorCarousel
+    lectorCarousel();
+
+    // checkInOutdatepicker
+    checkInOutdatepicker();
 });
 
 
+// bannerMainCarousel
+function bannerMainCarousel() {
+    if ($('.banner-main.owl-carousel')) {
+        var bannerOwl = $('.banner-main.owl-carousel');
+        bannerOwl.owlCarousel({
+            margin: 0,
+            nav: false,
+            dots: true,
+            items: 1,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 4000,
+            autoplaySpeed: true
+        })
+    }
+}
 
+// photoX3Carousel
+function photoX3Carousel() {
+    if ($('.photo-x3.owl-carousel')) {
+        var photoX3Owl = $('.photo-x3.owl-carousel');
+        photoX3Owl.owlCarousel({
+            margin: 10,
+            nav: true,
+            navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+            dots: false,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                992: {
+                    items: 3
+                }
+            }
+        })
+    }
+}
+
+// lectorCarousel
+function lectorCarousel() {
+    if ($('.banner-lector.owl-carousel')) {
+        var lectorOwl = $('.banner-lector.owl-carousel');
+        lectorOwl.owlCarousel({
+            margin: 0,                        
+            items: 1,
+            navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+            responsive: {
+                0: {
+                    dots: false,
+                    nav: true                    
+                },
+                992: {
+                    dots: true,
+                    nav: false,
+                }
+            }
+        })
+    }
+}
+
+// checkInOutdatepicker
+function checkInOutdatepicker(){
+
+    $('.input-daterange').each(function() {
+        $(this).datepicker(
+            {
+                endDate: 'today',
+                format : "yyyy/mm/dd",
+                language: "zh-TW",
+                orientation: "bottom auto",
+                autoclose: true
+            }
+        );
+    });
+
+    $("#startDate").datepicker({       
+        format : "yyyy/mm/dd",
+        language: "zh-TW",
+        orientation: "bottom auto",
+        autoclose: true
+    });
+
+    $("#endDate").datepicker({
+        endDate: 'today',
+        format : "yyyy/mm/dd",
+        language: "zh-TW",
+        orientation: "bottom auto",
+        autoclose: true
+    });
+
+}
 
 /* ========================================================================
  * Bootstrap: affix.js v3.3.5
@@ -12,7 +113,8 @@
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
-+function ($) {
++
+function ($) {
     'use strict';
 
     // AFFIX CLASS DEFINITION
@@ -23,19 +125,19 @@
 
         this.$target = $(this.options.target)
             .on('scroll.bs.affix.data-api', $.proxy(this.checkPosition, this))
-            .on('click.bs.affix.data-api',  $.proxy(this.checkPositionWithEventLoop, this))
+            .on('click.bs.affix.data-api', $.proxy(this.checkPositionWithEventLoop, this))
 
-        this.$element     = $(element)
-        this.affixed      = null
-        this.unpin        = null
+        this.$element = $(element)
+        this.affixed = null
+        this.unpin = null
         this.pinnedOffset = null
 
         this.checkPosition()
     }
 
-    Affix.VERSION  = '3.3.5'
+    Affix.VERSION = '3.3.5'
 
-    Affix.RESET    = 'affix affix-top affix-bottom'
+    Affix.RESET = 'affix affix-top affix-bottom'
 
     Affix.DEFAULTS = {
         offset: 0,
@@ -43,8 +145,8 @@
     }
 
     Affix.prototype.getState = function (scrollHeight, height, offsetTop, offsetBottom) {
-        var scrollTop    = this.$target.scrollTop()
-        var position     = this.$element.offset()
+        var scrollTop = this.$target.scrollTop()
+        var position = this.$element.offset()
         var targetHeight = this.$target.height()
 
         if (offsetTop != null && this.affixed == 'top') return scrollTop < offsetTop ? 'top' : false
@@ -54,8 +156,8 @@
             return (scrollTop + targetHeight <= scrollHeight - offsetBottom) ? false : 'bottom'
         }
 
-        var initializing   = this.affixed == null
-        var colliderTop    = initializing ? scrollTop : position.top
+        var initializing = this.affixed == null
+        var colliderTop = initializing ? scrollTop : position.top
         var colliderHeight = initializing ? targetHeight : height
 
         if (offsetTop != null && scrollTop <= offsetTop) return 'top'
@@ -68,7 +170,7 @@
         if (this.pinnedOffset) return this.pinnedOffset
         this.$element.removeClass(Affix.RESET).addClass('affix')
         var scrollTop = this.$target.scrollTop()
-        var position  = this.$element.offset()
+        var position = this.$element.offset()
         return (this.pinnedOffset = position.top - scrollTop)
     }
 
@@ -79,14 +181,14 @@
     Affix.prototype.checkPosition = function () {
         if (!this.$element.is(':visible')) return
 
-        var height       = this.$element.height()
-        var offset       = this.options.offset
-        var offsetTop    = offset.top
+        var height = this.$element.height()
+        var offset = this.options.offset
+        var offsetTop = offset.top
         var offsetBottom = offset.bottom
         var scrollHeight = Math.max($(document).height(), $(document.body).height())
 
-        if (typeof offset != 'object')         offsetBottom = offsetTop = offset
-        if (typeof offsetTop == 'function')    offsetTop    = offset.top(this.$element)
+        if (typeof offset != 'object') offsetBottom = offsetTop = offset
+        if (typeof offsetTop == 'function') offsetTop = offset.top(this.$element)
         if (typeof offsetBottom == 'function') offsetBottom = offset.bottom(this.$element)
 
         var affix = this.getState(scrollHeight, height, offsetTop, offsetBottom)
@@ -95,7 +197,7 @@
             if (this.unpin != null) this.$element.css('top', '')
 
             var affixType = 'affix' + (affix ? '-' + affix : '')
-            var e         = $.Event(affixType + '.bs.affix')
+            var e = $.Event(affixType + '.bs.affix')
 
             this.$element.trigger(e)
 
@@ -123,8 +225,8 @@
 
     function Plugin(option) {
         return this.each(function () {
-            var $this   = $(this)
-            var data    = $this.data('bs.affix')
+            var $this = $(this)
+            var data = $this.data('bs.affix')
             var options = typeof option == 'object' && option
 
             if (!data) $this.data('bs.affix', (data = new Affix(this, options)))
@@ -134,7 +236,7 @@
 
     var old = $.fn.affix
 
-    $.fn.affix             = Plugin
+    $.fn.affix = Plugin
     $.fn.affix.Constructor = Affix
 
 
@@ -158,7 +260,7 @@
             data.offset = data.offset || {}
 
             if (data.offsetBottom != null) data.offset.bottom = data.offsetBottom
-            if (data.offsetTop    != null) data.offset.top    = data.offsetTop
+            if (data.offsetTop != null) data.offset.top = data.offsetTop
 
             Plugin.call($spy, data)
         })

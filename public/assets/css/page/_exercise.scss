@@ -1,0 +1,140 @@
+@charset "UTF-8";
+.exercise {
+    text-align: center;
+    margin: 30px auto;
+    &__1-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        order: 1;
+    }
+    &__1-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        order: 0;
+    }
+    &__1-3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        order: 2;
+    }
+    &__img {
+        width: 185px;
+        height: 185px;
+        border-radius: 50%;
+        background-color: $color-white;
+        box-shadow: 4px 8px 20px 0 rgba(41, 38, 38, 0.1);
+        @include img-scale(1, 1);
+        margin-bottom: 10px;
+    }
+    &__title {
+        font-size: em(20);
+        letter-spacing: 2.5px;
+        color: #434e58;
+        margin-bottom: 10px;
+    }
+    &__subtitle {
+        font-size: em(16);
+        font-weight: 300;
+        color: $color-rosy-pink;
+        margin-bottom: 30px;
+    }
+    &__step {
+        &-no {
+            font-size: em(22);
+            font-weight: bolder;
+            color: #626262;
+            margin-bottom: 10px;
+        }
+        &-title {
+            font-size: em(30);
+            font-weight: bolder;
+            letter-spacing: 6px;
+            color: #434343;
+            margin-bottom: 40px;
+        }
+    }
+    &__acp {
+        position: relative;
+        overflow: hidden;
+        margin-top: 50px;
+        &::before{
+            content: "";
+            position: absolute;
+            width: 70%;
+            height: 15px;
+            left: 15%;
+            bottom: -15px;
+            box-shadow: 0 0 30px 0 rgba(0,0,0,0.5);
+        }
+        &-btn {
+            display: block;
+            color: $color-white;
+            margin: 0 auto;            
+            background: url(../images/icon/exercise-ACP-btn.png) no-repeat center bottom;                        
+            background-size: contain;
+            width: 155px;
+            height: 56px;
+            font-size: em(20);;
+            font-weight: 500;
+            letter-spacing: 3.4px;
+            line-height: 80px;
+        }
+    }
+}
+
+@media (min-width: $media-lg) {
+    .exercise {
+        margin: 100px auto 0 auto;
+        &__1-1 {
+            order: 0;
+        }
+        &__1-2 {
+            order: 1;
+        }
+        &__1-3 {
+            order: 2;
+        }
+        &__img {
+            margin-bottom: 30px;
+        }
+        &__title {
+            font-size: em(25);
+            margin-bottom: 20px;
+        }
+        &__subtitle {
+            font-size: em(20);
+            margin-bottom: 100px;
+        }
+        &__acp {
+            position: relative;
+            overflow: hidden;
+            &::before{
+                content: "";
+                position: absolute;
+                width: 50%;
+                height: 15px;
+                left: 25%;
+                bottom: -20px;
+                box-shadow: 0 0 30px 0 rgba(0,0,0,0.5);
+            }
+            &-btn {
+                display: block;
+                color: $color-white;
+                margin: 0 auto;            
+                background: url(../images/icon/exercise-ACP-btn.png) no-repeat center bottom;                        
+                width: 311px;
+                height: 112px;
+                font-size: em(34);
+                font-weight: 500;
+                letter-spacing: 3.4px;
+                line-height: 150px;
+            }
+        }
+    }
+}

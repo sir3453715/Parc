@@ -4,10 +4,17 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
+use Laravel\Scout\Searchable;
+
 
 
 class article extends Model
 {
+    use Searchable;
+    public function searchableAs()
+    {
+        return 'article_index';
+    }
     //
     protected $guarded = [];
 
@@ -34,6 +41,18 @@ class article extends Model
     }
     public function extra_sub_category(){
         $name= DB::table('extra_sub_category')->where('id',$this->extra_sub_category)->value('name');
+        return $name;
+    }
+    public function category_en(){
+        $name= DB::table('category')->where('id',$this->category)->value('en_name');
+        return $name;
+    }
+    public function sub_category_en(){
+        $name= DB::table('sub_category')->where('id',$this->sub_category)->value('en_name');
+        return $name;
+    }
+    public function extra_sub_category_en(){
+        $name= DB::table('extra_sub_category')->where('id',$this->extra_sub_category)->value('en_name');
         return $name;
     }
     // Get User_name

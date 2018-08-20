@@ -1,22 +1,24 @@
 @charset "UTF-8";
 .breadcrumb {
   display: block;
-  padding: 0.75rem 15px;
-  margin-top: 10px;
-  margin-bottom: 15px;
+  padding:0 0 0.25rem 0;
+  margin-top: 0;
+  margin-bottom: 0;
   list-style: none;
   background-color: transparent;
   border-radius: 0;
-  font-size: 13px;
+  font-size: em(13);
   line-height: 18px;
 }
 
 .breadcrumb-item {
   display: inline-block;
+  padding:0.25rem 0;
   color: $color-charcoal-grey;
   &::before{
     padding-left: 0.1rem !important;
     padding-right: 0.1rem !important;
+    width: 1rem;
   }
   &.active {
     color: $color-warm-grey;
@@ -26,12 +28,5 @@
     &:hover {
       text-decoration: underline;
     }
-  }
-}
-
-
-@media (min-width: $media-md) {
-  .breadcrumb {
-    padding: 0.75rem 0;
   }
 }

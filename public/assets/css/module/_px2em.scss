@@ -17,9 +17,8 @@ $browser-context: 16;
 }
 
 
-@mixin font-size($size) {
-  font-size: $size;
-  font-size: em($size);
+@function font-size($size) {
+  @return em($size);
 }
 
 @mixin em($size) {

@@ -3,7 +3,7 @@
   position: relative;
   padding: 5px;
   float: left;
-  font-size: 12px;
+  font-size: em(12);
   box-shadow: none;
   &:hover{
     z-index: 100;
@@ -38,7 +38,7 @@
     }
     &--more{
       display: inline-block;
-      font-size: 12px;
+      font-size: em(12);
       color:$color-greyish-brown;
     }
   }
@@ -74,7 +74,7 @@
   }
   &__price{
     ins{
-      font-size: 14px;
+      font-size: em(14);
       font-weight: 600;
       text-decoration: none;
     }
@@ -83,7 +83,7 @@
     }
     a {
       color: $color-white-three;
-      font-size: 13px;
+      font-size: em(13);
       margin-left: 8px;
       &:hover{
         color:$color-grapefruit;
@@ -104,7 +104,7 @@
     width: 100%;
     top:50%;
     left:0;
-    font-size: 24px;
+    font-size: em(24);
     color: $color-tea;
     .owl-prev{
       position: absolute;
@@ -219,7 +219,7 @@
     position: relative;
     overflow: hidden;
     line-height: 25px;
-    font-size: 18px;
+    font-size: em(18);
     font-weight: lighter;
     letter-spacing: 5px;
     text-align: center;
@@ -265,7 +265,7 @@
     -webkit-border-radius:0;
     display: inline-block;
     border-radius: 0;
-    font-size: 13px;
+    font-size: em(13);
     color: $color-black;
     margin: 10px 5px 10px 0;
     padding: 4px 5px 5px 5px;
@@ -273,7 +273,7 @@
     height: 33px;
   }
   &__title {
-    font-size: 16px;
+    font-size: em(16);
     line-height: 22px;
     color: $color-black;
     padding: 10px 15px;
@@ -285,7 +285,7 @@
       width: 100%;
       top:50%;
       left:0;
-      font-size: 24px;
+      font-size: em(24);
       color: $color-tea;
       .owl-prev{
         position: absolute;
@@ -350,7 +350,7 @@
       bottom: 0;
       left: 0;
       line-height: 22px;
-      font-size: 16px;
+      font-size: em(16);
       font-weight: bold;
       text-align: center;
       text-decoration: none;
@@ -365,7 +365,7 @@
     }
     &__data {
       padding: 15px;
-      font-size: 13px;
+      font-size: em(13);
       background-color: $color-white;
     }
     &__info {
@@ -386,7 +386,7 @@
     }
     &__sale {
       display: inline-block;
-      font-size: 16px;
+      font-size: em(16);
       font-weight: 600;
       color: $color-light-red;
     }
@@ -401,7 +401,7 @@
 @media (min-width: $media-lg) {
   .product-item{
     padding: 10px 15px;
-    font-size: 13px;
+    font-size: em(13);
     &:hover{
       -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -421,10 +421,10 @@
     }
     &__price{
       ins{
-        font-size: 16px;
+        font-size: em(16);
       }
       a {
-        font-size: 18px;
+        font-size: em(18);
       }
     }
     &__empty{
@@ -440,7 +440,7 @@
       width: 100%;
       top:50%;
       left:0;
-      font-size: 24px;
+      font-size: em(24);
       color: $color-tea;
       .owl-prev{
         position: absolute;
@@ -489,7 +489,7 @@
     }
     &__title {
       line-height: 23px;
-      font-size: 23px;
+      font-size: em(23);
       margin-bottom: 10px;
       &--more {
         position: absolute;
@@ -498,7 +498,7 @@
         right: 10px;
         line-height: 23px;
         letter-spacing: 0;
-        font-size: 16px;
+        font-size: em(16);
         font-weight: 600;
         color: $color-tea;
         &:hover {
@@ -531,7 +531,7 @@
         bottom: -40px;
         left: 0;
         line-height: 22px;
-        font-size: 16px;
+        font-size: em(16);
         font-weight: bold;
         text-align: center;
         text-decoration: none;

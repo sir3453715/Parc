@@ -77,7 +77,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'tw',
 
     /*
     |--------------------------------------------------------------------------
@@ -172,6 +172,8 @@ return [
         Unisharp\Laravelfilemanager\LaravelFilemanagerServiceProvider::class,
         UniSharp\DocUs\DocUsServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
+        TeamTNT\Scout\TNTSearchScoutServiceProvider::class,
+        Laravel\Scout\ScoutServiceProvider::class,
 
 
 
@@ -186,7 +188,7 @@ return [
 
         App\Providers\ComposerServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
-
+        
     ],
 
     /*

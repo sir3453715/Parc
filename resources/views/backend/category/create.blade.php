@@ -43,7 +43,7 @@
                                             <div class="col-lg-3 nopadding">
                                                     <div class="form-group">
 
-                                                        <select size="6" class="custom-select" name="sub_category" id="sub_category">
+                                                        <select size="6" class="custom-select" name="sub_category" id="sub_category" hidden>
                                                             
                                                         </select>
                                                         <button type="button" name="create_sub_category" id="create_sub_category" class="btn btn-primary btn-xs" onclick="sub_category_function()">New</button>
@@ -65,7 +65,7 @@
                                         <td>
                                             <div class="col-lg-3 nopadding">
                                                     <div class="form-group">
-                                                            <select size="6" class="custom-select" id="extra_sub_category" name="extra_sub_category">
+                                                            <select size="6" class="custom-select" id="extra_sub_category" name="extra_sub_category" hidden>
                                                                     <option value="" selected disabled hidden>其他分類</option>
                                                                 </select>
                                                         <button type="button" name="create_extra_sub_category" id="create_extra_sub_category" class="btn btn-primary btn-xs" onclick="extra_sub_category_function()">New</button>
@@ -239,6 +239,18 @@
                             $.each(data, function(key, value) {
                                 $('select[name="sub_category"]').append('<option id="'+ value +'" value="'+ key +'">'+ value +'</option>');
                             });
+                            if ($('#sub_category').children().length > 0 ) {
+                                $('#sub_category').removeAttr("hidden");
+                            }
+                            else{
+                                $('#sub_category').attr("hidden","");
+                            }
+                            if ($('#extra_sub_category').children().length > 0 ) {
+                                $('#extra_sub_category').removeAttr("hidden");
+                            }
+                            else{
+                                $('#extra_sub_category').attr("hidden","");
+                            }
                         }
                     });
                 }else{
@@ -259,6 +271,12 @@
                             $.each(data, function(key, value) {
                                 $('select[name="extra_sub_category"]').append('<option disabled id="'+ value +'" value="'+ key +'">'+ value +'</option>');
                             });
+                            if ($('#extra_sub_category').children().length > 0 ) {
+                                $('#extra_sub_category').removeAttr("hidden");
+                            }
+                            else{
+                                $('#extra_sub_category').attr("hidden","");
+                            }
                             //set category default value
                         }
                     });

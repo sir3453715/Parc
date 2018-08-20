@@ -9,6 +9,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\File;
 use Maatwebsite\Excel\Facades\Excel;
+use Carbon\Carbon;
+
 
 use Session;
 
@@ -24,16 +26,16 @@ class DonateRepository{
         $condition=donate::select('*');
         
         if($request->date_start){
-            $condition=$condition->where('created_at','>',$request->date_start);
+            $condition=$condition->where('transaction_time','>',$request->date_start);
         }
         if($request->date_end){
-            $condition=$condition->where('created_at','<',$request->date_end);
+            $condition=$condition->where('transaction_time','<',$request->date_end);
         }
         if($request->name){
             $condition=$condition->where('name',$request->name);
         }
-        if($request->account){
-            $condition=$condition->where('account',$request->account);
+        if($request->receipt_id){
+            $condition=$condition->where('receipt_id',$request->receipt_id);
         }
         if($request->show_all){
             $condition=$condition->get();
@@ -62,25 +64,55 @@ class DonateRepository{
             
 
             $results=Excel::load($request->excel, function($reader) {
-
+                $reader->noHeading();
+                $reader->skipRows(1);
                 $results = $reader->get();
                 $results->toArray();
-                $count=0;
-                //$results = $reader->all();
+                $new_count=0;
+                $modify_count=0;
                 foreach($results as $result){
-                    $donate=new \App\Donate;
-                    $donate->name=$result["name"];
-                    $donate->account=$result["account"];
-                    $donate->amount=$result["amount"];
-                    $donate->transaction_time=$result["transaction_time"];
-                    $donate->save();
-                    $count++;
+                    //if receipt id duplicate
+                    if(donate::where('receipt_id', $result[4])->exists()){
+                        $duplicate = donate::where('receipt_id', $result[4])->latest()->first();
+                        $duplicate->name=$result[0];
+                        $duplicate->email=$result[1];
+                        $duplicate->phone=$result[2];
+                        $duplicate->transaction_time=Carbon::createFromFormat('Ymd', $result[3])->toDateString();
+                        $duplicate->amount=$result[5];
+                        $duplicate->created_at = new \DateTime();
+                        $duplicate->save();
+                        $modify_count++;
+                    }
+                    else{
+                        $donate=new \App\Donate;
+                        $donate->name=$result[0];
+                        $donate->email=$result[1];
+                        $donate->phone=$result[2];
+                        $donate->transaction_time=Carbon::createFromFormat('Ymd', $result[3])->toDateString();
+                        $donate->receipt_id=$result[4];
+                        $donate->amount=$result[5];
+                        $donate->save();
+                        $new_count++;
+                    }
                 }
-                $GLOBALS['count']=$count;
+                $GLOBALS['new_count']=$new_count;
+                $GLOBALS['modify_count']=$modify_count;
 
-            });
-            return $GLOBALS['count'];
+            },'UTF-8');
+            return $GLOBALS;
         }
 
+    }
+    public function update(Request $request, Donate $donate)
+    {
+        //
+        $donate->name               = request('name');
+        $donate->email              = request('email');
+        $donate->phone              = request('phone');
+        $donate->transaction_time   = request('transaction_time');
+        $donate->receipt_id         = request('receipt_id');
+        $donate->amount             = request('amount');
+        $donate->created_at         = new \DateTime();
+        $donate->save();
     }
 }

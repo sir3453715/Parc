@@ -1,0 +1,30 @@
+@charset "UTF-8";
+.info {
+  &-bar{
+    text-align: center;
+    margin: 10px auto;
+    &__icon{
+      width: 14px;
+    }
+    &__text{
+      font-size: em(14);
+      font-weight: bold;
+    }
+  }  
+}
+
+@media (min-width: $media-lg) {
+  .info {
+    &-bar{
+      text-align: center;
+      margin: 10px auto;
+      &__icon{
+        width: 20px;
+      }
+      &__text{
+        font-size: em(18);
+        font-weight: bold;
+      }
+    }  
+  }
+}

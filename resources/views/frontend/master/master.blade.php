@@ -9,7 +9,7 @@
     <meta name="description" content="" />
 
     <title>病人自主研究中心 | Patient Autonomy Research Center</title>
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="{{ asset('assets/ico/favicon.ico') }}">
 
     <!-- CSS -->
     {{-- <link rel="stylesheet" href="css/vendor/bootstrap/bootstrap.min.css">
@@ -34,8 +34,8 @@
                     </div>
                 </div>
             </div>
-                    {{-- navigation bar --}}
-                    @include('frontend.master.nav')
+            {{-- navigation bar --}}
+            @include('frontend.master.nav')
             <!--main-->
             @yield('main')
             <!--footer-->

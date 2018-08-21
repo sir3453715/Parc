@@ -40,27 +40,31 @@ class IndexController extends Controller
         //     $length = null , $category = null , $sub_category = null 
         // , $extra_sub_category = null , $display = null, $pagination = null , $order = false
         $data['slider'] = $this->articleRepo->getArticleResult(4,1,null,null,true);
-        if($request->type == 'special'){
+        $data['type'] = $type;
+        if($data['type'] == null){
+            $data['type'] = "special";
+        }
+        if($data['type'] == 'special'){
             //精選特輯
             $data['article_list'] = $this->articleRepo->getArticleSpecial(null,6);
         }
-        else if($request->type == 'love'){
+        else if($data['type'] == 'love'){
             //親愛劇場
             $data['article_list'] = $this->articleRepo->getArticleResult(null,1,1,null,null,6);
         }
-        else if($request->type == 'doctor'){
+        else if($data['type'] == 'doctor'){
             //白袍時間
             $data['article_list'] = $this->articleRepo->getArticleResult(null,1,2,null,null,6);
         }
-        else if($request->type == 'life'){
+        else if($data['type'] == 'life'){
             //生死迷藏
             $data['article_list'] = $this->articleRepo->getArticleResult(null,1,3,null,null,6);
         }
-        else if($request->type == 'expert'){
+        else if($data['type'] == 'expert'){
             //權威觀點
             $data['article_list'] = $this->articleRepo->getArticleResult(null,1,4,null,null,6);
         }
-        else if($request->type == 'story'){
+        else if($data['type'] == 'story'){
             //私房故事
             $data['article_list'] = $this->articleRepo->getArticleResult(null,1,5,null,null,6);
         }
@@ -68,7 +72,6 @@ class IndexController extends Controller
             //精選特輯
             $data['article_list'] = $this->articleRepo->getArticleSpecial(null,6);
         }
-        $data['type'] = $type;
         return view('frontend.story.index',$data);
     }
     public function eventIndex(Request $request){
@@ -233,7 +236,8 @@ class IndexController extends Controller
         return view('frontend.nav.about.ceo');
     }
     public function aboutHistory(Request $request){
-        return view('frontend.nav.about.history');
+        $data['milestone'] = $this->otherRepo->getAboutMilestoneResult();
+        return view('frontend.nav.about.history',$data);
     }
     public function aboutOrganization(Request $request){
         return view('frontend.nav.about.organization');

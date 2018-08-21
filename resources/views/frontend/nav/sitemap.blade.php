@@ -66,28 +66,28 @@
         <a href="{{ url('/trend/ngo') }}" class="col-6 col-lg-3 sitemap__item">4-3 國際NGO</a>
         <a href="{{ url('/trend/world') }}" class="col-6 col-lg-3 sitemap__item">4-4 世界趨勢</a>
 
-        <a href="{{ url('news/center') }}" class="col-12 sitemap__title">5.最新消息</a>
-        <a href="{{ url('news/center') }}" class="col-6 col-lg-3 sitemap__item">5-1 中心動態</a>
-        <a href="{{ url('news/law') }}" class="col-6 col-lg-3 sitemap__item">5-2 法規政策動態</a>
-        <a href="{{ url('news/event') }}" class="col-6 col-lg-3 sitemap__item">5-3 課程與活動動態</a>
-        <a href="{{ url('news/international') }}" class="col-6 col-lg-3 sitemap__item">5-4 國際動態</a>
+        <a href="{{ url('/news/center') }}" class="col-12 sitemap__title">5.最新消息</a>
+        <a href="{{ url('/news/center') }}" class="col-6 col-lg-3 sitemap__item">5-1 中心動態</a>
+        <a href="{{ url('/news/law') }}" class="col-6 col-lg-3 sitemap__item">5-2 法規政策動態</a>
+        <a href="{{ url('/news/event') }}" class="col-6 col-lg-3 sitemap__item">5-3 課程與活動動態</a>
+        <a href="{{ url('/news/international') }}" class="col-6 col-lg-3 sitemap__item">5-4 國際動態</a>
 
-        <a href="#" class="col-12 sitemap__title">6.關於我們</a>
-        <a href="#" class="col-6 col-lg-3 sitemap__item">6-1 認識病主</a>
-        <a href="#" class="col-6 col-lg-3 sitemap__item">6-2 執行長的話</a>
-        <a href="#" class="col-6 col-lg-3 sitemap__item">6-3 組織簡介</a>
-        <a href="#" class="col-6 col-lg-3 sitemap__item">6-4 大事紀</a>
+        <a href="{{ url('/about') }}" class="col-12 sitemap__title">6.關於我們</a>
+        <a href="{{ url('/about') }}" class="col-6 col-lg-3 sitemap__item">6-1 認識病主</a>
+        <a href="{{ url('/about/ceo') }}" class="col-6 col-lg-3 sitemap__item">6-2 執行長的話</a>
+        <a href="{{ url('/about/organization') }}" class="col-6 col-lg-3 sitemap__item">6-3 組織簡介</a>
+        <a href="{{ url('/about/history') }}" class="col-6 col-lg-3 sitemap__item">6-4 大事紀</a>
 
-        <a href="#" class="col-12 sitemap__title">7.行使權利</a>
+        <a href="{{ url('/exercise') }}" class="col-12 sitemap__title">7.行使權利</a>
 
-        <a href="#" class="col-12 sitemap__title">8.常見問題 </a>
+        <a href="{{ url('/faq') }}" class="col-12 sitemap__title">8.常見問題 </a>
 
-        <a href="#" class="col-12 sitemap__title">9.我要支持 </a>
+        <a href="{{ url('/donate') }}" class="col-12 sitemap__title">9.我要支持 </a>
         <a href="#" class="col-6 col-lg-3 sitemap__item">9-1 我要捐款</a>
         <a href="#" class="col-6 col-lg-3 sitemap__item">9-2 成為志工</a>
-        <a href="#" class="col-6 col-lg-3 sitemap__item">9-3 分享故事</a>
+        <a href="{{ url('/donate/story') }}" class="col-6 col-lg-3 sitemap__item">9-3 分享故事</a>
         <a href="#" class="col-6 col-lg-3 sitemap__item">9-4 成為會員</a>
-        <a href="#" class="col-6 col-lg-3 sitemap__item">9-5 捐款徵信</a>
+        <a href="{{ url('/donate/inquiry') }}" class="col-6 col-lg-3 sitemap__item">9-5 捐款徵信</a>
 
         <a href="#" class="col-12 sitemap__title">追蹤我們</a>
         <a href="#" class="col-6 col-lg-3 sitemap__item">

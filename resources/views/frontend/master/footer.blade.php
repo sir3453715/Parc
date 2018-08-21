@@ -8,7 +8,7 @@
             </div>
             <div class="col-12 col-lg-4 text-center">
                 <div class="footer-title">即刻行動</div>
-                <a href="#" title="分享故事" class="footer-link">分享故事</a> /
+                <a href="{{ url('/donate/story') }}" title="分享故事" class="footer-link">分享故事</a> /
                 <a href="#" title="我要捐款" class="footer-link">我要捐款</a> /
                 <a href="#" title="訂閱電子報" class="footer-link">訂閱電子報</a>
             </div>

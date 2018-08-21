@@ -5,7 +5,7 @@
 
 	<div class="row">
 		<div class="col-lg-10">
-			<form id="EditForm" enctype="multipart/form-data" class="form-horizontal" method="post" action="/backend/milestone/edit/{{$datas["milestone"]->id}}">
+			<form id="EditForm" enctype="multipart/form-data" class="form-horizontal" method="post" action="/backend/about_milestone/edit/{{$datas["milestone"]->id}}">
 				{{ csrf_field() }}
 				<div class="panel panel-primary">
 					<div class="panel-heading">
@@ -142,10 +142,10 @@
 	$(document).ready(function() {
 		//Back
 		$("#btnBackTo2").click(function() {
-			location.href='{{ url('backend/milestone') }}';
+			location.href='{{ url('backend/about_milestone') }}';
 		});
 		$("#btnBackTo2_foot").click(function() {
-			location.href='{{ url('backend/milestone') }}';
+			location.href='{{ url('backend/about_milestone') }}';
 		});
 		//初始化需要偵錯的表格
 		$('#EditForm').validate();

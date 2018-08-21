@@ -16,7 +16,7 @@
                 </a>                 
             </div>
             <!-- 我要捐款 -->
-            <a href="donate.html" title="我要捐款" class="btn-donation">我要<br>捐款</a>
+            <a href="{{ url('/donate') }}" title="我要捐款" class="btn-donation">我要<br>捐款</a>
             <!-- GoTop -->
             <a href="#" title="Go Top" class="btn-gotop">
                 <i class="fa fa-caret-up"></i>
@@ -36,7 +36,7 @@
                         <ul class="col-12 col-lg-8 nav justify-content-end">
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('story/special') }}" title="生命故事">生命故事</a>
-                                <a href="#nav-event" class="nav-plus collapsed" data-toggle="collapse"><i class="fa fa-chevron-right"></i></a>
+                                <a href="#nav-story" class="nav-plus collapsed" data-toggle="collapse"><i class="fa fa-chevron-right"></i></a>
                                 <div class="sub-nav collapsed collapse" id="nav-story">
                                     <div class="sub-nav__box">
                                         <div class="sub-nav__item">
@@ -115,7 +115,7 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('news/center') }}" title="最新消息">最新消息</a>
+                                <a class="nav-link" href="{{ url('/news') }}" title="最新消息">最新消息</a>
                                 <a href="#nav-news" class="nav-plus collapsed" data-toggle="collapse"><i class="fa fa-chevron-right"></i></a>
                                 <div class="sub-nav collapsed collapse" id="nav-news">
                                     <div class="sub-nav__box">

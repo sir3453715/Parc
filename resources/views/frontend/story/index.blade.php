@@ -68,27 +68,27 @@
             <script type="text/javascript">
                 $(document).ready(function() {
 
-                    if( '{{Request::path()}}' == 'story/story')
+                    if( '{{ $type }}' == 'story')
                     {
                         $("#active_breadcrumb").append("私房故事")
                         $("#story").addClass("active");
                     }
-                    else if( '{{Request::path()}}' == 'story/love')
+                    else if( '{{ $type }}' == 'love')
                     {
                         $("#active_breadcrumb").append("親愛劇場")
                         $("#love").addClass("active");
                     }
-                    else if( '{{Request::path()}}' == 'story/doctor')
+                    else if( '{{ $type }}' == 'doctor')
                     {
                         $("#active_breadcrumb").append("白袍診間")
                         $("#doctor").addClass("active");
                     }
-                    else if( '{{Request::path()}}' == 'story/life')
+                    else if( '{{ $type }}' == 'life')
                     {
                         $("#active_breadcrumb").append("生死迷藏")
                         $("#life").addClass("active");
                     }
-                    else if( '{{Request::path()}}' == 'story/expert')
+                    else if( '{{ $type }}' == 'expert')
                     {
                         $("#active_breadcrumb").append("權威觀點")
                         $("#expert").addClass("active");

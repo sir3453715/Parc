@@ -20,7 +20,7 @@
             <!-- photo-x3 -->
             <div class="photo-x3 owl-carousel">
                 @foreach($slider as $data)
-                <a href="#" class="item photo-x3__item" title="{{$data->title}}">
+                <a href="{{ url('/'. $data->category_en(). '/'. $data->sub_category_en() .'/article/'. $data->id) }}" class="item photo-x3__item" title="{{$data->title}}">
                     <div class="photo-x3__img" alt="{{$data->title}}" style="background: url(/storage/{{$data->pic}}) no-repeat center; background-size: cover;"></div>
                     <div class="photo-x3__title">{{$data->title}}</div>
                 </a>
@@ -40,7 +40,7 @@
                     </div>
                     <div class="banner-icon__title">如何行使權利</div>
                 </a>
-                <a href="#" class="col-6 col-lg-4 banner-icon" title="我要支持">
+                <a href="{{ url('/donate') }}" class="col-6 col-lg-4 banner-icon" title="我要支持">
                     <div class="banner-icon__img">
                         <img src="{{ asset('assets/images/icon/icon-03.png') }}" alt="我要支持" class="img-fluid" />
                     </div>
@@ -51,7 +51,7 @@
             <!-- banner-lector -->
             <div class="banner-lector owl-carousel">
                 @foreach($quote as $data)
-                <a href="#" class="item banner-lector__item">
+                <a class="item banner-lector__item">
                     <div class="banner-lector__img" alt="{!!$data->body!!}" style="background: url(/storage/{{$data->pic}}) no-repeat center; background-size: cover;"></div>
                         <div class="banner-lector__box">
                         <div class="banner-lector__title">{!!$data->body!!}</div>
@@ -65,28 +65,28 @@
             <h2 class="title">我們的服務</h2>
             <!-- banner-icon -->
             <div class="row px-2 px-lg-0">
-                <a href="#" class="col-6 col-lg-3 banner-icon">
+                <a href="{{ url('/story') }}" class="col-6 col-lg-3 banner-icon">
                     <div class="banner-icon__img">
                         <img src="{{ asset('assets/images/icon/icon-04.png') }}" alt="生命故事" class="img-fluid" />
                     </div>
                     <div class="banner-icon__title">生命故事</div>
                     <div class="banner-icon__subtitle">聚集各界感動人心的故事，探問生命課題，啟發善終思考。</div>
                 </a>
-                <a href="#" class="col-6 col-lg-3 banner-icon">
+                <a href="{{ url('/event') }}" class="col-6 col-lg-3 banner-icon">
                     <div class="banner-icon__img">
                         <img src="{{ asset('assets/images/icon/icon-05.png') }}" alt="課程與活動" class="img-fluid" />
                     </div>
                     <div class="banner-icon__title">課程與活動</div>
                     <div class="banner-icon__subtitle">各類專業課程、生命育樂活動及跨界創作專案，精彩登場。</div>
                 </a>
-                <a href="#" class="col-6 col-lg-3 banner-icon">
+                <a href="{{ url('/law') }}" class="col-6 col-lg-3 banner-icon">
                     <div class="banner-icon__img">
                         <img src="{{ asset('assets/images/icon/icon-06.png') }}" alt="法規政策" class="img-fluid" />
                     </div>
                     <div class="banner-icon__title">法規政策</div>
                     <div class="banner-icon__subtitle">提供我國《病人自主權利法》最新動態及研究文獻。</div>
                 </a>
-                <a href="#" class="col-6 col-lg-3 banner-icon">
+                <a href="{{ url('/trend') }}" class="col-6 col-lg-3 banner-icon">
                     <div class="banner-icon__img">
                         <img src="{{ asset('assets/images/icon/icon-07.png') }}" alt="全球脈動" class="img-fluid" />
                     </div>

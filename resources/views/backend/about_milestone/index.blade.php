@@ -10,8 +10,8 @@
                             <div class="panel-title">Manage Lecturer</div>
                         </div>
                         <div class="col-md-6" style="text-align: right">
-                            <a class="btn btn-darkblue btn-xs" href="{{ url('backend/milestone/order') }}"><strong>Order</strong></a>
-                            <a class="btn btn-darkblue btn-xs" href="{{ url('backend/milestone/create') }}"><strong>Add</strong></a>
+                            <a class="btn btn-darkblue btn-xs" href="{{ url('backend/about_milestone/order') }}"><strong>Order</strong></a>
+                            <a class="btn btn-darkblue btn-xs" href="{{ url('backend/about_milestone/create') }}"><strong>Add</strong></a>
                         </div>
                     </div>
                 </div>
@@ -47,8 +47,8 @@
                                     <td>{{ $data->created_at }}</td>
                                     <td>{{ $data->updated_at }}</td>
                                     <td style="text-align: right">
-                                        <form method="post" action="{{ url('/backend/milestone/delete/'.$data->id) }} ">
-                                            <a class="btn btn-xs btn-success" href="{{ url('/backend/milestone/edit/'.$data->id) }}">Edit</a>
+                                        <form method="post" action="{{ url('/backend/about_milestone/delete/'.$data->id) }} ">
+                                            <a class="btn btn-xs btn-success" href="{{ url('/backend/about_milestone/edit/'.$data->id) }}">Edit</a>
                                             {{ csrf_field() }}
                                             {{ method_field('DELETE') }}
                                             <button type="submit" class="btn btn-danger btn-xs" onclick="return confirm('Are you sure?')"><strong>Delete</strong></button>

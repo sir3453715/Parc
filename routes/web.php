@@ -45,7 +45,8 @@ Route::group(['namespace' => 'Frontend'], function () {
     Route::get('/about/ceo', 'IndexController@aboutCeo');
     Route::get('/about/history', 'IndexController@aboutHistory');
     Route::get('/about/organization', 'IndexController@aboutOrganization');
-    
+    Route::view('/404', 'frontend.master.404');
+    Route::view('/edm_complete', 'frontend.edm_complete');
 });
 
 // Route::get('/', function () {
@@ -166,6 +167,15 @@ Route::group(['middleware' => 'web', 'prefix' => 'backend'], function () {
         Route::get('/milestone/order','MileStoneController@order');
         Route::post('/milestone/order','MileStoneController@order_update');
         Route::delete('/milestone/delete/{milestone}','MileStoneController@destroy');
+        
+        Route::get('/about_milestone','AboutMileStoneController@index');
+        Route::get('/about_milestone/create','AboutMileStoneController@create');
+        Route::post('/about_milestone/create','AboutMileStoneController@store');
+        Route::get('/about_milestone/edit/{about_milestone}','AboutMileStoneController@edit');
+        Route::post('/about_milestone/edit/{about_milestone}','AboutMileStoneController@update');
+        Route::get('/about_milestone/order','AboutMileStoneController@order');
+        Route::post('/about_milestone/order','AboutMileStoneController@order_update');
+        Route::delete('/about_milestone/delete/{about_milestone}','AboutMileStoneController@destroy');
 
         Route::get('/faq','FaqController@index');
         Route::get('/faq/create','FaqController@create');

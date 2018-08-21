@@ -7,6 +7,7 @@ use App\lecturer;
 use App\ContactForm;
 use App\faq;
 use App\donate;
+use App\AboutMilestone;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -30,6 +31,12 @@ class OtherRepository{
 
     public function getMilestoneResult($lang = "0"){
         $result = milestone::where('active','1');
+        $result = $result->where('lang',$lang);
+        $result = $result->orderBy('order', 'asc')->get();
+        return $result;
+    }
+    public function getAboutMilestoneResult($lang = "0"){
+        $result = AboutMilestone::where('active','1');
         $result = $result->where('lang',$lang);
         $result = $result->orderBy('order', 'asc')->get();
         return $result;

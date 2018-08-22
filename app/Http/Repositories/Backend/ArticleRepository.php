@@ -100,6 +100,7 @@ class ArticleRepository{
         $article->category=             request('category');
         $article->sub_category=         request('sub_category');
         $article->extra_sub_category=   request('extra_sub_category') ?: 0;
+        $article->tags=                 request('tags');
         $article->lang=                 request('lang');
         $article->display=              request('display')? 1:0;
         $article->user_id=              auth()->id();
@@ -139,6 +140,7 @@ class ArticleRepository{
             $copy->user_id=         $article->user_id;
             $copy->expiry_date=     $article->expiry_date;
             $copy->video_url=       $article->video_url;
+            $copy->tags=            $article->tags;
 
             //add own category
             $copy->category=$request->category2;
@@ -148,7 +150,7 @@ class ArticleRepository{
 
             $copy->save();
             //detach copy tag
-            $copy->tags()->detach();
+            // $copy->tags()->detach();
             
         }
         else if($article->pointer != null){
@@ -166,6 +168,7 @@ class ArticleRepository{
             $copy->user_id=         $article->user_id;
             $copy->expiry_date=     $article->expiry_date;
             $copy->video_url=       $article->video_url;
+            $copy->tags=            $article->tags;
 
             //add own category
             $copy->category=$request->category2;
@@ -175,51 +178,51 @@ class ArticleRepository{
 
             $copy->save();
             //detach copy tag
-            $copy->tags()->detach();
+            // $copy->tags()->detach();
         }
 
-        //detach all tag
-        $article->tags()->detach();
-        //save tag
-        $tags= new \App\Tag;
-        $tags_splitted=explode(',',$request->tags);
-        foreach($tags_splitted as $tag_splitted){
+        // //detach all tag
+        // $article->tags()->detach();
+        // //save tag
+        // $tags= new \App\Tag;
+        // $tags_splitted=explode(',',$request->tags);
+        // foreach($tags_splitted as $tag_splitted){
 
             
-            //if tag_splitted exist $exist_tag = new App\Tag::where('name','=',$tag_splitted);
-            // dont save it to tag
-            // reference it by $exist_tag=new blablabla
-            // attach
-            // else act normal
-            $exist_tag_name = \App\Tag::where('name','=',$tag_splitted)->first();
-            $exist_tag= $article->tags()->where('name',$tag_splitted)->exists();
-            if(!$exist_tag){
-                if($exist_tag_name!=null){
-                    //attach tag
-                    $article->tags()->attach($exist_tag_name);
+        //     //if tag_splitted exist $exist_tag = new App\Tag::where('name','=',$tag_splitted);
+        //     // dont save it to tag
+        //     // reference it by $exist_tag=new blablabla
+        //     // attach
+        //     // else act normal
+        //     $exist_tag_name = \App\Tag::where('name','=',$tag_splitted)->first();
+        //     $exist_tag= $article->tags()->where('name',$tag_splitted)->exists();
+        //     if(!$exist_tag){
+        //         if($exist_tag_name!=null){
+        //             //attach tag
+        //             $article->tags()->attach($exist_tag_name);
 
-                    if($copy!=null){
-                        $copy->tags()->attach($exist_tag_name);    
-                    }
+        //             if($copy!=null){
+        //                 $copy->tags()->attach($exist_tag_name);    
+        //             }
 
-                    //refresh tag
-                    $tags= new \App\Tag;
-                }
-                else{
-                    $tags->name=$tag_splitted;
-                    $tags->save();
-                    //attach tag
-                    $article->tags()->attach($tags);
+        //             //refresh tag
+        //             $tags= new \App\Tag;
+        //         }
+        //         else{
+        //             $tags->name=$tag_splitted;
+        //             $tags->save();
+        //             //attach tag
+        //             $article->tags()->attach($tags);
 
-                    if($copy!=null){
-                        $copy->tags()->attach($tags);    
-                    }
+        //             if($copy!=null){
+        //                 $copy->tags()->attach($tags);    
+        //             }
 
-                    //refresh tag
-                    $tags= new \App\Tag;
-                }
-            }
-        }
+        //             //refresh tag
+        //             $tags= new \App\Tag;
+        //         }
+        //     }
+        // }
     }
     public function store(Request $request){
         $article=article::create([
@@ -230,6 +233,7 @@ class ArticleRepository{
             'category'                  =>request('category'),
             'sub_category'              =>request('sub_category'),
             'extra_sub_category'        =>request('extra_sub_category') ?: 0,
+            'tags'                      =>request('tags'),
             'user_id'                   =>auth()->id(),
             'lock'                      =>request('lock') ? 1:0,
             'lang'                      =>request('lang'),
@@ -267,44 +271,44 @@ class ArticleRepository{
         }
         $article->save();
 
-        //save tag
-        $tags= new \App\Tag;
-        $tags_splitted=explode(',',$request->tags);
-        foreach($tags_splitted as $tag_splitted){
+        // //save tag
+        // $tags= new \App\Tag;
+        // $tags_splitted=explode(',',$request->tags);
+        // foreach($tags_splitted as $tag_splitted){
 
             
-            //if tag_splitted exist $exist_tag = new App\Tag::where('name','=',$tag_splitted);
-            // dont save it to tag
-            // reference it by $exist_tag=new blablabla
-            // attatch
-            // else act normal
-            $exist_tag_name = \App\Tag::where('name','=',$tag_splitted)->first();
-            $exist_tag= $article->tags()->where('name',$tag_splitted)->exists();
-            if(!$exist_tag){
-                if($exist_tag_name!=null){
-                    //attach tag
-                    $article->tags()->attach($exist_tag_name);
-                    if($copy!=null){
-                        $copy->tags()->attach($exist_tag_name);    
-                    }
+        //     //if tag_splitted exist $exist_tag = new App\Tag::where('name','=',$tag_splitted);
+        //     // dont save it to tag
+        //     // reference it by $exist_tag=new blablabla
+        //     // attatch
+        //     // else act normal
+        //     $exist_tag_name = \App\Tag::where('name','=',$tag_splitted)->first();
+        //     $exist_tag= $article->tags()->where('name',$tag_splitted)->exists();
+        //     if(!$exist_tag){
+        //         if($exist_tag_name!=null){
+        //             //attach tag
+        //             $article->tags()->attach($exist_tag_name);
+        //             if($copy!=null){
+        //                 $copy->tags()->attach($exist_tag_name);    
+        //             }
 
-                    //refresh tag
-                    $tags= new \App\Tag;
-                }
-                else{
-                    $tags->name=$tag_splitted;
-                    $tags->save();
-                    //attach tag
-                    $article->tags()->attach($tags);
-                    if($copy!=null){
-                        $copy->tags()->attach($tags);    
-                    }
+        //             //refresh tag
+        //             $tags= new \App\Tag;
+        //         }
+        //         else{
+        //             $tags->name=$tag_splitted;
+        //             $tags->save();
+        //             //attach tag
+        //             $article->tags()->attach($tags);
+        //             if($copy!=null){
+        //                 $copy->tags()->attach($tags);    
+        //             }
 
-                    //refresh tag
-                    $tags= new \App\Tag;
-                }
-            }
-        }
+        //             //refresh tag
+        //             $tags= new \App\Tag;
+        //         }
+        //     }
+        // }
     }
     public function destroy(article $article){
         if($article->pic){
@@ -313,12 +317,12 @@ class ArticleRepository{
         // pointer is either R or an id referencing another article
         if($article->pointer == "R"){
             $copy = article::where('pointer',$article->id)->first();
-            $copy->tags()->detach();
+            // $copy->tags()->detach();
             $copy->delete();
         }
         else if($article->pointer != null){
             $copy = article::find($article->pointer);
-            $copy->tags()->detach();
+            // $copy->tags()->detach();
             $copy->delete();
         }
         $article->delete();

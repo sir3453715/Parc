@@ -45,7 +45,12 @@
                 <img alt="時間" src="{{ asset('assets/images/icon/icon-clock.svg') }}" class="info-bar__icon img-fluid" />
                 <span class="info-bar__text">{{$datePresenter->getChineseMonth($article->created_at->month).' '.$article->created_at->day.','.$article->created_at->year}} </span>
                 <img alt="tag" src="{{ asset('assets/images/icon/icon-clock.svg') }}" class="info-bar__icon img-fluid" />
-                <span class="info-bar__text">{{$article->tagsname()}}</span>
+                @php
+                $tags_splitted=explode(',',$article->tags);
+                @endphp
+                @foreach ($tags_splitted as $tag_splitted )
+                <a href="{{ url('tag/'.$tag_splitted) }}"><span class="info-bar__text">#{{$tag_splitted}}</span></a>
+                @endforeach
             </div>
             <div class="social-bar">
                 <a href="#">

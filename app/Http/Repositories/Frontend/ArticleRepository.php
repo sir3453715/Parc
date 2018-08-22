@@ -67,4 +67,8 @@ class ArticleRepository{
         $data['article'] = $id;
         return $data;
     }
+    public function getTagResult($tag){
+        $result = article::where('tags','like','%'.$tag.'%')->paginate(6);
+        return $result;
+    }
 }

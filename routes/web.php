@@ -45,6 +45,7 @@ Route::group(['namespace' => 'Frontend'], function () {
     Route::get('/about/ceo', 'IndexController@aboutCeo');
     Route::get('/about/history', 'IndexController@aboutHistory');
     Route::get('/about/organization', 'IndexController@aboutOrganization');
+    Route::get('/tag/{tag}','IndexController@tagResult');
     Route::view('/404', 'frontend.master.404');
     Route::view('/edm_complete', 'frontend.edm_complete');
 });

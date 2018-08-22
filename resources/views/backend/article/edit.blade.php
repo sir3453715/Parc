@@ -189,7 +189,7 @@
                                         <td class="header-require col-lg-2">Tags</td>
                                         <td>
                                             <div class="col-lg-3 nopadding">
-                                                    <input name="tags" type="text" value="{{ $datas["article"]->tagsname() }}"  id="tags" class="form-control">
+                                                    <input name="tags" type="text" value="{{ $datas["article"]->tags }}"  id="tags" class="form-control">
                                                 <label class="error" for="tags"></label>
                                             </div>
                                         </td>

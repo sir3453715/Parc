@@ -242,4 +242,9 @@ class IndexController extends Controller
     public function aboutOrganization(Request $request){
         return view('frontend.nav.about.organization');
     }
+    public function tagResult($tag = null, Request $request){
+        $data['article_list'] = $this->articleRepo->getTagResult($tag);
+        $data['tag'] = $tag;
+        return view('frontend.tag',$data);
+    }
 }

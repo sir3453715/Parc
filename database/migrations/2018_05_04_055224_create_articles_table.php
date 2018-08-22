@@ -22,6 +22,7 @@ class CreateArticlesTable extends Migration
             $table->tinyInteger('category')->nullable()->default('0');
             $table->tinyInteger('sub_category')->nullable()->default('0');
             $table->tinyInteger('extra_sub_category')->nullable()->default('0');
+            $table->string('tags',250)->nullable();
             $table->string('pic',250)->nullable();
             $table->string('video_url',250)->nullable();
             $table->integer('user_id')->nullable(false);

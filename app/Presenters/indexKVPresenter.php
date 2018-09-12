@@ -7,34 +7,32 @@ class indexKVPresenter{
             return 
             '
             <tr>
-                <td>#</td>
-                <td>Active</td>
-                <td>Title</td>
-                <td>Author</td>
-                <td>Body</td>
-                <td>Picture</td>
-                <td>Link</td>
-                <td>Order</td>
-                <td>Language</td>
-                <td>Create Time</td>
-                <td>Modify Time</td>
-                <td></td>
+                <th style="width: 5%">Active</th>
+                <th style="width: 5%">Order</th>
+                <th>標題<br/>Title</th>
+                <th>作者<br/>Author</th>
+                <th>內文<br/>Content</th>
+                <th>圖片<br/>Picture</th>
+                <th style="width: 20%">連結<br/>Link</th>
+                <th>語言<br/>Language</th>
+                <th>新增時間<br/>Create Time</th>
+                <th>更新時間<br/>Modify Time</th>
+                <th></th>
             </tr>
             ';
         }
         else{
             return 
             '
-            <td>#</td>
-            <td>Active</td>
-            <td>Author</td>
-            <td>Body</td>
-            <td>Picture</td>
-            <td>Order</td>
-            <td>Language</td>
-            <td>Create Time</td>
-            <td>Modify Time</td>
-            <td></td>
+            <th style="width: 5%">有效<br/>Active</th>
+            <th style="width: 5%">順序<br/>Order</th>
+            <th>作者<br/>Author</th>
+            <th>內文<br/>Content</th>
+            <th>圖片<br/>Picture</th>
+            <th>語言<br/>Language</th>
+            <th>新增時間<br/>Create Time</th>
+            <th>更新時間<br/>Modify Time</th>
+            <th></th>
             ';
         }
     }

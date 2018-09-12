@@ -78,7 +78,6 @@
             @endif
         });
         function showArticle(id){
-            console.log("hello");
             $(".article").removeClass("active");
             $("#article"+id).addClass("active");
             $(".law").hide();

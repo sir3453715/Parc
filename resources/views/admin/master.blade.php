@@ -74,7 +74,6 @@ $('.children li a').click(function(){
 	$.cookie('children-id', funid, { path:'/'});
 	$.cookie('bread-parent', funmenu, { path:'/'});
 	$.cookie('bread-children', funname, { path:'/'});
-	console.log(funid + "/" + funmenu + "/" + funname);
 })
 </script>
 </html>

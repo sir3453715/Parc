@@ -20,9 +20,10 @@ class ArticleRepository{
     }
 
     public function getArticleResult($length = null , $category = null , $sub_category = null 
-    , $extra_sub_category = null , $display = null, $pagination = null , $order = false){
+    , $extra_sub_category = null , $display = null, $pagination = null , $order = false,$lang = "0"){
 
         $result = article::where('active','1')->where('category',$category);
+        $result = $result->where('lang',$lang);
         if($sub_category != null){
             $result = $result->where('sub_category',$sub_category);
         }

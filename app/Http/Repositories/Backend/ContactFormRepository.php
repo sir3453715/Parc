@@ -12,7 +12,7 @@ class ContactFormRepository{
         $this->contact_form=$contact_form;
     }
     public function index(){
-        return ContactForm::all();
+        return ContactForm::orderBy('updated_at','desc')->get();
     }
     public function store(Request $request){
         $contact_form=ContactForm::create(

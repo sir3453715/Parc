@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Repositories\Backend\PartnerRepository;
+use Illuminate\Support\Facades\Validator;
+
 
 use Session;
 use App\Http\Controllers\Controller;
@@ -54,8 +56,27 @@ class PartnerController extends Controller
     public function store(Request $request)
     {
         //
-        $this->partnerRepository->store($request);
-        return redirect('/backend/partner')->with('success','Logo Uploaded');
+        $messages = [
+            'pic.required'  => '請上傳圖片 Please upload an image',
+            'pic.image'     => '上傳檔案非圖片 File type not supported, please upload an image file',
+            'title.required'=> '請輸入標題 Please fill in title'
+            
+        ];
+        $validate = Validator::make($request->all(), [
+            'pic' => 'required|image',
+            'title' => 'required'
+            
+        ], $messages);
+
+        if ($validate->fails()) {
+            return redirect()->back()
+                ->withInput($request->all)
+                ->withErrors($validate);
+        }
+        else{
+            $this->partnerRepository->store($request);
+            return redirect('/backend/partner')->with('success','夥伴新增成功! Partner created successfully');
+        }
     }
 
     /**
@@ -95,7 +116,7 @@ class PartnerController extends Controller
     {
         //
         $this->partnerRepository->update($request,$partner);
-        return redirect('/backend/partner')->with('success','Logo Updated');
+        return redirect('/backend/partner')->with('success','夥伴更新成功! Partner Updated');
     }
 
     /**
@@ -110,7 +131,7 @@ class PartnerController extends Controller
             Storage::delete('public/'.$partner->pic);
         }
         $partner->delete();
-        return redirect('/backend/partner')->with('success','Logo Deleted');
+        return redirect('/backend/partner')->with('success','夥伴刪除成功 Partner Deleted');
     }
     public function order(){
         return view('backend.partner.order',
@@ -120,6 +141,6 @@ class PartnerController extends Controller
     }
     public function orderUpdate(Request $request){
         $this->partnerRepository->orderUpdate($request);
-        return redirect('/backend/partner')->with('success','Order Updated');
+        return redirect('/backend/partner')->with('success','順序已更新! Order Updated');
     }
 }

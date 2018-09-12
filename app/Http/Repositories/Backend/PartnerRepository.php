@@ -4,12 +4,14 @@ namespace App\Http\Repositories\Backend;
 use App\partner;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+
 
 class PartnerRepository{
-    protected $faq;
+    protected $partner;
 
     public function __construct(partner $partner){
-        $this->faq=$partner;
+        $this->partner=$partner;
     }
     public function index(){
         return partner::all()->sortBy("order");
@@ -24,8 +26,8 @@ class PartnerRepository{
         if($request->pic){
             $upload_image=$request->pic;
             $picName = time().'.'.$upload_image->getClientOriginalName();
-            $upload_image->storeAs('public', $picName);
-            $partner->pic=$picName;
+            $upload_image->storeAs('public/partner', $picName);
+            $partner->pic='partner/'.$picName;
             $partner->save();
         }
     }
@@ -33,10 +35,11 @@ class PartnerRepository{
         $partner->active  = request('active')? 1:0 ;
         $partner->title   = request('title');
         if($request->pic){
+            Storage::delete('public/'.$partner->pic);
             $upload_image=$request->pic;
             $picName = time().'.'.$upload_image->getClientOriginalName();
-            $upload_image->storeAs('public', $picName);
-            $partner->pic=$picName;
+            $upload_image->storeAs('public/partner', $picName);
+            $partner->pic='partner/'.$picName;
         }
         $partner->save();
     }

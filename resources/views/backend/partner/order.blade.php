@@ -6,7 +6,7 @@
 				{{ csrf_field() }}
 				<div class="panel panel-primary">
 					<div class="panel-heading">
-						<h4 class="panel-title">Order</h4>
+						<h4 class="panel-title">順序<br/>Order</h4>
 					</div>
 					<div class="panel-body">
 						<div>
@@ -21,7 +21,7 @@
                                                     <div class="form-group">
 														<ul id="example" class="list-group">
 															@foreach($datas as $data)
-																<li id="{{$data->id}}" class="list-group-item list-group-item-light"><img src="/storage/{{$data->pic}}" height="100"></li>
+															<li id="{{$data->id}}" class="list-group-item list-group-item-light">{{$data->title}}</li>
 															@endforeach
 														</ul>
 														<input type="hidden" id="order" name="order" value=""> 
@@ -34,8 +34,8 @@
 										<td>&nbsp;</td>
 										<td>
 											<div style="text-align: right">
-                                                <input type="submit" name="btnUpdate_foot" value="Update" id="btnUpdate_foot" class="btn btn-primary btn-xs" onclick="submitForm();">
-                                                <input type="button" name="btnBackTo2_foot" value="Back" id="btnBackTo2_foot" class="btn btn-default btn-xs">
+                                                <input type="button" name="btnBackTo2_foot" value="返回 Back" id="btnBackTo2_foot" class="btn btn-default btn-xs">
+                                                <input type="submit" name="btnUpdate_foot" value="更新 Update" id="btnUpdate_foot" class="btn btn-primary btn-xs" onclick="submitForm();">
 											</div>
 										</td>
 									</tr>
@@ -96,17 +96,13 @@
 		$("#EditForm").validate().cancelSubmit = true;
     }
 	</script>
-	<style>
-			#example { list-style-type: none; margin: 0; padding: 0; width: 450px; }
-			#example li { margin: auto; padding: 1px; float: left; width: 150px; height: 100px; font-size: 4em; text-align: center; }
-			</style>
 	<script src="{{ asset('assets/js/jquery.ui.sortable-animation.js')}}"></script>
 	<script>
 	$(document).ready(function(){
 		$('#example').sortable({
-		//axis: 'y',
+		axis: 'y',
 		placeholder: "ui-state-highlight",
-		//animation: 250,
+		animation: 250,
 		revert: 250,
 		update: function(event, ui) {
 			var newOrder = $(this).sortable('toArray');

@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Repositories\Backend\MileStoneRepository;
+use Illuminate\Support\Facades\Validator;
+
 
 use App\Http\Controllers\Controller;
 use Session;
@@ -37,8 +39,28 @@ class MileStoneController extends Controller
         ]);
     }
     public function store(Request $request){
-        $this->mileStoneRepository->store($request);
-        return redirect('/backend/milestone');
+        $messages = [
+            'title.required'  => '請輸入標題 Please fill in title',
+            'date.required'  => '請輸入日期 Please fill in date',
+            'pic.required'  => '請上傳圖片 Please upload image',
+            'pic.image'  => '上傳檔案非圖片 Please upload valid image',
+        ];
+        $validate = Validator::make($request->all(), [
+            'title' => 'required',
+            'date' => 'required',
+            'pic' => 'required|image',
+            
+        ], $messages);
+
+        if ($validate->fails()) {
+            return redirect()->back()
+                ->withInput($request->all)
+                ->withErrors($validate);
+        }
+        else{
+            $this->mileStoneRepository->store($request);
+            return redirect('/backend/milestone')->with('success','資料新增成功! Data created successfully');
+        }
     }
     public function edit(milestone $milestone){
         $datas = $this->mileStoneRepository->edit($milestone);
@@ -58,15 +80,30 @@ class MileStoneController extends Controller
         return redirect('/backend/milestone');
     }
     public function update(Request $request,milestone $milestone){
-        $this->mileStoneRepository->update($request,$milestone);
-        return redirect('/backend/milestone');
+        $messages = [
+            'title.required'  => '請輸入標題 Please fill in title',
+            'date.required'  => '請輸入日期 Please fill in date',
+        ];
+        $validate = Validator::make($request->all(), [
+            'title' => 'required',
+            'date' => 'required',            
+        ], $messages);
+
+        if ($validate->fails()) {
+            return redirect()->back()
+                ->withInput($request->all)
+                ->withErrors($validate);
+        }
+        else{
+            $this->mileStoneRepository->update($request,$milestone);
+            return redirect('/backend/milestone')->with('success','資料更新成功! Data updated successfully');
+        }
     }
     public function destroy(milestone $milestone){
         if($milestone->pic){
             Storage::delete('public/'.$milestone->pic);
         }
         $milestone->delete();
-        Session::flash('msg', 'Milestone Deleted');
-        return redirect('/backend/milestone');
+        return redirect('/backend/milestone')->with('success','資料已刪除 Data Deleted');
     }
 }

@@ -38,10 +38,10 @@ class DonateRepository{
             $condition=$condition->where('receipt_id',$request->receipt_id);
         }
         if($request->show_all){
-            $condition=$condition->get();
+            $condition=$condition->orderBy('updated_at','desc')->get();
         }
         else{
-            $condition=$condition->paginate(30);
+            $condition=$condition->orderBy('updated_at','desc')->paginate(30);
         }
         // $datas=array(
         //     "donate"   => $condition,

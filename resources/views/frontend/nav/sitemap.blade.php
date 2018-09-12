@@ -90,13 +90,13 @@
         <a href="{{ url('/donate/inquiry') }}" class="col-6 col-lg-3 sitemap__item">9-5 捐款徵信</a>
 
         <a href="#" class="col-12 sitemap__title">追蹤我們</a>
-        <a href="#" class="col-6 col-lg-3 sitemap__item">
+        <a href="https://www.facebook.com/parc.tw/" class="col-6 col-lg-3 sitemap__item" target="_blank" rel="noopener noreferrer">
             <img src="{{ asset('assets/images/icon/btn-facebook.png') }}" alt="facebook" />
         </a>
-        <a href="#" class="col-6 col-lg-3 sitemap__item">
+        <a href="#" class="col-6 col-lg-3 sitemap__item" target="_blank" rel="noopener noreferrer">
             <img src="{{ asset('assets/images/icon/btn-line.png') }}" alt="line" />
         </a>
-        <a href="#" class="col-6 col-lg-3 sitemap__item">
+        <a href="https://www.youtube.com/channel/UCkJWN2WEhzH_EA5QM65GchQ" class="col-6 col-lg-3 sitemap__item" target="_blank" rel="noopener noreferrer">
             <img src="{{ asset('assets/images/icon/btn-youtube.png') }}" alt="youtube" />
         </a>
     </div>

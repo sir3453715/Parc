@@ -21,7 +21,7 @@ class MileStoneRepository{
         return $datas;
     }
     public function store(Request $request){
-        $milestone=milestone::create([
+        $milestone=MileStone::create([
             'active'    =>request('active') ? 1:0,
             'title'     =>request('title'),
             'body'      =>request('body'),
@@ -32,8 +32,8 @@ class MileStoneRepository{
         if($request->pic){
             $upload_image=$request->pic;
             $picName = time().'.'.$upload_image->getClientOriginalName();
-            $upload_image->storeAs('public', $picName);
-            $milestone->pic=$picName;
+            $upload_image->storeAs('public/milestone', $picName);
+            $milestone->pic='milestone/'.$picName;
         }
         $milestone->save();
     }
@@ -51,13 +51,14 @@ class MileStoneRepository{
         $milestone->body    = request('body');
         $milestone->date    = request('date');
         $milestone->lang    = request('lang');
-        $milestone->order   = request('order');
+        // $milestone->order   = request('order');
         //save pic path
         if($request->pic){
+            Storage::delete('public/'.$milestone->pic);
             $upload_image=$request->pic;
             $picName = time().'.'.$upload_image->getClientOriginalName();
-            $upload_image->storeAs('public', $picName);
-            $milestone->pic=$picName;
+            $upload_image->storeAs('public/milestone', $picName);
+            $milestone->pic='milestone/'.$picName;
         }
         $milestone->save();
     }
@@ -66,7 +67,7 @@ class MileStoneRepository{
             $orders = explode(',', $request->order);
             $i=0;
             foreach($orders as $order){
-                $temp = milestone::find($order);
+                $temp = MileStone::find($order);
                 $temp->order=$i;
                 $i++;
                 $temp->save();

@@ -1,18 +1,20 @@
 <?php
 namespace App\Http\Repositories\Backend;
 
-use App\AboutMileStone;
+use App\AboutMilestone;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
-class AboutMileStoneRepository{
+
+class AboutMilestoneRepository{
     protected $about_milestone;
 
-    public function __construct(AboutMileStone $about_milestone){
+    public function __construct(AboutMilestone $about_milestone){
         $this->about_milestone=$about_milestone;
     }
     public function index(){
-        return AboutMileStone::all()->sortBy("order");
+        return AboutMilestone::all()->sortBy("order");
     }
     public function create(){
         $datas=array(
@@ -21,19 +23,19 @@ class AboutMileStoneRepository{
         return $datas;
     }
     public function store(Request $request){
-        $about_milestone=AboutMileStone::create([
+        $about_milestone=AboutMilestone::create([
             'active'    =>request('active') ? 1:0,
             'title'     =>request('title'),
             'body'      =>request('body'),
             'date'      =>request('date'),
             'lang'      =>request('lang'),
-            'order'     =>(AboutMileStone::latest()->value("order")+1)
+            'order'     =>(AboutMilestone::latest()->value("order")+1)
         ]);
         if($request->pic){
             $upload_image=$request->pic;
             $picName = time().'.'.$upload_image->getClientOriginalName();
-            $upload_image->storeAs('public', $picName);
-            $about_milestone->pic=$picName;
+            $upload_image->storeAs('public/aboutmilestone', $picName);
+            $about_milestone->pic='aboutmilestone/'.$picName;
         }
         $about_milestone->save();
     }
@@ -51,13 +53,14 @@ class AboutMileStoneRepository{
         $about_milestone->body    = request('body');
         $about_milestone->date    = request('date');
         $about_milestone->lang    = request('lang');
-        $about_milestone->order   = request('order');
+        // $about_milestone->order   = request('order');
         //save pic path
         if($request->pic){
+            Storage::delete('public/'.$about_milestone->pic);
             $upload_image=$request->pic;
             $picName = time().'.'.$upload_image->getClientOriginalName();
-            $upload_image->storeAs('public', $picName);
-            $about_milestone->pic=$picName;
+            $upload_image->storeAs('public/aboutmilestone', $picName);
+            $about_milestone->pic='aboutmilestone/'.$picName;
         }
         $about_milestone->save();
     }
@@ -66,7 +69,7 @@ class AboutMileStoneRepository{
             $orders = explode(',', $request->order);
             $i=0;
             foreach($orders as $order){
-                $temp = AboutMileStone::find($order);
+                $temp = AboutMilestone::find($order);
                 $temp->order=$i;
                 $i++;
                 $temp->save();

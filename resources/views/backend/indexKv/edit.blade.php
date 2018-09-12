@@ -10,9 +10,9 @@
 				<div class="panel panel-primary">
 					<div class="panel-heading">
                         @if(Request::segment(3)=="kv")
-                        <h4 class="panel-title">Modify Key Visual</h4>
+                        <h4 class="panel-title">編輯主視覺 Modify Key Visual</h4>
                         @else
-                        <h4 class="panel-title">Modify Quote</h4>
+                        <h4 class="panel-title">編輯引言 Modify Quote</h4>
                         @endif
 					</div>
 					<div class="panel-body">
@@ -22,7 +22,7 @@
 								<tbody>
                                     <!-- 欄位：active -->
 									<tr>
-                                        <td class="header-require col-lg-2">Active</td>
+                                        <td class="header-require col-lg-2">有效<br/>Active</td>
                                         <td>
                                             <div class="col-lg-3 nopadding">
                                                 <input name="active" type="checkbox" id="active" class="form-control" {{($datas["indexKV"]->active == 1) ? "checked" : "" }}>
@@ -33,7 +33,7 @@
                                     <!-- 欄位：title -->
                                     @if(Request::segment(3)=="kv")
 									<tr>
-										<td class="header-require col-lg-2">Title</td>
+										<td class="header-require col-lg-2">標題<br/>Title</td>
 										<td>
 											<div class="col-lg-3 nopadding">
 													<input name="title" type="text" value="{{ $datas["indexKV"]->title }}"  id="name" class="form-control">
@@ -44,7 +44,7 @@
                                     @endif
                                     <!-- 欄位：Author -->
 									<tr>
-										<td class="header-require col-lg-2">Author</td>
+										<td class="header-require col-lg-2">作者<br/>Author</td>
 										<td>
 											<div class="col-lg-3 nopadding">
 													<input name="author" type="text" value="{{ $datas["indexKV"]->author }}"  id="author" class="form-control">
@@ -54,7 +54,7 @@
                                     </tr>
 									<!-- 欄位：body -->                                    
                                     <tr>
-                                        <td class="col-lg-2">Body</td>
+                                        <td class="col-lg-2">內文<br/>Content</td>
                                         <td>
                                             <div class="col-lg-8 nopadding">
                                                 <textarea name="body" id="body" class="form-control">{!! $datas["indexKV"]->body !!}</textarea>
@@ -65,7 +65,7 @@
                                     <!-- 欄位：Link -->
                                     @if(Request::segment(3)=="kv")
 									<tr>
-										<td class="header-require col-lg-2">Link</td>
+										<td class="header-require col-lg-2">連結<br/>Link</td>
 										<td>
 											<div class="col-lg-3 nopadding">
 													<input name="link" type="text" value="{{ $datas["indexKV"]->link }}"  id="link" class="form-control">
@@ -76,7 +76,7 @@
                                     @endif
                                     <!-- 欄位：lang -->
 									<tr>
-                                        <td class="header-require col-lg-2">Languages</td>
+                                        <td class="header-require col-lg-2">語言<br/>Languages</td>
                                         <td>
                                             <div class="col-lg-3 nopadding">
                                                 <select class="custom-select form-control" id="lang" name="lang" >
@@ -91,7 +91,7 @@
                                     </tr>
                                     {{-- Order --}}
                                     <tr>
-										<td class="header-require col-lg-2">Order</td>
+										<td class="header-require col-lg-2">順序<br/>Order</td>
 										<td>
 											<div class="col-lg-3 nopadding">
                                                 <input type="number" class="form-control" name="order" id="order" value="{{ $datas["indexKV"]->order }}">
@@ -101,10 +101,10 @@
                                     </tr>
                                     {{-- 欄位：Pic Upload --}}
                                     <tr>
-                                        <td class="header-require col-lg-2">Picture</td>
+                                        <td class="header-require col-lg-2">上傳圖片<br/>Upload Picture</td>
                                         <td>
                                             <div class="col-lg-3 nopadding">
-                                                <label for="upload_pic">Upload your picture</label>
+                                                <label for="upload_pic"></label>
                                                 <br>
                                                 @if ($datas["indexKV"]->pic)
                                                 <img src="/storage/{{$datas["indexKV"]->pic}}" height="150">                                                
@@ -117,11 +117,11 @@
                                     </tr>                                                                                  
 									<!-- 欄位：time -->                                    
                                     <tr>
-                                        <td class="col-lg-2">Create Time</td>
+                                        <td class="col-lg-2">新增時間<br/>Create Time</td>
                                         <td>{{ $datas["indexKV"]->created_at }}</td>
                                     </tr>
                                     <tr>
-                                        <td class="col-lg-2">Modify Time</td>
+                                        <td class="col-lg-2">修改時間<br/>Modify Time</td>
                                         <td>{{ $datas["indexKV"]->updated_at }}</td>
                                     </tr>
 									<!-- 下控制按鈕 -->
@@ -129,8 +129,8 @@
 										<td>&nbsp;</td>
 										<td>
 											<div style="text-align: right">
-                                                <input type="button" name="btnBackTo2_foot" value="Back" id="btnBackTo2_foot" class="btn btn-default btn-xs">
-												<input type="submit" name="btnUpdate_foot" value="Modify" id="btnUpdate_foot" class="btn btn-primary btn-xs" onclick="submitForm();">
+                                                <input type="button" name="btnBackTo2_foot" value="返回 Back" id="btnBackTo2_foot" class="btn btn-default btn-xs">
+												<input type="submit" name="btnUpdate_foot" value="送出 Modify" id="btnUpdate_foot" class="btn btn-primary btn-xs" onclick="submitForm();">
 											</div>
 										</td>
 									</tr>

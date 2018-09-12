@@ -42,30 +42,30 @@
             <form method="POST" action="{{ url('/donate/inquiry')}}" enctype="multipart/form-data" class="inquiry__form">
                 {{csrf_field()}}
                 <div class="form-group">
-                    <label for="username">姓名/公司行號名稱</label>
-                    <input type="text" class="form-control" name="name" title="姓名/公司行號名稱" value="{{$cookie->name ? $cookie->name : "" }}" />
+                    <label for="name">姓名/公司行號名稱</label>
+                    <input type="text" class="form-control" id="name" name="name" title="姓名/公司行號名稱" value="{{$cookie->name ? $cookie->name : "" }}" />
                 </div>
                 <div class="form-group">
                     <label for="email">電子信箱 </label>
-                    <input type="email" class="form-control" name="email" title="電子信箱" value="{{$cookie->email ? $cookie->email : "" }}"  />
+                    <input type="email" class="form-control" id="email" name="email" title="電子信箱" value="{{$cookie->email ? $cookie->email : "" }}"  />
                 </div>
                 <div class="form-group">
-                    <label for="startDate">捐款日期區間 </label>
+                    <label for="date_start">捐款日期區間 </label>
                     <div class="form-row input-daterange align-items-center">
                         <div class="col">
-                            <label for="startDate" class="d-none">起始日期</label>
-                            <input type="text" name="date_start" class="form-control" placeholder="起始日期" title="起始日期" value="{{$cookie->date_start ? $cookie->date_start : "" }}" >
+                            <label for="date_start" class="d-none">起始日期</label>
+                            <input type="text" id="date_start" name="date_start" class="form-control" placeholder="起始日期" title="起始日期" value="{{$cookie->date_start ? $cookie->date_start : "" }}" >
                         </div>
                         <i class="fa fa-minus"></i>
                         <div class="col">
-                            <label for="endDate" class="d-none">結束日期</label>
-                            <input type="text" name="date_end" class="form-control" placeholder="結束日期" title="結束日期" value="{{$cookie->date_end ? $cookie->date_end : "" }}" >
+                            <label for="date_end" class="d-none">結束日期</label>
+                            <input type="text" id="date_end" name="date_end" class="form-control" placeholder="結束日期" title="結束日期" value="{{$cookie->date_end ? $cookie->date_end : "" }}" >
                         </div>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="receipt">收據編號</label>
-                    <input type="text" class="form-control" name="receipt_id" title="收據編號" value="{{$cookie->receipt_id ? $cookie->receipt_id : "" }}"  />
+                    <label for="receipt_id">收據編號</label>
+                    <input type="text" class="form-control" id="receipt_id" name="receipt_id" title="收據編號" value="{{$cookie->receipt_id ? $cookie->receipt_id : "" }}"  />
                 </div>
                 <button type="submit" class="inquiry__submit" title="查 詢">查 詢</button>
             </form>
@@ -106,7 +106,7 @@
     </section>
 </main>
 <script src="{{ asset('assets/lib/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}"></script>
-<script src="{{ asset('assets/lib/bootstrap-datepicker/locales/bootstrap-datepicker.zh-TW.min.js') }}"></script>
+<script src="{{ asset('assets/lib/bootstrap-datepicker/locales/bootstrap-datepicker.zh-tw.min.js') }}"></script>
 <script src="{{ asset('assets/js/donate-inquiry.js') }}"></script>
 
 @endsection

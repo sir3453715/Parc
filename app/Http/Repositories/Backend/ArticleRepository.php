@@ -3,6 +3,8 @@ namespace App\Http\Repositories\Backend;
 
 use App\article;
 use App\category;
+use App\sub_category;
+use App\extra_sub_category;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -36,21 +38,31 @@ class ArticleRepository{
                 $category=5;
                 break;
         }
+        $sub_category = DB::table('sub_category')->where('category_id',$category)->get();
+        // $condition=$condition->where('active', 1);
         $condition=$condition->where('category',$category);
         if($request->date_start){
-            $condition=$condition->where('created_at','>',$request->date_start);
+            $condition=$condition->where('created_at','>=',$request->date_start);
+        }
+        if($request->display != null){
+            $condition=$condition->where('display',$request->display);
         }
         if($request->date_end){
-            $condition=$condition->where('created_at','<',$request->date_end);
+            $condition=$condition->where('created_at','<=',$request->date_end);
         }
         if($request->title){
             $condition=$condition->where('title',$request->title);
         }
+        if($request->sub_category != null){
+            $condition=$condition->where('sub_category',$request->sub_category);
+        }
+        $condition=$condition->orderBy('updated_at','desc');
         $condition=$condition->paginate(30);
         $datas=array(
-            "category"  => DB::table('category')->get(),
-            "article"   => $condition,
-            "cookie"    => $request,
+            "category"      => DB::table('category')->get(),
+            "article"       => $condition,
+            "cookie"        => $request,
+            "sub_category"  => $sub_category,
         );
         return $datas;
     }
@@ -71,20 +83,12 @@ class ArticleRepository{
         return $datas;
     }
     public function edit(article $article){
-        $copy = null;
-        if($article->pointer == "R"){
-            $copy = article::where('pointer',$article->id)->first();
-        }
-        else if($article->pointer != "special" && $article->pointer != null){
-            $copy = article::find($article->pointer);
-        }
         $datas=array(
             "article"               => $article,
             "categories"            => DB::table('category')->get(),
             "sub_categories"        => DB::table('sub_category')->get(),
             "extra_sub_categories"  => DB::table('extra_sub_category')->get(),
             "lang"                  => DB::table('lang')->get(),
-            "copy"                  => $copy,
         );
         return $datas;
     }
@@ -102,6 +106,7 @@ class ArticleRepository{
         $article->extra_sub_category=   request('extra_sub_category') ?: 0;
         $article->tags=                 request('tags');
         $article->lang=                 request('lang');
+        $article->lock=                 request('lock') ? 1:0;
         $article->display=              request('display')? 1:0;
         $article->user_id=              auth()->id();
         $article->expiry_date=          request('expiry_date');
@@ -115,114 +120,13 @@ class ArticleRepository{
         }
         //save pic path
         if($request->pic){
+            Storage::delete('public/'.$article->pic);
             $upload_image=$request->pic;
             $picName = time().'.'.$upload_image->getClientOriginalName();
-            $upload_image->storeAs('public', $picName);
-            $article->pic=$picName;
+            $upload_image->storeAs('public/article/'.$article->category_en(), $picName);
+            $article->pic='article/'.$article->category_en().'/'.$picName;
         }
         $article->save();
-
-        //init copy
-        $copy=null;
-
-        if($article->pointer == "R"){
-            $copy = article::where('pointer',$article->id)->first();
-            //Copy the data
-            $copy->active=          $article->active;             
-            $copy->special=         $article->special;              
-            $copy->order=           $article->order;
-            $copy->title=           $article->title;             
-            $copy->description=     $article->description;          
-            $copy->author=          $article->author;
-            $copy->body=            $article->body;
-            $copy->lang=            $article->lang;
-            $copy->display=         $article->display;
-            $copy->user_id=         $article->user_id;
-            $copy->expiry_date=     $article->expiry_date;
-            $copy->video_url=       $article->video_url;
-            $copy->tags=            $article->tags;
-
-            //add own category
-            $copy->category=$request->category2;
-            $copy->sub_category=$request->sub_category2;
-            $copy->extra_sub_category=$request->extra_sub_category2;
-            $copy->pointer=$article->id;
-
-            $copy->save();
-            //detach copy tag
-            // $copy->tags()->detach();
-            
-        }
-        else if($article->pointer != null){
-            $copy = article::find($article->pointer);
-            //Copy the data
-            $copy->active=          $article->active;             
-            $copy->special=         $article->special;              
-            $copy->order=           $article->order;
-            $copy->title=           $article->title;             
-            $copy->description=     $article->description;          
-            $copy->author=          $article->author;
-            $copy->body=            $article->body;
-            $copy->lang=            $article->lang;
-            $copy->display=         $article->display;
-            $copy->user_id=         $article->user_id;
-            $copy->expiry_date=     $article->expiry_date;
-            $copy->video_url=       $article->video_url;
-            $copy->tags=            $article->tags;
-
-            //add own category
-            $copy->category=$request->category2;
-            $copy->sub_category=$request->sub_category2;
-            $copy->extra_sub_category=$request->extra_sub_category2;
-            $copy->pointer= "R";
-
-            $copy->save();
-            //detach copy tag
-            // $copy->tags()->detach();
-        }
-
-        // //detach all tag
-        // $article->tags()->detach();
-        // //save tag
-        // $tags= new \App\Tag;
-        // $tags_splitted=explode(',',$request->tags);
-        // foreach($tags_splitted as $tag_splitted){
-
-            
-        //     //if tag_splitted exist $exist_tag = new App\Tag::where('name','=',$tag_splitted);
-        //     // dont save it to tag
-        //     // reference it by $exist_tag=new blablabla
-        //     // attach
-        //     // else act normal
-        //     $exist_tag_name = \App\Tag::where('name','=',$tag_splitted)->first();
-        //     $exist_tag= $article->tags()->where('name',$tag_splitted)->exists();
-        //     if(!$exist_tag){
-        //         if($exist_tag_name!=null){
-        //             //attach tag
-        //             $article->tags()->attach($exist_tag_name);
-
-        //             if($copy!=null){
-        //                 $copy->tags()->attach($exist_tag_name);    
-        //             }
-
-        //             //refresh tag
-        //             $tags= new \App\Tag;
-        //         }
-        //         else{
-        //             $tags->name=$tag_splitted;
-        //             $tags->save();
-        //             //attach tag
-        //             $article->tags()->attach($tags);
-
-        //             if($copy!=null){
-        //                 $copy->tags()->attach($tags);    
-        //             }
-
-        //             //refresh tag
-        //             $tags= new \App\Tag;
-        //         }
-        //     }
-        // }
     }
     public function store(Request $request){
         $article=article::create([
@@ -254,79 +158,79 @@ class ArticleRepository{
         if($request->pic){
             $upload_image=$request->pic;
             $picName = time().'.'.$upload_image->getClientOriginalName();
-            $upload_image->storeAs('public', $picName);
-            $article->pic=$picName;
-        }
-        //init copy
-        $copy=null;
-        if($request->category2){
-            $copy= $article->replicate();
-            $copy->category=$request->category2;
-            $copy->sub_category=$request->sub_category2;
-            $copy->extra_sub_category=$request->extra_sub_category2;
-
-            $copy->pointer=$article->id;
-            $article->pointer="R";
-            $copy->save();
+            $upload_image->storeAs('public/article/'.$article->category_en(), $picName);
+            $article->pic='article/'.$article->category_en().'/'.$picName;
         }
         $article->save();
+    }
+    public function copy_list(Request $request){
+        if($_SERVER['REQUEST_METHOD']=="GET"){
+            $request->category_select = ($request->cookie('category_select')) ? $request->cookie('category_select') : $request->category_select;
+            $request->sub_category = ($request->cookie('sub_category')) ? $request->cookie('sub_category') : $request->sub_category;
+            $request->extra_sub_category = ($request->cookie('extra_sub_category')) ? $request->cookie('extra_sub_category') : $request->extra_sub_category;
+        }
+        if($request->category_select)
+        {
+            $condition=article::select('*');
+            if($request->category_select){
+                $condition=$condition->where('category',$request->category_select);
+                $request->category_select_name = category::find($request->category_select)->name;
+                // $request->session()->put('category_name',category::find($request->category_select)->value('name'));
+            }
+            if($request->sub_category){
+                $condition=$condition->where('sub_category',$request->sub_category);
+                $request->sub_category_name = sub_category::find($request->sub_category)->name;
 
-        // //save tag
-        // $tags= new \App\Tag;
-        // $tags_splitted=explode(',',$request->tags);
-        // foreach($tags_splitted as $tag_splitted){
+            }
+            if($request->extra_sub_category){
+                $condition=$condition->where('extra_sub_category',$request->extra_sub_category);
+                $request->extra_sub_category_name = extra_sub_category::find($request->extra_sub_category)->name;
 
-            
-        //     //if tag_splitted exist $exist_tag = new App\Tag::where('name','=',$tag_splitted);
-        //     // dont save it to tag
-        //     // reference it by $exist_tag=new blablabla
-        //     // attatch
-        //     // else act normal
-        //     $exist_tag_name = \App\Tag::where('name','=',$tag_splitted)->first();
-        //     $exist_tag= $article->tags()->where('name',$tag_splitted)->exists();
-        //     if(!$exist_tag){
-        //         if($exist_tag_name!=null){
-        //             //attach tag
-        //             $article->tags()->attach($exist_tag_name);
-        //             if($copy!=null){
-        //                 $copy->tags()->attach($exist_tag_name);    
-        //             }
-
-        //             //refresh tag
-        //             $tags= new \App\Tag;
-        //         }
-        //         else{
-        //             $tags->name=$tag_splitted;
-        //             $tags->save();
-        //             //attach tag
-        //             $article->tags()->attach($tags);
-        //             if($copy!=null){
-        //                 $copy->tags()->attach($tags);    
-        //             }
-
-        //             //refresh tag
-        //             $tags= new \App\Tag;
-        //         }
-        //     }
-        // }
+            }
+        }
+        else{
+            $condition=article::select('*')->where('category',1);
+        }
+        $condition=$condition->paginate(30);
+        Cookie::queue('category_select', $request->category_select, 60);
+        Cookie::queue('sub_category', $request->sub_category, 60);
+        Cookie::queue('extra_sub_category', $request->extra_sub_category, 60);
+        $datas=array(
+            "categories"                => DB::table('category')->get(),
+            "sub_categories"            => DB::table('sub_category')->get(),
+            "extra_sub_categories"      => DB::table('extra_sub_category')->get(),
+            "lang"                      => DB::table('lang')->get(),
+            "article"                   => $condition,
+            "request"                   => $request,
+        );
+        return $datas;
+    }
+    public function copy_selected(Request $request){
+        $count=0;
+        if($request->article_copy_id){
+            foreach($request->article_copy_id as $data){
+                $article= article::find($data);
+                $this->copy($request,$article);
+                $count++;
+            }
+        }
+        return $count;
+    }
+    public function copy(Request $request,article $article){
+            $copy= $article->replicate();
+            $copy->category=$request->category_copy;
+            $copy->sub_category=$request->sub_category_copy;
+            $copy->extra_sub_category=0;
+            $path = str_replace($article->category_en(),"news",$article->pic);
+            Storage::copy('public/'.$article->pic, 'public/'.$path);
+            $copy->pic = $path;
+            $copy->save();
     }
     public function destroy(article $article){
         if($article->pic){
             Storage::delete('public/'.$article->pic);
         }
-        // pointer is either R or an id referencing another article
-        if($article->pointer == "R"){
-            $copy = article::where('pointer',$article->id)->first();
-            // $copy->tags()->detach();
-            $copy->delete();
-        }
-        else if($article->pointer != null){
-            $copy = article::find($article->pointer);
-            // $copy->tags()->detach();
-            $copy->delete();
-        }
         $article->delete();
-        $article->tags()->detach();
     }
     public function delete_selected(Request $request){
         $count=0;

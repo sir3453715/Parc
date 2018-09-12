@@ -6,7 +6,7 @@
 				{{ csrf_field() }}
 				<div class="panel panel-primary">
 					<div class="panel-heading">
-						<h4 class="panel-title">Order</h4>
+						<h4 class="panel-title">順序<br/>Order</h4>
 					</div>
 					<div class="panel-body">
 						<div>

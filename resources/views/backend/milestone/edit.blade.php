@@ -4,29 +4,21 @@
 <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>  
 
 	<div class="row">
-		<div class="col-lg-10">
+		<div class="col-xl-12">
 			<form id="EditForm" enctype="multipart/form-data" class="form-horizontal" method="post" action="/backend/milestone/edit/{{$datas["milestone"]->id}}">
 				{{ csrf_field() }}
 				<div class="panel panel-primary">
 					<div class="panel-heading">
-						<h4 class="panel-title">Edit Milestone</h4>
+						<h4 class="panel-title">編輯時間軸 Edit Timeline</h4>
 					</div>
 					<div class="panel-body">
 						<div>
 							<!-- 表格本體 -->
 							<table class="table" cellspacing="0" id="DetailsView1" style="border-collapse:collapse;">
 								<tbody>
-									<!-- 欄位：No -->
-                                    <tr>
-                                        <td class="col-lg-2">#</td>
-                                        <td>
-                                            <input name="id" type="hidden" value="{{ $datas["milestone"]->id }}" id="id" />
-                                            {{ $datas["milestone"]->id }}
-                                        </td>
-                                    </tr>
                                     <!-- 欄位：Active -->
 									<tr>
-                                        <td class="col-lg-2">Active</td>
+                                        <td class="col-lg-2">有效<br/>Active</td>
                                         <td>
                                             <div class="col-lg-3 nopadding">
                                                 <input name="active" type="checkbox" id="active" class="form-control" {{($datas["milestone"]->active == 1) ? "checked" : "" }}>
@@ -36,7 +28,7 @@
                                     </tr> 
                                     <!-- 欄位：Title -->
 									<tr>
-										<td class="header-require col-lg-2">Title</td>
+										<td class="header-require col-lg-2">標題<br/>Title</td>
 										<td>
 											<div class="col-lg-3 nopadding">
 													<input name="title" type="text" value="{{ $datas["milestone"]->title }}"  id="title" class="form-control">
@@ -46,7 +38,7 @@
 									</tr>
 									<!-- 欄位：Body -->
 									<tr>
-										<td class=" col-lg-2">Body</td>
+										<td class=" col-lg-2">內文<br/>Content</td>
 										<td>
 											<div class="col-lg-8 nopadding">
 												<textarea name="body" type="text" id="body" class="form-control tooltips ckeditor">{!! $datas["milestone"]->body !!}</textarea>
@@ -56,7 +48,7 @@
 									</tr>
 									<!-- 欄位：Date -->
 									<tr>
-										<td class="header-require col-lg-2">Date:</td>
+										<td class="header-require col-lg-2">日期<br/>Date</td>
 										<td>
 											<div class="col-lg-3 nopadding">
 													<input name="date" type="date" value="{{ $datas["milestone"]->date->format('Y-m-d') }}"  id="date" class="form-control">
@@ -66,7 +58,7 @@
 									</tr>
 									<!-- 欄位：lang -->
 									<tr>
-										<td class="header-require col-lg-2">Languages</td>
+										<td class="header-require col-lg-2">語言<br/>Languages</td>
 										<td>
 											<div class="col-lg-3 nopadding">
 												<select class="custom-select form-control" id="lang" name="lang" >
@@ -79,22 +71,12 @@
 											</div>
 										</td>
 									</tr>
-									<!-- 欄位：Order -->
-									<tr>
-										<td class="header-require col-lg-2">Order</td>
-										<td>
-											<div class="col-lg-3 nopadding">
-													<input name="order" type="order" value="{{ $datas["milestone"]->order }}"  id="order" class="form-control">
-												<label class="error" for="order"></label>
-											</div>
-										</td>
-									</tr>
 									{{-- 欄位：Pic Upload --}}
                                     <tr>
-										<td class="header-require col-lg-2">Picture</td>
+										<td class="header-require col-lg-2">上傳圖片<br/>Upload Picture</td>
 										<td>
 											<div class="col-lg-3 nopadding">
-												<label for="upload_pic">Upload your picture</label>
+												<label for="upload_pic"></label>
 												<br>
 												@if ($datas["milestone"]->pic)
 													<img src="/storage/{{$datas["milestone"]->pic}}" height="150">                                                
@@ -107,11 +89,11 @@
 									</tr>										                                                                                           
 									<!-- 欄位：time -->                                    
                                     <tr>
-                                        <td class="col-lg-2">Create Time</td>
+                                        <td class="col-lg-2">新增時間<br/>Create Time</td>
                                         <td>{{ $datas["milestone"]->created_at }}</td>
                                     </tr>
                                     <tr>
-                                        <td class="col-lg-2">Modify Time</td>
+                                        <td class="col-lg-2">更新時間<br/>Modify Time</td>
                                         <td>{{ $datas["milestone"]->updated_at }}</td>
                                     </tr>
 									<!-- 下控制按鈕 -->
@@ -119,8 +101,8 @@
 										<td>&nbsp;</td>
 										<td>
 											<div style="text-align: right">
-													<input type="submit" name="btnUpdate_foot" value="Modify" id="btnUpdate_foot" class="btn btn-primary btn-xs" onclick="submitForm();">
-												<input type="button" name="btnBackTo2_foot" value="Back" id="btnBackTo2_foot" class="btn btn-default btn-xs">
+												<input type="button" name="btnBackTo2_foot" value="返回 Back" id="btnBackTo2_foot" class="btn btn-default btn-xs">
+												<input type="submit" name="btnUpdate_foot" value="修改 Modify" id="btnUpdate_foot" class="btn btn-primary btn-xs" onclick="submitForm();">
 											</div>
 										</td>
 									</tr>

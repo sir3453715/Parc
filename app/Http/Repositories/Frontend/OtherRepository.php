@@ -1,12 +1,12 @@
 <?php
 namespace App\Http\Repositories\Frontend;
 
-use App\milestone;
+use App\MileStone;
 use App\extra_sub_category;
-use App\lecturer;
+use App\Lecturer;
 use App\ContactForm;
 use App\faq;
-use App\donate;
+use App\Donate;
 use App\AboutMilestone;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
@@ -78,7 +78,7 @@ class OtherRepository{
             $contact_form->phone = $request->phone;
             $contact_form->body = $request->body;
             $contact_form->save();
-            return redirect('event/lecturer/');
+            return redirect('event/lecturer/')->with('success','我們已收到您的資料並會盡快與您聯繫');
         }
 
     }
@@ -123,6 +123,15 @@ class OtherRepository{
                 $result = $result->where('transaction_time','<',$request->date_end);
             }
             $result = $result->orderBy('transaction_time', 'asc')->get();
+            foreach($result as $data){
+                $string_length = mb_strlen($data->name,"utf-8");
+                $firstCharacter = mb_substr($data->name,0,1,"utf-8");
+                $lastCharacter = mb_substr($data->name,$string_length-1,$string_length,"utf-8");
+                if($string_length == 2){
+                    $lastCharacter = "O";
+                }
+                $data->name = $firstCharacter.str_repeat("O",$string_length-2).$lastCharacter;
+            }
             return $result;
         }
     }

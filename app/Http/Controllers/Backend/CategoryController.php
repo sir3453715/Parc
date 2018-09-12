@@ -40,37 +40,23 @@ class CategoryController extends Controller
     {
         $messages = [
             //'shopname.required' => '線上商店名稱未輸入',
-            'category_input.unique' => '主分類名稱重覆',
-            'category_input.required_without'=>'請輸入或選擇主分類',
-            'sub_category_input.required_without_all'=>'請輸入或選擇次分類',
-            'sub_category_input.unique'=>'次分類名稱重覆',
-            'sub_category.required_without_all'=>'請輸入或選擇次分類',
-            'extra_sub_category_input.required_with'=>'請輸入特別分類',
-            'extra_sub_category_input.unique'=>'特別分類名稱重覆',            
+            'extra_sub_category_input.required'=>'請輸入特別分類中文名稱 Please input chinese name of extra sub category',
+            'extra_sub_category_input.max'=>'特別分類中文名稱最多十五字 Max character of extra sub category is 15, please try a different name',
+            'extra_sub_category_input.unique'=>'特別分類名稱重覆 Duplicate name of extra sub category',
+            'extra_sub_category_input_english.required' => '請輸入特別分類英文名稱 Please input english name of extra sub category'            
         ];
         $validate = Validator::make($request->all(), [
-            'category_input' => 'unique:category,name|required_without:category_select|max:15',
-            'sub_category' =>'required_without_all:sub_category_input,category_input|max:15',
-            'sub_category_input' =>
-                [
-                    'required_without_all:sub_category,category_input',
-                    'max:15',
-                    // 此規則為避免名稱重覆            
-                    Rule::unique('sub_category','name')->where(function($query) use($request){
-                    return $query->where('category_id',$request->category_select)
-                    ->where('name',$request->sub_category_input);
-                    })
-                ],
             'extra_sub_category_input'=> 
                 [
-                    'required_with:sub_category',
+                    'required',
                     'max:15',
                     Rule::unique('extra_sub_category','name')
                     ->where(function($query) use($request){
                         return $query->where('sub_category_id',$request->sub_category)
                         ->where('name',$request->extra_sub_category_input);
                     })
-                ],           
+                ],
+            'extra_sub_category_input_english' => 'required',           
         ], $messages);
         if ($validate->fails()) {
             return redirect()->back()
@@ -79,7 +65,7 @@ class CategoryController extends Controller
         }
         else{
             $input=$this->categoryRepository->store($request);
-            return redirect('/backend/category')->with('success','Category Created');
+            return redirect('/backend/category')->with('success','資料新增成功! Data created successfully');
         }
     }
     public function index(Request $request){
@@ -193,11 +179,10 @@ class CategoryController extends Controller
             Storage::delete('public/'.$extra_sub_category->pic);
         }
         $extra_sub_category->delete();
-        Session::flash('msg', 'Extra Sub Category Deleted');
-        return back();
+        return back()->with('success','資料已刪除 Data Deleted');
     }
     public function delete_selected(Request $request){
         $count= $this->categoryRepository->delete_selected($request);
-        return back()->with('success', $count.' categories deleted');
+        return back()->with('success','資料已刪除 Data Deleted');
     }
 }

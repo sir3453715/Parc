@@ -14,14 +14,14 @@
             </div>
             <div class="col-12 col-lg-4 text-center">
                 <div class="footer-title">追蹤我們</div>
-                <a href="#" title="facebook" class="footer-social">
-                    <img src="{{ asset('assets/images/icon/icon-facebook.svg') }}" class="img-fluid" alt="social facebook" />
+                <a href="https://www.facebook.com/parc.tw/" title="facebook" class="footer-social" target="_blank" rel="noopener noreferrer">
+                    <img src="{{ asset('assets/images/icon/icon-facebook.svg') }}" class="img-fluid" alt="social facebook" target="_blank" rel="noopener noreferrer"/>
                 </a>
-                <a href="#" title="line" class="footer-social">
-                    <img src="{{ asset('assets/images/icon/icon-line.svg') }}" class="img-fluid" alt="social line" />
+                <a href="#" title="line" class="footer-social" target="_blank" rel="noopener noreferrer">
+                    <img src="{{ asset('assets/images/icon/icon-line.svg') }}" class="img-fluid" alt="social line"/>
                 </a>
-                <a href="#" title="youtube" class="footer-social">
-                    <img src="{{ asset('assets/images/icon/icon-youtube.svg') }}" class="img-fluid" alt="social youtube" />
+                <a href="https://www.youtube.com/channel/UCkJWN2WEhzH_EA5QM65GchQ" title="youtube" class="footer-social" target="_blank" rel="noopener noreferrer">
+                    <img src="{{ asset('assets/images/icon/icon-youtube.svg') }}" class="img-fluid" alt="social youtube"/>
                 </a>
             </div>
         </div>

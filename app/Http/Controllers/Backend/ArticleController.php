@@ -85,11 +85,13 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
         $messages = [
-            'pic.image' => '上傳檔案非圖片',
+            'pic.image' => '上傳檔案非圖片 Please upload valid image',
+            'title.required' => '請輸入標題 Please input title'
             
         ];
         $validate = Validator::make($request->all(), [
             'pic' => 'nullable|image',
+            'title' => 'required'
             
         ], $messages);
 
@@ -156,6 +158,17 @@ class ArticleController extends Controller
             return redirect('/backend/article/'.$request->segment(3));
         }
     }
+    public function copy_list(Request $request){
+        $datas=$this->articleRepository->copy_list($request);
+        // dd($datas);
+        return view('backend.article.copy', [
+            'datas'            => $datas,
+        ]);
+    }
+    public function copy_selected(Request $request){
+        $count=$this->articleRepository->copy_selected($request);
+        return back()->with('success',$count.' article copied');
+    }
 
     /**
      * Remove the specified resource from storage.
@@ -166,10 +179,10 @@ class ArticleController extends Controller
     public function destroy(article $article)
     {
         $this->articleRepository->destroy($article);
-        return back()->with('success','Article deleted');
+        return back()->with('success','文章已刪除 Article Deleted');
     }
     public function delete_selected(Request $request){
         $count=$this->articleRepository->delete_selected($request);
-        return back()->with('success',$count.' article deleted');
+        return back()->with('success',$count.' 篇文章已刪除 '.$count.' Articles Deleted');
     }
 }

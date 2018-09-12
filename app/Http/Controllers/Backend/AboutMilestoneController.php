@@ -8,8 +8,10 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Repositories\Backend\AboutMilestoneRepository;
+use Illuminate\Support\Facades\Validator;
 
-use App\AboutMileStone;
+
+use App\AboutMilestone;
 use Session;
 
 class AboutMilestoneController extends Controller
@@ -35,8 +37,28 @@ class AboutMilestoneController extends Controller
         ]);
     }
     public function store(Request $request){
-        $this->aboutMilestoneRepository->store($request);
-        return redirect('/backend/about_milestone');
+        $messages = [
+            'title.required'  => '請輸入標題 Please fill in title',
+            'date.required'  => '請輸入日期 Please fill in date',
+            'pic.required'  => '請上傳圖片 Please upload image',
+            'pic.image'  => '上傳檔案非圖片 Please upload valid image',
+        ];
+        $validate = Validator::make($request->all(), [
+            'title' => 'required',
+            'date' => 'required',
+            'pic' => 'required|image',
+            
+        ], $messages);
+
+        if ($validate->fails()) {
+            return redirect()->back()
+                ->withInput($request->all)
+                ->withErrors($validate);
+        }
+        else{
+            $this->aboutMilestoneRepository->store($request);
+            return redirect('/backend/about_milestone')->with('success','資料新增成功! Data created successfully');
+        }
     }
     public function edit(AboutMileStone $about_milestone){
         $datas = $this->aboutMilestoneRepository->edit($about_milestone);
@@ -56,15 +78,30 @@ class AboutMilestoneController extends Controller
         return redirect('/backend/about_milestone');
     }
     public function update(Request $request,AboutMileStone $about_milestone){
-        $this->aboutMilestoneRepository->update($request,$about_milestone);
-        return redirect('/backend/about_milestone');
+        $messages = [
+            'title.required'  => '請輸入標題 Please fill in title',
+            'date.required'  => '請輸入日期 Please fill in date',
+        ];
+        $validate = Validator::make($request->all(), [
+            'title' => 'required',
+            'date' => 'required',
+        ], $messages);
+
+        if ($validate->fails()) {
+            return redirect()->back()
+                ->withInput($request->all)
+                ->withErrors($validate);
+        }
+        else{
+            $this->aboutMilestoneRepository->update($request,$about_milestone);
+            return redirect('/backend/about_milestone')->with('success','資料更新成功! Data updated successfully');
+        }
     }
     public function destroy(AboutMileStone $about_milestone){
         if($about_milestone->pic){
             Storage::delete('public/'.$about_milestone->pic);
         }
         $about_milestone->delete();
-        Session::flash('msg', 'Milestone Deleted');
-        return redirect('/backend/about_milestone');
+        return back()->with('success','資料已刪除 Data Deleted');
     }
 }

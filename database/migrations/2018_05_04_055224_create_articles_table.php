@@ -31,7 +31,6 @@ class CreateArticlesTable extends Migration
             $table->tinyInteger('active')->default('1');
             $table->tinyInteger('display')->default('0');
             $table->date('expiry_date')->nullable();
-            $table->string('pointer',50)->nullable();
             $table->tinyInteger('special')->nullable()->default('0');
             $table->tinyInteger('order')->nullable()->default('1');
             $table->timestamps();	

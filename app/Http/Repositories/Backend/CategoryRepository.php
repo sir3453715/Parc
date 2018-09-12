@@ -16,44 +16,16 @@ use App\extra_sub_category;
 
 class CategoryRepository{
     public function index(Request $request){
-    
-        $condition["category"]=true;
-        $condition["sub_category"]=false;
-        $condition["extra_sub_category"]=false;
-        if($_SERVER['REQUEST_METHOD']=="GET"){
-            $request->category = ($request->cookie('category')) ? $request->cookie('category') : $request->category;
+        $condition = new extra_sub_category;
+        if($request->sub_category){
+            $condition = $condition->where('sub_category_id',$request->sub_category);
         }
-        else{
-            if($request->category=="主分類"){
-                $condition["category"]=true;
-                $condition["sub_category"]=false;
-                $condition["extra_sub_category"]=false;
-            }
-            if($request->category=="次分類"){
-                $condition["category"]=false;
-                $condition["sub_category"]=true;
-                $condition["extra_sub_category"]=false;
-            }
-            if($request->category=="特別分類"){
-                $condition["category"]=false;
-                $condition["sub_category"]=false;
-                $condition["extra_sub_category"]=true;
-            }
-            if($request->category=="全部"){
-                $condition["category"]=true;
-                $condition["sub_category"]=true;
-                $condition["extra_sub_category"]=true;
-            }
-            Cookie::queue('category', $request->category, 60);
-        }
-        $datas=array(          
-            "categories"                => \App\category::all(),
-            "sub_categories"            => \App\sub_category::all(),
-            "extra_sub_categories"      => \App\extra_sub_category::all(),
-            "condition"                 => $condition,
-            "cookie"                    => $request,
+        $condition = $condition->paginate(30);
+        $datas=array(
+            "categories"                => DB::table('category')->get(),          
+            "extra_sub_categories"      => $condition,
+            "request"                    => $request,
         );
-        
         return $datas;
     }
     public function create(){
@@ -81,8 +53,8 @@ class CategoryRepository{
                 if($request->pic){
                     $upload_image=$request->pic;
                     $picName = time().'.'.$upload_image->getClientOriginalName();
-                    $upload_image->storeAs('public', $picName);
-                    $extra_sub_category->pic=$picName;
+                    $upload_image->storeAs('public/extrasubcategory', $picName);
+                    $extra_sub_category->pic='extrasubcategory/'.$picName;
                 }
                 $extra_sub_category->save();
             }
@@ -103,8 +75,8 @@ class CategoryRepository{
                     if($request->pic){
                         $upload_image=$request->pic;
                         $picName = time().'.'.$upload_image->getClientOriginalName();
-                        $upload_image->storeAs('public', $picName);
-                        $extra_sub_category->pic=$picName;
+                        $upload_image->storeAs('public/extrasubcategory', $picName);
+                        $extra_sub_category->pic='extrasubcategory/'.$picName;
                     }
                     $extra_sub_category->save();
                 }
@@ -140,8 +112,8 @@ class CategoryRepository{
                     if($request->pic){
                         $upload_image=$request->pic;
                         $picName = time().'.'.$upload_image->getClientOriginalName();
-                        $upload_image->storeAs('public', $picName);
-                        $extra_sub_category->pic=$picName;
+                        $upload_image->storeAs('public/extrasubcategory', $picName);
+                        $extra_sub_category->pic='extrasubcategory/'.$picName;
                     }
                     $extra_sub_category->save();
                 }
@@ -170,10 +142,11 @@ class CategoryRepository{
         $extra_sub_category->description=request('extra_sub_category_description');
         $extra_sub_category->pic=request('pic');
         if($request->pic){
+            Storage::delete('public/'.$extra_sub_category->pic);
             $upload_image=$request->pic;
             $picName = time().'.'.$upload_image->getClientOriginalName();
-            $upload_image->storeAs('public', $picName);
-            $extra_sub_category->pic=$picName;
+            $upload_image->storeAs('public/extrasubcategory', $picName);
+            $extra_sub_category->pic='extrasubcategory/'.$picName;
         }
         $extra_sub_category->order=request('order');
         $extra_sub_category->save();

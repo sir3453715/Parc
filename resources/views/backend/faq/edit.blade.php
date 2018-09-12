@@ -4,29 +4,21 @@
 <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>  
 
 	<div class="row">
-		<div class="col-lg-10">
+		<div class="col-lg-12">
 			<form id="EditForm" enctype="multipart/form-data" class="form-horizontal" method="post" action="/backend/faq/edit/{{$datas["faq"]->id}}">
 				{{ csrf_field() }}
 				<div class="panel panel-primary">
 					<div class="panel-heading">
-						<h4 class="panel-title">Edit FAQ</h4>
+						<h4 class="panel-title">編輯常見問題 Edit FAQ</h4>
 					</div>
 					<div class="panel-body">
 						<div>
 							<!-- 表格本體 -->
 							<table class="table" cellspacing="0" id="DetailsView1" style="border-collapse:collapse;">
 								<tbody>
-									<!-- 欄位：No -->
-                                    <tr>
-                                        <td class="col-lg-2">#</td>
-                                        <td>
-                                            <input name="id" type="hidden" value="{{ $datas["faq"]->id }}" id="id" />
-                                            {{ $datas["faq"]->id }}
-                                        </td>
-                                    </tr>
                                     <!-- 欄位：Active -->
 									<tr>
-                                        <td class="col-lg-2">Active</td>
+                                        <td class="col-lg-2">有效<br/>Active</td>
                                         <td>
                                             <div class="col-lg-3 nopadding">
                                                 <input name="active" type="checkbox" id="active" class="form-control" {{($datas["faq"]->active == 1) ? "checked" : "" }}>
@@ -36,27 +28,27 @@
                                     </tr> 
                                     <!-- 欄位：Question -->
 									<tr>
-										<td class="header-require col-lg-2">Question</td>
+										<td class="header-require col-lg-2">問題<br/>Question</td>
 										<td>
-											<div class="col-lg-3 nopadding">
-													<input name="question" type="text" value="{{ $datas["faq"]->question }}"  id="question" class="form-control">
+											<div class="col-lg-8 nopadding">
+													<textarea rows="8" name="question" type="text" id="question" class="form-control">{{ $datas["faq"]->question }}</textarea>
 												<label class="error" for="question"></label>
 											</div>
 										</td>
 									</tr>
 									<!-- 欄位：Answer -->
 									<tr>
-										<td class=" col-lg-2">Answer</td>
+										<td class=" col-lg-2">答案<br/>Answer</td>
 										<td>
 											<div class="col-lg-8 nopadding">
-												<textarea name="answer" type="text" id="answer" class="form-control">{!! $datas["faq"]->answer !!}</textarea>
+												<textarea rows="8" name="answer" type="text" id="answer" class="form-control">{!! $datas["faq"]->answer !!}</textarea>
 												<label class="error" for="answer"></label>
 											</div>
 										</td>
 									</tr>
 									<!-- 欄位：lang -->
 									<tr>
-										<td class="header-require col-lg-2">Languages</td>
+										<td class="header-require col-lg-2">語言<br/>Languages</td>
 										<td>
 											<div class="col-lg-3 nopadding">
 												<select class="custom-select form-control" id="lang" name="lang" >
@@ -71,11 +63,11 @@
 									</tr>								                                                                                           
 									<!-- 欄位：time -->                                    
                                     <tr>
-                                        <td class="col-lg-2">Create Time</td>
+                                        <td class="col-lg-2">新增時間<br/>Create Time</td>
                                         <td>{{ $datas["faq"]->created_at }}</td>
                                     </tr>
                                     <tr>
-                                        <td class="col-lg-2">Modify Time</td>
+                                        <td class="col-lg-2">更新時間<br/>Modify Time</td>
                                         <td>{{ $datas["faq"]->updated_at }}</td>
                                     </tr>
 									<!-- 下控制按鈕 -->
@@ -83,8 +75,8 @@
 										<td>&nbsp;</td>
 										<td>
 											<div style="text-align: right">
-													<input type="submit" name="btnUpdate_foot" value="Modify" id="btnUpdate_foot" class="btn btn-primary btn-xs" onclick="submitForm();">
-												<input type="button" name="btnBackTo2_foot" value="Back" id="btnBackTo2_foot" class="btn btn-default btn-xs">
+												<input type="button" name="btnBackTo2_foot" value="返回 Back" id="btnBackTo2_foot" class="btn btn-default btn-xs">
+												<input type="submit" name="btnUpdate_foot" value="修改 Modify" id="btnUpdate_foot" class="btn btn-primary btn-xs" onclick="submitForm();">
 											</div>
 										</td>
 									</tr>

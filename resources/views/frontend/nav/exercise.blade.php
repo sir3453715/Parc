@@ -20,7 +20,7 @@
                 <img src="{{ asset('assets/images/icon/icon-16.png') }}" class="img-fluid" alt="遇到人生善終問題" />
             </div>
             <div class="exercise__title">遇到人生善終問題</div>
-            <a href="story.html" class="exercise__subtitle">他們的生命故事</a>
+            <a href="{{ url('/story/special') }}" class="exercise__subtitle">他們的生命故事</a>
         </div>
         <div class="col-12 col-lg-4 exercise__1-2">
             <div class="exercise__step-no">Step 1</div>
@@ -29,7 +29,7 @@
                 <img src="{{ asset('assets/images/icon/icon-17.png') }}" class="img-fluid" alt="瞭解什麼是病人自主權利法" />
             </div>
             <div class="exercise__title">瞭解什麼是病人自主權利法</div>
-            <a href="event-online.html" class="exercise__subtitle">前往線上影音課程</a>
+            <a href="{{ url('/event/video') }}" class="exercise__subtitle">前往線上影音課程</a>
         </div>
         <div class="col-12 col-lg-4 exercise__1-3">
             <div class="exercise__img">

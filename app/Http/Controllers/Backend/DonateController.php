@@ -126,6 +126,6 @@ class DonateController extends Controller
     {
         //
         $donate->delete();
-        return back()->with('success','Data Deleted');;
+        return back()->with('success','資料已刪除 Data Deleted');
     }
 }

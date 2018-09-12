@@ -48,6 +48,7 @@ Route::group(['namespace' => 'Frontend'], function () {
     Route::get('/tag/{tag}','IndexController@tagResult');
     Route::view('/404', 'frontend.master.404');
     Route::view('/edm_complete', 'frontend.edm_complete');
+    Route::view('/about-en','frontend.nav.about-en');
 });
 
 // Route::get('/', function () {
@@ -124,9 +125,12 @@ Route::group(['middleware' => 'web', 'prefix' => 'backend'], function () {
         Route::get('/article/create/ajax/{category_id}','ArticleController@sub_menu_ajax');
         Route::get('/article/create/ajax/{category_id}/{sub_category_id}','ArticleController@extra_sub_menu_ajax');
         Route::get('/article/{category}/edit/{article}', 'ArticleController@edit');
+        Route::get('/article/news/copy/', 'ArticleController@copy_list');
+        Route::post('/article/news/copy/', 'ArticleController@copy_list');
         Route::post('/article/{category}/edit/{article}', 'ArticleController@update');
         Route::delete('/article/delete/{article}', 'ArticleController@destroy');
         Route::delete('/article/delete_selected', 'ArticleController@delete_selected');
+        Route::post('/article/news/copy_selected', 'ArticleController@copy_selected');
 
         Route::get('/category', 'CategoryController@index');
         Route::post('/category', 'CategoryController@index');
@@ -145,6 +149,7 @@ Route::group(['middleware' => 'web', 'prefix' => 'backend'], function () {
 
 
         Route::get('/lecturer','LecturerController@index');
+        Route::post('/lecturer','LecturerController@index');
         Route::get('/lecturer/create','LecturerController@create');
         Route::post('/lecturer/create','LecturerController@store');
         Route::get('/lecturer/edit/{lecturer}','LecturerController@edit');
@@ -169,14 +174,14 @@ Route::group(['middleware' => 'web', 'prefix' => 'backend'], function () {
         Route::post('/milestone/order','MileStoneController@order_update');
         Route::delete('/milestone/delete/{milestone}','MileStoneController@destroy');
         
-        Route::get('/about_milestone','AboutMileStoneController@index');
-        Route::get('/about_milestone/create','AboutMileStoneController@create');
-        Route::post('/about_milestone/create','AboutMileStoneController@store');
-        Route::get('/about_milestone/edit/{about_milestone}','AboutMileStoneController@edit');
-        Route::post('/about_milestone/edit/{about_milestone}','AboutMileStoneController@update');
-        Route::get('/about_milestone/order','AboutMileStoneController@order');
-        Route::post('/about_milestone/order','AboutMileStoneController@order_update');
-        Route::delete('/about_milestone/delete/{about_milestone}','AboutMileStoneController@destroy');
+        Route::get('/about_milestone','AboutMilestoneController@index');
+        Route::get('/about_milestone/create','AboutMilestoneController@create');
+        Route::post('/about_milestone/create','AboutMilestoneController@store');
+        Route::get('/about_milestone/edit/{about_milestone}','AboutMilestoneController@edit');
+        Route::post('/about_milestone/edit/{about_milestone}','AboutMilestoneController@update');
+        Route::get('/about_milestone/order','AboutMilestoneController@order');
+        Route::post('/about_milestone/order','AboutMilestoneController@order_update');
+        Route::delete('/about_milestone/delete/{about_milestone}','AboutMilestoneController@destroy');
 
         Route::get('/faq','FaqController@index');
         Route::get('/faq/create','FaqController@create');

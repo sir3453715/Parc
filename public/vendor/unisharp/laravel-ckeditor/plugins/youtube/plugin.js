@@ -200,12 +200,9 @@
 						{
 							url = url + '?' + params.join( '&' );
 						}
-						console.log(description);
-						content = '<iframe title="' + description + '" width="' + width + '" height="' + height + '" src="' + url + '" ';
+						content = '<iframe title="' + description + '" width="' + width + '" height="' + height + '" src="https:' + url + '" ';
 						content += 'frameborder="0" allowfullscreen></iframe>';	
-
 						var instance = this.getParentEditor();
-						console.log(content);
 						instance.insertHtml( content );
 					}
 				};

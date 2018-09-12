@@ -7,7 +7,7 @@
 				{{ csrf_field() }}
 				<div class="panel panel-primary">
 					<div class="panel-heading">
-						<h4 class="panel-title">Create Category</h4>
+						<h4 class="panel-title">新增分類 Create Category</h4>
 					</div>
 					<div class="panel-body">
 						<div>
@@ -16,75 +16,56 @@
 								<tbody>
                                     <!-- 欄位：category -->
 									<tr>
-                                        <td class="header-require col-lg-2">主分類</td>
+                                        <td class="header-require col-lg-2">主分類<br/>Category</td>
                                         <td>
                                             <div class="col-lg-3 nopadding">
                                                     <div class="form-group">
-                                                        <select size="6" id="category_select" name="category_select" class="custom-select">
+                                                        <select id="category_select" name="category_select" class="custom-select form-control">
                                                             @foreach($datas["categories"] as $category)
                                                                 <option id="{{$category->name}}" value="{{$category->id}}">{{$category->name}}</option>
                                                             @endforeach
                                                         </select>
-                                                        {{-- <button type="button" name="create_category" id="create_category" class="btn btn-primary btn-xs" onclick="category_function()">New</button> --}}
-                                                        <div id="category_hide" style="display: none;">
-                                                            <label for="category_input">category_input:</label>
-                                                            <input type="text" class="form-control" id="category_input" name="category_input" placeholder="Input category name">
-                                                            <label for="category_input_english">category_input_english:</label>
-                                                            <input type="text" class="form-control" id="category_input_english" name="category_input_english" placeholder="Input english category name">
-                                                        </div>
                                                     </div>
                                             </div>
                                         </td>
                                     </tr>
                                     <!-- 欄位：sub category -->
 									<tr>
-                                        <td class="header-require col-lg-2">次分類</td>
+                                        <td class="header-require col-lg-2">次分類<br/>Sub Category</td>
                                         <td>
                                             <div class="col-lg-3 nopadding">
                                                     <div class="form-group">
-
-                                                        <select size="6" class="custom-select" name="sub_category" id="sub_category" hidden>
-                                                            
-                                                        </select>
-                                                        <button type="button" name="create_sub_category" id="create_sub_category" class="btn btn-primary btn-xs" onclick="sub_category_function()">New</button>
-                                                        <div id="sub_hide" style="display: none;">
-                                                            <label for="sub_category_input">sub_category_input:</label>
-                                                            <input type="text" class="form-control" id="sub_category_input" name="sub_category_input" placeholder="Input Sub_category name">
-                                                            <label for="sub_category_input_english">sub_category_input_english:</label>
-                                                            <input type="text" class="form-control" id="sub_category_input_english" name="sub_category_input_english" placeholder="Input english sub_category name">
-                                                            <label for="order">Order</label>
-                                                            <input type="number" class="form-control" name="sub_order" id="sub_order" value="0">
-                                                        </div>
+                                                        <select class="custom-select form-control" name="sub_category" id="sub_category"></select>
                                                     </div>
                                             </div>
                                         </td>
                                     </tr>
                                     <!-- 欄位：extra sub category -->
 									<tr>
-                                        <td class="header-require col-lg-2">其他分類</td>
+                                        <td class="header-require col-lg-2">特殊分類<br/>Extra Sub Category</td>
                                         <td>
                                             <div class="col-lg-3 nopadding">
                                                     <div class="form-group">
-                                                            <select size="6" class="custom-select" id="extra_sub_category" name="extra_sub_category" hidden>
-                                                                    <option value="" selected disabled hidden>其他分類</option>
-                                                                </select>
-                                                        <button type="button" name="create_extra_sub_category" id="create_extra_sub_category" class="btn btn-primary btn-xs" onclick="extra_sub_category_function()">New</button>
+                                                            {{-- <select size="6" class="custom-select" id="extra_sub_category" name="extra_sub_category" hidden>
+                                                                <option value="" disabled hidden>特殊分類</option>
+                                                            </select> --}}
+                                                        {{-- <button type="button" name="create_extra_sub_category" id="create_extra_sub_category" class="btn btn-primary btn-xs" onclick="extra_sub_category_function()">New</button> --}}
                                                         <br>
-                                                        <div id="extra_hide" style="display: none;">
+                                                        <div id="extra_hide">
 
-                                                            <label for="extra_sub_category_input">extra_sub_category_input:</label>
-                                                            <input type="text" class="form-control" id="extra_sub_category_input" name="extra_sub_category_input" placeholder="Input Extra_Sub_category name">
+                                                            <label for="extra_sub_category_input">特殊分類名稱<br/>Extra Sub Category Name</label>
+                                                            <input type="text" class="form-control" id="extra_sub_category_input" name="extra_sub_category_input" placeholder="輸入特殊分類名稱">
                                                             
-                                                            <label for="extra_sub_category_input_english">extra_sub_category_input_english:</label>
-                                                            <input type="text" class="form-control" id="extra_sub_category_input_english" name="extra_sub_category_input_english" placeholder="Input english extra sub category name">
+                                                            <label for="extra_sub_category_input_english">特殊分類英文名稱<br/>Extra Sub Category English Name</label>
+                                                            <input type="text" class="form-control" id="extra_sub_category_input_english" name="extra_sub_category_input_english" placeholder="輸入英文分類名稱">
                                                             
-                                                            <label for="extra_sub_category_description">extra_sub_category_description:</label>
-                                                            <textarea id="extra_sub_category_description" name="extra_sub_category_description" form="form_category_create" placeholder="Descripition here"></textarea>
+                                                            <label for="extra_sub_category_description">說明<br/>Description</label>
+                                                            <textarea id="extra_sub_category_description" class="form-control" name="extra_sub_category_description" form="form_category_create" placeholder="輸入說明文字"></textarea>
                                                             
-                                                            <label for="pic">Upload your picture</label>
+                                                            <label for="pic">上傳圖片<br/>Upload Picture</label>
                                                             <input type="file" class="form-control-file multi with-preview" name="pic" id="pic">
 
-                                                            <label for="order">Order</label>
+                                                            <label for="order">順序<br/>Order</label>
                                                             <input type="number" class="form-control" name="order" id="order" value="0">
                                                         </div>
                                                     </div>
@@ -95,8 +76,8 @@
 										<td>&nbsp;</td>
 										<td>
 											<div style="text-align: right">
-                                                <input type="submit" name="btnUpdate_foot" value="Create" id="btnUpdate_foot" class="btn btn-primary btn-xs" onclick="submitForm();">
-                                                <input type="button" name="btnBackTo2_foot" value="Back" id="btnBackTo2_foot" class="btn btn-default btn-xs">
+                                                <input type="button" name="btnBackTo2_foot" value="返回 Back" id="btnBackTo2_foot" class="btn btn-default btn-xs">
+                                                <input type="submit" name="btnUpdate_foot" value="新增 Create" id="btnUpdate_foot" class="btn btn-primary btn-xs" onclick="submitForm();">
 											</div>
 										</td>
 									</tr>
@@ -191,14 +172,14 @@
         if(check=="block"){
             document.getElementById("sub_category").selectedIndex=-1;
             document.getElementById("sub_category").setAttribute("class","hidden");
-            document.getElementById("create_sub_category").innerHTML="Clear";
+            // document.getElementById("create_sub_category").innerHTML="Clear";
 
             $('select[name="extra_sub_category"]').empty();
         }
         else{
             document.getElementById("sub_category").selectedIndex=-1;
             document.getElementById("sub_category").setAttribute("class","custom-select");
-            document.getElementById("create_sub_category").innerHTML="New";
+            // document.getElementById("create_sub_category").innerHTML="New";
             document.getElementById("sub_category_input").value="";
             document.getElementById("sub_category_input_english").value="";
         }
@@ -209,11 +190,11 @@
         var check=$('#extra_hide').css('display');
         if(check=="block"){
             //document.getElementById("extra_sub_category").selectedIndex=-1;
-            document.getElementById("create_extra_sub_category").innerHTML="Clear";
+            // document.getElementById("create_extra_sub_category").innerHTML="Clear";
         }
         else{
             //document.getElementById("extra_sub_category").selectedIndex=-1;
-            document.getElementById("create_extra_sub_category").innerHTML="New";
+            // document.getElementById("create_extra_sub_category").innerHTML="New";
             document.getElementById("extra_sub_category_input").value="";
             document.getElementById("extra_sub_category_input_english").value="";
             document.getElementById("extra_sub_category_description").value="";
@@ -251,6 +232,8 @@
                             else{
                                 $('#extra_sub_category').attr("hidden","");
                             }
+                            $('select[name="sub_category"]').trigger("change");
+
                         }
                     });
                 }else{
@@ -285,6 +268,8 @@
                 }
                 
             });
+            $('select[name="category_select"]').trigger("change");
+            $('select[name="sub_category"]').trigger("change");
 
             
 

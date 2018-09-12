@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+body {
+  color: $color-grey;
+  background: #f8f8f8;
+  font-size: 1rem;
+}
+
+body,
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $font-family-base;
+}
+
+h1{ font-size: font-size(22); line-height: 1.5; font-weight: bold; }
+h2{ font-size: font-size(20); line-height: 1.5; }
+h3{ font-size: font-size(18); line-height: 1.5; }
+h4{ font-size: font-size(16); line-height: 1.5; }
+ p{ font-size: font-size(16); line-height: 1.5; }
+
+a {
+  color: $color-grey;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  &:hover{
+    color: $color-blood;
+  }
+}
+
+.wrap{
+  overflow-x: hidden;
+}
+main{
+  margin-top: 60px;   
+}
+
+@media (min-width: $media-lg) {
+  main{
+    min-height: 600px;
+    margin-top: 140px;
+    overflow: hidden;
+    &.container{    
+      padding: 0 15px;
+    }
+  }
+}

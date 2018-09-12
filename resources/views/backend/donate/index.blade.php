@@ -15,7 +15,7 @@
                             <div class="form-group">
                                 <input type="file" class="form-control-file" name="excel" id="excel">
                             </div>
-                            <button type="submit" class="btn btn-darkblue btn-xs"><strong>匯入</strong></button>
+                            <button type="submit" class="btn btn-success btn-xs"><strong>匯入 Import</strong></button>
                         </form>
                     </div>
                         </div>
@@ -41,63 +41,92 @@
                                     {{ csrf_field() }}
                                     <div class="form-group" >
                                         
-                                        <label class="control-label" style="color:white;">收據編號</label>
+                                        <label class="control-label" style="color:white;">收據編號<br/>Receipt ID</label>
                                         <input name="receipt_id"  type="text" class="form-control" value="{{$cookie->receipt_id ? $cookie->receipt_id : "" }}">
                                         
-                                        <label class="control-label" style="color:white;">姓名</label>
+                                        <label class="control-label" style="color:white;">姓名<br/>Name</label>
                                         <input name="name"  type="text" class="form-control" value="{{$cookie->name ? $cookie->name : "" }}">
                                         
-                                        <label class="control-label" style="color:white;">開始日期</label>
+                                        <label class="control-label" style="color:white;">開始日期<br/>Date Start</label>
                                         <input name="date_start"  type="date" class="form-control" value="{{$cookie->date_start ? $cookie->date_start : "" }}">
-                                        ~
-                                        <label class="control-label" style="color:white;">結束日期</label>
+                                        <label class="control-label" style="color:white;">結束日期<br/>Date End</label>
                                         <input name="date_end" type="date" class="form-control" value="{{$cookie->date_end ? $cookie->date_end : "" }}">
                                     </div>
                                     <div class="form-group" >
                                         <button type="submit" class="btn btn-danger btn-xs" class="form-control">
                                             <strong>篩選</strong>
                                         </button>
-                                        @if(!$cookie->show_all)
+                                        {{-- @if(!$cookie->show_all)
                                             <button type="submit" form="show" name="show_all" id="show_all" value="something" class="btn btn-success btn-xs"><strong>顯示一頁</strong></button>
                                         @else
                                             <button type="submit" form="show" name="show_all" id="show_all" value="" class="btn btn-success btn-xs"><strong>分頁</strong></button>
-                                        @endif
+                                        @endif --}}
                                     </div>
                                 </form>
                             </div>
                     </div>
                 </div>
-                <table class="table table-hover">
+                <table class="table-responsive-xl table-hover" style="table-layout:fixed;" cellspacing="0" width="100%">
                     <thead>
                         <tr>
-                            <td>#</td>
-                            <td>聯絡人姓名</td>
-                            <td>電子郵件</td>
-                            <td>電話</td>
-                            <td>入款日期</td>
-                            <td>收據編號</td>
-                            <td>金額</td>
-                            <td>建立日期</td>
-                            <td></td>
+                            <th>姓名<br/>Name</th>
+                            <th>電子郵件<br/>Email</th>
+                            <th>電話<br/>Phone</th>
+                            <th>入款日期<br/>Transaction Date</th>
+                            <th>收據編號<br/>Receipt ID</th>
+                            <th>金額<br/>Amount</th>
+                            <th>建立日期<br/>Created Time</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach($datas as $data)
-                            <tr>
-                                <td>{{ $data->id }}</td>
+                            <tr height="50">
                                 <td>{{ $data->name }}</td>
-                                <td>{{ $data->email }}</td>
-                                <td>{{ $data->phone }}</td>
+                                <td class="text" style="max-width: 200px;">
+                                        <span style="white-space: nowrap;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        display: inline-block;
+                                        max-width: 100%;">
+                                        {{$data->email}}
+                                        </span>
+                                </td>
+                                <td class="text" style="max-width: 200px;">
+                                        <span style="white-space: nowrap;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        display: inline-block;
+                                        max-width: 100%;">
+                                        {{$data->phone}}
+                                        </span>
+                                </td>
                                 <td>{{ $data->transaction_time }}</td>
-                                <td>{{ $data->receipt_id }}</td>
+                                <td class="text" style="max-width: 200px;">
+                                        <span style="white-space: nowrap;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        display: inline-block;
+                                        max-width: 100%;">
+                                        {{$data->receipt_id}}
+                                        </span>
+                                </td>
                                 <td>{{ $data->amount }}</td>
-                                <td>{{ $data->created_at }}</td>
+                                <td class="text" style="max-width: 200px;">
+                                        <span style="white-space: nowrap;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        display: inline-block;
+                                        max-width: 100%;">
+                                        {{$data->created_at}}
+                                        </span>
+                                </td>
                                 <td style="text-align: right">
                                     <form method="post" action="{{ url('/backend/donate/delete/'.$data->id) }} ">
-                                        <a class="btn btn-xs btn-success" href="{{ url('/backend/donate/edit/'.$data->id) }}">Edit</a>
+                                        <a class="btn btn-xs btn-success" href="{{ url('/backend/donate/edit/'.$data->id) }}">編輯</a>
                                         {{ csrf_field() }}
                                         {{ method_field('DELETE') }}
-                                        <button type="submit" class="btn btn-danger btn-xs" onclick="return confirm('Are you sure?')"><strong>Delete</strong></button>
+                                        <button type="submit" class="btn btn-danger btn-xs" onclick="return confirm('是否確定刪除? Are you sure?')"><strong>刪除</strong></button>
                                     </form>
                                 </td>
                             </tr>
@@ -105,12 +134,13 @@
                     </tbody>
                 </table>
                 <div class="col-md-12 text-center no-margin">
-                        @if(!$cookie->show_all)
+                        {{$datas->render()}}
+                        {{-- @if(!$cookie->show_all)
                             {{$datas->render()}}
                             <button type="submit" form="show" name="show_all" id="show_all" value="something" class="btn btn-success btn-xs" <strong>顯示一頁</strong></button>
                         @else
                             <button type="submit" form="show" name="show_all" id="show_all" value="" class="btn btn-success btn-xs" <strong>分頁</strong></button>
-                        @endif
+                        @endif --}}
                 </div>
             </div>
         </div>

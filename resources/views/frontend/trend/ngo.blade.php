@@ -15,7 +15,7 @@
         </ol>
         <!-- ngo-map -->
         <section class="ngo-map my-5">
-            <img src="{{ asset('assets/images/photo/NGO-MAP.png') }}" class="img-fluid" />
+            <img src="{{ asset('assets/images/photo/NGO-MAP.png') }}" class="img-fluid" alt="NGO世界地圖" />
         </section>
 
         <!-- 各地區簡介 -->

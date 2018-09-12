@@ -46,14 +46,32 @@ class IndexKvController extends Controller
     }
 
     public function store(Request $request){
-        $messages = [
-            'pic.image' => '上傳檔案非圖片',
-            
-        ];
-        $validate = Validator::make($request->all(), [
-            'pic' => 'nullable|image',
-            
-        ], $messages);
+        if($request->type == "kv"){
+            $messages = [
+                'pic.required'  => '請上傳圖片 Please upload an image',
+                'pic.image'     => '上傳檔案非圖片 File type not supported, please upload an image file',
+                'title.required'=> '請輸入標題 Please fill in title'
+                
+            ];
+            $validate = Validator::make($request->all(), [
+                'pic' => 'required|image',
+                'title' => 'required'
+                
+            ], $messages);
+        }
+        else{
+            $messages = [
+                'pic.required'  => '請上傳圖片 Please upload an image',
+                'pic.image'     => '上傳檔案非圖片 File type not supported, please upload an image file',
+                // 'title.required'=> '請輸入標題 Please fill in title'
+                
+            ];
+            $validate = Validator::make($request->all(), [
+                'pic' => 'required|image',
+                // 'title' => 'required'
+                
+            ], $messages);
+        }
 
         if ($validate->fails()) {
             return redirect()->back()
@@ -98,6 +116,6 @@ class IndexKvController extends Controller
     public function destroy(indexKV $indexKV)
     {
         $this->indexKvRepository->destroy($indexKV);
-        return back()->with('success','Item deleted');
+        return back()->with('success','資料已刪除 Data Deleted');
     }
 }

@@ -144,7 +144,7 @@
                             <a class="nav-link" href="#U" id="AU" name="U" title="右上方功能區塊" accesskey="U" tabindex="1">:::</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="consult.html" title="線上諮詢">線上諮詢</a>
+                            <a class="nav-link" href="#" title="線上諮詢">線上諮詢</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/sitemap') }}" title="網站導覽">網站導覽</a>
@@ -162,11 +162,12 @@
                             <a class="nav-link" href="{{ url('/faq') }}" title="常見問題">常見問題</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled" href="#" title="English">English</a>
+                            <a class="nav-link" href="{{ url('/about-en') }}" title="English">English</a>
                         </li>
                         <li class="nav-item search">
-                            <form action="search.html" method="get" name="search-form" id="search-form" title="搜尋">
-                                <input type="text" id="search" name="search" placeholder="關鍵字搜尋" title="關鍵字">
+                            <form action="" method="get" name="search-form" id="search-form" title="搜尋">
+                                <label for="S" class="d-none">關鍵字搜尋: </label>
+                                <input type="text" id="S" accesskey="S" name="search" placeholder="關鍵字搜尋" title="關鍵字">
                                 <div class="fa fa-search" onclick="document.getElementById('search-form').submit();" title="搜尋"></div>
                                 <input type="submit" value="Submit" class="btn-submit" title="Submit">
                             </form>

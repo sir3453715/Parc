@@ -5,7 +5,7 @@
 
 	<div class="row">
 		<div class="col-lg-10">
-			<form id="EditForm" enctype="multipart/form-data" class="form-horizontal" method="post" action="/backend/lecturer/create/">
+			<form id="EditForm" enctype="multipart/form-data" class="form-horizontal" method="post" action="/backend/lecturer/create">
 				{{ csrf_field() }}
 				<div class="panel panel-primary">
 					<div class="panel-heading">

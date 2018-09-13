@@ -5,7 +5,7 @@
 
 	<div class="row">
 		<div class="col-lg-12">
-			<form id="EditForm" enctype="multipart/form-data" class="form-horizontal" method="post" action="/backend/indexKV/{{Request::segment(3)}}/create/">
+			<form id="EditForm" enctype="multipart/form-data" class="form-horizontal" method="post" action="/backend/indexKV/{{Request::segment(3)}}/create">
 				{{ csrf_field() }}
 				<div class="panel panel-primary">
 					<div class="panel-heading">
@@ -116,7 +116,7 @@
 										<td>
 											<div style="text-align: right">
                                                 <input type="button" name="btnBackTo2_foot" value="返回 Back" id="btnBackTo2_foot" class="btn btn-default btn-xs">
-												<input type="submit" name="btnUpdate_foot" value="送出 Modify" id="btnUpdate_foot" class="btn btn-primary btn-xs" onclick="submitForm();">
+												<input type="submit" name="btnUpdate_foot" value="送出 Submit" id="btnUpdate_foot" class="btn btn-primary btn-xs" onclick="submitForm();">
 											</div>
 										</td>
 									</tr>
@@ -138,10 +138,10 @@
 	$(document).ready(function() {
 		//Back
 		$("#btnBackTo2").click(function() {
-			location.href='{{url()->previous()}}';
+			location.href='{{url('backend/indexKV/kv')}}';
 		});
 		$("#btnBackTo2_foot").click(function() {
-			location.href='{{url()->previous()}}';
+			location.href='{{url('backend/indexKV/'.Request::segment(3))}}';
 		});
 		//初始化需要偵錯的表格
 		$('#EditForm').validate();

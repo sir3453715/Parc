@@ -34,7 +34,7 @@
                     </div>
                     <div class="banner-icon__title">什麼是病人自主權利法</div>
                 </a>
-                <a href="#" class="col-6 col-lg-4 banner-icon" title="如何行使權利">
+                <a href="{{ url('/exercise')}}" class="col-6 col-lg-4 banner-icon" title="如何行使權利">
                     <div class="banner-icon__img">
                         <img src="{{ asset('assets/images/icon/icon-02.png') }}" alt="如何行使權利" class="img-fluid" />
                     </div>

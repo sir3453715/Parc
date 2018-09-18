@@ -51,10 +51,11 @@ class CategoryRepository{
                 $extra_sub_category->description=$request->input('extra_sub_category_description');
                 $extra_sub_category->order=$request->input('order');
                 if($request->pic){
-                    $upload_image=$request->pic;
-                    $picName = time().'.'.$upload_image->getClientOriginalName();
-                    $upload_image->storeAs('public/extrasubcategory', $picName);
-                    $extra_sub_category->pic='extrasubcategory/'.$picName;
+                    $extra_sub_category->pic = Storage::disk('public')->putFile('extrasubcategory', $request->pic);
+                    // $upload_image=$request->pic;
+                    // $picName = time().'.'.$upload_image->getClientOriginalName();
+                    // $upload_image->storeAs('public/extrasubcategory', $picName);
+                    // $extra_sub_category->pic='extrasubcategory/'.$picName;
                 }
                 $extra_sub_category->save();
             }
@@ -73,10 +74,11 @@ class CategoryRepository{
                     $extra_sub_category->description=$request->input('extra_sub_category_description');
                     $extra_sub_category->order=$request->input('order');
                     if($request->pic){
-                        $upload_image=$request->pic;
-                        $picName = time().'.'.$upload_image->getClientOriginalName();
-                        $upload_image->storeAs('public/extrasubcategory', $picName);
-                        $extra_sub_category->pic='extrasubcategory/'.$picName;
+                        $extra_sub_category->pic = Storage::disk('public')->putFile('extrasubcategory', $request->pic);
+                        // $upload_image=$request->pic;
+                        // $picName = time().'.'.$upload_image->getClientOriginalName();
+                        // $upload_image->storeAs('public/extrasubcategory', $picName);
+                        // $extra_sub_category->pic='extrasubcategory/'.$picName;
                     }
                     $extra_sub_category->save();
                 }
@@ -110,10 +112,11 @@ class CategoryRepository{
                     $extra_sub_category->description=$request->input('extra_sub_category_description');
                     $extra_sub_category->order=$request->input('order');
                     if($request->pic){
-                        $upload_image=$request->pic;
-                        $picName = time().'.'.$upload_image->getClientOriginalName();
-                        $upload_image->storeAs('public/extrasubcategory', $picName);
-                        $extra_sub_category->pic='extrasubcategory/'.$picName;
+                        $extra_sub_category->pic = Storage::disk('public')->putFile('extrasubcategory', $request->pic);
+                        // $upload_image=$request->pic;
+                        // $picName = time().'.'.$upload_image->getClientOriginalName();
+                        // $upload_image->storeAs('public/extrasubcategory', $picName);
+                        // $extra_sub_category->pic='extrasubcategory/'.$picName;
                     }
                     $extra_sub_category->save();
                 }
@@ -143,10 +146,11 @@ class CategoryRepository{
         $extra_sub_category->pic=request('pic');
         if($request->pic){
             Storage::delete('public/'.$extra_sub_category->pic);
-            $upload_image=$request->pic;
-            $picName = time().'.'.$upload_image->getClientOriginalName();
-            $upload_image->storeAs('public/extrasubcategory', $picName);
-            $extra_sub_category->pic='extrasubcategory/'.$picName;
+            $extra_sub_category->pic = Storage::disk('public')->putFile('extrasubcategory', $request->pic);
+            // $upload_image=$request->pic;
+            // $picName = time().'.'.$upload_image->getClientOriginalName();
+            // $upload_image->storeAs('public/extrasubcategory', $picName);
+            // $extra_sub_category->pic='extrasubcategory/'.$picName;
         }
         $extra_sub_category->order=request('order');
         $extra_sub_category->save();

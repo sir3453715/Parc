@@ -121,10 +121,11 @@ class ArticleRepository{
         //save pic path
         if($request->pic){
             Storage::delete('public/'.$article->pic);
-            $upload_image=$request->pic;
-            $picName = time().'.'.$upload_image->getClientOriginalName();
-            $upload_image->storeAs('public/article/'.$article->category_en(), $picName);
-            $article->pic='article/'.$article->category_en().'/'.$picName;
+            $article->pic = Storage::disk('public')->putFile('article/'.$article->category_en(), $request->pic);
+            // $upload_image=$request->pic;
+            // $picName = time().'.'.$upload_image->getClientOriginalName();
+            // $upload_image->storeAs('public/article/'.$article->category_en(), $picName);
+            // $article->pic='article/'.$article->category_en().'/'.$picName;
         }
         $article->save();
     }
@@ -156,10 +157,11 @@ class ArticleRepository{
         }
         //save pic path
         if($request->pic){
-            $upload_image=$request->pic;
-            $picName = time().'.'.$upload_image->getClientOriginalName();
-            $upload_image->storeAs('public/article/'.$article->category_en(), $picName);
-            $article->pic='article/'.$article->category_en().'/'.$picName;
+            $article->pic = Storage::disk('public')->putFile('article/'.$article->category_en(), $request->pic);
+            // $upload_image=$request->pic;
+            // $picName = time().'.'.$upload_image->getClientOriginalName();
+            // $upload_image->storeAs('public/article/'.$article->category_en(), $picName);
+            // $article->pic='article/'.$article->category_en().'/'.$picName;
         }
         $article->save();
     }

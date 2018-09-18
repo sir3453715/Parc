@@ -27,7 +27,7 @@
                                         </td>
                                     </tr> 
                                     <!-- 欄位：display -->
-									<tr>
+									<tr class="hide_at_law">
                                         <td class="header-require col-lg-2">顯示於Banner <br/>Display on Banner</td>
                                         <td>
                                             <div class="col-lg-3 nopadding">
@@ -86,17 +86,17 @@
 										</td>
                                     </tr>
                                     <!-- 欄位：Description -->                                    
-                                    <tr>
+                                    <tr class="hide_at_law">
                                         <td class="col-lg-2">敘述<br/>Description</td>
                                         <td>
                                             <div class="col-lg-6 nopadding">
-                                                <textarea rows="8" name="description" id="description" class="form-control"></textarea>
+                                                <textarea rows="2" name="description" id="description" class="form-control"></textarea>
                                                 <label class="error" for="description"></label>
                                             </div>
                                         </td>
                                     </tr>
                                     <!-- 欄位：Author -->
-									<tr>
+									<tr class="hide_at_law">
 										<td class="header-require col-lg-2">作者<br/>Author</td>
 										<td>
 											<div class="col-lg-3 nopadding">
@@ -116,22 +116,22 @@
                                         </td>
                                     </tr>
                                     {{-- 欄位：Pic Upload --}}
-                                    <tr>
+                                    <tr class="hide_at_law">
                                         <td class="header-require col-lg-2">上傳圖片<br/>Upload Picture</td>
                                         <td>
                                             <div class="col-lg-3 nopadding">
-                                                <label for="upload_pic"></label>
+                                                <label for="upload_pic"><span style="color:red">*</span>最適尺寸為2878*1380</label>
                                                 <input type="file" class="form-control-file multi with-preview" name="pic" id="pic">
                                             </div>
                                         </td>
                                     </tr>
                                     <!-- 欄位：Video URL -->
                                     @if(Request::segment(3)=="event")
-                                        <tr>
+                                        <tr id="video_url_table">
                                             <td class="header-require col-lg-2">Youtube網址<br/>Youtube URL</td>
                                             <td>
                                                 <div class="col-lg-3 nopadding">
-                                                        <input name="video_url" type="text" id="video_url" class="form-control">
+                                                    <input name="video_url" type="text" id="video_url" class="form-control">
                                                     <label class="error" for="video_url"></label>
                                                 </div>
                                                 <iframe hidden width=100% id="video_iframe" height="315" src="" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
@@ -139,7 +139,7 @@
                                         </tr>
                                     @endif
                                     <!-- 欄位：tags -->
-									<tr>
+									<tr class="hide_at_law">
                                         <td class="header-require col-lg-2">標籤<br/>Tags</td>
                                         <td>
                                             <div class="col-lg-3 nopadding">
@@ -161,7 +161,7 @@
                                         </tr>
                                     @endif --}}
                                     <!-- 欄位：lang -->
-									<tr>
+									<tr class="hide_at_law">
                                         <td class="header-require col-lg-2">語言<br/>Languages</td>
                                         <td>
                                             <div class="col-lg-3 nopadding">
@@ -339,6 +339,20 @@
                         }
                     }
                 });
+                if(sub_category_id == 8){
+                    $('#video_url_table').show();
+                }
+                else{
+                    $('#video_url_table').hide();
+                    $('#video_url').val("");
+                    $('#video_url').trigger("change");
+                }
+                if(sub_category_id == 10){
+                    $('.hide_at_law').hide();
+                }
+                else{
+                    $('.hide_at_law').show();
+                }
             }else{
                 $('select[name="extra_sub_category"]').empty();
             }

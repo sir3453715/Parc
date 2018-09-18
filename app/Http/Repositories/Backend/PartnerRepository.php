@@ -24,10 +24,11 @@ class PartnerRepository{
         ]);
         //save pic path
         if($request->pic){
-            $upload_image=$request->pic;
-            $picName = time().'.'.$upload_image->getClientOriginalName();
-            $upload_image->storeAs('public/partner', $picName);
-            $partner->pic='partner/'.$picName;
+            $partner->pic = Storage::disk('public')->putFile('partner', $request->pic);
+            // $upload_image=$request->pic;
+            // $picName = time().'.'.$upload_image->getClientOriginalName();
+            // $upload_image->storeAs('public/partner', $picName);
+            // $partner->pic='partner/'.$picName;
             $partner->save();
         }
     }
@@ -36,10 +37,11 @@ class PartnerRepository{
         $partner->title   = request('title');
         if($request->pic){
             Storage::delete('public/'.$partner->pic);
-            $upload_image=$request->pic;
-            $picName = time().'.'.$upload_image->getClientOriginalName();
-            $upload_image->storeAs('public/partner', $picName);
-            $partner->pic='partner/'.$picName;
+            $partner->pic = Storage::disk('public')->putFile('partner', $request->pic);
+            // $upload_image=$request->pic;
+            // $picName = time().'.'.$upload_image->getClientOriginalName();
+            // $upload_image->storeAs('public/partner', $picName);
+            // $partner->pic='partner/'.$picName;
         }
         $partner->save();
     }

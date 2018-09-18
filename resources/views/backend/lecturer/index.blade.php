@@ -36,7 +36,7 @@
                             <th style="width: 5%">有效<br/>Active</th>
                             <th>姓名<br/>Name</th>
                             <th>頭銜<br/>Title</th>
-                            <th>內文<br/>Content</th>
+                            {{-- <th>內文<br/>Content</th> --}}
                             <th>圖片<br/>Picture</th>
                             {{-- <th>語言<br/>Language</th> --}}
                             <th>新增時間<br/>Created Time</th>
@@ -52,8 +52,15 @@
                                         <input type="checkbox" disabled {{ ($data->active == 1) ? "checked" : "" }}>
                                     </td>
                                     <td>{{ $data->name }}</td>
-                                    <td>{{ $data->title }}</td>
-                                    <td>{{ strip_tags($data->body) }}</td>
+                                    <td class="text" style="max-width: 200px;">
+                                        <span style="white-space: nowrap;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        display: inline-block;
+                                        max-width: 100%;">
+                                        {{ strip_tags($data->title) }}
+                                        </span>
+                                    </td>
                                     <td>
                                         @if($data->pic)
                                             <img src="/storage/{{$data->pic}}" width="100%" style="padding: 10px;">

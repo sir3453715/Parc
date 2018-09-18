@@ -28,7 +28,7 @@
             </div>
             <!-- banner-icon -->
             <div class="row justify-content-center px-2 px-lg-0">
-                <a href="#" class="col-6 col-lg-4 banner-icon" title="什麼是病人自主權利法">
+                <a href="{{ url('/about')}}" class="col-6 col-lg-4 banner-icon" title="什麼是病人自主權利法">
                     <div class="banner-icon__img">
                         <img src="{{ asset('assets/images/icon/icon-01.png') }}" alt="什麼是病人自主權利法" class="img-fluid" />
                     </div>

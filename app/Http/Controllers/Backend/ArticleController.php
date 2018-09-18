@@ -85,13 +85,16 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
         $messages = [
-            'pic.image' => '上傳檔案非圖片 Please upload valid image',
-            'title.required' => '請輸入標題 Please input title'
+            'pic.image'         => '上傳檔案非圖片 Please upload valid image',
+            'title.required'    => '請輸入標題 Please input title',
+            'title.max'         => '標題需為200字以內 The title may not be greater than 200 characters',
+            'description.max'   => '敘述需為56字以內 The description may not be greater than 56 characters',
             
         ];
         $validate = Validator::make($request->all(), [
             'pic' => 'nullable|image',
-            'title' => 'required'
+            'title' => 'required|max:200',
+            'description' => 'max:56',
             
         ], $messages);
 
@@ -140,11 +143,16 @@ class ArticleController extends Controller
     public function update(Request $request, $category=null, article $article)
     {
         $messages = [
-            'pic.image' => '上傳檔案非圖片',
+            'pic.image'         => '上傳檔案非圖片 Please upload valid image',
+            'title.required'    => '請輸入標題 Please input title',
+            'title.max'         => '標題需為200字以內 The title may not be greater than 200 characters',
+            'description.max'   => '敘述需為56字以內 The description may not be greater than 56 characters',
             
         ];
         $validate = Validator::make($request->all(), [
             'pic' => 'nullable|image',
+            'title' => 'required|max:200',
+            'description' => 'max:56',
             
         ], $messages);
 

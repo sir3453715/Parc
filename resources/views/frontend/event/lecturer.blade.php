@@ -54,7 +54,7 @@
                         <div class="photo-x6__img" alt="{{ $data->name }}" style="background: url(/storage/{{$data->pic}}) no-repeat center; background-size: cover;"></div>
                     </div>
                     <div class="photo-x6__title">{{ $data->name }}</div>
-                    <div class="photo-x6__text">{{ $data->title }}</div>
+                    <div class="photo-x6__text">{!! $data->title !!}</div>
                 </a>
             </div>
             @endforeach
@@ -138,5 +138,12 @@
         </div>
     </section>
 </main>
+<script>
+    var msg = '{{Session::get('alert')}}';
+    var exist = '{{Session::has('alert')}}';
+    if(exist){
+        alert(msg);
+    }
+</script>
     
 @endsection

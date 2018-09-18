@@ -104,8 +104,12 @@
                                         <td class="header-require col-lg-2">上傳圖片<br/>Upload Picture</td>
                                         <td>
                                             <div class="col-lg-3 nopadding">
-                                                <label for="upload_pic"></label>
-                                                <br>
+												@if(Request::segment(3)=="kv")
+												<label for="upload_pic"><span style="color:red">*</span>最適尺寸為2878*1380</label>
+												@else
+												<label for="upload_pic"><span style="color:red">*</span>最適尺寸為1905*942</label>
+												@endif
+												<br>
                                                 @if ($datas["indexKV"]->pic)
                                                 <img src="/storage/{{$datas["indexKV"]->pic}}" height="150">                                                
                                                 @else 

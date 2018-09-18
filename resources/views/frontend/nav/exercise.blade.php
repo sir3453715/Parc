@@ -48,7 +48,7 @@
             <img src="{{ asset('assets/images/icon/exercise-step2V.png') }}" class="d-lg-none img-fluid" alt="Step 2" />
 
             <div class="exercise__acp">
-                <a href="#" class="exercise__acp-btn">預約ACP</a>
+                <a href="" class="exercise__acp-btn">預約ACP</a>
             </div>
         </div>
     </section>

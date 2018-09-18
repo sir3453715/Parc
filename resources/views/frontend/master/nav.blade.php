@@ -16,7 +16,7 @@
                 </a>                 
             </div>
             <!-- 我要捐款 -->
-            <a href="{{ url('/donate') }}" title="我要捐款" class="btn-donation">我要<br>捐款</a>
+            <a href="https://tlea.neticrm.tw/civicrm/contribute/transact?reset=1&id=3" target="_blank" rel="noopener noreferrer" title="我要捐款" class="btn-donation">我要<br>捐款</a>
             <!-- GoTop -->
             <a href="#" title="Go Top" class="btn-gotop">
                 <i class="fa fa-caret-up"></i>
@@ -143,9 +143,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#U" id="AU" name="U" title="右上方功能區塊" accesskey="U" tabindex="1">:::</a>
                         </li>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a class="nav-link" href="#" title="線上諮詢">線上諮詢</a>
-                        </li>
+                        </li> --}}
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/sitemap') }}" title="網站導覽">網站導覽</a>
                         </li>

@@ -36,7 +36,7 @@
 											</div>
 										</td>
 									</tr>
-									<!-- 欄位：Job Title -->
+									{{-- <!-- 欄位：Job Title -->
 									<tr>
 										<td class="col-lg-2">職稱<br/>Job title</td>
 										<td>
@@ -45,14 +45,14 @@
 												<label class="error" for="title"></label>
 											</div>
 										</td>
-									</tr>	
-									<!-- 欄位：Body -->
+									</tr>	 --}}
+									<!-- 欄位：Job Title -->
 									<tr>
-										<td class=" col-lg-2">內文<br/>Content</td>
+										<td class="col-lg-2">職稱<br/>Job title</td>
 										<td>
 											<div class="col-lg-8 nopadding">
-												<textarea name="body" type="text" id="body" class="form-control tooltips ckeditor">{!! $datas["lecturer"]->body !!}</textarea>
-												<label class="error" for="body"></label>
+												<textarea name="title" type="text" id="title" class="form-control tooltips ckeditor"></textarea>
+												<label class="title" for="title"></label>
 											</div>
 										</td>
 									</tr>
@@ -76,7 +76,7 @@
 										<td class="header-require col-lg-2">上傳圖片<br/>Picture</td>
 										<td>
 											<div class="col-lg-3 nopadding">
-												<label for="upload_pic"></label>
+                                                <label for="upload_pic"><span style="color:red">*</span>最適尺寸為810*463</label>
 												<br>
 												@if ($datas["lecturer"]->pic)
 													<img src="/storage/{{$datas["lecturer"]->pic}}" height="150">                                                

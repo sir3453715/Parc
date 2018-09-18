@@ -86,7 +86,7 @@
 										<td class="header-require col-lg-2">上傳圖片<br/>Upload Picture</td>
 										<td>
 											<div class="col-lg-3 nopadding">
-												<label for="upload_pic"></label>
+                                                <label for="upload_pic"><span style="color:red">*</span>最適尺寸為800*450</label>
 												<br>
 												@if ($datas["milestone"]->pic)
 													<img src="/storage/{{$datas["milestone"]->pic}}" height="150">                                                

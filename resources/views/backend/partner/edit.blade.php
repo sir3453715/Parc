@@ -41,7 +41,7 @@
 										<td class="header-require col-lg-2">上傳圖片<br/>Upload Picture</td>
 										<td>
 											<div class="col-lg-3 nopadding">
-												<label for="pic"></label>
+                                                <label for="pic"><span style="color:red">*</span>最適尺寸為小於150*150</label>
 												<br>
 												<img src="/storage/{{$datas->pic}}" height="50">                                                
 												<input type="file" class="form-control-file multi with-preview" name="pic" id="pic">

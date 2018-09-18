@@ -35,7 +35,7 @@
                                         </td>
                                     </tr> 
                                     <!-- 欄位：display -->
-									<tr>
+									<tr class="hide_at_law">
                                         <td class="header-require col-lg-2">顯示於Banner <br/>Display on Banner</td>
                                         <td>
                                             <div class="col-lg-3 nopadding">
@@ -106,7 +106,7 @@
 										</td>
                                     </tr>
                                     <!-- 欄位：Description -->                                    
-                                    <tr>
+                                    <tr class="hide_at_law">
                                         <td class="col-lg-2">敘述<br/>Description</td>
                                         <td>
                                             <div class="col-lg-3 nopadding">
@@ -116,7 +116,7 @@
                                         </td>
                                     </tr>
                                     <!-- 欄位：Author -->
-									<tr>
+									<tr class="hide_at_law">
 										<td class="header-require col-lg-2">作者<br/>Author</td>
 										<td>
 											<div class="col-lg-3 nopadding">
@@ -136,11 +136,11 @@
                                         </td>
                                     </tr>
                                     {{-- 欄位：Pic Upload --}}
-                                    <tr>
+                                    <tr class="hide_at_law">
                                         <td class="header-require col-lg-2">上傳圖片<br/>Upload Picture</td>
                                         <td>
                                             <div class="col-lg-3 nopadding">
-                                                <label for="upload_pic"></label>
+                                                <label for="upload_pic"><span style="color:red">*</span>最適尺寸為2878*1380</label>
                                                 <br>
                                                 @if ($datas["article"]->pic)
                                                 <img src="/storage/{{$datas["article"]->pic}}" height="150">                                                
@@ -153,7 +153,7 @@
                                     </tr>
                                     <!-- 欄位：Video URL -->
                                     @if(Request::segment(3)=="event")
-                                        <tr>
+                                        <tr id="video_url_table">
                                             <td class="header-require col-lg-2">Youtube網址<br/>Youtube URL</td>
                                             <td>
                                                 <div class="col-lg-3 nopadding">
@@ -165,7 +165,7 @@
                                         </tr>
                                     @endif
                                     <!-- 欄位：tags -->
-									<tr>
+									<tr class="hide_at_law">
                                         <td class="header-require col-lg-2">標籤<br/>Tags</td>
                                         <td>
                                             <div class="col-lg-3 nopadding">
@@ -187,7 +187,7 @@
                                         </tr>
                                     @endif --}}
                                     <!-- 欄位：lang -->
-									<tr>
+									<tr class="hide_at_law">
                                         <td class="header-require col-lg-2">語言<br/>Languages</td>
                                         <td>
                                             <div class="col-lg-3 nopadding">
@@ -338,7 +338,7 @@
                             });
                             //set category default value
                             document.getElementById("{{$datas["article"]->sub_category()}}").selected = "true";
-                        }
+                            }
                     });
                 }else{
                     $('select[name="sub_category"]').empty();
@@ -370,6 +370,20 @@
                             // document.getElementById("{{$datas["article"]->extra_sub_category()}}").selected = "true";
                         }
                     });
+                    if(sub_category_id == 8){
+                    $('#video_url_table').show();
+                    }
+                    else{
+                        $('#video_url_table').hide();
+                        $('#video_url').val("");
+                        $('#video_url').trigger("change");
+                    }
+                    if(sub_category_id == 10){
+                    $('.hide_at_law').hide();
+                    }
+                    else{
+                    $('.hide_at_law').show();
+                    }
                 }else{
                     $('select[name="extra_sub_category"]').empty();
                 }
@@ -377,60 +391,6 @@
             });
             $('select[name="category"]').val('{{$datas["article"]->category}}').change();
             $('select[name="sub_category"]').val('{{$datas["article"]->sub_category}}').change();
-
-
-            // category2
-            //set default lang
-            $('select[name="category2"]').on('change', function() {
-                var category_id = $(this).val();
-                if(category_id) {
-                    $.ajax({
-                        url: '/backend/article/create/ajax/'+category_id,
-                        type: "GET",
-                        dataType: "json",
-                        success:function(data) {
-    
-                            
-                            $('select[name="sub_category2"]').empty();
-                            $('select[name="extra_sub_category2"]').empty()
-                            $.each(data, function(key, value) {
-                                $('select[name="sub_category2"]').append('<option id="'+ value +'" value="'+ key +'">'+ value +'</option>');
-                            });
-                            //set category default value
-                        }
-                    });
-                }else{
-                    $('select[name="sub_category2"]').empty();
-                }
-            });
-            $('select[name="sub_category2"]').on('change', function() {
-                var sub_category_id = $(this).val();
-                var category_id = $('select[name="category2"]').val();
-                if(sub_category_id) {
-                    $.ajax({
-                        url: '/backend/article/create/ajax/'+category_id+'/'+sub_category_id,
-                        type: "GET",
-                        dataType: "json",
-                        success:function(data) {
-                            $('select[name="extra_sub_category2"]').empty();
-                            $.each(data, function(key, value) {
-                                $('select[name="extra_sub_category2"]').append('<option id="'+ value +'" value="'+ key +'">'+ value +'</option>');
-                            });
-                            if ($('#extra_sub_category2').children().length > 0 ) {
-                                $('#extra_sub_category2').removeAttr("hidden");
-                            }
-                            else{
-                                $('#extra_sub_category2').attr("hidden","");
-                            }
-                            //set category default value
-                            // document.getElementById("{{$datas["article"]->extra_sub_category()}}").selected = "true";
-                        }
-                    });
-                }else{
-                    $('select[name="extra_sub_category2"]').empty();
-                }
-                
-            });
             
 
         });

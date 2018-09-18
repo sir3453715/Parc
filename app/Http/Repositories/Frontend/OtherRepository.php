@@ -78,7 +78,7 @@ class OtherRepository{
             $contact_form->phone = $request->phone;
             $contact_form->body = $request->body;
             $contact_form->save();
-            return redirect('event/lecturer/')->with('success','我們已收到您的資料並會盡快與您聯繫');
+            return redirect('event/lecturer/')->with('alert','我們已收到您的資料並會盡快與您聯繫');
         }
 
     }

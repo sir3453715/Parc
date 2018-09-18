@@ -21,10 +21,14 @@
                                             <div class="col-lg-3 nopadding">
                                                     <div class="form-group">
                                                         <select id="category_select" name="category_select" class="custom-select form-control">
+                                                                <option id="課程活動" value="2">課程活動</option>
+                                                                <option id="法規政策" value="3">法規政策</option>
+                                                        </select>
+                                                        {{-- <select id="category_select" name="category_select" class="custom-select form-control">
                                                             @foreach($datas["categories"] as $category)
                                                                 <option id="{{$category->name}}" value="{{$category->id}}">{{$category->name}}</option>
                                                             @endforeach
-                                                        </select>
+                                                        </select> --}}
                                                     </div>
                                             </div>
                                         </td>
@@ -35,7 +39,13 @@
                                         <td>
                                             <div class="col-lg-3 nopadding">
                                                     <div class="form-group">
-                                                        <select class="custom-select form-control" name="sub_category" id="sub_category"></select>
+                                                        <select class="custom-select form-control" name="sub_category" id="sub_category">
+                                                            <option id="專業課程" class="課程活動" value="6" hidden>專業課程</option>
+                                                            <option id="線上影音課程" class="課程活動" value="8" hidden>線上影音課程</option>
+                                                            <option id="生命樂活" class="課程活動" value="9" hidden>生命樂活</option>
+                                                            {{-- <option id="法規實務" class="法規政策" value="10" hidden>法規實務</option> --}}
+                                                            <option id="政策研究" class="法規政策" value="11" hidden>政策研究</option>
+                                                        </select>
                                                     </div>
                                             </div>
                                         </td>
@@ -55,15 +65,18 @@
 
                                                             <label for="extra_sub_category_input">特殊分類名稱<br/>Extra Sub Category Name</label>
                                                             <input type="text" class="form-control" id="extra_sub_category_input" name="extra_sub_category_input" placeholder="輸入特殊分類名稱">
-                                                            
+                                                            <br/>
                                                             <label for="extra_sub_category_input_english">特殊分類英文名稱<br/>Extra Sub Category English Name</label>
                                                             <input type="text" class="form-control" id="extra_sub_category_input_english" name="extra_sub_category_input_english" placeholder="輸入英文分類名稱">
-                                                            
+                                                            <br/>
+
                                                             <label for="extra_sub_category_description">說明<br/>Description</label>
                                                             <textarea id="extra_sub_category_description" class="form-control" name="extra_sub_category_description" form="form_category_create" placeholder="輸入說明文字"></textarea>
-                                                            
-                                                            <label for="pic">上傳圖片<br/>Upload Picture</label>
+                                                            <br/>
+
+                                                            <label for="pic">上傳圖片<br/>Upload Picture<br/><br/><span style="color:red">*</span>最適尺寸為540*360</label>
                                                             <input type="file" class="form-control-file multi with-preview" name="pic" id="pic">
+                                                            <br/>
 
                                                             <label for="order">順序<br/>Order</label>
                                                             <input type="number" class="form-control" name="order" id="order" value="0">
@@ -206,71 +219,21 @@
         $(document).ready(function() {
             $('select[name="category_select"]').on('change', function() {
                 var category_id = $(this).val();
-                if(category_id) {
-                    $.ajax({
-                        url: '/backend/article/create/ajax/'+category_id,
-                        type: "GET",
-                        dataType: "json",
-                        success:function(data) {
-    
-                           
-                            $('select[name="sub_category"]').empty();
-
-                            $('select[name="extra_sub_category"]').empty()
-                            $.each(data, function(key, value) {
-                                $('select[name="sub_category"]').append('<option id="'+ value +'" value="'+ key +'">'+ value +'</option>');
-                            });
-                            if ($('#sub_category').children().length > 0 ) {
-                                $('#sub_category').removeAttr("hidden");
-                            }
-                            else{
-                                $('#sub_category').attr("hidden","");
-                            }
-                            if ($('#extra_sub_category').children().length > 0 ) {
-                                $('#extra_sub_category').removeAttr("hidden");
-                            }
-                            else{
-                                $('#extra_sub_category').attr("hidden","");
-                            }
-                            $('select[name="sub_category"]').trigger("change");
-
-                        }
-                    });
-                }else{
-
-                    $('select[name="sub_category"]').empty();
+                if(category_id == 2) {
+                    $('.課程活動').show();
+                    $('.法規政策').hide();
+                    $('select[name="sub_category"]').val($('.課程活動').first().val());                
+                    //hide 10,11
+                }else if(category_id == 3){
+                    $('.課程活動').hide();
+                    $('.法規政策').show(); 
+                    $('select[name="sub_category"]').val($('.法規政策').first().val());                
+                    // $('select[name="sub_category"]').val($('select[name="sub_category"] option:first').val());                
+                    //display 6,8,9
+                    //hide 10,11
                 }
-            });
-            $('select[name="sub_category"]').on('change', function() {
-                var sub_category_id = $(this).val();
-                var category_id = $('select[name="category_select"]').val();
-                if(sub_category_id) {
-                    $.ajax({
-                        url: '/backend/article/create/ajax/'+category_id+'/'+sub_category_id,
-                        type: "GET",
-                        dataType: "json",
-                        success:function(data) {
-                            $('select[name="extra_sub_category"]').empty();
-                            $.each(data, function(key, value) {
-                                $('select[name="extra_sub_category"]').append('<option disabled id="'+ value +'" value="'+ key +'">'+ value +'</option>');
-                            });
-                            if ($('#extra_sub_category').children().length > 0 ) {
-                                $('#extra_sub_category').removeAttr("hidden");
-                            }
-                            else{
-                                $('#extra_sub_category').attr("hidden","");
-                            }
-                            //set category default value
-                        }
-                    });
-                }else{
-                    $('select[name="extra_sub_category"]').empty();
-                }
-                
             });
             $('select[name="category_select"]').trigger("change");
-            $('select[name="sub_category"]').trigger("change");
-
             
 
         });

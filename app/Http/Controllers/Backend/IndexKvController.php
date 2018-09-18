@@ -50,12 +50,15 @@ class IndexKvController extends Controller
             $messages = [
                 'pic.required'  => '請上傳圖片 Please upload an image',
                 'pic.image'     => '上傳檔案非圖片 File type not supported, please upload an image file',
-                'title.required'=> '請輸入標題 Please fill in title'
+                'title.required'=> '請輸入標題 Please fill in title',
+                'title.max'     => '標題需為17字以內 The title may not be greater than 17 characters',
+                'body.max'      => '內文需為56字以內 The content may not be greater than 56 characters',
                 
             ];
             $validate = Validator::make($request->all(), [
                 'pic' => 'required|image',
-                'title' => 'required'
+                'title' => 'required|max:17',
+                'body' => 'max:56',
                 
             ], $messages);
         }
@@ -93,14 +96,34 @@ class IndexKvController extends Controller
     }
 
     public function update($type=null, indexKV $indexKV, Request $request){
-        $messages = [
-            'pic.image' => '上傳檔案非圖片',
-            
-        ];
-        $validate = Validator::make($request->all(), [
-            'pic' => 'nullable|image',
-            
-        ], $messages);
+        if($request->type == "kv"){
+            $messages = [
+                'pic.required'  => '請上傳圖片 Please upload an image',
+                'pic.image'     => '上傳檔案非圖片 File type not supported, please upload an image file',
+                'title.required'=> '請輸入標題 Please fill in title',
+                'title.max'     => '標題需為17字以內 The title may not be greater than 17 characters',
+                'body.max'      => '內文需為56字以內 The content may not be greater than 56 characters',
+                
+            ];
+            $validate = Validator::make($request->all(), [
+                'pic' => 'required|image',
+                'title' => 'required|max:17',
+                'body' => 'max:56',
+                
+            ], $messages);
+        }
+        else{
+            $messages = [
+                'pic.required'  => '請上傳圖片 Please upload an image',
+                'pic.image'     => '上傳檔案非圖片 File type not supported, please upload an image file',
+                // 'title.required'=> '請輸入標題 Please fill in title'
+            ];
+            $validate = Validator::make($request->all(), [
+                'pic' => 'required|image',
+                // 'title' => 'required'
+                
+            ], $messages);
+        }
 
         if ($validate->fails()) {
             return redirect()->back()

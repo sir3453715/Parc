@@ -48,10 +48,11 @@ class IndexKvRepository{
         //save pic path
         if($request->pic){
             Storage::delete('public/'.$indexKV->pic);
-            $upload_image=$request->pic;
-            $picName = time().'.'.$upload_image->getClientOriginalName();
-            $upload_image->storeAs('public/indexKV', $picName);
-            $indexKV->pic='indexKV/'.$picName;
+            $indexKV->pic = Storage::disk('public')->putFile('indexKV', $request->pic);
+            // $upload_image=$request->pic;
+            // $picName = time().'.'.$upload_image->getClientOriginalName();
+            // $upload_image->storeAs('public/indexKV', $picName);
+            // $indexKV->pic='indexKV/'.$picName;
             $indexKV->save();
         }
         else{
@@ -71,10 +72,11 @@ class IndexKvRepository{
         ]);
         //save pic path
         if($request->pic){
-            $upload_image=$request->pic;
-            $picName = time().'.'.$upload_image->getClientOriginalName();
-            $upload_image->storeAs('public/indexKV', $picName);
-            $indexKV->pic='indexKV/'.$picName;
+            $indexKV->pic = Storage::disk('public')->putFile('indexKV', $request->pic);
+            // $upload_image=$request->pic;
+            // $picName = time().'.'.$upload_image->getClientOriginalName();
+            // $upload_image->storeAs('public/indexKV', $picName);
+            // $indexKV->pic='indexKV/'.$picName;
         }
         $indexKV->save();
     }

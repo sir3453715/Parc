@@ -36,8 +36,8 @@
 										<td class="header-require col-lg-2">標題<br/>Title</td>
 										<td>
 											<div class="col-lg-3 nopadding">
-													<input name="title" type="text" id="name" class="form-control">
-												<label class="error" for="title"></label>
+												<input name="title" type="text" id="name" class="form-control">
+												<label class="title" for="title"></label>
 											</div>
 										</td>
                                     </tr>
@@ -56,9 +56,9 @@
                                     <tr>
                                         <td class="col-lg-2">內文<br/>Content</td>
                                         <td>
-                                            <div class="col-lg-8 nopadding">
-                                                <textarea name="body" id="body" class="form-control"></textarea>
-                                                <label class="error" for="body"></label>
+                                            <div class="col-lg-3 nopadding">
+                                                <label class="body" for="body"></label>
+                                                <textarea rows="6" name="body" id="body" class="form-control"></textarea>
                                             </div>
                                         </td>
                                     </tr>
@@ -104,8 +104,12 @@
                                         <td class="header-require col-lg-2">上傳圖片<br/>Upload Picture</td>
                                         <td>
                                             <div class="col-lg-3 nopadding">
-                                                <label for="upload_pic"></label>
-                                                <br>
+												@if(Request::segment(3)=="kv")
+												<label for="upload_pic"><span style="color:red">*</span>最適尺寸為2878*1380</label>
+												@else
+                                                <label for="upload_pic"><span style="color:red">*</span>最適尺寸為1905*942</label>
+												@endif
+												<br>
                                                 <input type="file" class="form-control-file multi with-preview" name="pic" id="pic">
                                             </div>
                                         </td>
@@ -158,7 +162,7 @@
             filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
             filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
         };
-        CKEDITOR.replace('body',options);
+        // CKEDITOR.replace('body',options);
 
         
     });

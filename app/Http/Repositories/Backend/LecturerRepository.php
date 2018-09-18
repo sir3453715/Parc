@@ -41,10 +41,11 @@ class LecturerRepository{
             'order'     =>(lecturer::latest()->value('order')+1)
         ]);
         if($request->pic){
-            $upload_image=$request->pic;
-            $picName = time().'.'.$upload_image->getClientOriginalName();
-            $upload_image->storeAs('public/lecturer', $picName);
-            $lecturer->pic='lecturer/'.$picName;
+            $lecturer->pic = Storage::disk('public')->putFile('lecturer', $request->pic);
+            // $upload_image=$request->pic;
+            // $picName = time().'.'.$upload_image->getClientOriginalName();
+            // $upload_image->storeAs('public/lecturer', $picName);
+            // $lecturer->pic='lecturer/'.$picName;
         }
         $lecturer->save();
     }
@@ -66,10 +67,11 @@ class LecturerRepository{
         //save pic path
         if($request->pic){
             Storage::delete('public/'.$lecturer->pic);
-            $upload_image=$request->pic;
-            $picName = time().'.'.$upload_image->getClientOriginalName();
-            $upload_image->storeAs('public/lecturer', $picName);
-            $lecturer->pic='lecturer/'.$picName;
+            $lecturer->pic = Storage::disk('public')->putFile('lecturer', $request->pic);
+            // $upload_image=$request->pic;
+            // $picName = time().'.'.$upload_image->getClientOriginalName();
+            // $upload_image->storeAs('public/lecturer', $picName);
+            // $lecturer->pic='lecturer/'.$picName;
             $lecturer->save();
         }
         else{

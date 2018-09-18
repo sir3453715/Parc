@@ -32,10 +32,11 @@ class AboutMilestoneRepository{
             'order'     =>(AboutMilestone::latest()->value("order")+1)
         ]);
         if($request->pic){
-            $upload_image=$request->pic;
-            $picName = time().'.'.$upload_image->getClientOriginalName();
-            $upload_image->storeAs('public/aboutmilestone', $picName);
-            $about_milestone->pic='aboutmilestone/'.$picName;
+            $about_milestone->pic = Storage::disk('public')->putFile('aboutmilestone', $request->pic);
+            // $upload_image=$request->pic;
+            // $picName = time().'.'.$upload_image->getClientOriginalName();
+            // $upload_image->storeAs('public/aboutmilestone', $picName);
+            // $about_milestone->pic='aboutmilestone/'.$picName;
         }
         $about_milestone->save();
     }
@@ -57,10 +58,11 @@ class AboutMilestoneRepository{
         //save pic path
         if($request->pic){
             Storage::delete('public/'.$about_milestone->pic);
-            $upload_image=$request->pic;
-            $picName = time().'.'.$upload_image->getClientOriginalName();
-            $upload_image->storeAs('public/aboutmilestone', $picName);
-            $about_milestone->pic='aboutmilestone/'.$picName;
+            $about_milestone->pic = Storage::disk('public')->putFile('aboutmilestone', $request->pic);
+            // $upload_image=$request->pic;
+            // $picName = time().'.'.$upload_image->getClientOriginalName();
+            // $upload_image->storeAs('public/aboutmilestone', $picName);
+            // $about_milestone->pic='aboutmilestone/'.$picName;
         }
         $about_milestone->save();
     }

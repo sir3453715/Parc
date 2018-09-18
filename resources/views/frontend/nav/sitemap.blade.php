@@ -31,8 +31,9 @@
         <a href="{{ url('/story/special') }}" class="col-6 col-lg-3 sitemap__item">1-1 精選特輯</a>
         <a href="{{ url('/story/love') }}" class="col-6 col-lg-3 sitemap__item">1-2 親愛劇場</a>
         <a href="{{ url('/story/doctor') }}" class="col-6 col-lg-3 sitemap__item">1-3 白袍診間</a>
-        <a href="{{ url('/story/life') }}" class="col-6 col-lg-3 sitemap__item">1-4 權威觀點</a>
-        <a href="{{ url('/story/expert') }}" class="col-6 col-lg-3 sitemap__item">1-5 私房故事</a>
+        <a href="{{ url('/story/life') }}" class="col-6 col-lg-3 sitemap__item">1-4 生死迷藏</a>
+        <a href="{{ url('/story/expert') }}" class="col-6 col-lg-3 sitemap__item">1-5 權威觀點</a>
+        <a href="{{ url('/story/story') }}" class="col-6 col-lg-3 sitemap__item">1-5 私房故事</a>
 
         <a href="{{ url('/event') }}" class="col-12 sitemap__title">2.課程與活動</a>
         <a href="{{ url('/event/course') }}" class="col-6 col-lg-3 sitemap__item">2-1 專業課程</a>
@@ -56,7 +57,7 @@
         <a href="{{ url('/law/act') }}" class="col-6 col-lg-3 sitemap__item">3-1 法規實務</a>
         <a href="{{ url('/law/policy') }}" class="col-6 col-lg-3 sitemap__item">3-2 政策研究</a>
         {{-- spit out policy 3,11 --}}
-        @foreach($event_lohas_list as $data)
+        @foreach($law_policy_list as $data)
         <a href="{{ url('/law/policy/'.$data->en_name) }}" class="col-6 col-lg-3 sitemap__item">3-2-{{$loop->iteration}} {{ $data->name }}</a>
         @endforeach
 
@@ -83,18 +84,18 @@
         <a href="{{ url('/faq') }}" class="col-12 sitemap__title">8.常見問題 </a>
 
         <a href="{{ url('/donate') }}" class="col-12 sitemap__title">9.我要支持 </a>
-        <a href="#" class="col-6 col-lg-3 sitemap__item">9-1 我要捐款</a>
-        <a href="#" class="col-6 col-lg-3 sitemap__item">9-2 成為志工</a>
+        <a href="https://tlea.neticrm.tw/civicrm/contribute/transact?reset=1&id=3" target="_blank" rel="noopener noreferrer" class="col-6 col-lg-3 sitemap__item">9-1 我要捐款</a>
+        <a href="{{ url('/404') }}" class="col-6 col-lg-3 sitemap__item">9-2 成為志工</a>
         <a href="{{ url('/donate/story') }}" class="col-6 col-lg-3 sitemap__item">9-3 分享故事</a>
-        <a href="#" class="col-6 col-lg-3 sitemap__item">9-4 成為會員</a>
+        <a href="{{ url('/404') }}" class="col-6 col-lg-3 sitemap__item">9-4 成為會員</a>
         <a href="{{ url('/donate/inquiry') }}" class="col-6 col-lg-3 sitemap__item">9-5 捐款徵信</a>
 
         <a href="#" class="col-12 sitemap__title">追蹤我們</a>
         <a href="https://www.facebook.com/parc.tw/" class="col-6 col-lg-3 sitemap__item" target="_blank" rel="noopener noreferrer">
             <img src="{{ asset('assets/images/icon/btn-facebook.png') }}" alt="facebook" />
         </a>
-        <a href="#" class="col-6 col-lg-3 sitemap__item" target="_blank" rel="noopener noreferrer">
-            <img src="{{ asset('assets/images/icon/btn-line.png') }}" alt="line" />
+        {{-- <a href="#" class="col-6 col-lg-3 sitemap__item" target="_blank" rel="noopener noreferrer">
+            <img src="{{ asset('assets/images/icon/btn-line.png') }}" alt="line" /> --}}
         </a>
         <a href="https://www.youtube.com/channel/UCkJWN2WEhzH_EA5QM65GchQ" class="col-6 col-lg-3 sitemap__item" target="_blank" rel="noopener noreferrer">
             <img src="{{ asset('assets/images/icon/btn-youtube.png') }}" alt="youtube" />

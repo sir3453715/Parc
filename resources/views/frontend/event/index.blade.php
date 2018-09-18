@@ -27,9 +27,9 @@
         <!-- photo-x3 -->
         <div class="photo-x3 owl-carousel mb-1">
             @foreach($course_article_list as $data)
-            <a href="{{ url(''. $data->category_en(). '/'. $data->sub_category_en() .'/article/'. $data->id) }}" class="item photo-x3__item" title="{{ $data->title }}}">
-                <div class="photo-x3__img" alt="{{ $data->title }}}" style="background: url(/storage/{{$data->pic}}) no-repeat center; background-size: cover;"></div>
-                <div class="photo-x3__title">{{ $data->title }}}</div>
+            <a href="{{ url(''. $data->category_en(). '/'. $data->sub_category_en() .'/article/'. $data->id) }}" class="item photo-x3__item" title="{{ $data->title }}">
+                <div class="photo-x3__img" alt="{{ $data->title }}" style="background: url(/storage/{{$data->pic}}) no-repeat center; background-size: cover;"></div>
+                <div class="photo-x3__title">{{ $data->title }}</div>
             </a>
             @endforeach
         </div>

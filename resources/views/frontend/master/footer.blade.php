@@ -9,17 +9,17 @@
             <div class="col-12 col-lg-4 text-center">
                 <div class="footer-title">即刻行動</div>
                 <a href="{{ url('/donate/story') }}" title="分享故事" class="footer-link">分享故事</a> /
-                <a href="#" title="我要捐款" class="footer-link">我要捐款</a> /
-                <a href="#" title="訂閱電子報" class="footer-link">訂閱電子報</a>
+                <a href="https://tlea.neticrm.tw/civicrm/contribute/transact?reset=1&id=3" target="_blank" rel="noopener noreferrer" title="我要捐款" class="footer-link">我要捐款</a> /
+                <a href="https://tlea.neticrm.tw/civicrm/profile/create?gid=15&reset=1" target="_blank" rel="noopener noreferrer" title="訂閱電子報" class="footer-link">訂閱電子報</a>
             </div>
             <div class="col-12 col-lg-4 text-center">
                 <div class="footer-title">追蹤我們</div>
                 <a href="https://www.facebook.com/parc.tw/" title="facebook" class="footer-social" target="_blank" rel="noopener noreferrer">
                     <img src="{{ asset('assets/images/icon/icon-facebook.svg') }}" class="img-fluid" alt="social facebook" target="_blank" rel="noopener noreferrer"/>
                 </a>
-                <a href="#" title="line" class="footer-social" target="_blank" rel="noopener noreferrer">
+                {{-- <a href="#" title="line" class="footer-social" target="_blank" rel="noopener noreferrer">
                     <img src="{{ asset('assets/images/icon/icon-line.svg') }}" class="img-fluid" alt="social line"/>
-                </a>
+                </a> --}}
                 <a href="https://www.youtube.com/channel/UCkJWN2WEhzH_EA5QM65GchQ" title="youtube" class="footer-social" target="_blank" rel="noopener noreferrer">
                     <img src="{{ asset('assets/images/icon/icon-youtube.svg') }}" class="img-fluid" alt="social youtube"/>
                 </a>

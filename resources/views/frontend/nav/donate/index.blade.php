@@ -17,7 +17,7 @@
 <div class="container">
     <section class="bg-white">
         <div class="row justify-content-center p-5">
-            <a href="#" class="col-6 col-lg-4 text-center p-2">
+            <a href="https://tlea.neticrm.tw/civicrm/contribute/transact?reset=1&id=3" target="_blank" rel="noopener noreferrer" class="col-6 col-lg-4 text-center p-2">
                 <div class="service-lohas__icon">
                     <img src="{{ asset('assets/images/icon/icon-11.png') }}" class="img-fluid" alt="我要捐款" />
                 </div>
@@ -29,13 +29,13 @@
                 </div>
                 <h2>分享故事</h2>
             </a>
-            <a href="#" class="col-6 col-lg-4 text-center p-2">
+            <a href="{{ url('/404') }}" class="col-6 col-lg-4 text-center p-2">
                 <div class="service-lohas__icon">
                     <img src="{{ asset('assets/images/icon/icon-13.png') }}" class="img-fluid" alt="成為志工" />
                 </div>
                 <h2>成為志工</h2>
             </a>
-            <a href="#" class="col-6 col-lg-4 text-center p-2">
+            <a href="{{ url('/404') }}" class="col-6 col-lg-4 text-center p-2">
                 <div class="service-lohas__icon">
                     <img src="{{ asset('assets/images/icon/icon-14.png') }}" class="img-fluid" alt="成為會員" />
                 </div>

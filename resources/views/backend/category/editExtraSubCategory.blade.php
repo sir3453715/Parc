@@ -66,7 +66,7 @@
 									</tr>
 									{{-- 欄位：Pic Upload --}}
                                     <tr>
-										<td class="header-require col-lg-2">上傳圖片<br/>Upload Picture</td>
+										<td class="header-require col-lg-2">上傳圖片<br/>Upload Picture<br/><span style="color:red">*</span>最適尺寸為540*360</td>
 										<td>
 											<div class="col-lg-3 nopadding">
 												<label for="pic"></label>

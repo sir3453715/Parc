@@ -15,7 +15,7 @@
         </ol>
         <!-- ngo-map -->
         <section class="ngo-map my-5">
-            <img src="{{ asset('assets/images/photo/NGO-MAP.png') }}" class="img-fluid" alt="NGO世界地圖" />
+            <img src="{{ asset('assets/images/photo/ngo-map.png') }}" class="img-fluid" alt="NGO世界地圖" />
         </section>
 
         <!-- 各地區簡介 -->
@@ -25,7 +25,7 @@
             <div class="row justify-content-center text-center mb-5">
                 <div class="col-12 col-lg-6 service-lohas__item">
                     <div class="service-lohas__icon">
-                        <img src="{{ asset('assets/images/icon/JP-SDWD.png') }}" class="img-fluid" alt="日本尊嚴死協會">
+                        <img src="{{ asset('assets/images/icon/jp-sdwd.png') }}" class="img-fluid" alt="日本尊嚴死協會">
                     </div>
                     <div class="service-lohas__box">
                         <div class="service-lohas__title">
@@ -37,7 +37,7 @@
                 </div>
                 <div class="col-12 col-lg-6 service-lohas__item">
                     <div class="service-lohas__icon">
-                        <img src="{{ asset('assets/images/icon/JP-NPO.png') }}" class="img-fluid" alt="千葉居家照護 市民網絡">
+                        <img src="{{ asset('assets/images/icon/jp-npo.png') }}" class="img-fluid" alt="千葉居家照護 市民網絡">
                     </div>
                     <div class="service-lohas__box">
                         <div class="service-lohas__title">
@@ -55,7 +55,7 @@
             <div class="row justify-content-center text-center mb-5">
                 <div class="col-12 col-lg-6 service-lohas__item">
                     <div class="service-lohas__icon">
-                        <img src="{{ asset('assets/images/icon/KR-CRI.png') }}" class="img-fluid" alt="南韓國際照護權組織">
+                        <img src="{{ asset('assets/images/icon/kr-cri.png') }}" class="img-fluid" alt="南韓國際照護權組織">
                     </div>
                     <div class="service-lohas__box">
                         <div class="service-lohas__title">
@@ -67,7 +67,7 @@
                 </div>
                 <div class="col-12 col-lg-6 service-lohas__item">
                     <div class="service-lohas__icon">
-                        <img src="{{ asset('assets/images/icon/KR-IAD.png') }}" class="img-fluid" alt="南韓預立醫療指示立法推動會">
+                        <img src="{{ asset('assets/images/icon/kr-iad.png') }}" class="img-fluid" alt="南韓預立醫療指示立法推動會">
                     </div>
                     <div class="service-lohas__box">
                         <div class="service-lohas__title">
@@ -85,7 +85,7 @@
             <div class="row justify-content-center text-center mb-5">
                 <div class="col-12 col-lg-6 service-lohas__item">
                     <div class="service-lohas__icon">
-                        <img src="{{ asset('assets/images/icon/HK-PE.png') }}" class="img-fluid" alt="美善生命計畫">
+                        <img src="{{ asset('assets/images/icon/hk-pe.png') }}" class="img-fluid" alt="美善生命計畫">
                     </div>
                     <div class="service-lohas__box">
                         <div class="service-lohas__title">
@@ -103,7 +103,7 @@
             <div class="row justify-content-center text-center mb-5">
                 <div class="col-12 col-lg-6 service-lohas__item">
                     <div class="service-lohas__icon">
-                        <img src="{{ asset('assets/images/icon/CN-LWPA.png') }}" class="img-fluid" alt="北京生前預囑推廣協會">
+                        <img src="{{ asset('assets/images/icon/cn-lwpa.png') }}" class="img-fluid" alt="北京生前預囑推廣協會">
                     </div>
                     <div class="service-lohas__box">
                         <div class="service-lohas__title">
@@ -121,7 +121,7 @@
             <div class="row justify-content-center text-center mb-5">
                 <div class="col-12 col-lg-6 service-lohas__item">
                     <div class="service-lohas__icon">
-                        <img src="{{ asset('assets/images/icon/SG-HC.png') }}" class="img-fluid" alt="新加坡慈懷理事會">
+                        <img src="{{ asset('assets/images/icon/sg-hc.png') }}" class="img-fluid" alt="新加坡慈懷理事會">
                     </div>
                     <div class="service-lohas__box">
                         <div class="service-lohas__title">
@@ -133,7 +133,7 @@
                 </div>
                 <div class="col-12 col-lg-6 service-lohas__item">
                     <div class="service-lohas__icon">
-                        <img src="{{ asset('assets/images/icon/SG-HCA.png') }}" class="img-fluid" alt="HCA Hospice Care">
+                        <img src="{{ asset('assets/images/icon/sg-hca.png') }}" class="img-fluid" alt="HCA Hospice Care">
                     </div>
                     <div class="service-lohas__box">
                         <div class="service-lohas__title">
@@ -151,7 +151,7 @@
             <div class="row justify-content-center text-center mb-5">
                 <div class="col-12 col-lg-6 service-lohas__item">
                     <div class="service-lohas__icon">
-                        <img src="{{ asset('assets/images/icon/TH-THAPS.png') }}" class="img-fluid" alt="泰國安寧照護社群">
+                        <img src="{{ asset('assets/images/icon/th-thaps.png') }}" class="img-fluid" alt="泰國安寧照護社群">
                     </div>                     
                     <div class="service-lohas__box">
                         <div class="service-lohas__title">
@@ -163,7 +163,7 @@
                 </div>
                 <div class="col-12 col-lg-6 service-lohas__item">
                     <div class="service-lohas__icon">
-                        <img src="{{ asset('assets/images/icon/SG-HCA.png') }}" class="img-fluid" alt="平靜善終">
+                        <img src="{{ asset('assets/images/icon/sg-hca.png') }}" class="img-fluid" alt="平靜善終">
                     </div>
                     <div class="service-lohas__box">
                         <div class="service-lohas__title">
@@ -181,7 +181,7 @@
                 <div class="row justify-content-center text-center mb-5">
                     <div class="col-12 col-lg-6 service-lohas__item">
                         <div class="service-lohas__icon">
-                            <img src="{{ asset('assets/images/icon/CN-LWPA.png') }}" class="img-fluid" alt="Pallium India">
+                            <img src="{{ asset('assets/images/icon/cn-lwpa.png') }}" class="img-fluid" alt="Pallium India">
                         </div>
                         <div class="service-lohas__box">
                             <div class="service-lohas__title">

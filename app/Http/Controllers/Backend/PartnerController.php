@@ -115,8 +115,26 @@ class PartnerController extends Controller
     public function update(Request $request, partner $partner)
     {
         //
-        $this->partnerRepository->update($request,$partner);
-        return redirect('/backend/partner')->with('success','夥伴更新成功! Partner Updated');
+        $messages = [
+            'pic.image'     => '上傳檔案非圖片 File type not supported, please upload an image file',
+            'title.required'=> '請輸入標題 Please fill in title'
+            
+        ];
+        $validate = Validator::make($request->all(), [
+            'pic' => 'image',
+            'title' => 'required'
+            
+        ], $messages);
+
+        if ($validate->fails()) {
+            return redirect()->back()
+                ->withInput($request->all)
+                ->withErrors($validate);
+        }
+        else{
+            $this->partnerRepository->update($request,$partner);
+            return redirect('/backend/partner')->with('success','夥伴更新成功! Partner Updated');
+        }
     }
 
     /**

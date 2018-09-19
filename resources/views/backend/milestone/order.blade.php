@@ -34,8 +34,8 @@
 										<td>&nbsp;</td>
 										<td>
 											<div style="text-align: right">
-                                                <input type="submit" name="btnUpdate_foot" value="Update" id="btnUpdate_foot" class="btn btn-primary btn-xs" onclick="submitForm();">
-                                                <input type="button" name="btnBackTo2_foot" value="Back" id="btnBackTo2_foot" class="btn btn-default btn-xs">
+                                                <input type="button" name="btnBackTo2_foot" value="返回 Back" id="btnBackTo2_foot" class="btn btn-default btn-xs">
+                                                <input type="submit" name="btnUpdate_foot" value="更新 Update" id="btnUpdate_foot" class="btn btn-primary btn-xs" onclick="submitForm();">
 											</div>
 										</td>
 									</tr>

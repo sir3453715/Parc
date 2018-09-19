@@ -98,7 +98,7 @@ class IndexKvController extends Controller
     public function update($type=null, indexKV $indexKV, Request $request){
         if($request->type == "kv"){
             $messages = [
-                'pic.required'  => '請上傳圖片 Please upload an image',
+                // 'pic.required'  => '請上傳圖片 Please upload an image',
                 'pic.image'     => '上傳檔案非圖片 File type not supported, please upload an image file',
                 'title.required'=> '請輸入標題 Please fill in title',
                 'title.max'     => '標題需為17字以內 The title may not be greater than 17 characters',
@@ -106,7 +106,7 @@ class IndexKvController extends Controller
                 
             ];
             $validate = Validator::make($request->all(), [
-                'pic' => 'required|image',
+                'pic' => 'image',
                 'title' => 'required|max:17',
                 'body' => 'max:56',
                 

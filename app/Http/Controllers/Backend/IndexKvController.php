@@ -90,7 +90,7 @@ class IndexKvController extends Controller
     public function edit($type,indexKV $indexKV)
     {
         $datas=$this->indexKvRepository->edit($indexKV);
-        return view('backend.indexKV.edit',[
+        return view('backend.indexKv.edit',[
             'datas'=>$datas,
         ]);
     }

@@ -45,10 +45,10 @@
         <div class="exercise__step-title">如何進行</div>
         <div class="p-lg-5">
             <img src="{{ asset('assets/images/icon/exercise-step2.png') }}" class="d-none d-lg-block img-fluid" alt="Step 2" />
-            <img src="{{ asset('assets/images/icon/exercise-step2V.png') }}" class="d-lg-none img-fluid" alt="Step 2" />
+            <img src="{{ asset('assets/images/icon/exercise-step2v.png') }}" class="d-lg-none img-fluid" alt="Step 2" />
 
             <div class="exercise__acp">
-                <a href="" class="exercise__acp-btn">預約ACP</a>
+                <a href="{{ url('404')}}" class="exercise__acp-btn">預約ACP</a>
             </div>
         </div>
     </section>

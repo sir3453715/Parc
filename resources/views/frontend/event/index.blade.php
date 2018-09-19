@@ -42,9 +42,9 @@
         <!-- photo-x3 -->
         <div class="photo-x3 owl-carousel mb-1">
             @foreach($lecturer_list as $data)
-            <a href="#" class="item photo-x3__item" title="{{ $data->name }}">
+            <a class="item photo-x3__item" title="{{ $data->name }}">
                 <div class="photo-x3__img" alt="{{ $data->name }}" style="background: url(/storage/{{$data->pic}}) no-repeat center; background-size: cover;"></div>
-            <div class="photo-x3__title">{{ $data->name }} <br>{{ $data->title }}</div>
+            <div class="photo-x3__title">{{ $data->name }} <br>{!! $data->title !!}</div>
             </a>
             @endforeach
         </div>

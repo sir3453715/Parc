@@ -53,11 +53,11 @@ class OtherRepository{
     }
     public function StoreLecturerRequest(Request $request){
         $messages = [
-            'name.required' => '請輸入您的名字',
-            'name.max' => '名字過長，請重新輸入',
-            'email.required_without' => '請輸入您的電子信箱或聯絡電話',
-            'email.max' => '電子信箱過長，請重新輸入',
-            'phone.max' => '聯絡電話過長，請重新輸入',
+            'name.required' => '請輸入您的名字 Please fill in your name',
+            'name.max' => '名字過長，請重新輸入 Name may not be greater than 100 characters',
+            'email.required_without' => '請輸入您的電子信箱或聯絡電話 Please fill in your email or phone',
+            'email.max' => '電子信箱過長，請重新輸入 Email may not be greater than 191 characters',
+            'phone.max' => '聯絡電話過長，請重新輸入 Phone number may not be greater than 20 characters',
         ];
         $validate = Validator::make($request->all(), [
             'name' => 'required|max:100',

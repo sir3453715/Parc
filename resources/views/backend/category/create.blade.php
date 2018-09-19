@@ -64,14 +64,14 @@
                                                         <div id="extra_hide">
 
                                                             <label for="extra_sub_category_input">特殊分類名稱<br/>Extra Sub Category Name</label>
-                                                            <input type="text" class="form-control" id="extra_sub_category_input" name="extra_sub_category_input" placeholder="輸入特殊分類名稱">
+                                                            <input type="text" class="form-control" id="extra_sub_category_input" name="extra_sub_category_input" placeholder="輸入特殊分類名稱" value="{{ old('extra_sub_category_input') }}">
                                                             <br/>
                                                             <label for="extra_sub_category_input_english">特殊分類英文名稱<br/>Extra Sub Category English Name</label>
-                                                            <input type="text" class="form-control" id="extra_sub_category_input_english" name="extra_sub_category_input_english" placeholder="輸入英文分類名稱">
+                                                            <input type="text" class="form-control" id="extra_sub_category_input_english" name="extra_sub_category_input_english" placeholder="輸入英文分類名稱" value="{{ old('extra_sub_category_input_english') }}">
                                                             <br/>
 
                                                             <label for="extra_sub_category_description">說明<br/>Description</label>
-                                                            <textarea id="extra_sub_category_description" class="form-control" name="extra_sub_category_description" form="form_category_create" placeholder="輸入說明文字"></textarea>
+                                                            <textarea id="extra_sub_category_description" class="form-control" name="extra_sub_category_description" form="form_category_create" placeholder="輸入說明文字">{{ old('extra_sub_category_description') }}</textarea>
                                                             <br/>
 
                                                             <label for="pic">上傳圖片<br/>Upload Picture<br/><br/><span style="color:red">*</span>最適尺寸為540*360</label>

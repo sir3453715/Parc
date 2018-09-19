@@ -31,7 +31,7 @@
 										<td class="header-require col-lg-2">標題<br/>Title</td>
 										<td>
 											<div class="col-lg-3 nopadding">
-													<input name="title" type="text" id="title" class="form-control">
+													<input name="title" type="text" id="title" class="form-control" value="{{ old('title') }}">
 												<label class="error" for="title"></label>
 											</div>
 										</td>

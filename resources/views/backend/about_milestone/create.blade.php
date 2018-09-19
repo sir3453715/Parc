@@ -31,7 +31,7 @@
 										<td class="header-require col-lg-2">標題<br/>Title</td>
 										<td>
 											<div class="col-lg-8 nopadding">
-													<input name="title" type="text" id="title" class="form-control ">
+													<input name="title" type="text" id="title" class="form-control " value="{{ old('title') }}">
 												<label class="error" for="title"></label>
 											</div>
 										</td>
@@ -41,7 +41,7 @@
 										<td class=" col-lg-2">內文<br/>Content</td>
 										<td>
 											<div class="col-lg-8 nopadding">
-												<textarea name="body" type="text" id="body" class="form-control tooltips ckeditor"></textarea>
+												<textarea name="body" type="text" id="body" class="form-control tooltips ckeditor">{{ old('body') }}</textarea>
 												<label class="error" for="body"></label>
 											</div>
 										</td>
@@ -51,7 +51,7 @@
 										<td class="header-require col-lg-2">日期<br/>Date</td>
 										<td>
 											<div class="col-lg-3 nopadding">
-													<input name="date" type="date" id="date" class="form-control">
+													<input name="date" type="date" id="date" class="form-control" value="{{ old('date') }}">
 												<label class="error" for="date"></label>
 											</div>
 										</td>

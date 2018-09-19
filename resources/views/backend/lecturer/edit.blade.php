@@ -51,7 +51,7 @@
 										<td class="col-lg-2">職稱<br/>Job title</td>
 										<td>
 											<div class="col-lg-8 nopadding">
-												<textarea name="title" type="text" id="title" class="form-control tooltips ckeditor"></textarea>
+												<textarea name="title" type="text" id="title" class="form-control tooltips ckeditor">{!! $datas["lecturer"]->title !!}</textarea>
 												<label class="title" for="title"></label>
 											</div>
 										</td>
@@ -81,7 +81,7 @@
 												@if ($datas["lecturer"]->pic)
 													<img src="/storage/{{$datas["lecturer"]->pic}}" height="150">                                                
 												@else 
-													you no pic!
+													<p>未上傳圖片 Picture not uploaded</p>
 												@endif
 												<input type="file" class="form-control-file multi with-preview" name="pic" id="pic">
 											</div>

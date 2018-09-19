@@ -35,14 +35,16 @@ class ContactFormController extends Controller
     }
     public function store(Request $request){
         $messages = [
-            'name.required'  => '請輸入姓名 Please fill in name',
-            'email.required'  => '請輸入電子信箱 Please fill in email',
-            'body.required'  => '請輸入內文 Please fill in content',
+            'name.required' => '請輸入您的名字 Please fill in your name',
+            'name.max' => '名字過長，請重新輸入 Name may not be greater than 100 characters',
+            'email.required_without' => '請輸入您的電子信箱或聯絡電話 Please fill in your email or phone',
+            'email.max' => '電子信箱過長，請重新輸入 Email may not be greater than 191 characters',
+            'phone.max' => '聯絡電話過長，請重新輸入 Phone number may not be greater than 20 characters',
         ];
         $validate = Validator::make($request->all(), [
-            'name' => 'required',
-            'email' => 'required',
-            'body' => 'required',
+            'name' => 'required|max:100',
+            'email' => 'required_without:phone|max:191',
+            'phone' => 'max:20',
             
         ], $messages);
 
@@ -65,8 +67,28 @@ class ContactFormController extends Controller
         );
     }
     public function update(Request $request,ContactForm $contact_form){
-        $this->contactFormRepository->update($request,$contact_form);
-        return redirect('/backend/contact_form');
+        $messages = [
+            'name.required' => '請輸入您的名字 Please fill in your name',
+            'name.max' => '名字過長，請重新輸入 Name may not be greater than 100 characters',
+            'email.required_without' => '請輸入您的電子信箱或聯絡電話 Please fill in your email or phone',
+            'email.max' => '電子信箱過長，請重新輸入 Email may not be greater than 191 characters',
+            'phone.max' => '聯絡電話過長，請重新輸入 Phone number may not be greater than 20 characters',
+        ];
+        $validate = Validator::make($request->all(), [
+            'name' => 'required|max:100',
+            'email' => 'required_without:phone|max:191',
+            'phone' => 'max:20',
+            
+        ], $messages);
+        if ($validate->fails()) {
+            return redirect()->back()
+                ->withInput($request->all)
+                ->withErrors($validate);
+        }
+        else{
+            $this->contactFormRepository->update($request,$contact_form);
+            return redirect('/backend/contact_form');
+        }
     }
     public function destroy(ContactForm $contact_form){
         $contact_form->delete();

@@ -29,7 +29,7 @@
 										<td class="header-require col-lg-2">姓名<br/>Name</td>
 										<td>
 											<div class="col-lg-3 nopadding">
-													<input name="name" type="text" id="name" class="form-control">
+													<input name="name" type="text" id="name" class="form-control" value="{{ old('name') }}">
 												<label class="error" for="name"></label>
 											</div>
 										</td>
@@ -39,7 +39,7 @@
 										<td class="col-lg-2">電子信箱<br/>Email</td>
 										<td>
 											<div class="col-lg-8 nopadding">
-												<input name="email" type="text" id="email" class="form-control">
+												<input name="email" type="text" id="email" class="form-control" value="{{ old('email') }}">
 												<label class="error" for="email"></label>
 											</div>
 										</td>
@@ -49,7 +49,7 @@
 										<td class="col-lg-2">電話<br/>Phone</td>
 										<td>
 											<div class="col-lg-8 nopadding">
-												<input name="phone" type="text" id="phone" class="form-control">
+												<input name="phone" type="text" id="phone" class="form-control" value="{{ old('phone') }}">
 												<label class="error" for="phone"></label>
 											</div>
 										</td>
@@ -59,7 +59,7 @@
 										<td class=" col-lg-2">內文<br/>Content</td>
 										<td>
 											<div class="col-lg-8 nopadding">
-												<textarea rows="8" name="body" type="text" id="body" class="form-control"></textarea>
+												<textarea rows="8" name="body" type="text" id="body" class="form-control">{{ old('body') }}</textarea>
 												<label class="error" for="body"></label>
 											</div>
 										</td>

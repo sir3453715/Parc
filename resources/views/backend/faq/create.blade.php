@@ -31,7 +31,7 @@
 										<td class="header-require col-lg-2">問題<br/>Question</td>
 										<td>
 											<div class="col-lg-8 nopadding">
-													<textarea rows="8" name="question" type="text" id="question" class="form-control"></textarea>
+													<textarea rows="8" name="question" type="text" id="question" class="form-control">{{ old('question') }}</textarea>
 												<label class="error" for="question"></label>
 											</div>
 										</td>
@@ -41,7 +41,7 @@
 										<td class=" col-lg-2">答案<br/>Answer</td>
 										<td>
 											<div class="col-lg-8 nopadding">
-												<textarea rows="8" name="answer" type="text" id="answer" class="form-control"></textarea>
+												<textarea rows="8" name="answer" type="text" id="answer" class="form-control">{{ old('answer') }}</textarea>
 												<label class="error" for="answer"></label>
 											</div>
 										</td>

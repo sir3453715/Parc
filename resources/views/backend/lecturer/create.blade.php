@@ -31,7 +31,7 @@
 										<td class="header-require col-lg-2">姓名<br/>Name</td>
 										<td>
 											<div class="col-lg-3 nopadding">
-													<input name="name" type="text" id="name" class="form-control">
+												<input name="name" type="text" id="name" class="form-control" value="{{ old('name') }}">
 												<label class="error" for="name"></label>
 											</div>
 										</td>
@@ -48,10 +48,10 @@
 									</tr>	 --}}
 									<!-- 欄位：Job Title -->
 									<tr>
-											<td class="col-lg-2">職稱<br/>Job title</td>
+										<td class="col-lg-2">職稱<br/>Job title</td>
 											<td>
 											<div class="col-lg-8 nopadding">
-												<textarea name="title" type="text" id="title" class="form-control tooltips ckeditor"></textarea>
+												<textarea name="title" type="text" id="title" class="form-control tooltips ckeditor">{{ old('title') }}</textarea>
 												<label class="title" for="title"></label>
 											</div>
 										</td>
@@ -124,13 +124,6 @@
 			}
 		);
         //各欄位
-        var options = {
-            filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
-            filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
-            filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
-            filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='
-        };    
-        CKEDITOR.replace( 'body',options );
     });
 		
 	//提交與取消按鈕

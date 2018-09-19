@@ -80,7 +80,7 @@
 										<td class="header-require col-lg-2">標題<br/>Title</td>
 										<td>
 											<div class="col-lg-6 nopadding">
-													<input name="title" type="text" id="title" class="form-control">
+													<input name="title" type="text" id="title" class="form-control" value="{{ old('title') }}">
 												<label class="error" for="title"></label>
 											</div>
 										</td>
@@ -90,7 +90,7 @@
                                         <td class="col-lg-2">敘述<br/>Description</td>
                                         <td>
                                             <div class="col-lg-6 nopadding">
-                                                <textarea rows="2" name="description" id="description" class="form-control"></textarea>
+                                                <textarea rows="2" name="description" id="description" class="form-control">{{ old('description') }}</textarea>
                                                 <label class="error" for="description"></label>
                                             </div>
                                         </td>
@@ -100,7 +100,7 @@
 										<td class="header-require col-lg-2">作者<br/>Author</td>
 										<td>
 											<div class="col-lg-3 nopadding">
-													<input name="author" type="text" id="author" class="form-control">
+													<input name="author" type="text" id="author" class="form-control" value="{{ old('author') }}">
 												<label class="error" for="author"></label>
 											</div>
 										</td>
@@ -110,7 +110,7 @@
                                         <td class="col-lg-2">內文<br/>Content</td>
                                         <td>
                                             <div class="col-lg-8 nopadding">
-                                                <textarea name="body" id="body" class="form-control"></textarea>
+                                                <textarea name="body" id="body" class="form-control">{{ old('body') }}</textarea>
                                                 <label class="error" for="body"></label>
                                             </div>
                                         </td>
@@ -143,7 +143,7 @@
                                         <td class="header-require col-lg-2">標籤<br/>Tags</td>
                                         <td>
                                             <div class="col-lg-3 nopadding">
-                                                    <input name="tags" type="text" id="tags" class="form-control" placeholder="mytag1,mytag2">
+                                                    <input name="tags" type="text" id="tags" class="form-control" placeholder="mytag1,mytag2" value="{{ old('tags') }}">
                                                 <label class="error" for="tags"></label>
                                             </div>
                                         </td>

@@ -122,13 +122,13 @@
                         {{csrf_field()}}
                         <div class="service-contact__form">
                             <label for="name" class="service-contact__form-title">聯絡人姓名</label>
-                            <input type="text" id="name" name="name" class="service-contact__form-control form-control" title="聯絡人姓名" />
+                            <input type="text" id="name" name="name" class="service-contact__form-control form-control" title="聯絡人姓名" value="{{ old('name') }}"/>
                             <label for="email" class="service-contact__form-title">電子信箱</label>
-                            <input type="email" id="email"  name="email" class="service-contact__form-control form-control" title="電子信箱" />
+                            <input type="email" id="email"  name="email" class="service-contact__form-control form-control" title="電子信箱" value="{{ old('email') }}"/>
                             <label for="phone" class="service-contact__form-title">電話號碼</label>
-                            <input type="tel" id="phone"  name="phone" class="service-contact__form-control form-control" title="電話號碼" />
+                            <input type="tel" id="phone"  name="phone" class="service-contact__form-control form-control" title="電話號碼" value="{{ old('phone') }}"/>
                             <label for="body" class="service-contact__form-title">需求簡介</label>
-                            <textarea rows="6" id="body" name="body" class="service-contact__form-control  form-control" title="需求簡介"></textarea>
+                            <textarea rows="6" id="body" name="body" class="service-contact__form-control  form-control" title="需求簡介">{{ old('body') }}</textarea>
                             {{-- <div class="service-contact__form-btn" title="送 出">送 出</div> --}}
                             <button type="submit" class="service-contact__form-btn">送 出</button>
                         </div>

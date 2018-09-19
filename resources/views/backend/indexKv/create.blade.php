@@ -36,7 +36,7 @@
 										<td class="header-require col-lg-2">標題<br/>Title</td>
 										<td>
 											<div class="col-lg-3 nopadding">
-												<input name="title" type="text" id="name" class="form-control">
+												<input name="title" type="text" id="name" class="form-control" value="{{ old('title') }}">
 												<label class="title" for="title"></label>
 											</div>
 										</td>
@@ -47,7 +47,7 @@
 										<td class="header-require col-lg-2">作者<br/>Author</td>
 										<td>
 											<div class="col-lg-3 nopadding">
-													<input name="author" type="text" id="author" class="form-control">
+													<input name="author" type="text" id="author" class="form-control" value="{{ old('author') }}">
 												<label class="error" for="author"></label>
 											</div>
 										</td>
@@ -58,7 +58,7 @@
                                         <td>
                                             <div class="col-lg-3 nopadding">
                                                 <label class="body" for="body"></label>
-                                                <textarea rows="6" name="body" id="body" class="form-control"></textarea>
+                                                <textarea rows="6" name="body" id="body" class="form-control">{{ old('body') }}</textarea>
                                             </div>
                                         </td>
                                     </tr>
@@ -68,7 +68,7 @@
 										<td class="header-require col-lg-2">連結<br/>Link</td>
 										<td>
 											<div class="col-lg-3 nopadding">
-													<input name="link" type="text" id="link" class="form-control">
+													<input name="link" type="text" id="link" class="form-control" value="{{ old('link') }}">
 												<label class="error" for="link"></label>
 											</div>
 										</td>

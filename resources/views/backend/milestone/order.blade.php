@@ -2,7 +2,7 @@
 @section('content')
 	<div class="row">
 		<div class="col-lg-12">
-			<form id="form_order" class="form-horizontal" method="post" action="/backend/milestone/order/">
+			<form id="form_order" class="form-horizontal" method="post" action="/backend/milestone/order">
 				{{ csrf_field() }}
 				<div class="panel panel-primary">
 					<div class="panel-heading">

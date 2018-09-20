@@ -73,10 +73,11 @@
                                                             <label for="extra_sub_category_description">說明<br/>Description</label>
                                                             <textarea id="extra_sub_category_description" class="form-control" name="extra_sub_category_description" form="form_category_create" placeholder="輸入說明文字">{{ old('extra_sub_category_description') }}</textarea>
                                                             <br/>
-
-                                                            <label for="pic">上傳圖片<br/>Upload Picture<br/><br/><span style="color:red">*</span>最適尺寸為540*360</label>
-                                                            <input type="file" class="form-control-file multi with-preview" name="pic" id="pic">
-                                                            <br/>
+                                                            <div id="upload_hide" hidden>
+                                                                <label for="pic">上傳圖片<br/>Upload Picture<br/><br/><span style="color:red">*</span>最適尺寸為540*360</label>
+                                                                <input type="file" class="form-control-file multi with-preview" name="pic" id="pic">
+                                                                <br/>
+                                                            </div>
 
                                                             <label for="order">順序<br/>Order</label>
                                                             <input type="number" class="form-control" name="order" id="order" value="0">
@@ -232,8 +233,24 @@
                     //display 6,8,9
                     //hide 10,11
                 }
+                $('select[name="sub_category"]').trigger("change");
+
             });
             $('select[name="category_select"]').trigger("change");
+
+            $('select[name="sub_category"]').on('change', function() {
+                var sub_category_id = $(this).val();
+                if(sub_category_id == 9 || sub_category_id == 11) {
+                    $('#upload_hide').show();
+                }else{
+                    $('#upload_hide').hide();
+                    // $('select[name="sub_category"]').val($('select[name="sub_category"] option:first').val());                
+                    //display 6,8,9
+                    //hide 10,11
+                }
+            });
+
+            $('select[name="sub_category"]').trigger("change");
             
 
         });

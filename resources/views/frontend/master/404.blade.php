@@ -18,7 +18,7 @@
         <div class="c2">
             <div class="c2-main">
                 <div class="c2-main-img">
-                    <img src="{{ asset('assets/images/icon/icon-404.png') }}" class="img-fluid" />
+                    <img src="{{ asset('assets/images/icon/icon-404.png') }}" class="img-fluid" alt="網頁建構中"/>
                 </div>
                 <div class="c2-title">網頁建構中</div>
                 <div class="c2-subtitle">敬請期待</div>

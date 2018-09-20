@@ -27,6 +27,7 @@
                                         </td>
                                     </tr> 
                                     <!-- 欄位：display -->
+                                    @if(Request::segment(3)!=="trend" || Request::segment(3)!=="law" )
 									<tr class="hide_at_law">
                                         <td class="header-require col-lg-2">顯示於Banner <br/>Display on Banner</td>
                                         <td>
@@ -35,7 +36,8 @@
                                                 <label class="error" for="display"></label>
                                             </div>
                                         </td>
-                                    </tr>  
+                                    </tr>
+                                    @endif  
                                     <!-- 欄位：Special -->
                                     @if(Request::segment(3)=="story")
                                         <tr>

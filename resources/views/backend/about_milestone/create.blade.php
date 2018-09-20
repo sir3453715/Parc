@@ -57,11 +57,11 @@
 										</td>
 									</tr>
 									<!-- 欄位：lang -->
-									<tr>
+									<tr hidden>
 										<td class="header-require col-lg-2">語言<br/>Languages</td>
 										<td>
 											<div class="col-lg-3 nopadding">
-												<select class="custom-select form-control" id="lang" name="lang" >
+												<select class="custom-select form-control" id="lang" name="lang">
 													@foreach($datas["lang"] as $data)
 														<option id="{{$data->name}}" value="{{$data->id}}">{{$data->name}}</option>
 													@endforeach   

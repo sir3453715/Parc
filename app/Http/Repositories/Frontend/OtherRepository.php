@@ -58,11 +58,13 @@ class OtherRepository{
             'email.required_without' => '請輸入您的電子信箱或聯絡電話 Please fill in your email or phone',
             'email.max' => '電子信箱過長，請重新輸入 Email may not be greater than 191 characters',
             'phone.max' => '聯絡電話過長，請重新輸入 Phone number may not be greater than 20 characters',
+            'body.max' => '需求內容過長，請重新輸入 Content may not be greater than 1000 characters',
         ];
         $validate = Validator::make($request->all(), [
             'name' => 'required|max:100',
             'email' => 'required_without:phone|max:191',
             'phone' => 'max:20',
+            'body' => 'max:1000',
             
         ], $messages);
 

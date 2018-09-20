@@ -1,7 +1,6 @@
 @extends('admin.master')
 
 @section('content')
-<script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>  
 
 	<div class="row">
 		<div class="col-lg-12">
@@ -24,7 +23,7 @@
 									<tr>
                                         <td class="header-require col-lg-2">有效<br/>Active</td>
                                         <td>
-                                            <div class="col-lg-3 nopadding">
+                                            <div class="col-lg-4 nopadding">
                                                 <input name="active" type="checkbox" id="active" class="form-control" {{($datas["indexKV"]->active == 1) ? "checked" : "" }}>
                                                 <label class="error" for="active"></label>
                                             </div>
@@ -35,30 +34,32 @@
 									<tr>
 										<td class="header-require col-lg-2">標題<br/>Title</td>
 										<td>
-											<div class="col-lg-3 nopadding">
-													<input name="title" type="text" value="{{ $datas["indexKV"]->title }}"  id="name" class="form-control">
+											<div class="col-lg-4 nopadding">
+													<input name="title" type="text" value="{{ $datas["indexKV"]->title }}"  id="name" class="form-control" placeholder="建議17字以內">
 												<label class="error" for="title"></label>
 											</div>
 										</td>
                                     </tr>
                                     @endif
-                                    <!-- 欄位：Author -->
+									<!-- 欄位：Author -->
+									@if(Request::segment(3)=="quote")
 									<tr>
 										<td class="header-require col-lg-2">作者<br/>Author</td>
 										<td>
-											<div class="col-lg-3 nopadding">
+											<div class="col-lg-4 nopadding">
 													<input name="author" type="text" value="{{ $datas["indexKV"]->author }}"  id="author" class="form-control">
 												<label class="error" for="author"></label>
 											</div>
 										</td>
-                                    </tr>
+									</tr>
+									@endif
 									<!-- 欄位：body -->                                    
                                     <tr>
                                         <td class="col-lg-2">內文<br/>Content</td>
                                         <td>
-                                            <div class="col-lg-8 nopadding">
-                                                <textarea name="body" id="body" class="form-control">{!! $datas["indexKV"]->body !!}</textarea>
-                                                <label class="error" for="body"></label>
+                                            <div class="col-lg-4 nopadding">
+                                                <textarea name="body" id="body" rows="8" class="form-control" placeholder="建議56字以內">{!! $datas["indexKV"]->body !!}</textarea>
+                                                <label class="body" for="body"></label>
                                             </div>
                                         </td>
                                     </tr>
@@ -67,7 +68,7 @@
 									<tr>
 										<td class="header-require col-lg-2">連結<br/>Link</td>
 										<td>
-											<div class="col-lg-3 nopadding">
+											<div class="col-lg-4 nopadding">
 													<input name="link" type="text" value="{{ $datas["indexKV"]->link }}"  id="link" class="form-control">
 												<label class="error" for="link"></label>
 											</div>
@@ -75,10 +76,10 @@
                                     </tr>
                                     @endif
                                     <!-- 欄位：lang -->
-									<tr>
+									<tr hidden>
                                         <td class="header-require col-lg-2">語言<br/>Languages</td>
                                         <td>
-                                            <div class="col-lg-3 nopadding">
+                                            <div class="col-lg-4 nopadding">
                                                 <select class="custom-select form-control" id="lang" name="lang" >
                                                 <option value="{{$datas["indexKV"]->lang}}" selected hidden>{{$datas["indexKV"]->lang()}}</option>
                                                     @foreach($datas["lang"] as $data)
@@ -93,7 +94,7 @@
                                     <tr>
 										<td class="header-require col-lg-2">順序<br/>Order</td>
 										<td>
-											<div class="col-lg-3 nopadding">
+											<div class="col-lg-4 nopadding">
                                                 <input type="number" class="form-control" name="order" id="order" value="{{ $datas["indexKV"]->order }}">
 												<label class="error" for="order"></label>
 											</div>
@@ -103,7 +104,7 @@
                                     <tr>
                                         <td class="header-require col-lg-2">上傳圖片<br/>Upload Picture</td>
                                         <td>
-                                            <div class="col-lg-3 nopadding">
+                                            <div class="col-lg-4 nopadding">
 												@if(Request::segment(3)=="kv")
 												<label for="upload_pic"><span style="color:red">*</span>最適尺寸為2878*1380</label>
 												@else
@@ -171,13 +172,6 @@
 				return this.optional(element) || re.test(value);
 			}
 		);
-        //各欄位
-        var options = {
-            filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
-            filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
-        };
-        CKEDITOR.replace('body',options);
-
         
     });
 		

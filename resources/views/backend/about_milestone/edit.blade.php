@@ -57,7 +57,7 @@
 										</td>
 									</tr>
 									<!-- 欄位：lang -->
-									<tr>
+									<tr hidden>
 										<td class="header-require col-lg-2">語言<br/>Languages</td>
 										<td>
 											<div class="col-lg-3 nopadding">

@@ -100,7 +100,7 @@
 										<td class="header-require col-lg-2">標題<br/>Title</td>
 										<td>
 											<div class="col-lg-3 nopadding">
-													<input name="title" type="text" value="{{ $datas["article"]->title }}"  id="name" class="form-control">
+													<input name="title" type="text" value="{{ $datas["article"]->title }}"  id="name" class="form-control" placeholder="建議17字以內">
 												<label class="error" for="title"></label>
 											</div>
 										</td>
@@ -110,7 +110,7 @@
                                         <td class="col-lg-2">敘述<br/>Description</td>
                                         <td>
                                             <div class="col-lg-3 nopadding">
-                                                <textarea rows="8" name="description" id="description" class="form-control">{!! $datas["article"]->description !!}</textarea>
+                                                <textarea rows="8" name="description" id="description" class="form-control" placeholder="建議27字以內">{!! $datas["article"]->description !!}</textarea>
                                                 <label class="error" for="description"></label>
                                             </div>
                                         </td>
@@ -187,7 +187,8 @@
                                         </tr>
                                     @endif --}}
                                     <!-- 欄位：lang -->
-									<tr class="hide_at_law">
+									{{-- <tr class="hide_at_law"> --}}
+									<tr hidden>
                                         <td class="header-require col-lg-2">語言<br/>Languages</td>
                                         <td>
                                             <div class="col-lg-3 nopadding">

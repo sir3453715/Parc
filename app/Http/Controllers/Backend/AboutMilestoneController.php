@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
-use App\Http\Repositories\Backend\AboutMilestoneRepository;
+use App\Http\Repositories\Backend\AboutMileStoneRepository;
 use Illuminate\Support\Facades\Validator;
 
 
@@ -18,7 +18,7 @@ class AboutMilestoneController extends Controller
 {
     protected $aboutMilestoneRepository;
     
-    public function __construct(AboutMilestoneRepository $aboutMilestoneRepository){
+    public function __construct(AboutMileStoneRepository $aboutMilestoneRepository){
         $this->aboutMilestoneRepository=$aboutMilestoneRepository;
     }
     //

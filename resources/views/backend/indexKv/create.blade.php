@@ -1,8 +1,6 @@
 @extends('admin.master')
 
 @section('content')
-<script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>  
-
 	<div class="row">
 		<div class="col-lg-12">
 			<form id="EditForm" enctype="multipart/form-data" class="form-horizontal" method="post" action="/backend/indexKV/{{Request::segment(3)}}/create">
@@ -24,7 +22,7 @@
 									<tr>
                                         <td class="header-require col-lg-2">有效<br/>Active</td>
                                         <td>
-                                            <div class="col-lg-3 nopadding">
+                                            <div class="col-lg-4 nopadding">
                                                 <input name="active" type="checkbox" id="active" class="form-control" checked>
                                                 <label class="error" for="active"></label>
                                             </div>
@@ -35,30 +33,32 @@
 									<tr>
 										<td class="header-require col-lg-2">標題<br/>Title</td>
 										<td>
-											<div class="col-lg-3 nopadding">
-												<input name="title" type="text" id="name" class="form-control" value="{{ old('title') }}">
+											<div class="col-lg-4 nopadding">
+												<input name="title" type="text" id="name" class="form-control" value="{{ old('title') }}" placeholder="建議17字以內">
 												<label class="title" for="title"></label>
 											</div>
 										</td>
                                     </tr>
                                     @endif
-                                    <!-- 欄位：Author -->
+									<!-- 欄位：Author -->
+									@if(Request::segment(3)=="quote")
 									<tr>
 										<td class="header-require col-lg-2">作者<br/>Author</td>
 										<td>
-											<div class="col-lg-3 nopadding">
+											<div class="col-lg-4 nopadding">
 													<input name="author" type="text" id="author" class="form-control" value="{{ old('author') }}">
 												<label class="error" for="author"></label>
 											</div>
 										</td>
-                                    </tr>
+									</tr>
+									@endif
 									<!-- 欄位：body -->                                    
                                     <tr>
                                         <td class="col-lg-2">內文<br/>Content</td>
                                         <td>
-                                            <div class="col-lg-3 nopadding">
+                                            <div class="col-lg-4 nopadding">
                                                 <label class="body" for="body"></label>
-                                                <textarea rows="6" name="body" id="body" class="form-control">{{ old('body') }}</textarea>
+                                                <textarea rows="8" name="body" id="body" class="form-control" placeholder="建議56字以內">{{ old('body') }}</textarea>
                                             </div>
                                         </td>
                                     </tr>
@@ -67,7 +67,7 @@
 									<tr>
 										<td class="header-require col-lg-2">連結<br/>Link</td>
 										<td>
-											<div class="col-lg-3 nopadding">
+											<div class="col-lg-4 nopadding">
 													<input name="link" type="text" id="link" class="form-control" value="{{ old('link') }}">
 												<label class="error" for="link"></label>
 											</div>
@@ -75,10 +75,10 @@
                                     </tr>
                                     @endif
                                     <!-- 欄位：lang -->
-									<tr>
+									<tr hidden>
                                         <td class="header-require col-lg-2">語言<br/>Languages</td>
                                         <td>
-                                            <div class="col-lg-3 nopadding">
+                                            <div class="col-lg-4 nopadding">
                                                 <select class="custom-select form-control" id="lang" name="lang" >
                                                 <option value="0" hidden>中文</option>
                                                     @foreach($datas["lang"] as $data)
@@ -93,7 +93,7 @@
                                     <tr>
 										<td class="header-require col-lg-2">順序<br/>Order</td>
 										<td>
-											<div class="col-lg-3 nopadding">
+											<div class="col-lg-4 nopadding">
                                                 <input type="number" class="form-control" name="order" id="order" value="0">
 												<label class="error" for="order"></label>
 											</div>
@@ -103,7 +103,7 @@
                                     <tr>
                                         <td class="header-require col-lg-2">上傳圖片<br/>Upload Picture</td>
                                         <td>
-                                            <div class="col-lg-3 nopadding">
+                                            <div class="col-lg-4 nopadding">
 												@if(Request::segment(3)=="kv")
 												<label for="upload_pic"><span style="color:red">*</span>最適尺寸為2878*1380</label>
 												@else
@@ -158,11 +158,6 @@
 			}
 		);
         //各欄位
-        var options = {
-            filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
-            filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
-        };
-        // CKEDITOR.replace('body',options);
 
         
     });

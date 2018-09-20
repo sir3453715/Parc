@@ -10,7 +10,6 @@ class indexKVPresenter{
                 <th style="width: 5%">Active</th>
                 <th style="width: 5%">Order</th>
                 <th>標題<br/>Title</th>
-                <th>作者<br/>Author</th>
                 <th>內文<br/>Content</th>
                 <th>圖片<br/>Picture</th>
                 <th style="width: 20%">連結<br/>Link</th>

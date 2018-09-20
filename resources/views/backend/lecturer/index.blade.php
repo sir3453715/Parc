@@ -35,7 +35,7 @@
                             <th style="width: 5%">順序<br/>Order</th>
                             <th style="width: 5%">有效<br/>Active</th>
                             <th>姓名<br/>Name</th>
-                            <th>頭銜<br/>Title</th>
+                            <th>職稱與敘述<br/>Job title & Description</th>
                             {{-- <th>內文<br/>Content</th> --}}
                             <th>圖片<br/>Picture</th>
                             {{-- <th>語言<br/>Language</th> --}}

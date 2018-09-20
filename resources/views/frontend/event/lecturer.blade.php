@@ -128,7 +128,7 @@
                             <label for="phone" class="service-contact__form-title">電話號碼</label>
                             <input type="tel" id="phone"  name="phone" class="service-contact__form-control form-control" title="電話號碼" value="{{ old('phone') }}"/>
                             <label for="body" class="service-contact__form-title">需求簡介</label>
-                            <textarea rows="6" id="body" name="body" class="service-contact__form-control  form-control" title="需求簡介">{{ old('body') }}</textarea>
+                            <textarea rows="6" id="body" name="body" class="service-contact__form-control  form-control" title="需求簡介" placeholder="請輸入您的需求簡介，字數限制為1000字以內">{{ old('body') }}</textarea>
                             {{-- <div class="service-contact__form-btn" title="送 出">送 出</div> --}}
                             <button type="submit" class="service-contact__form-btn">送 出</button>
                         </div>

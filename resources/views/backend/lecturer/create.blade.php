@@ -48,7 +48,7 @@
 									</tr>	 --}}
 									<!-- 欄位：Job Title -->
 									<tr>
-										<td class="col-lg-2">職稱<br/>Job title</td>
+										<td class="col-lg-2">職稱與敘述<br/>Job title & Description</td>
 											<td>
 											<div class="col-lg-8 nopadding">
 												<textarea name="title" type="text" id="title" class="form-control tooltips ckeditor">{{ old('title') }}</textarea>
@@ -57,7 +57,7 @@
 										</td>
 									</tr>
 									<!-- 欄位：lang -->
-									<tr>
+									<tr hidden>
 										<td class="header-require col-lg-2">語言<br/>Languages</td>
 										<td>
 											<div class="col-lg-3 nopadding">

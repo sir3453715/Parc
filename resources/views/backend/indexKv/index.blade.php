@@ -33,7 +33,9 @@
                                 @if(Request::segment(3)== "kv")
                                     <td>{{ $data->title }}</td>
                                 @endif
-                                <td>{{ $data->author }}</td>
+                                @if(Request::segment(3)== "quote")
+                                    <td>{{ $data->author }}</td>
+                                @endif
                                 <td class="text" style="max-width: 200px;">
                                     <span style="white-space: nowrap;
                                     overflow: hidden;

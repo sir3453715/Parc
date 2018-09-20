@@ -27,7 +27,7 @@
                                         </td>
                                     </tr> 
                                     <!-- 欄位：display -->
-                                    @if(Request::segment(3)!=="trend" || Request::segment(3)!=="law" )
+                                    @if(Request::segment(3)!=="trend" && Request::segment(3)!=="law" )
 									<tr class="hide_at_law">
                                         <td class="header-require col-lg-2">顯示於Banner <br/>Display on Banner</td>
                                         <td>
@@ -82,7 +82,7 @@
 										<td class="header-require col-lg-2">標題<br/>Title</td>
 										<td>
 											<div class="col-lg-6 nopadding">
-													<input name="title" type="text" id="title" class="form-control" value="{{ old('title') }}">
+													<input name="title" type="text" id="title" class="form-control" value="{{ old('title') }}" placeholder="建議17字以內">
 												<label class="error" for="title"></label>
 											</div>
 										</td>
@@ -92,7 +92,7 @@
                                         <td class="col-lg-2">敘述<br/>Description</td>
                                         <td>
                                             <div class="col-lg-6 nopadding">
-                                                <textarea rows="2" name="description" id="description" class="form-control">{{ old('description') }}</textarea>
+                                                <textarea rows="2" name="description" id="description" class="form-control" placeholder="建議27字以內">{{ old('description') }}</textarea>
                                                 <label class="error" for="description"></label>
                                             </div>
                                         </td>
@@ -163,7 +163,8 @@
                                         </tr>
                                     @endif --}}
                                     <!-- 欄位：lang -->
-									<tr class="hide_at_law">
+									{{-- <tr class="hide_at_law"> --}}
+									<tr hidden>
                                         <td class="header-require col-lg-2">語言<br/>Languages</td>
                                         <td>
                                             <div class="col-lg-3 nopadding">

@@ -9,7 +9,7 @@
                 <a href="{{$data->link}}" target="_blank" class="item banner-main__item" title="{{$data->title}}" style="background: url(/storage/{{$data->pic}}) no-repeat center;background-size: cover;">
                     <div class="banner-main__label">
                     <div class="banner-main__title">{{$data->title}}</div>
-                        <div class="banner-main__subtitle">{!!$data->body!!}</div>
+                        <div class="banner-main__subtitle">{{$data->body}}</div>
                     </div>
                 </a>
                 @endforeach
@@ -52,9 +52,9 @@
             <div class="banner-lector owl-carousel">
                 @foreach($quote as $data)
                 <a class="item banner-lector__item">
-                    <div class="banner-lector__img" alt="{!!$data->body!!}" style="background: url(/storage/{{$data->pic}}) no-repeat center; background-size: cover;"></div>
+                    <div class="banner-lector__img" alt="{{$data->body}}" style="background: url(/storage/{{$data->pic}}) no-repeat center; background-size: cover;"></div>
                         <div class="banner-lector__box">
-                        <div class="banner-lector__title">{!!$data->body!!}</div>
+                        <div class="banner-lector__title">{{$data->body}}</div>
                         <div class="banner-lector__name"> - {{$data->author}}</div>
                     </div>
                 </a>

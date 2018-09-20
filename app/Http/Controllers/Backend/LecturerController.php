@@ -45,12 +45,15 @@ class LecturerController extends Controller
     public function store(Request $request){
         $messages = [
             'name.required'  => '請輸入姓名 Please fill in name',
+            'name.max'   => '姓名需為18字以內 The Name may not be greater than 30 characters',
             'pic.required'  => '請上傳圖片 Please upload image',
             'pic.image'  => '上傳檔案非圖片 Please upload valid image',
+            'title.max' => '職稱與敘述需為100字以內 Job title & description may not be greater than 17 characters',
         ];
         $validate = Validator::make($request->all(), [
-            'name' => 'required',
+            'name' => 'required|max:18',
             'pic' => 'required|image',
+            'title' => 'max:100',
             
         ], $messages);
 
@@ -67,9 +70,15 @@ class LecturerController extends Controller
     public function update(Request $request,lecturer $lecturer){
         $messages = [
             'name.required'  => '請輸入姓名 Please fill in name',
+            'name.max'   => '姓名需為18字以內 The Name may not be greater than 30 characters',
+            'pic.image'  => '上傳檔案非圖片 Please upload valid image',
+            'title.max' => '職稱與敘述需為100字以內 Job title & description may not be greater than 17 characters',
         ];
         $validate = Validator::make($request->all(), [
-            'name' => 'required',            
+            'name' => 'required|max:18',
+            'pic' => 'image',
+            'title' => 'max:100',
+            
         ], $messages);
 
         if ($validate->fails()) {

@@ -21,7 +21,7 @@
                                                     <div class="form-group">
 														<ul id="example" class="list-group">
 															@foreach($datas as $data)
-																<li id="{{$data->id}}" class="list-group-item list-group-item-light">{{$data->title}}</li>
+															<li id="{{$data->id}}" class="list-group-item list-group-item-light">{{$data->title}} {{$data->date->format('Y-m-d')}}</li>
 															@endforeach
 														</ul>
 														<input type="hidden" id="order" name="order" value=""> 

@@ -53,16 +53,29 @@
 										</td>
 									</tr>
 									@endif
-									<!-- 欄位：body -->                                    
+									<!-- 欄位：body -->
+									@if(Request::segment(3)=="kv")
                                     <tr>
                                         <td class="col-lg-2">內文<br/>Content</td>
                                         <td>
                                             <div class="col-lg-4 nopadding">
-                                                <textarea name="body" id="body" rows="8" class="form-control" placeholder="建議56字以內">{!! $datas["indexKV"]->body !!}</textarea>
                                                 <label class="body" for="body"></label>
+                                                <textarea rows="8" name="body" id="body" class="form-control" placeholder="建議56字以內">{{ old('body') }}</textarea>
                                             </div>
                                         </td>
                                     </tr>
+									@endif    
+									@if(Request::segment(3)=="quote")                                
+                                    <tr>
+                                        <td class="col-lg-2">內文<br/>Content</td>
+                                        <td>
+                                            <div class="col-lg-4 nopadding">
+                                                <label class="body" for="body"></label>
+                                                <textarea rows="8" name="body" id="body" class="form-control">{{ old('body') }}</textarea>
+                                            </div>
+                                        </td>
+									</tr>
+									@endif
                                     <!-- 欄位：Link -->
                                     @if(Request::segment(3)=="kv")
 									<tr>

@@ -18,15 +18,30 @@
                                 <div class="form-group">
                                     <label class="control-label" style="color:white;">主分類</label>
                                     <select id="category_select" name="category_select" class="custom-select form-control">
-                                        <option id="nochoose" value="nochoose">不拘</option>
-                                        @foreach($datas["categories"] as $category)
-                                            <option id="{{$category->name}}" value="{{$category->id}}"{{ ($datas["request"]->category_select == $category->id ) ? 'selected' : ''  }}>{{$category->name}}</option>
-                                        @endforeach
+                                        <option id="nochoose" value="">不拘</option>
+                                        <option id="課程活動" value="2" @if($datas["request"]->category_select == '2')selected @endif>課程活動</option>
+                                        <option id="法規政策" value="3" @if($datas["request"]->category_select == '3')selected @endif>法規政策</option>
                                     </select>
                                 </div>
                                 <div class="form-group"> 
                                     <label class="control-label" style="color:white;">次分類</label>
-                                    <select id="sub_category" name="sub_category" class="custom-select form-control"></select>
+                                    <select id="sub_category" name="sub_category" class="custom-select form-control">
+                                        @if($datas["request"]->sub_category == '6')
+                                        <option id="專業課程" class="課程活動 cookie" value="6" hidden>專業課程</option>
+                                        @endif
+                                        @if($datas["request"]->sub_category == '8')
+                                        <option id="線上影音課程" class="課程活動 cookie" value="8" hidden>線上影音課程</option>
+                                        @endif
+                                        @if($datas["request"]->sub_category == '9')
+                                        <option id="生命樂活" class="課程活動 cookie" value="9" hidden>生命樂活</option>
+                                        @endif
+                                        <option id="nochoose2" value="" hidden>不拘</option>
+                                        <option id="專業課程" class="課程活動" value="6" hidden>專業課程</option>
+                                        <option id="線上影音課程" class="課程活動" value="8" hidden>線上影音課程</option>
+                                        <option id="生命樂活" class="課程活動" value="9" hidden>生命樂活</option>
+                                        {{-- <option id="法規實務" class="法規政策" value="10" hidden>法規實務</option> --}}
+                                        <option id="政策研究" class="法規政策" value="11" hidden @if($datas["request"]->sub_category == '11')selected @endif>政策研究</option>
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-success btn-xs" class="form-control">
@@ -93,70 +108,27 @@
 
             $('select[name="category_select"]').on('change', function() {
                 var category_id = $(this).val();
-                if(category_id) {
-                    $.ajax({
-                        url: '/backend/article/create/ajax/'+category_id,
-                        type: "GET",
-                        dataType: "json",
-                        success:function(data) {
-    
-                           
-                            $('select[name="sub_category"]').empty();
-
-                            $('select[name="extra_sub_category"]').empty()
-                            $.each(data, function(key, value) {
-                                $('select[name="sub_category"]').append('<option id="'+ value +'" value="'+ key +'">'+ value +'</option>');
-                            });
-                            if ($('#sub_category').children().length > 0 ) {
-                                $('#sub_category').removeAttr("hidden");
-                            }
-                            else{
-                                $('select[name="sub_category"]').append('<option id="no_choose_sub_category" value="">不拘</option>');
-                            }
-                            if ($('#extra_sub_category').children().length > 0 ) {
-                                $('#extra_sub_category').removeAttr("hidden");
-                            }
-                            else{
-                                $('#extra_sub_category').attr("hidden","");
-                            }
-                            $('select[name="sub_category"]').trigger("change");
-
-                        }
-                    });
-                }else{
-                    $('select[name="sub_category"]').empty();
+                if(category_id == 2) {
+                    $('.課程活動').show();
+                    $('.法規政策').hide();
+                    $('select[name="sub_category"]').val($('.課程活動').first().val());
+                    $('.cookie').hide();  
+                    //hide 10,11
+                }else if(category_id == 3){
+                    $('.課程活動').hide();
+                    $('.法規政策').show(); 
+                    $('select[name="sub_category"]').val($('.法規政策').first().val());   
+                    // $('select[name="sub_category"]').val($('select[name="sub_category"] option:first').val());                
+                    //display 6,8,9
+                    //hide 10,11
                 }
-            });
-            $('select[name="sub_category"]').on('change', function() {
-                var sub_category_id = $(this).val();
-                var category_id = $('select[name="category_select"]').val();
-                if(sub_category_id) {
-                    $.ajax({
-                        url: '/backend/article/create/ajax/'+category_id+'/'+sub_category_id,
-                        type: "GET",
-                        dataType: "json",
-                        success:function(data) {
-                            $('select[name="extra_sub_category"]').empty();
-                            $.each(data, function(key, value) {
-                                $('select[name="extra_sub_category"]').append('<option disabled id="'+ value +'" value="'+ key +'">'+ value +'</option>');
-                            });
-                            if ($('#extra_sub_category').children().length > 0 ) {
-                                $('#extra_sub_category').removeAttr("hidden");
-                            }
-                            else{
-                                $('#extra_sub_category').attr("hidden","");
-                            }
-                            //set category default value
-                        }
-                    });
-                }else{
-                    $('select[name="extra_sub_category"]').empty();
+                else{
+                    $('.法規政策').hide();
+                    $('.課程活動').hide();
+                    $('select[name="sub_category"]').val($('#nochoose2').first().val());                
                 }
-                
             });
             $('select[name="category_select"]').trigger("change");
-            $('select[name="sub_category"]').trigger("change");
-
             
         });
     </script>

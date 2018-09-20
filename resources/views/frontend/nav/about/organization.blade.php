@@ -62,7 +62,7 @@
             <p class="text-center m-5">我們致力於政策研究、教育訓練、醫療院所施行及大眾宣導等任務，透過與各方統籌、協調、溝通與推動，希望整合政府與民間不同層級屬性之單位，協力分工發揮綜效， 普及推廣《病人自主權利法》，引領社會大眾思考尊嚴善終與生命價值。
             </p>
             <div class="p-5">
-                <img src="{{ asset('assets/images/icon/about-organization-4C.png') }}" class="img-fluid" alt="四大任務與使命" />
+                <img src="{{ asset('assets/images/icon/about-organization-4c.png') }}" class="img-fluid" alt="四大任務與使命" />
             </div>
         </section>
     </main>

@@ -118,17 +118,25 @@ class CategoryController extends Controller
     }
     public function updateExtraSubCategory(Request $request,extra_sub_category $extra_sub_category){
         $messages = [
-            'name.unique' => '分類名稱重覆',
-            'en_name.unique' => '英文分類名稱重覆',
+            //'shopname.required' => '線上商店名稱未輸入',
+            'name.required'=>'請輸入特別分類中文名稱 Please input chinese name of extra sub category',
+            'name.max'=>'特別分類中文名稱最多十五字 Max character of extra sub category is 15, please try a different name',
+            'name.unique'=>'特別分類名稱重覆 Duplicate name of extra sub category',
+            'en_name.required' => '請輸入特別分類英文名稱 Please input english name of extra sub category'            
         ];
         $validate = Validator::make($request->all(), [
-            'name'  => Rule::unique('extra_sub_category')->ignore($extra_sub_category->id),
-            'en_name'  =>
+            'name'=> 
                 [
-                    'nullable',
-                    Rule::unique('extra_sub_category')->ignore($extra_sub_category->id),
-                ]
-            ], $messages);
+                    'required',
+                    'max:15',
+                    Rule::unique('extra_sub_category','name')
+                    ->where(function($query) use($request){
+                        return $query->where('sub_category_id',$request->sub_category)
+                        ->where('name',$request->extra_sub_category_input);
+                    })
+                ],
+            'en_name' => 'required',           
+        ], $messages);
                 
         if ($validate->fails()) {
             return redirect()->back()

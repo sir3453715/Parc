@@ -110,7 +110,7 @@
                                         <td class="col-lg-2">敘述<br/>Description</td>
                                         <td>
                                             <div class="col-lg-3 nopadding">
-                                                <textarea rows="8" name="description" id="description" class="form-control" placeholder="建議27字以內">{!! $datas["article"]->description !!}</textarea>
+                                                <textarea rows="8" name="description" id="description" class="form-control" placeholder="建議56字以內">{!! $datas["article"]->description !!}</textarea>
                                                 <label class="error" for="description"></label>
                                             </div>
                                         </td>
@@ -233,8 +233,8 @@
 										<td>&nbsp;</td>
 										<td>
 											<div style="text-align: right">
-                                                <input type="button" name="btnBackTo2_foot" value="Back" id="btnBackTo2_foot" class="btn btn-default btn-xs">
-												<input type="submit" name="btnUpdate_foot" value="Modify" id="btnUpdate_foot" class="btn btn-primary btn-xs" onclick="submitForm();">
+                                                <input type="button" name="btnBackTo2_foot" value="返回 Back" id="btnBackTo2_foot" class="btn btn-default btn-xs">
+												<input type="submit" name="btnUpdate_foot" value="更新 Update" id="btnUpdate_foot" class="btn btn-primary btn-xs" onclick="submitForm();">
 											</div>
 										</td>
 									</tr>

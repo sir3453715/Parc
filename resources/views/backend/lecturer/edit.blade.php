@@ -31,7 +31,7 @@
 										<td class="header-require col-lg-2">姓名<br/>Name</td>
 										<td>
 											<div class="col-lg-3 nopadding">
-													<input name="name" type="text" value="{{ $datas["lecturer"]->name }}"  id="name" class="form-control">
+													<input name="name" type="text" value="{{ $datas["lecturer"]->name }}"  id="name" class="form-control" placeholder="建議18字以內">
 												<label class="error" for="name"></label>
 											</div>
 										</td>
@@ -48,10 +48,10 @@
 									</tr>	 --}}
 									<!-- 欄位：Job Title -->
 									<tr>
-										<td class="col-lg-2">職稱與敘述<br/>Job title & Description</td>
+										<td class="col-lg-2">職稱與敘述<br/>Job title & Description<br/><span style="color:red">*</span>建議100字以內</td>
 										<td>
 											<div class="col-lg-8 nopadding">
-												<textarea name="title" type="text" id="title" class="form-control tooltips ckeditor">{!! $datas["lecturer"]->title !!}</textarea>
+												<textarea name="title" type="text" id="title" class="form-control tooltips ckeditor" placeholder="建議100字以內">{!! $datas["lecturer"]->title !!}</textarea>
 												<label class="title" for="title"></label>
 											</div>
 										</td>

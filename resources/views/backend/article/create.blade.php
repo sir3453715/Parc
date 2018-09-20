@@ -92,7 +92,7 @@
                                         <td class="col-lg-2">敘述<br/>Description</td>
                                         <td>
                                             <div class="col-lg-6 nopadding">
-                                                <textarea rows="2" name="description" id="description" class="form-control" placeholder="建議27字以內">{{ old('description') }}</textarea>
+                                                <textarea rows="2" name="description" id="description" class="form-control" placeholder="建議56字以內">{{ old('description') }}</textarea>
                                                 <label class="error" for="description"></label>
                                             </div>
                                         </td>

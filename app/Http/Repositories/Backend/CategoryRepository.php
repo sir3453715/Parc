@@ -20,6 +20,7 @@ class CategoryRepository{
         if($request->sub_category){
             $condition = $condition->where('sub_category_id',$request->sub_category);
         }
+        $condition = $condition->where('id','!=','14');
         $condition = $condition->paginate(30);
         $datas=array(
             "categories"                => DB::table('category')->get(),          

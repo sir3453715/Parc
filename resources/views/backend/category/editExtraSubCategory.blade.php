@@ -64,6 +64,7 @@
 											</div>
 										</td>
 									</tr>
+									@if ($extra_sub_category->pic)
 									{{-- 欄位：Pic Upload --}}
                                     <tr>
 										<td class="header-require col-lg-2">上傳圖片<br/>Upload Picture<br/><span style="color:red">*</span>最適尺寸為540*360</td>
@@ -78,6 +79,7 @@
 											</div>
 										</td>
 									</tr>
+									@endif
 									<!-- 欄位：Order -->
 									<tr>
 										<td class="header-require col-lg-2">順序<br/>Order</td>

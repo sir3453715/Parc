@@ -144,7 +144,9 @@ class CategoryRepository{
         $extra_sub_category->en_name=request('en_name');
         $extra_sub_category->description=request('extra_sub_category_description');
         if($request->pic){
-            Storage::delete('public/'.$extra_sub_category->pic);
+            if(!is_null($extra_sub_category->pic)){
+                Storage::delete('public/'.$extra_sub_category->pic);
+            }
             $extra_sub_category->pic = Storage::disk('public')->putFile('extrasubcategory', $request->pic);
             // $upload_image=$request->pic;
             // $picName = time().'.'.$upload_image->getClientOriginalName();

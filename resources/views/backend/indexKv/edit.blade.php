@@ -71,7 +71,7 @@
                                         <td>
                                             <div class="col-lg-4 nopadding">
                                                 <label class="body" for="body"></label>
-                                                <textarea rows="8" name="body" id="body" class="form-control" placeholder="字數最多100字以內">{{ $datas["indexKV"]->body }}</textarea>
+                                                <textarea rows="8" name="body" id="body" class="form-control" placeholder="字數最多100字">{{ $datas["indexKV"]->body }}</textarea>
                                             </div>
                                         </td>
 									</tr>

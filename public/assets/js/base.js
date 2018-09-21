@@ -65,7 +65,7 @@ function lectorCarousel() {
                     dots: false,
                     nav: true                    
                 },
-                992: {
+                768: {
                     dots: true,
                     nav: false,
                 }

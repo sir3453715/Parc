@@ -327,6 +327,7 @@
                     });
                 }else{
                     $('select[name="sub_category"]').empty();
+                    // $('select[name="category"]').trigger("change");
                 }
             });
             $('select[name="sub_category"]').on('change', function() {

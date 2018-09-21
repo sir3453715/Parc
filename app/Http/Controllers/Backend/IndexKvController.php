@@ -67,13 +67,13 @@ class IndexKvController extends Controller
                 'pic.required'  => '請上傳圖片 Please upload an image',
                 'pic.image'     => '上傳檔案非圖片 File type not supported, please upload an image file',
                 'author.max'    => '作者需為17字以內',
-                'body.max'      => '內文需為100字以內'
+                'body.max'      => '內文需為80字以內'
                 
             ];
             $validate = Validator::make($request->all(), [
                 'pic' => 'required|image',
                 'author' => 'max:17',
-                'body' => 'max:100',
+                'body' => 'max:80',
                 
             ], $messages);
         }
@@ -118,13 +118,13 @@ class IndexKvController extends Controller
             $messages = [
                 'pic.image'     => '上傳檔案非圖片 File type not supported, please upload an image file',
                 'author.max'    => '作者需為17字以內',
-                'body.max'      => '內文需為100字以內'
+                'body.max'      => '內文需為80字以內'
                 
             ];
             $validate = Validator::make($request->all(), [
                 'pic' => 'image',
                 'author' => 'max:17',
-                'body' => 'max:100',               
+                'body' => 'max:80',               
             ], $messages);
         }
 

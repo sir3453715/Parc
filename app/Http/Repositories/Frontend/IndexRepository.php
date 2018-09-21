@@ -22,13 +22,13 @@ class IndexRepository{
 
     public function getBannerResult($length = null, $order = false){
         $result = indexKV::where('active','1')->where('type','KV');
-        $result = $result->orderBy('created_at', 'desc')->take($length)->get();
+        $result = $result->orderBy('order', 'asc')->take($length)->get();
         return $result;
     }
 
     public function getQuoteResult($length = null, $order = false){
         $result = indexKV::where('active','1')->where('type','quote');
-        $result = $result->orderBy('created_at', 'desc')->take($length)->get();
+        $result = $result->orderBy('order', 'asc')->take($length)->get();
         return $result;
     }
 

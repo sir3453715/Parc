@@ -306,22 +306,6 @@
 
     <script type="text/javascript">
         $(document).ready(function() {
-            $('#video_url').on('change', function() {
-                var url_string = $(this).val(); //window.location.href
-                if (is_url(url_string)) {
-                    var url = new URL(url_string);
-                    var v = url.searchParams.get("v");
-                    $('#video_iframe').removeAttr("hidden");
-                    $("#video_iframe").attr("src","https://www.youtube.com/embed/"+v+"?rel=0&amp;showinfo=0");
-                }
-                else{
-                    $("#video_iframe").attr("hidden","");
-                }
-                
-            });
-            $('#video_url').trigger("change");
-            //set default lang
-            document.getElementById("{{$datas["article"]->lang()}}").selected = "true";
             $('select[name="category"]').on('change', function() {
                 var category_id = $(this).val();
                 if(category_id) {
@@ -390,22 +374,27 @@
                 }
                 
             });
+            $('#video_url').on('change', function() {
+                var url_string = $(this).val(); //window.location.href
+                if (is_url(url_string)) {
+                    var url = new URL(url_string);
+                    var v = url.searchParams.get("v");
+                    $('#video_iframe').removeAttr("hidden");
+                    $("#video_iframe").attr("src","https://www.youtube.com/embed/"+v+"?rel=0&amp;showinfo=0");
+                }
+                else{
+                    $("#video_iframe").attr("hidden","");
+                }
+                
+            });
+            $('#video_url').trigger("change");
+            //set default lang
+            document.getElementById("{{$datas["article"]->lang()}}").selected = "true";
             $('select[name="category"]').val('{{$datas["article"]->category}}').change();
             $('select[name="sub_category"]').val('{{$datas["article"]->sub_category}}').change();
             
 
         });
-        function toggle_add_to_news(){
-            $("#add_to_news").toggle(200);
-            if($("#add_to_news_button").text() == "從最新消息下架"){
-                $("#add_to_news_button").text("新增至最新消息");
-                $('select[name="category2"]').attr("value","");
-                $('select[name="sub_category2"]').attr("value","");
-            }
-            else{
-                $("#add_to_news_button").text("從最新消息下架");
-            }
-        }
         function is_url(str)
         {
             regexp =  /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/;

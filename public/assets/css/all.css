@@ -16884,6 +16884,7 @@ header .sub-nav__item a {
   text-overflow: ellipsis;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
+  text-align: left;
 }
 
 .service-lohas__title {
@@ -17212,6 +17213,7 @@ header .sub-nav__item a {
   border-color: transparent;
   border-radius: 6px;
   background-image: linear-gradient(147deg, #f58764, #f16670 67%);
+  border: none;
 }
 
 .inquiry__title {

@@ -77,6 +77,7 @@
             }
             &-btn {
                 display: inline-block;
+                border: none;
                 padding: 13px 36px;
                 line-height: 1;
                 font-size: em(23);
@@ -109,7 +110,8 @@
             a{
                 display: block;
                 margin-bottom: 5px;
-                @include ellipsis('100%',1);                
+                @include ellipsis('100%',1);        
+                text-align: left;        
             }
         }
         &__title{

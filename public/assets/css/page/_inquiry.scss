@@ -44,17 +44,18 @@
       border-color: transparent;
     }
   }
-  &__submit {    
+  &__submit {
     float: right;
     line-height: 1;
     font-size: em(15);
     font-weight: 500;
     color: $color-white;
     padding: 8px 32px;
-    border-color: transparent; 
+    border-color: transparent;
     border-radius: 6px;
     background-image: linear-gradient(147deg, $color-orange, $color-rosy-pink 67%);
-  }
+    border: none;
+}
   &__title {
     text-align: center;
     font-size: em(22);

@@ -37,6 +37,10 @@ CKEDITOR.editorConfig = function( config ) {
 	config.removeDialogTabs = 'image:advanced;image:Upload;link:advanced';
 
 	// add youtube embed function
-	config.extraPlugins = 'youtube';
+	config.extraPlugins = 'youtube,tableresize';
+
+	//set skin
+	// config.skin = 'office2013';
+
 
 };

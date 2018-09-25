@@ -46,7 +46,7 @@
                                             <a href="{{ url('/story/love') }}" title="親愛劇場">親愛劇場</a>
                                         </div>
                                         <div class="sub-nav__item">
-                                            <a href="{{ url('/story/doctor') }}" title="白袍時間">白袍時間</a>
+                                            <a href="{{ url('/story/doctor') }}" title="白袍診間">白袍診間</a>
                                         </div>
                                         <div class="sub-nav__item">
                                             <a href="{{ url('/story/life') }}" title="生死迷藏">生死迷藏</a>

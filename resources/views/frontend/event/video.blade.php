@@ -71,7 +71,8 @@
             @foreach($video_extra_sub_category as $category)
             @if($type == $category->en_name)
             $("#active_breadcrumb").append("{{$category->name}}");
-            $("#nav-{{ $category->en_name }}").addClass("active");
+            $("[id='nav-{{ $category->en_name }}']").addClass("active");
+            //$("#nav-{{ $category->en_name }}").addClass("active");
                 @break
             @endif
             @endforeach

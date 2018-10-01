@@ -114,5 +114,12 @@
 <script src="{{ asset('assets/lib/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}"></script>
 <script src="{{ asset('assets/lib/bootstrap-datepicker/locales/bootstrap-datepicker.zh-tw.min.js') }}"></script>
 <script src="{{ asset('assets/js/donate-inquiry.js') }}"></script>
-
+<script>
+    @if ($errors->has('name')) 
+    alert('請輸入姓名或公司行號名稱');
+    @endif
+    @if ($errors->has('email') || $errors->has('receipt_id') || $errors->has('date_start') || $errors->has('date_end')) 
+    alert('請輸入電子信箱或捐款日期區間或收據編號');
+    @endif
+    </script>
 @endsection

@@ -94,7 +94,7 @@
                     <div class="banner-icon__subtitle">掌握各國病人自主權的發展現況，建立海外合作關係。</div>
                 </a>
             </div>
-
+            @if($video != null)
             <!-- 影片上稿區  -->
             <div class="row tvcf-main">
                 <div class="tvcf-main__circle-left"></div>
@@ -109,6 +109,7 @@
                 </div>
                 <div class="tvcf-main__circle-right"></div>
             </div>
+            @endif
 
 
             <!-- 合作單位 -->

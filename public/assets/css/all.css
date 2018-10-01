@@ -17017,6 +17017,7 @@ header .sub-nav__item a {
   background: #ffffff;
   padding: 50px;
   margin-bottom: 50px;
+  overflow-x: auto;
 }
 
 .law__title {

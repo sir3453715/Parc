@@ -2,7 +2,8 @@
 .law{
     background: $color-white;
     padding: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 50px;    
+    overflow-x: auto;
     &__title{
         position: relative;
         font-size: em(32);

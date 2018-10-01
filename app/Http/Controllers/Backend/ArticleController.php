@@ -55,6 +55,19 @@ class ArticleController extends Controller
             'datas' => $datas,
         ]);
     }
+
+    public function order(){
+        return view('backend.article.order',
+        [
+            'datas'=> article::where('special','1')->where('active','1')->orderBy('order','asc')->get(),
+        ]);
+    }
+
+    public function orderUpdate(Request $request){
+        $this->articleRepository->orderUpdate($request);
+        return redirect('/backend/article/story/special')->with('success','順序已更新 Order Updated');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

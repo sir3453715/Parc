@@ -41,7 +41,7 @@
                                             text-overflow: ellipsis;
                                             display: inline-block;
                                             max-width: 100%;">
-                                            {{$data->question}}
+                                            {{ strip_tags($data->question) }}
                                             </span>
                                     </td>
                                     <td style="width: 30%" class="text" style="max-width: 200px;">
@@ -50,7 +50,7 @@
                                             text-overflow: ellipsis;
                                             display: inline-block;
                                             max-width: 100%;">
-                                            {{$data->answer}}
+                                            {{ strip_tags($data->answer) }}
                                             </span>
                                     </td>
                                     {{-- <td>{{ $data->question }}</td>

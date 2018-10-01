@@ -37,4 +37,9 @@ class IndexRepository{
         $result = $result->orderBy('order', 'asc')->get();
         return $result;
     }
+
+    public function getVideo(){
+        $result = indexKV::where('type','video')->first();
+        return $result;
+    }
 }

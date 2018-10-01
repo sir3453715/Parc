@@ -113,7 +113,14 @@
 				return this.optional(element) || re.test(value);
 			}
 		);
-        //各欄位
+		//各欄位
+		//ckeditor
+		var options = {
+			filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
+			filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
+        };
+        // CKEDITOR.replace('question',options);
+        CKEDITOR.replace('answer',options);
     });
 		
 	//提交與取消按鈕

@@ -24,6 +24,33 @@ class IndexKvController extends Controller
         $this->indexKvRepository=$indexKvRepository;
     }
 
+    public function video(){
+        $data = $this->indexKvRepository->video();
+        return view('backend.indexKv.video')->with('data',$data);
+    }
+
+    public function videoUpdate(Request $request){
+            $messages = [
+                'title.max'    => '標題需為9字以內 The title may not be greater than 9 characters',
+                'title.required'=> '請輸入標題 Title is required',                
+                'link.required'=> '請輸入Youtube連結 Youtube Link is required',                
+            ];
+            $validate = Validator::make($request->all(), [
+                'title' => 'required|max:9',
+                'link'  => 'required'
+            ], $messages);
+
+        if ($validate->fails()) {
+            return redirect()->back()
+                ->withInput($request->all)
+                ->withErrors($validate);
+        }
+        else{
+            $this->indexKvRepository->videoUpdate($request);
+            return redirect('/backend/indexKV/video')->with('success','資料已更新 Data Updated');;
+        }
+    }
+
     public function kvIndex(Request $request){
         $datas = $this->indexKvRepository->kvIndex($request);
         return view('backend.indexKv.index',[
@@ -62,7 +89,7 @@ class IndexKvController extends Controller
                 
             ], $messages);
         }
-        else{
+        else if($request->type == "quote"){
             $messages = [
                 'pic.required'  => '請上傳圖片 Please upload an image',
                 'pic.image'     => '上傳檔案非圖片 File type not supported, please upload an image file',
@@ -114,7 +141,7 @@ class IndexKvController extends Controller
                 
             ], $messages);
         }
-        else{
+        else if($request->type == "quote"){
             $messages = [
                 'pic.image'     => '上傳檔案非圖片 File type not supported, please upload an image file',
                 'author.max'    => '作者需為17字以內',

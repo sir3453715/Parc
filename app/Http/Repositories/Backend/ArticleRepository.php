@@ -96,7 +96,7 @@ class ArticleRepository{
 
         $article->active=               request('active') ? 1:0;
         $article->special=              request('special') ? 1:0;
-        $article->order=                request('order') ? 0:1;
+        // $article->order=                request('order') ? 0:1;
         $article->title=                request('title');
         $article->description=          request('description');
         $article->author=               request('author');
@@ -144,7 +144,7 @@ class ArticleRepository{
             'lang'                      =>request('lang'),
             'active'                    =>request('active') ? 1:0,
             'special'                   =>request('special') ? 1:0,
-            'order'                     =>request('order') ? 0:1,
+            'order'                     =>0,
             'display'                   =>request('display') ? 1:0,
             'expiry_date'               =>request('expiry_date'),
             // 'video_url'                 =>request('video_url'),
@@ -164,6 +164,18 @@ class ArticleRepository{
             // $article->pic='article/'.$article->category_en().'/'.$picName;
         }
         $article->save();
+    }
+    public function orderUpdate(Request $request){
+        if($request->order){
+            $orders = explode(',', $request->order);
+            $i=0;
+            foreach($orders as $order){
+                $temp = article::find($order);
+                $temp->order=$i;
+                $i++;
+                $temp->save();
+            } 
+        }
     }
     public function copy_list(Request $request){
         if($_SERVER['REQUEST_METHOD']=="GET"){

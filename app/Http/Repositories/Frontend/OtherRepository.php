@@ -94,22 +94,6 @@ class OtherRepository{
         return $result;
     }
     public function getDonateList(Request $request){
-        $messages = [
-            'name.required_without_all'         => '請輸入姓名或公司行號名稱',
-            'email.required_without_all'        => '請輸入Email',
-            'receipt_id.required_without_all'   => '請輸入收據編號',
-        ];
-        $validate = Validator::make($request->all(), [
-            'name'          => 'required_without_all:name,email,receipt_id',
-            'email'         => 'required_without_all:name,email,receipt_id',
-            'receipt_id'    => 'required_without_all:name,email,receipt_id',
-            
-        ], $messages);
-
-        if ($validate->fails()) {
-            redirect('donate/inquiry/')->withInput($request->all)->withErrors($validate);
-        }
-        else{
             $result = new donate;
             if($request->name){
                 $result = $result->where('name',$request->name);
@@ -135,7 +119,6 @@ class OtherRepository{
                 $data->name = $firstCharacter.str_repeat("O",$string_length-2).$lastCharacter;
             }
             return $result;
-        }
     }
     public function getDonateLastUpdatedDate(){
         return donate::orderBy('created_at','desc')->first()->value('created_at');

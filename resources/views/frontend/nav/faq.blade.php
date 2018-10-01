@@ -17,7 +17,7 @@
                 @foreach($faq_list as $data)
                 <div class="faq__item">
                 <a href="#a{{$loop->iteration}}" data-toggle="collapse" class="faq__q">
-                <span>Q{{$loop->iteration}}.</span>{{ $data->question }}</a>
+                <span>Q{{$loop->iteration}}.</span>{!! $data->question !!}</a>
                     <div id="a{{$loop->iteration}}" class="faq__a collapse" data-parent="#faq">
                         {!! $data->answer !!}
                     </div>

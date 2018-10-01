@@ -58,7 +58,7 @@ class ArticleRepository{
         }
         else
         {
-            $result = $result->orderBy('created_at', 'asc')->take($length)->get();
+            $result = $result->orderBy('order', 'asc')->take($length)->get();
         }
         return $result;
     }

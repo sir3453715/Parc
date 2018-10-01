@@ -36,7 +36,7 @@
                         <a class="nav-link" id="love" href="{{ url('/story/love') }}" title="親愛劇場">親愛劇場</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="doctor" href="{{ url('/story/doctor') }}" title="白袍時間">白袍時間</a>
+                        <a class="nav-link" id="doctor" href="{{ url('/story/doctor') }}" title="白袍診間">白袍診間</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="life" href="{{ url('/story/life') }}" title="生死迷藏">生死迷藏</a>

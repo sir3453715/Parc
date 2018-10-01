@@ -3,10 +3,14 @@
 <!--main-->
 <main class="container">
     @if ( count( $errors ) > 0 )
-    <div class="alert alert-danger">
-    @foreach ($errors->all() as $error)
-    {{ $error }}<br>
-    @endforeach
+    <div class="alert alert-danger alert-dismissible">
+        <span class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></span>
+        @if ($errors->has('name')) 
+        {{"請輸入姓名或公司行號名稱"}}<br>
+        @endif
+        @if ($errors->has('email') || $errors->has('receipt_id') || $errors->has('date_start') || $errors->has('date_end')) 
+        {{"請輸入電子信箱或捐款日期區間或收據編號"}}
+        @endif
     </div>
     @endif
 <!--breadcrumb-->
@@ -42,30 +46,32 @@
             <form method="POST" action="{{ url('/donate/inquiry')}}" enctype="multipart/form-data" class="inquiry__form">
                 {{csrf_field()}}
                 <div class="form-group">
-                    <label for="name">姓名/公司行號名稱</label>
-                    <input type="text" class="form-control" id="name" name="name" title="姓名/公司行號名稱" value="{{$cookie->name ? $cookie->name : "" }}" />
+                    <label for="name">姓名/公司行號名稱 （必填）</label>
+                    <input type="text" class="form-control" id="name" name="name" title="姓名/公司行號名稱" value="{{$cookie->name ? $cookie->name : old('name') }}" />
                 </div>
+                <hr>
+                <p>以下資訊須擇一填寫，方可查詢</p>
                 <div class="form-group">
                     <label for="email">電子信箱 </label>
-                    <input type="email" class="form-control" id="email" name="email" title="電子信箱" value="{{$cookie->email ? $cookie->email : "" }}"  />
+                    <input type="email" class="form-control" id="email" name="email" title="電子信箱" value="{{$cookie->email ? $cookie->email : old('email') }}"  />
                 </div>
                 <div class="form-group">
                     <label for="date_start">捐款日期區間 </label>
                     <div class="form-row input-daterange align-items-center">
                         <div class="col">
                             <label for="date_start" class="d-none">起始日期</label>
-                            <input type="text" id="date_start" name="date_start" class="form-control" placeholder="起始日期" title="起始日期" value="{{$cookie->date_start ? $cookie->date_start : "" }}" >
+                            <input type="text" id="date_start" name="date_start" class="form-control" placeholder="起始日期" title="起始日期" value="{{$cookie->date_start ? $cookie->date_start : old('date_start') }}" >
                         </div>
                         <i class="fa fa-minus"></i>
                         <div class="col">
                             <label for="date_end" class="d-none">結束日期</label>
-                            <input type="text" id="date_end" name="date_end" class="form-control" placeholder="結束日期" title="結束日期" value="{{$cookie->date_end ? $cookie->date_end : "" }}" >
+                            <input type="text" id="date_end" name="date_end" class="form-control" placeholder="結束日期" title="結束日期" value="{{$cookie->date_end ? $cookie->date_end : old('date_end') }}" >
                         </div>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="receipt_id">收據編號</label>
-                    <input type="text" class="form-control" id="receipt_id" name="receipt_id" title="收據編號" value="{{$cookie->receipt_id ? $cookie->receipt_id : "" }}"  />
+                    <input type="text" class="form-control" id="receipt_id" name="receipt_id" title="收據編號" value="{{$cookie->receipt_id ? $cookie->receipt_id : old('receipt_id') }}"  />
                 </div>
                 <button type="submit" class="inquiry__submit" title="查 詢">查 詢</button>
             </form>

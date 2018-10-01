@@ -97,6 +97,8 @@ Route::group(['middleware' => 'web', 'prefix' => 'backend'], function () {
 
         Route::get('/indexKV/kv','IndexKvController@kvIndex');
         Route::get('/indexKV/quote','IndexKvController@quoteIndex');
+        Route::get('/indexKV/video','IndexKvController@video');
+        Route::post('/indexKV/video','IndexKvController@videoUpdate');
         Route::get('/indexKV/kv/create','IndexKvController@create');
         Route::get('/indexKV/quote/create','IndexKvController@create');
         Route::post('/indexKV/{type}/create','IndexKvController@store');
@@ -107,6 +109,8 @@ Route::group(['middleware' => 'web', 'prefix' => 'backend'], function () {
         Route::get('/article', 'ArticleController@index');
         Route::get('/article/story', 'ArticleController@index');
         Route::get('/article/story/special', 'ArticleController@special');
+        Route::get('/article/story/special/order', 'ArticleController@order');
+        Route::post('/article/story/special/order', 'ArticleController@orderUpdate');
         Route::get('/article/event', 'ArticleController@index');
         Route::get('/article/law', 'ArticleController@index');
         Route::get('/article/trend', 'ArticleController@index');

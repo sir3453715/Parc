@@ -10,7 +10,8 @@
                             <div class="panel-title">精選特輯 Special Category </div>
                         </div>
                         <div class="col-md-6" style="text-align: right">
-                            <a class="btn btn-darkblue btn-xs" href="{{ url('backend/article/'.Request::segment(3).'/create') }}"><strong>新增 Add</strong></a>
+                            <a class="btn btn-darkblue btn-xs" href="{{ url('backend/article/story/special/order') }}"><strong>順序 Order</strong></a>
+                            <a class="btn btn-success btn-xs" href="{{ url('backend/article/'.Request::segment(3).'/create') }}"><strong>新增 Add</strong></a>
                         </div>
                     </div>
                 </div>
@@ -19,7 +20,7 @@
                         <tr>
                             <th style="width: 5%">有效否 <br/>Active</th>
                             <th style="width: 5%">顯示於Banner<br/>On Banner</th>
-                            <th style="width: 5%">優先顯示<br/>Display first</th>
+                            <th style="width: 5%">順序<br/>Order</th>
                             <th>標題<br/>Title</th>
                             <th>作者<br/>Author</th>
                             <th>內文<br/>Content</th>
@@ -42,7 +43,7 @@
                                         <input type="checkbox" disabled {{ ($data->display == 1) ? "checked" : "" }}>
                                     </td>
                                     <td style="width: 5%">
-                                        <input type="checkbox" disabled {{ ($data->order == 0) ? "checked" : "" }}>
+                                        {{ $data->order }}
                                     </td>
                                     <td class="text" style="max-width: 200px;">
                                             <span style="white-space: nowrap;

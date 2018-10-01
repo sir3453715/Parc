@@ -95,15 +95,15 @@
                 </a>
             </div>
 
-            <!-- 執行長談病人自主權  -->
+            <!-- 影片上稿區  -->
             <div class="row tvcf-main">
                 <div class="tvcf-main__circle-left"></div>
                 <div class="col-12 col-lg-4 tvcf-main__title order-lg-2">
-                    <h2>執行長談病人自主權</h2>
+                    <h2>{{ $video->title }}</h2>
                 </div>
                 <div class="col-12 col-lg-8 tvcf-main__box order-lg-1">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe title="執行長談病人自主權" width="100%" height="100%" class="embed-responsive-item" src="https://www.youtube.com/embed/hEpnD4nqz2s" frameborder="0"
+                        <iframe title="{{ $video->title }}" width="100%" height="100%" class="embed-responsive-item" src="https://www.youtube.com/embed/{{ $video->link }}" frameborder="0"
                         allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </div>
                 </div>

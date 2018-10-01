@@ -13,8 +13,8 @@
 </ol>
 
 <!-- banner-main -->
-<div class="banner-single owl-carousel px-0" title="政策研究" style="background: url({{ asset('assets/images/photo/banner-law-1.jpg') }}) no-repeat center;background-size: cover;">
-    <h2 class="banner-single__title">政策研究</h2>
+<div class="banner-single owl-carousel px-0" title="法規政策" style="background: url({{ asset('assets/images/photo/banner-law-1.jpg') }}) no-repeat center;background-size: cover;">
+    <h2 class="banner-single__title">法規政策</h2>
     <div class="banner-single__subtitle">我國病人自主權法理資訊與政策動態即時掌握</div>
 </div>
 

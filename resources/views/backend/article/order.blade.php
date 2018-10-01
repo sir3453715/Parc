@@ -2,7 +2,7 @@
 @section('content')
 	<div class="row">
 		<div class="col-lg-12">
-			<form id="form_order" class="form-horizontal" method="post" action="/backend/faq/order">
+			<form id="form_order" class="form-horizontal" method="post" action="/backend/article/story/special/order">
 				{{ csrf_field() }}
 				<div class="panel panel-primary">
 					<div class="panel-heading">
@@ -21,7 +21,7 @@
                                                     <div class="form-group">
 														<ul id="example" class="list-group">
 															@foreach($datas as $data)
-																<li id="{{$data->id}}" class="list-group-item list-group-item-light">{{ strip_tags($data->question) }}</li>
+																<li id="{{$data->id}}" class="list-group-item list-group-item-light">{{$data->title}}</li>
 															@endforeach
 														</ul>
 														<input type="hidden" id="order" name="order" value=""> 
@@ -57,10 +57,10 @@
 	$(document).ready(function() {
 		//Back
 		$("#btnBackTo2").click(function() {
-			location.href='{{ url('backend/faq') }}';
+			location.href='{{ url('backend/article/story/special') }}';
 		});
 		$("#btnBackTo2_foot").click(function() {
-			location.href='{{ url('backend/faq') }}';
+			location.href='{{ url('backend/article/story/special') }}';
 		});
 		//初始化需要偵錯的表格
 		$('#EditForm').validate();
@@ -111,8 +111,6 @@
 		}
 		}); 
 		$('#example').disableSelection();
-
-			
 		// var sortedIDs = $( "#example" ).sortable( "toArray" );
 		// console.log(sortedIDs);
 	});

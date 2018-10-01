@@ -159,6 +159,6 @@ class PartnerController extends Controller
     }
     public function orderUpdate(Request $request){
         $this->partnerRepository->orderUpdate($request);
-        return redirect('/backend/partner')->with('success','順序已更新! Order Updated');
+        return redirect('/backend/partner')->with('success','順序已更新 Order Updated');
     }
 }

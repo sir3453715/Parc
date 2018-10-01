@@ -49,7 +49,7 @@
                                                 </div>
                                             </td>
                                         </tr>
-                                    <!-- 欄位：Order -->
+                                    {{-- <!-- 欄位：Order -->
                                     <tr>
                                         <td class="header-require col-lg-2">優先顯示於精選特輯<br/>Prior to display on special section</td>
                                         <td>
@@ -58,7 +58,7 @@
                                                 <label class="error" for="order"></label>
                                             </div>
                                         </td>
-                                    </tr>
+                                    </tr> --}}
                                     @endif
                                     <!-- 欄位：category -->
 									<tr>

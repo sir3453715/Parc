@@ -96,7 +96,7 @@ class FaqController extends Controller
     }
     public function orderUpdate(Request $request){
         $this->faqRepository->orderUpdate($request);
-        return redirect('/backend/faq');
+        return redirect('/backend/faq')->with('success','順序已更新 Order Updated');
     }
     public function destroy(faq $faq){
         $faq->delete();

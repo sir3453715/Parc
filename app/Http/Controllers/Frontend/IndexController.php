@@ -33,6 +33,7 @@ class IndexController extends Controller
         $data['banner'] = $this->indexRepo->getBannerResult(4);
         $data['quote'] = $this->indexRepo->getQuoteResult(4);
         $data['partner'] = $this->indexRepo->getPartnerResult();
+        $data['video'] = $this->indexRepo->getVideo();
         return view('frontend.index',$data);
     }
 
@@ -217,9 +218,32 @@ class IndexController extends Controller
         return view('frontend.nav.donate.inquiry',$data);
     }
     public function donateInquiryPost(Request $request){
-        $data['cookie'] = $request;
-        $data['donate_list'] = $this->otherRepo->getDonateList($request);
-        $data['last_updated'] = $this->otherRepo->getDonateLastUpdatedDate();
+        $messages = [
+            'name.required'                     => '請輸入姓名或公司行號名稱',
+            'email.required_without_all'        => '請輸入Email',
+            'receipt_id.required_without_all'   => '請輸入收據編號',
+            'date_start.required_without_all'   => '請輸入捐款日期區間',
+            'date_end.required_without_all'     => '請輸入捐款日期區間',
+            'date_start.required_with'          => '請輸入結束日期',
+            'date_end.required_with'            => '請輸入開始日期',
+        ];
+        $validate = Validator::make($request->all(), [
+            'name'          => 'required',
+            'email'         => 'required_without_all:receipt_id,date_start,date_end',
+            'receipt_id'    => 'required_without_all:email,date_start,date_end',
+            'date_start'    => 'required_without_all:email,receipt_id|required_with:date_end',
+            'date_end'      => 'required_without_all:email,receipt_id|required_with:date_start',
+            
+        ], $messages);
+
+        if ($validate->fails()) {
+            return redirect('donate/inquiry/')->withInput($request->all)->withErrors($validate);
+        }
+        else{
+            $data['cookie']         =  $request;
+            $data['donate_list']    =  $this->otherRepo->getDonateList($request);
+            $data['last_updated']   =  $this->otherRepo->getDonateLastUpdatedDate();
+        }
         return view('frontend.nav.donate.inquiry',$data);
     }
     public function sitemap(Request $request){

@@ -16,6 +16,34 @@ class IndexKvRepository{
     public function __construct(IndexKV $indexKV){
         $this->indexKV=$indexKV;
     }
+    public function video(){
+        return indexKV::where('type','video')->first();
+    }
+    public function videoUpdate(Request $request){
+        $result = indexKV::where('type','video')->first();
+        if($result != null){
+            $url = $request->link;
+            parse_str( parse_url( $url, PHP_URL_QUERY ), $youtube );
+            $result->link = $youtube['v'];
+
+            $result->title = $request->title;
+            $result->type = "video";
+            $result->lang = 0 ;
+            $result->save();
+        }
+        else{
+            $result = new indexKV;
+
+            $url = $request->link;
+            parse_str( parse_url( $url, PHP_URL_QUERY ), $youtube );
+            $result->link = $youtube['v'];
+
+            $result->title = $request->title;
+            $result->type = "video";
+            $result->lang = 0 ;
+            $result->save();
+        }
+    }
     public function kvIndex(Request $request){
         return indexKV::where('type','KV')->orderBy('order','asc')->get();
     }

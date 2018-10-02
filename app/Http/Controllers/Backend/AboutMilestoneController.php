@@ -42,11 +42,12 @@ class AboutMilestoneController extends Controller
             'date.required'  => '請輸入日期 Please fill in date',
             'pic.required'  => '請上傳圖片 Please upload image',
             'pic.image'  => '上傳檔案非圖片 Please upload valid image',
+            'pic.max'       => '圖片大小需小於4MB Image file size may not be greater than 4MB',
         ];
         $validate = Validator::make($request->all(), [
             'title' => 'required',
             'date' => 'required',
-            'pic' => 'required|image',
+            'pic' => 'required|image|max:4000',
             
         ], $messages);
 
@@ -81,10 +82,13 @@ class AboutMilestoneController extends Controller
         $messages = [
             'title.required'  => '請輸入標題 Please fill in title',
             'date.required'  => '請輸入日期 Please fill in date',
+            'pic.image'  => '上傳檔案非圖片 Please upload valid image',
+            'pic.max'       => '圖片大小需小於4MB Image file size may not be greater than 4MB',
         ];
         $validate = Validator::make($request->all(), [
             'title' => 'required',
             'date' => 'required',
+            'pic' => 'image|max:4000',
         ], $messages);
 
         if ($validate->fails()) {

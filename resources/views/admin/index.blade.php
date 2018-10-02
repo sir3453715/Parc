@@ -8,24 +8,24 @@
             <tr>
                 <td>
                     <p style="color: Gray">
-                        Login Time:  
-                        <span id="ctl00_ContentPlaceHolder1_loginDateTime" style="font-size:Small;">
-                            <?php
+                        歡迎來到  <span id="ctl00_ContentPlaceHolder1_labSystemName">病人自主後臺管理系統</span><br />
+                        請使用左方導航列使用系統<br /><br />
+                    </p>
+                    <p style="color: Gray">
+                            登入時間:  
+                            <span id="ctl00_ContentPlaceHolder1_loginDateTime" style="font-size:Small;">
+                                    <?php
                             date_default_timezone_set('Asia/Taipei');
                             echo date("Y/m/d h:i:s");
                             ?>
                         </span>
                         <br />
-                        Role:
+                        使用者:
                         <span id="ctl00_ContentPlaceHolder1_loginName" style="font-size:Small;">
-                            {{ $username }}
-                        </span>
-                    </p>
-                    <p style="color: Gray">
-                        Welcome to  <span id="ctl00_ContentPlaceHolder1_labSystemName"><?php echo env('APP_NAME')?></span><br />
-                        Use the left menu bar to control.<br /><br />
-                        Production date: <?php echo env('RELEASE_DATE')?>
-                    </p>
+                                {{ $username }}
+                            </span>
+                        </p>
+                        系統最後更新時間: {{ env('RELEASE_DATE') }}
                 </td>
             </tr>
         </table>

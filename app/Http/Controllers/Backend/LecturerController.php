@@ -49,10 +49,11 @@ class LecturerController extends Controller
             'pic.required'  => '請上傳圖片 Please upload image',
             'pic.image'  => '上傳檔案非圖片 Please upload valid image',
             'title.max' => '職稱與敘述需為100字以內 Job title & description may not be greater than 17 characters',
+            'pic.max'           => '圖片大小需小於4MB Image file size may not be greater than 4MB',
         ];
         $validate = Validator::make($request->all(), [
             'name' => 'required|max:18',
-            'pic' => 'required|image',
+            'pic' => 'required|image|max:4000',
             'title' => 'max:100',
             
         ], $messages);
@@ -73,10 +74,11 @@ class LecturerController extends Controller
             'name.max'   => '姓名需為18字以內 The Name may not be greater than 30 characters',
             'pic.image'  => '上傳檔案非圖片 Please upload valid image',
             'title.max' => '職稱與敘述需為100字以內 Job title & description may not be greater than 17 characters',
+            'pic.max'           => '圖片大小需小於4MB Image file size may not be greater than 4MB',
         ];
         $validate = Validator::make($request->all(), [
             'name' => 'required|max:18',
-            'pic' => 'image',
+            'pic' => 'image|max:4000',
             'title' => 'max:100',
             
         ], $messages);

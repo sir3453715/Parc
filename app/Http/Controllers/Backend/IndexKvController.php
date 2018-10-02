@@ -80,10 +80,11 @@ class IndexKvController extends Controller
                 'title.required'=> '請輸入標題 Please fill in title',
                 'title.max'     => '標題需為17字以內 The title may not be greater than 17 characters',
                 'body.max'      => '內文需為56字以內 The content may not be greater than 56 characters',
-                
+                'pic.max'       => '圖片大小需小於4MB Image file size may not be greater than 4MB',
+
             ];
             $validate = Validator::make($request->all(), [
-                'pic' => 'required|image',
+                'pic' => 'required|image|max:4000',
                 'title' => 'required|max:17',
                 'body' => 'max:56',
                 
@@ -94,11 +95,12 @@ class IndexKvController extends Controller
                 'pic.required'  => '請上傳圖片 Please upload an image',
                 'pic.image'     => '上傳檔案非圖片 File type not supported, please upload an image file',
                 'author.max'    => '作者需為17字以內',
-                'body.max'      => '內文需為80字以內'
+                'body.max'      => '內文需為80字以內',
+                'pic.max'       => '圖片大小需小於4MB Image file size may not be greater than 4MB',
                 
             ];
             $validate = Validator::make($request->all(), [
-                'pic' => 'required|image',
+                'pic' => 'required|image|max:4000',
                 'author' => 'max:17',
                 'body' => 'max:80',
                 
@@ -132,10 +134,10 @@ class IndexKvController extends Controller
                 'title.required'=> '請輸入標題 Please fill in title',
                 'title.max'     => '標題需為17字以內 The title may not be greater than 17 characters',
                 'body.max'      => '內文需為56字以內 The content may not be greater than 56 characters',
-                
+                'pic.max'           => '圖片大小需小於4MB Image file size may not be greater than 4MB',
             ];
             $validate = Validator::make($request->all(), [
-                'pic' => 'image',
+                'pic' => 'image|max:4000',
                 'title' => 'required|max:17',
                 'body' => 'max:56',
                 
@@ -145,11 +147,11 @@ class IndexKvController extends Controller
             $messages = [
                 'pic.image'     => '上傳檔案非圖片 File type not supported, please upload an image file',
                 'author.max'    => '作者需為17字以內',
-                'body.max'      => '內文需為80字以內'
-                
+                'body.max'      => '內文需為80字以內',
+                'pic.max'       => '圖片大小需小於4MB Image file size may not be greater than 4MB',
             ];
             $validate = Validator::make($request->all(), [
-                'pic' => 'image',
+                'pic' => 'image|max:4000',
                 'author' => 'max:17',
                 'body' => 'max:80',               
             ], $messages);

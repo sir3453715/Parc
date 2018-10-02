@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d2a213c5c77a825321270c15bb1e4367",
+    "content-hash": "883f7d2fef1a89eb1a9225f27f6d52a2",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -2779,16 +2779,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v3.4.12",
+            "version": "v3.4.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "acc5a37c706ace827962851b69705b24e71ca17c"
+                "reference": "8b87aca97f341d65dee430c60863f2442605c88b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/acc5a37c706ace827962851b69705b24e71ca17c",
-                "reference": "acc5a37c706ace827962851b69705b24e71ca17c",
+                "url": "https://api.github.com/repos/symfony/process/zipball/8b87aca97f341d65dee430c60863f2442605c88b",
+                "reference": "8b87aca97f341d65dee430c60863f2442605c88b",
                 "shasum": ""
             },
             "require": {
@@ -2824,7 +2824,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2018-05-30T04:24:30+00:00"
+            "time": "2018-09-08T13:15:14+00:00"
         },
         {
             "name": "symfony/routing",
@@ -3040,129 +3040,6 @@
                 "dump"
             ],
             "time": "2018-06-15T07:47:49+00:00"
-        },
-        {
-            "name": "teamtnt/laravel-scout-tntsearch-driver",
-            "version": "v3.0.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/teamtnt/laravel-scout-tntsearch-driver.git",
-                "reference": "048590c769d0d09900d89e32a026d9549558c9a7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/teamtnt/laravel-scout-tntsearch-driver/zipball/048590c769d0d09900d89e32a026d9549558c9a7",
-                "reference": "048590c769d0d09900d89e32a026d9549558c9a7",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/bus": "~5.4",
-                "illuminate/contracts": "~5.4",
-                "illuminate/database": "~5.4",
-                "illuminate/pagination": "~5.4",
-                "illuminate/queue": "~5.4",
-                "illuminate/support": "~5.4",
-                "laravel/scout": "*",
-                "php": ">=5.6.4",
-                "teamtnt/tntsearch": "1.3.*"
-            },
-            "require-dev": {
-                "mockery/mockery": "~0.9",
-                "phpunit/phpunit": "~5.0"
-            },
-            "suggest": {
-                "teamtnt/tntsearch": "Required to use the TNTSearch engine."
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                },
-                "laravel": {
-                    "providers": [
-                        "TeamTNT\\Scout\\TNTSearchScoutServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "TeamTNT\\Scout\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "TNT Studio",
-                    "email": "info@tntstudio.hr"
-                }
-            ],
-            "description": "Driver for Laravel Scout search package based on https://github.com/teamtnt/tntsearch",
-            "keywords": [
-                "laravel",
-                "scout",
-                "search",
-                "tntsearch"
-            ],
-            "time": "2018-06-27T15:57:52+00:00"
-        },
-        {
-            "name": "teamtnt/tntsearch",
-            "version": "v1.3.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/teamtnt/tntsearch.git",
-                "reference": "40c4395cf04e089b6f2fd4dd98d4b1d09de1ce6b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/teamtnt/tntsearch/zipball/40c4395cf04e089b6f2fd4dd98d4b1d09de1ce6b",
-                "reference": "40c4395cf04e089b6f2fd4dd98d4b1d09de1ce6b",
-                "shasum": ""
-            },
-            "require": {
-                "ext-mbstring": "*",
-                "ext-pdo_sqlite": "*",
-                "ext-sqlite3": "*",
-                "php": "~5.5|~7.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "5.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "TeamTNT\\TNTSearch\\": "src"
-                },
-                "files": [
-                    "helper/helpers.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nenad Tičarić",
-                    "email": "nticaric@gmail.com",
-                    "homepage": "http://www.tntstudio.us",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A fully featured full text search engine written in PHP",
-            "homepage": "https://github.com/teamtnt/tntsearch",
-            "keywords": [
-                "Fuzzy search",
-                "fulltext",
-                "geosearch",
-                "search",
-                "teamtnt",
-                "tntsearch"
-            ],
-            "time": "2018-07-18T16:57:14+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -5031,6 +4908,129 @@
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
             "homepage": "https://github.com/sebastianbergmann/version",
             "time": "2016-10-03T07:35:21+00:00"
+        },
+        {
+            "name": "teamtnt/laravel-scout-tntsearch-driver",
+            "version": "v3.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/teamtnt/laravel-scout-tntsearch-driver.git",
+                "reference": "048590c769d0d09900d89e32a026d9549558c9a7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/teamtnt/laravel-scout-tntsearch-driver/zipball/048590c769d0d09900d89e32a026d9549558c9a7",
+                "reference": "048590c769d0d09900d89e32a026d9549558c9a7",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/bus": "~5.4",
+                "illuminate/contracts": "~5.4",
+                "illuminate/database": "~5.4",
+                "illuminate/pagination": "~5.4",
+                "illuminate/queue": "~5.4",
+                "illuminate/support": "~5.4",
+                "laravel/scout": "*",
+                "php": ">=5.6.4",
+                "teamtnt/tntsearch": "1.3.*"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9",
+                "phpunit/phpunit": "~5.0"
+            },
+            "suggest": {
+                "teamtnt/tntsearch": "Required to use the TNTSearch engine."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "TeamTNT\\Scout\\TNTSearchScoutServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TeamTNT\\Scout\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "TNT Studio",
+                    "email": "info@tntstudio.hr"
+                }
+            ],
+            "description": "Driver for Laravel Scout search package based on https://github.com/teamtnt/tntsearch",
+            "keywords": [
+                "laravel",
+                "scout",
+                "search",
+                "tntsearch"
+            ],
+            "time": "2018-06-27T15:57:52+00:00"
+        },
+        {
+            "name": "teamtnt/tntsearch",
+            "version": "v1.3.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/teamtnt/tntsearch.git",
+                "reference": "40c4395cf04e089b6f2fd4dd98d4b1d09de1ce6b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/teamtnt/tntsearch/zipball/40c4395cf04e089b6f2fd4dd98d4b1d09de1ce6b",
+                "reference": "40c4395cf04e089b6f2fd4dd98d4b1d09de1ce6b",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "ext-pdo_sqlite": "*",
+                "ext-sqlite3": "*",
+                "php": "~5.5|~7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "5.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "TeamTNT\\TNTSearch\\": "src"
+                },
+                "files": [
+                    "helper/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nenad Tičarić",
+                    "email": "nticaric@gmail.com",
+                    "homepage": "http://www.tntstudio.us",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A fully featured full text search engine written in PHP",
+            "homepage": "https://github.com/teamtnt/tntsearch",
+            "keywords": [
+                "Fuzzy search",
+                "fulltext",
+                "geosearch",
+                "search",
+                "teamtnt",
+                "tntsearch"
+            ],
+            "time": "2018-07-18T16:57:14+00:00"
         },
         {
             "name": "theseer/tokenizer",

@@ -106,7 +106,7 @@
 		revert: 250,
 		update: function(event, ui) {
 			var newOrder = $(this).sortable('toArray');
-			console.log(newOrder);
+			//console.log(newOrder);
 			document.getElementById("order").value=newOrder;
 		}
 		}); 

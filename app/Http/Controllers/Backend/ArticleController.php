@@ -102,10 +102,10 @@ class ArticleController extends Controller
             'title.required'    => '請輸入標題 Please input title',
             'title.max'         => '標題需為200字以內 The title may not be greater than 200 characters',
             'description.max'   => '敘述需為56字以內 The description may not be greater than 56 characters',
-            
+            'pic.max'           => '圖片大小需小於4MB Image file size may not be greater than 4MB',            
         ];
         $validate = Validator::make($request->all(), [
-            'pic' => 'nullable|image',
+            'pic' => 'nullable|image|max:4000',
             'title' => 'required|max:200',
             'description' => 'max:56',
             
@@ -160,10 +160,10 @@ class ArticleController extends Controller
             'title.required'    => '請輸入標題 Please input title',
             'title.max'         => '標題需為200字以內 The title may not be greater than 200 characters',
             'description.max'   => '敘述需為56字以內 The description may not be greater than 56 characters',
-            
+            'pic.max'           => '圖片大小需小於4MB Image file size may not be greater than 4MB',            
         ];
         $validate = Validator::make($request->all(), [
-            'pic' => 'nullable|image',
+            'pic' => 'nullable|image|max:4000',
             'title' => 'required|max:200',
             'description' => 'max:56',
             

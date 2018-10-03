@@ -25,7 +25,7 @@
                                 {{ $username }}
                             </span>
                         </p>
-                        系統最後更新時間: {{ env('RELEASE_DATE') }}
+                        系統最後更新時間: {{ env('RELEASE_DATE','2018/10/01') }}
                 </td>
             </tr>
         </table>

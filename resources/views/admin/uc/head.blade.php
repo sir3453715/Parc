@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <link rel="shortcut icon" href="{{url('assets/images/favicon.png')}}" type="image/png" />
-<title>{{ env('APP_NAME') }}</title>
+<title>病人自主後臺管理系統</title>
 <link rel="Stylesheet" type="text/css" href="{{url('assets/css/style.default.css')}}"/>
 <!--<link rel="Stylesheet" type="text/css" href="{{url('assets/css/style.darkknight.css')}}"/>-->
 <script src="{{url('assets/js/jquery-1.11.1.min.js')}}"></script>

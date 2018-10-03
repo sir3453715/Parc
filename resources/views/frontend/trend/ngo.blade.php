@@ -181,7 +181,7 @@
                 </div>
                 <div class="col-12 col-lg-6 service-lohas__item">
                     <div class="service-lohas__icon">
-                        <img src="{{ asset('assets/images/icon/sg-hca.png') }}" class="img-fluid" alt="平靜善終">
+                        <img src="{{ asset('assets/images/icon/th-hd.png') }}" class="img-fluid" alt="平靜善終">
                     </div>
                     <div class="service-lohas__box">
                         <div class="service-lohas__title">
@@ -201,7 +201,7 @@
                 <div class="row justify-content-center text-center mb-5">
                     <div class="col-12 col-lg-6 service-lohas__item">
                         <div class="service-lohas__icon">
-                            <img src="{{ asset('assets/images/icon/cn-lwpa.png') }}" class="img-fluid" alt="Pallium India">
+                            <img src="{{ asset('assets/images/icon/in-pi.png') }}" class="img-fluid" alt="Pallium India">
                         </div>
                         <div class="service-lohas__box">
                             <div class="service-lohas__title">

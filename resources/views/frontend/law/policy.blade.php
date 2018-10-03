@@ -23,6 +23,18 @@
         <h2 class="banner-single__title">政策研究</h2>
     </div>
 
+    <h3 class="text-center">
+        為保障生命最後一哩路，我們致力推廣生命教育以及尊嚴善終。
+        <br>
+        透過政策研究，我們匯整各方專家之病人自主權研究意見，並汲取醫療現場的實務經驗，
+        <br>
+        我們期盼政府政策縝密周延，更為貼近國人生活與生命經驗，充分保障國人生命。
+        <br>
+        本單元不僅彙整各方專家意見，持續蒐集我國病人自主權專文，
+        <br>
+        同時紀錄政策配套措施之進展，有關病人自主權之動態我們即時掌握。
+        <hr>                
+    </h3>
     <!-- tabs -->
     <ul class="nav justify-content-center">
         @foreach($policy_extra_sub_category as $category)

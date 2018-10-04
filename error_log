@@ -1,0 +1,32 @@
+[03-Oct-2018 10:08:52 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_transient() in /home/patientarc/public_html/deleteme.wp8ys6.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/patientarc/public_html/deleteme.wp8ys6.php on line 16
+[03-Oct-2018 10:08:52 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_transient() in /home/patientarc/public_html/deleteme.wpczkd.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/patientarc/public_html/deleteme.wpczkd.php on line 16
+[03-Oct-2018 10:08:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_transient() in /home/patientarc/public_html/deleteme.wpfgxc.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/patientarc/public_html/deleteme.wpfgxc.php on line 16
+[03-Oct-2018 10:08:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_transient() in /home/patientarc/public_html/deleteme.wp8skl.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/patientarc/public_html/deleteme.wp8skl.php on line 16
+[03-Oct-2018 16:10:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_transient() in /home/patientarc/public_html/deleteme.wp4btl.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/patientarc/public_html/deleteme.wp4btl.php on line 16
+[03-Oct-2018 16:10:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_transient() in /home/patientarc/public_html/deleteme.wpup9t.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/patientarc/public_html/deleteme.wpup9t.php on line 16
+[03-Oct-2018 16:10:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_transient() in /home/patientarc/public_html/deleteme.wpixdq.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/patientarc/public_html/deleteme.wpixdq.php on line 16
+[03-Oct-2018 16:10:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_transient() in /home/patientarc/public_html/deleteme.wplfpj.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/patientarc/public_html/deleteme.wplfpj.php on line 16

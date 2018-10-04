@@ -176,7 +176,7 @@
                                     s.parentNode.insertBefore(gcse, s);
                                 })();
                             </script>
-                            <form action="https://cse.google.com/cse?cx=017593280929212757294:y9-dkbcicm8" method="get" name="search-form" id="search-form" title="搜尋">
+                            <form action="https://cse.google.com/cse?cx=017593280929212757294:y9-dkbcicm8" method="get" name="search-form" id="search-form" title="搜尋" target="GoogleSearch">
                                 <input type="hidden" name="cx" value="017593280929212757294:y9-dkbcicm8"/>
                                 <input type="hidden" name="ie" value="utf-8"/>
                                 <input type="hidden" name="hl" value="zh-tw"/>

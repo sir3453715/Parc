@@ -165,26 +165,11 @@
                             <a class="nav-link" href="{{ url('/about-en') }}" title="English">English</a>
                         </li>
                         <li class="nav-item search">
-                            <script>
-                                (function() {
-                                    var cx = '017593280929212757294:y9-dkbcicm8';
-                                    var gcse = document.createElement('script');
-                                    gcse.type = 'text/javascript';
-                                    gcse.async = true;
-                                    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-                                    var s = document.getElementsByTagName('script')[0];
-                                    s.parentNode.insertBefore(gcse, s);
-                                })();
-                            </script>
-                            <form action="https://cse.google.com/cse?cx=017593280929212757294:y9-dkbcicm8" method="get" name="search-form" id="search-form" title="搜尋" target="GoogleSearch">
-                                <input type="hidden" name="cx" value="017593280929212757294:y9-dkbcicm8"/>
-                                <input type="hidden" name="ie" value="utf-8"/>
-                                <input type="hidden" name="hl" value="zh-tw"/>
+                            <form action="{{ url('search')}}" method="get" name="search-form" id="search-form" title="搜尋">
                                 <label for="S" class="d-none">關鍵字搜尋: </label>
-                                <input name="q" type="text" id="S" accesskey="S" name="search" placeholder="關鍵字搜尋" title="關鍵字" />
-                                {{-- <input type="text" id="S" accesskey="S" name="search" placeholder="關鍵字搜尋" title="關鍵字"> --}}
+                                <input type="text" id="S" accesskey="S" name="q" placeholder="關鍵字搜尋" title="關鍵字" value="{{ old('q')}}">
                                 <div class="fa fa-search" onclick="document.getElementById('search-form').submit();" title="搜尋"></div>
-                                <input type="submit" value="Submit" class="btn-submit" title="Submit" name="sa">
+                                <input type="submit" value="Submit" class="btn-submit" title="Submit">
                             </form>
                         </li>
                     </ul>

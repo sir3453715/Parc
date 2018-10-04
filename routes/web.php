@@ -49,6 +49,7 @@ Route::group(['namespace' => 'Frontend'], function () {
     Route::view('/404', 'frontend.master.404');
     Route::view('/edm_complete', 'frontend.edm_complete');
     Route::view('/about-en','frontend.nav.about-en');
+    Route::view('/search','frontend.search');
     Route::fallback(function(){
         return view('frontend.master.404');
     });

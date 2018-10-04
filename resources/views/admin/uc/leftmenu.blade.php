@@ -1,6 +1,6 @@
 <div class="leftpanel">
-	<div class="logopanel" style="cursor:pointer;">
-        <!--<img src="assets/images/nav_logo.png" style="height: 73px;">-->
+	<div class="logopanel">
+        <img alt="病人自主研究中心" src="http://parc.tw/assets/images/icon/logo.svg" class="img-fluid" >
 		<h1> <?php echo env('APP_NAME')?> </h1>
 	</div>
 	<!-- logopanel -->
@@ -14,10 +14,10 @@
 				</div>
 			</div>
 		</div>
-        <h5 class="sidebartitle">Navigation</h5>
+        <h5 class="sidebartitle">導航列</h5>
 		<ul id="navLeftMenu" class="nav nav-pills nav-stacked nav-bracket">
 			<!-- 選單區段 -->
-			<li class='nav-link' id="Dashboard"><a href='{{ url('backend/') }}' class="dashboard"><i class='fa fa-dashboard'></i><span>DashBoard</span></a></li>
+			<li class='nav-link' id="Dashboard"><a href='{{ url('backend/') }}' class="dashboard"><i class='fa fa-dashboard'></i><span>系統首頁</span></a></li>
             @foreach($leftmenu as $data)
                 <li class='nav-parent'><a href='' class='parent-name'><i class='{{ $data->icon }}'></i><span>{{ $data->menuname }}</span></a><ul class='children'>
                 @for($i = 0; $i< count(explode(",",$data->submenuname)); $i++)

@@ -63,7 +63,7 @@ $(document).ready(function() {
 
 $('.dashboard').click(function(){
 	$.cookie('children-id', 0, { path:'/'});
-	$.cookie('bread-parent', 'Dashboard', { path:'/'});
+	$.cookie('bread-parent', '系統首頁', { path:'/'});
 	$.cookie('bread-children', null, { path:'/'});
 });
 

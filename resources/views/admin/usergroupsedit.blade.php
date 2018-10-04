@@ -24,7 +24,7 @@
 				{{ csrf_field() }}
 				<div class="panel panel-primary">
 					<div class="panel-heading">
-						<h4 class="panel-title">{{ (($operdata == "") ? "Create " : "Modify ") }}Group</h4>
+						<h4 class="panel-title">{{ (($operdata == "") ? "建立群組 Create Group" : "編輯群組 Modify Group") }}</h4>
 					</div>
 					<div class="panel-body">
 						<div>
@@ -38,7 +38,7 @@
 									@else
 										<!-- Edit Mode -->
 										<tr>
-											<td class="col-lg-2">no</td>
+											<td class="col-lg-2">編號<br>no</td>
 											<td>
 												<input name="id" type="hidden" value="{{ $_serno }}" id="serno" />
 												{{ $_serno }}
@@ -48,7 +48,7 @@
 									<!-- 欄位：Group Name -->
 									<!-- ALL Mode -->
 									<tr>
-										<td class="header-require col-lg-2">Group Name</td>
+										<td class="header-require col-lg-2">群組名稱<br>Group Name</td>
 										<td>
 											<div class="col-lg-3 nopadding">
 												<input name="Name" type="text" value="{{ $_name }}" maxlength="20" id="name" class="form-control">
@@ -59,7 +59,7 @@
 									<!-- 欄位：Valid -->
 									<!-- ALL Mode -->
 									<tr>
-										<td class="col-lg-2">Valid</td>
+										<td class="col-lg-2">有效<br>Valid</td>
 										<td>
 											<input id="valid" type="checkbox" name="Valid" {{ ($_valid=='1')?"checked='checked'":"" }} />
 										</td>
@@ -70,7 +70,7 @@
 									@else
 										<!-- Edit Mode -->
 										<tr>
-											<td class="col-lg-2">Create Time</td>
+											<td class="col-lg-2">創造時間 Create Time</td>
 											<td>{{ $_cdate }}</td>
 										</tr>
 									@endif
@@ -80,7 +80,7 @@
 									@else
 										<!-- Edit Mode -->
 										<tr>
-											<td class="col-lg-2">Modify Time</td>
+											<td class="col-lg-2">更新時間 Modify Time</td>
 											<td>{{ $_mdate }}</td>
 										</tr>
 									@endif
@@ -90,20 +90,20 @@
 									@else
 										<!-- Edit Mode -->
 										<tr>
-											<td class="col-lg-2">Role</td>
+											<td class="col-lg-2">角色<br>Role</td>
 											<td><span id="oid">{{ $_oid }}</span></td>
 										</tr>
 									@endif
 									<!-- 欄位：Functions -->
 									<!-- ALL Mode -->
 									<tr>
-										<td class="col-lg-2">Functions</td>
+										<td class="col-lg-2">功能<br>Functions</td>
 										<td>
 											<!-- 左側Source區 -->
 											<div class="row">
 												<div class="col-lg-12">
 													<div class="form-group has-warning" style="margin: 0">
-														<label class="control-label" for="funlist">Unassign</label>
+														<label class="control-label" for="funlist">未指派<br>Unassign</label>
 														<select size="4" name="fFunAll" multiple="multiple" id="fFunAll" class="form-control">
 															@foreach($unseleted_funlist as $data)
 																<option value='{{ $data->id }}'>{{ $data->FunName }}</option>
@@ -116,7 +116,7 @@
 												<!-- 右側Destination區 -->
 												<div class="col-lg-12">
 													<div class="form-group has-success" style="margin: 0">
-														<label class="control-label" for="funlist">Assigned</label>
+														<label class="control-label" for="funlist">已指派<br>Assigned</label>
 														<select size="4" name="FunList" multiple="multiple" id="funlist" class="form-control">
 															@foreach($seleted_funlist as $data)
 																<option value='{{ $data->id }}'>{{ $data->FunName }}</option>
@@ -132,13 +132,13 @@
 									<!-- 欄位：Role -->
 									<!-- ALL Mode -->
 									<tr>
-										<td class="col-lg-2">Users</td>
+										<td class="col-lg-2">使用者<br>Users</td>
 										<td>
 											<!-- 左側Source區 -->
 											<div class="row">
 												<div class="col-lg-12">
 													<div class="form-group has-warning" style="margin: 0">
-														<label class="control-label" for="fUsrAll">Unassign</label>
+														<label class="control-label" for="fUsrAll">未指派<br>Unassign</label>
 														<select size="4" name="fUsrAll" multiple="multiple" id="fUsrAll" class="form-control">
 															@foreach($unseleted_usrlist as $data)
 																<option value='{{ $data->id }}'>{{ $data->name }}({{ $data->email }})</option>
@@ -152,7 +152,7 @@
 												<!-- 右側Destination區 -->
 												<div class="col-lg-12">
 													<div class="form-group has-success" style="margin: 0">
-														<label class="control-label" for="usrlist">Assigned</label>
+														<label class="control-label" for="usrlist">已指派<br>Assigned</label>
 														<select size="4" name="UsrList" multiple="multiple" id="usrlist" class="form-control">
 															@foreach($seleted_usrlist as $data)
 																<option value='{{ $data->id }}'>{{ $data->name }}({{ $data->email }})</option>
@@ -170,14 +170,14 @@
 										<td>&nbsp;</td>
 										<td>
 											<div style="text-align: right">
+												<input type="button" name="btnBackTo2_foot" value="返回 Back" id="btnBackTo2_foot" class="btn btn-default btn-xs">
 												@if ($operdata == "")
 													<!-- Insert Mode -->
-													<input type="button" name="btnUpdate_foot" value="Create" id="btnUpdate_foot" class="btn btn-primary btn-xs" onclick="submitForm();">
+													<input type="button" name="btnUpdate_foot" value="創造 Create" id="btnUpdate_foot" class="btn btn-primary btn-xs" onclick="submitForm();">
 												@else
 													<!-- Edit Mode -->
-													<input type="button" name="btnUpdate_foot" value="Modify" id="btnUpdate_foot" class="btn btn-primary btn-xs" onclick="submitForm();">
+													<input type="button" name="btnUpdate_foot" value="更新 Modify" id="btnUpdate_foot" class="btn btn-primary btn-xs" onclick="submitForm();">
 												@endif
-												<input type="button" name="btnBackTo2_foot" value="Back" id="btnBackTo2_foot" class="btn btn-default btn-xs">
 											</div>
 										</td>
 									</tr>

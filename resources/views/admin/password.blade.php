@@ -6,18 +6,18 @@
 				{!! csrf_field() !!}
 				<div class="panel panel-primary">
 					<div class="panel-heading">
-						<h4 class="panel-title">Change Password</h4>
+						<h4 class="panel-title">變更密碼 Change Password</h4>
 					</div>
 					<div class="panel-body">
 						<div class="form-group">
-							<label class="col-lg-2 control-label">New Password:</label>
+							<label class="col-lg-2 control-label">新密碼:<br>New Password</label>
 							<div class="col-lg-4">
 								<input id="qpwd1" name="qpwd1" class="form-control" maxlength="20" type="password" />
 								<label class="error" for="qpwd1"></label>
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-lg-2 control-label">Retype Password:</label>
+							<label class="col-lg-2 control-label">確認新密碼:<br>Confirm New Password</label>
 							<div class="col-lg-4">
 								<input id="qpwd2" name="qpwd2" class="form-control" maxlength="20" type="password" />
 								<label class="error" for="qpwd2"></label>
@@ -26,7 +26,7 @@
 					</div>
 					<!-- panel-body -->
 					<div class="panel-footer" style="text-align:right">
-						<input id="btnOK" name="btnOK" value="Submit" class="btn btn-primary btn-xs" type="submit" onclick="submitForm();" />
+						<input id="btnOK" name="btnOK" value="送出 Submit" class="btn btn-primary btn-xs" type="submit" onclick="submitForm();" />
 					</div>
 					<!-- panel-footer -->
 				</div>

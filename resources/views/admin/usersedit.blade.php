@@ -7,7 +7,7 @@
 				{{ csrf_field() }}
 				<div class="panel panel-primary">
 					<div class="panel-heading">
-						<h4 class="panel-title">{{ ($operdata == "") ? "Create " : "Modify " }}User</h4>
+						<h4 class="panel-title">{{ ($operdata == "") ? "新增使用者 Create User " : "更新使用者 Modify User " }}</h4>
 					</div>
 					<div class="panel-body">
 						<div>
@@ -21,7 +21,7 @@
 									@else
 										<!-- Edit Mode -->
 										<tr>
-											<td class="col-lg-2">no</td>
+											<td class="col-lg-2">編號<br>no</td>
 											<td>
 												<input name="id" type="hidden" value="{{ $operdata->id }}" id="serno" />
 												{{ $operdata->id }}
@@ -31,7 +31,7 @@
 									<!-- 欄位：Nickname -->
 									<!-- ALL Mode -->
 									<tr>
-										<td class="header-require col-lg-2">Nickname</td>
+										<td class="header-require col-lg-2">暱稱<br>Nickname</td>
 										<td>
 											<div class="col-lg-3 nopadding">
 												@if ($operdata == "")
@@ -47,7 +47,7 @@
 									@if ($operdata == "")
 										<!-- Insert Mode -->
 										<tr>
-											<td class="header-require col-lg-2">Username</td>
+											<td class="header-require col-lg-2">帳戶名稱<br>Username</td>
 											<td>
 												<div class="col-lg-3 nopadding">
 													<input name="email" type="text" value="" maxlength="100" id="email" class="form-control">
@@ -58,7 +58,7 @@
 									@else
 										<!-- Edit Mode -->
 										<tr class="Grid_Item">
-											<td class="col-lg-2">Username</td>
+											<td class="col-lg-2">帳戶名稱<br>Username</td>
 											<td>
 												{{ $operdata->email }}
 											</td>
@@ -68,7 +68,7 @@
 									@if ($operdata == "")
 										<!-- Insert Mode -->
 										<tr>
-											<td class="header-require col-lg-2">Password</td>
+											<td class="header-require col-lg-2">密碼<br>Password</td>
 											<td>
 												<div class="col-lg-3 nopadding">
 													<input name="password" type="password" value="" maxlength="20" id="password" class="form-control">
@@ -79,7 +79,7 @@
 									@else
 										<!-- Edit Mode -->
 										<tr>
-											<td class="col-lg-2">Password</td>
+											<td class="col-lg-2">密碼<br>Password</td>
 											<td>
 												<div class="col-lg-3 nopadding">
 													<input name="password" type="password" value="" maxlength="20" id="password" class="form-control tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Leave it blank if you don't want to change password">
@@ -95,7 +95,7 @@
 									@else
 										<!-- Edit Mode -->
 										<tr>
-											<td class="col-lg-2">Create Time</td>
+											<td class="col-lg-2">創造時間<br>Create Time</td>
 											<td>{{ $operdata->created_at }}</td>
 										</tr>
 									@endif
@@ -105,7 +105,7 @@
 									@else
 										<!-- Edit Mode -->
 										<tr>
-											<td class="col-lg-2">Modify Time</td>
+											<td class="col-lg-2">更新時間<br>Modify Time</td>
 											<td>{{ $operdata->updated_at }}</td>
 										</tr>
 									@endif
@@ -115,14 +115,14 @@
 										<td>&nbsp;</td>
 										<td>
 											<div style="text-align: right">
+												<input type="button" name="btnBackTo2_foot" value="返回 Back" id="btnBackTo2_foot" class="btn btn-default btn-xs">
 												@if ($operdata == "")
 													<!-- Insert Mode -->
-													<input type="submit" name="btnUpdate_foot" value="Create" id="btnUpdate_foot" class="btn btn-primary btn-xs" onclick="submitForm();">
+													<input type="submit" name="btnUpdate_foot" value="創造 Create" id="btnUpdate_foot" class="btn btn-primary btn-xs" onclick="submitForm();">
 												@else
 													<!-- Edit Mode -->
-													<input type="submit" name="btnUpdate_foot" value="Modify" id="btnUpdate_foot" class="btn btn-primary btn-xs" onclick="submitForm();">
+													<input type="submit" name="btnUpdate_foot" value="更新 Modify" id="btnUpdate_foot" class="btn btn-primary btn-xs" onclick="submitForm();">
 												@endif
-												<input type="button" name="btnBackTo2_foot" value="Back" id="btnBackTo2_foot" class="btn btn-default btn-xs">
 											</div>
 										</td>
 									</tr>

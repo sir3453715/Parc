@@ -8,22 +8,22 @@
 				<div class="panel-heading">
 					<div class="row">
 						<div class="col-md-6">
-							<div class="panel-title">Manage Groups</div>
+							<div class="panel-title">群組管理 Manage Groups</div>
 						</div>
 						<div class="col-md-6" style="text-align: right">
-							<a class="btn btn-darkblue btn-xs" href="{{ url('/backend/Usergroups/create') }}"><strong>Add</strong></a>
+							<a class="btn btn-darkblue btn-xs" href="{{ url('/backend/Usergroups/create') }}"><strong>新增 Add</strong></a>
 						</div>
 					</div>
 				</div>
 				<table class="table table-hover" cellspacing="0" width="100%">
 					<thead>
 						<tr>
-							<th>no</th>
-							<th>Group Name</th>
-							<th>Valid</th>
-							<th>Create Time</th>
-							<th>Modify Time</th>
-							<th>Operate</th>
+							<th>編號<br>no</th>
+							<th>群組名稱<br>Group Name</th>
+							<th>有效<br>Valid</th>
+							<th>創造時間<br>Create Time</th>
+							<th>更新時間<br>Modify Time</th>
+							<th><br></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -37,11 +37,11 @@
 								<td style="text-align: right">
 									<form method="post" action="{{ url('/backend/Usergroups/'.$data->id) }}">
 										<a class="btn btn-warning btn-xs" href="{{ url('/backend/Usergroups/edit/'.$data->id) }}">
-											<strong>Edit</strong>
+											<strong>編輯 Edit</strong>
 										</a>
 										{{ csrf_field() }}
 										{{ method_field('DELETE') }}
-										<button type="submit" class="btn btn-danger btn-xs"><strong>Delete</strong></button>
+										<button type="submit" class="btn btn-danger btn-xs"><strong>刪除 Delete</strong></button>
 									</form>
 								</td>
 							</tr>

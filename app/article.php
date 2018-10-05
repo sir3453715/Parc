@@ -4,18 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
-use Laravel\Scout\Searchable;
 
 
 
 class article extends Model
 {
-    use Searchable;
-    public function searchableAs()
-    {
-        return 'article_index';
-    }
-    //
     protected $guarded = [];
 
     public function tags(){

@@ -238,9 +238,15 @@ class ArticleRepository{
             $copy->sub_category=$request->sub_category_copy;
             $copy->extra_sub_category=0;
             $path = str_replace($article->category_en(),"news",$article->pic);
-            //if file not exist,  do copy
-            if((!Storage::disk('public')->exists($path))){
+            //if file exist,  rename and copy
+            if((Storage::disk('public')->exists($path))){
+                //rename and copy
+                $path = substr_replace($path, time().'.', 14, 0);
+                // dd($path);
                 Storage::copy('public/'.$article->pic, 'public/'.$path);
+            }
+            else{
+                Storage::copy('public/'.$article->pic, 'public/'.$path);    
             }
             $copy->pic = $path;
             $copy->save();

@@ -10,3 +10,4 @@ Homestead.yaml
 .env.production
 /storage/article_index.index
 /demo
+/public/photos

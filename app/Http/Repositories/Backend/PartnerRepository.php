@@ -36,7 +36,9 @@ class PartnerRepository{
         $partner->active  = request('active')? 1:0 ;
         $partner->title   = request('title');
         if($request->pic){
-            Storage::delete('public/'.$partner->pic);
+            if($partner->pic){
+                Storage::delete('public/'.$partner->pic);
+            }
             $partner->pic = Storage::disk('public')->putFile('partner', $request->pic);
             // $upload_image=$request->pic;
             // $picName = time().'.'.$upload_image->getClientOriginalName();

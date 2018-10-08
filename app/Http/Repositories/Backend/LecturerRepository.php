@@ -66,7 +66,9 @@ class LecturerRepository{
 
         //save pic path
         if($request->pic){
-            Storage::delete('public/'.$lecturer->pic);
+            if($lecturer->pic){
+                Storage::delete('public/'.$lecturer->pic);
+            }
             $lecturer->pic = Storage::disk('public')->putFile('lecturer', $request->pic);
             // $upload_image=$request->pic;
             // $picName = time().'.'.$upload_image->getClientOriginalName();

@@ -120,7 +120,9 @@ class ArticleRepository{
         }
         //save pic path
         if($request->pic){
-            Storage::delete('public/'.$article->pic);
+            if($article->pic){
+                Storage::delete('public/'.$article->pic);
+            }
             $article->pic = Storage::disk('public')->putFile('article/'.$article->category_en(), $request->pic);
             // $upload_image=$request->pic;
             // $picName = time().'.'.$upload_image->getClientOriginalName();

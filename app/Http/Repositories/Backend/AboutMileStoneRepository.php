@@ -57,7 +57,9 @@ class AboutMilestoneRepository{
         // $about_milestone->order   = request('order');
         //save pic path
         if($request->pic){
-            Storage::delete('public/'.$about_milestone->pic);
+            if($about_milestone->pic){
+                Storage::delete('public/'.$about_milestone->pic);
+            }
             $about_milestone->pic = Storage::disk('public')->putFile('aboutmilestone', $request->pic);
             // $upload_image=$request->pic;
             // $picName = time().'.'.$upload_image->getClientOriginalName();

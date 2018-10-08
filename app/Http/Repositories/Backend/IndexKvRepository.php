@@ -76,7 +76,9 @@ class IndexKvRepository{
 
         //save pic path
         if($request->pic){
-            Storage::delete('public/'.$indexKV->pic);
+            if($indexKV->pic){
+                Storage::delete('public/'.$indexKV->pic);
+            }
             $indexKV->pic = Storage::disk('public')->putFile('indexKV', $request->pic);
             // $upload_image=$request->pic;
             // $picName = time().'.'.$upload_image->getClientOriginalName();

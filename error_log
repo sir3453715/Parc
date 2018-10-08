@@ -30,3 +30,51 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/patientarc/public_html/deleteme.wplfpj.php on line 16
+[05-Oct-2018 10:04:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_transient() in /home/patientarc/public_html/deleteme.wpsiin.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/patientarc/public_html/deleteme.wpsiin.php on line 16
+[05-Oct-2018 10:04:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_transient() in /home/patientarc/public_html/deleteme.wptalf.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/patientarc/public_html/deleteme.wptalf.php on line 16
+[05-Oct-2018 10:04:47 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_transient() in /home/patientarc/public_html/deleteme.wpsfzf.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/patientarc/public_html/deleteme.wpsfzf.php on line 16
+[05-Oct-2018 10:04:47 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_transient() in /home/patientarc/public_html/deleteme.wpvaoi.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/patientarc/public_html/deleteme.wpvaoi.php on line 16
+[06-Oct-2018 10:00:30 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_transient() in /home/patientarc/public_html/deleteme.wpzoin.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/patientarc/public_html/deleteme.wpzoin.php on line 16
+[06-Oct-2018 10:00:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_transient() in /home/patientarc/public_html/deleteme.wpzm7u.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/patientarc/public_html/deleteme.wpzm7u.php on line 16
+[06-Oct-2018 10:00:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_transient() in /home/patientarc/public_html/deleteme.wpdaze.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/patientarc/public_html/deleteme.wpdaze.php on line 16
+[06-Oct-2018 10:00:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_transient() in /home/patientarc/public_html/deleteme.wptsxc.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/patientarc/public_html/deleteme.wptsxc.php on line 16
+[07-Oct-2018 09:58:30 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_transient() in /home/patientarc/public_html/deleteme.wpzg5h.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/patientarc/public_html/deleteme.wpzg5h.php on line 16
+[07-Oct-2018 09:58:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_transient() in /home/patientarc/public_html/deleteme.wpo9sd.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/patientarc/public_html/deleteme.wpo9sd.php on line 16
+[07-Oct-2018 09:58:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_transient() in /home/patientarc/public_html/deleteme.wpkmpt.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/patientarc/public_html/deleteme.wpkmpt.php on line 16
+[07-Oct-2018 09:58:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_transient() in /home/patientarc/public_html/deleteme.wpqffd.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/patientarc/public_html/deleteme.wpqffd.php on line 16

@@ -238,7 +238,10 @@ class ArticleRepository{
             $copy->sub_category=$request->sub_category_copy;
             $copy->extra_sub_category=0;
             $path = str_replace($article->category_en(),"news",$article->pic);
-            Storage::copy('public/'.$article->pic, 'public/'.$path);
+            //if file not exist,  do copy
+            if((!Storage::disk('public')->exists($path))){
+                Storage::copy('public/'.$article->pic, 'public/'.$path);
+            }
             $copy->pic = $path;
             $copy->save();
     }

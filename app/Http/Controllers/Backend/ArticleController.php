@@ -188,7 +188,7 @@ class ArticleController extends Controller
     }
     public function copy_selected(Request $request){
         $count=$this->articleRepository->copy_selected($request);
-        return back()->with('success',$count.' article copied');
+        return back()->with('success',$count.' 篇文章已複製');
     }
 
     /**

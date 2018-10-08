@@ -67,7 +67,7 @@
                     </li>
                     @endforeach
                 </ul>
-                <a href="{{ url('law/policy') }}" class="btn-more2">看更多...</a>
+                <a href="{{ url('law/policy/'. $category->en_name .'') }}" class="btn-more2">看更多...</a>
             </div>
         </div>
     </div>

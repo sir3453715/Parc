@@ -5,7 +5,6 @@ use App\indexKV;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-use ImageOptimizer;
 
 
 use Cookie;
@@ -103,7 +102,6 @@ class IndexKvRepository{
         //save pic path
         if($request->pic){
             $indexKV->pic = Storage::disk('public')->putFile('indexKV', $request->pic);
-            ImageOptimizer::optimize('storage/'.$indexKV->pic);
             // $upload_image=$request->pic;
             // $picName = time().'.'.$upload_image->getClientOriginalName();
             // $upload_image->storeAs('public/indexKV', $picName);

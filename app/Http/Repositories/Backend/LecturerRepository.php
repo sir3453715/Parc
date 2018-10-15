@@ -18,7 +18,7 @@ class LecturerRepository{
             $condition = $condition->where('name',$request->name);
         }
         $condition=$condition->orderBy('order','asc');
-        $condition=$condition->paginate(30);
+        $condition=$condition->paginate(10);
         $datas=array(
             "lecturer"  => $condition,
             "cookie"    => $request,

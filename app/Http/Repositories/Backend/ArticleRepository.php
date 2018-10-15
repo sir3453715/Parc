@@ -57,7 +57,7 @@ class ArticleRepository{
             $condition=$condition->where('sub_category',$request->sub_category);
         }
         $condition=$condition->orderBy('updated_at','desc');
-        $condition=$condition->paginate(30);
+        $condition=$condition->paginate(10);
         $datas=array(
             "category"      => DB::table('category')->get(),
             "article"       => $condition,
@@ -207,7 +207,7 @@ class ArticleRepository{
         else{
             $condition=article::select('*')->where('category',1);
         }
-        $condition=$condition->paginate(30);
+        $condition=$condition->paginate(10);
         Cookie::queue('category_select', $request->category_select, 60);
         Cookie::queue('sub_category', $request->sub_category, 60);
         Cookie::queue('extra_sub_category', $request->extra_sub_category, 60);

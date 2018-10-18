@@ -84,7 +84,7 @@
                     </tbody>
                 </table>
                 <div class="col-md-12 text-center no-margin">
-                    {{$datas["lecturer"]->render()}}
+                    {{$datas["lecturer"]->appends(Request::except('_token'))->render()}}
                 </div>
             </div>
         </div>

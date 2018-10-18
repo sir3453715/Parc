@@ -134,7 +134,7 @@
                     </tbody>
                 </table>
                 <div class="col-md-12 text-center no-margin">
-                        {{$datas->render()}}
+                        {{$datas->appends(Request::except('_token'))->render()}}
                         {{-- @if(!$cookie->show_all)
                             {{$datas->render()}}
                             <button type="submit" form="show" name="show_all" id="show_all" value="something" class="btn btn-success btn-xs" <strong>顯示一頁</strong></button>

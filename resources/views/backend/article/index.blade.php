@@ -140,7 +140,7 @@
                     </tbody>
                 </table>
                 <div class="col-md-12 text-center no-margin">
-                    {{$datas["article"]->render()}}
+                    {{$datas["article"]->appends(Request::except('_token'))->render()}}
                 </div>
             </div>
         </div>

@@ -20,7 +20,7 @@
 
 <section>
     <h2 class="title">相關法規</h2>
-    @if(count($law_article_list)<12)
+    @if(count($law_article_list)<=12)
         <div class="row">
             @foreach($law_article_list as $data)
             <div class="col-6 col-lg-4">
@@ -44,7 +44,7 @@
             @endfor               
         </div>
         <div class="btn-more-line">
-            <a href="#moreLaw" data-toggle="collapse" class="btn-more-law collapsed">相關法條看更多</a>
+            <a href="{{ url('law/act/') }}" class="btn-more-law collapsed">相關法條看更多</a>
         </div> 
     @endif
 </section>

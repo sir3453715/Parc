@@ -50,14 +50,14 @@
         <div class="row">
             @for($i = 0 ; $i<12 ; $i++)
             <div class="col-6 col-lg-4">
-                <a href="javascript:showArticle({{$data->id}});" id="article{{$law_article_list[$i]->id}}" class="article btn-line">{{ $law_article_list[$i]->title }}</a>
+                <a href="javascript:showArticle({{$law_article_list[$i]->id}});" id="article{{$law_article_list[$i]->id}}" class="article btn-line">{{ $law_article_list[$i]->title }}</a>
             </div>
             @endfor
         </div>
         <div class="row collapse" id="moreLaw">
             @for($i = 12 ; $i<count($law_article_list) ; $i++)
             <div class="col-6 col-lg-4">
-                <a id="article{{$law_article_list[$i]->id}}" class="article btn-line">{{$law_article_list[$i]->title}}</a>
+                <a href="javascript:showArticle({{$law_article_list[$i]->id}});" id="article{{$law_article_list[$i]->id}}" class="article btn-line">{{$law_article_list[$i]->title}}</a>
             </div>
             @endfor               
         </div>

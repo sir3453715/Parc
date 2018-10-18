@@ -38,7 +38,7 @@
 
 <section>
     <h2 class="title">相關法規</h2>
-    @if(count($law_article_list)<12)
+    @if(count($law_article_list)<=12)
         <div class="row">
             @foreach($law_article_list as $data)
             <div class="col-6 col-lg-4">

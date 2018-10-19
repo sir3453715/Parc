@@ -16,35 +16,40 @@ Route::group(['namespace' => 'Frontend'], function () {
     Route::get('/' , 'IndexController@index');
     Route::get('/story/{type?}' , 'IndexController@storyIndex');
     Route::get('/{category}/{sub_category}/article/{id}' , 'ArticleController@getArticleDetail');
+    
     Route::get('/event' , 'IndexController@eventIndex');
     Route::get('/event/course/{type?}' , 'IndexController@eventCourseIndex');
     Route::get('/event/lecturer/' , 'IndexController@eventLecturerIndex');
     Route::post('/event/lecturer/' , 'IndexController@eventLecturerPost');
     Route::get('/event/video/{type?}' , 'IndexController@eventVideoIndex');
     Route::get('/event/lohas/{type?}' , 'IndexController@eventLohasIndex');
+
     Route::get('/law/policy/{type?}' , 'IndexController@lawPolicyIndex');
     Route::get('/law' , 'IndexController@lawIndex');
     Route::get('/law/act/{type?}' , 'IndexController@lawActIndex');
     Route::get('/law/policy/' , 'IndexController@lawPolicyIndex');
+
     Route::get('/trend' , 'IndexController@trendIndex');
     Route::get('/trend/international' , 'IndexController@trendInternationalIndex');
     Route::get('/trend/exchange' , 'IndexController@trendExchangeIndex');
     Route::get('/trend/ngo' , 'IndexController@trendNgoIndex');
     Route::get('/trend/world' , 'IndexController@trendWorldIndex');
-    // Route::get('/trend/{type}/article/{id}' , 'ArticleController@getArticleDetail');
+
     Route::get('/news/{type?}' , 'IndexController@newsIndex');
-    // Route::get('/news/{type}/article/{id}' , 'ArticleController@getArticleDetail');
     Route::get('/faq' , 'IndexController@faq');
     Route::get('/sitemap' , 'IndexController@sitemap');
     Route::get('/exercise', 'IndexController@exercise');
+
     Route::get('/donate', 'IndexController@donate');
     Route::get('/donate/story', 'IndexController@donateStory');
     Route::get('/donate/inquiry', 'IndexController@donateInquiry');
     Route::post('/donate/inquiry', 'IndexController@donateInquiryPost');
+
     Route::get('/about', 'IndexController@about');
     Route::get('/about/ceo', 'IndexController@aboutCeo');
     Route::get('/about/history', 'IndexController@aboutHistory');
     Route::get('/about/organization', 'IndexController@aboutOrganization');
+    
     Route::get('/tag/{tag}','IndexController@tagResult');
     Route::view('/404', 'frontend.master.404');
     Route::view('/edm_complete', 'frontend.edm_complete');
@@ -110,24 +115,12 @@ Route::group(['middleware' => 'web', 'prefix' => 'backend'], function () {
         Route::post('/indexKV/{type}/edit/{indexKV}','IndexKvController@update');
         Route::delete('/indexKV/delete/{indexKV}','IndexKvController@destroy');
 
-        Route::get('/article', 'ArticleController@index');
-        Route::get('/article/story', 'ArticleController@index');
+        Route::get('/article/{category}', 'ArticleController@index');
         Route::get('/article/story/special', 'ArticleController@special');
         Route::get('/article/story/special/order', 'ArticleController@order');
         Route::post('/article/story/special/order', 'ArticleController@orderUpdate');
-        Route::get('/article/event', 'ArticleController@index');
-        Route::get('/article/law', 'ArticleController@index');
-        Route::get('/article/trend', 'ArticleController@index');
-        Route::get('/article/news', 'ArticleController@index');
 
-        Route::post('/article', 'ArticleController@index');
-        Route::post('/article/story', 'ArticleController@index');
-        Route::post('/article/event', 'ArticleController@index');
-        Route::post('/article/law', 'ArticleController@index');
-        Route::post('/article/trend', 'ArticleController@index');
-        Route::post('/article/news', 'ArticleController@index');
-
-        Route::get('/article/create', 'ArticleController@create');
+        Route::post('/article/{category}', 'ArticleController@index');
         Route::get('/article/{category}/create', 'ArticleController@create');
         Route::post('/article/{category}/create', 'ArticleController@store');
         Route::get('/article/create/ajax/{category_id}','ArticleController@sub_menu_ajax');
@@ -144,16 +137,9 @@ Route::group(['middleware' => 'web', 'prefix' => 'backend'], function () {
         Route::post('/category', 'CategoryController@index');
         Route::get('/category/create', 'CategoryController@create');
         Route::post('/category/create', 'CategoryController@store');
-        Route::get('/category/category/edit/{category}', 'CategoryController@editCategory');
-        Route::post('/category/category/edit/{category}', 'CategoryController@updateCategory');
-        Route::get('/category/sub_category/edit/{sub_category}', 'CategoryController@editSubCategory');
-        Route::post('/category/sub_category/edit/{sub_category}', 'CategoryController@updateSubCategory');
         Route::get('/category/extra_sub_category/edit/{extra_sub_category}', 'CategoryController@editExtraSubCategory');
         Route::post('/category/extra_sub_category/edit/{extra_sub_category}', 'CategoryController@updateExtraSubCategory');
-        Route::delete('/category/category/delete/{category}', 'CategoryController@destroyCategory');
-        Route::delete('/category/sub_category/delete/{sub_category}', 'CategoryController@destroySubCategory');
         Route::delete('/category/extra_sub_category/delete/{extra_sub_category}', 'CategoryController@destroyextraSubCategory');
-        Route::delete('/category/delete_selected', 'CategoryController@delete_selected');
 
 
         Route::get('/lecturer','LecturerController@index');

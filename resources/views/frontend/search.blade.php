@@ -1,4 +1,7 @@
 @extends('frontend.master.master')
+@section('title')
+<title>病人自主研究中心 | Patient Autonomy Research Center - 搜尋結果</title>
+@endsection
 @section('main')
 <style>
         .gsc-webResult.gsc-result,

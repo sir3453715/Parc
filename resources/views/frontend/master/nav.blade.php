@@ -16,9 +16,9 @@
                 </a>                 
             </div>
             <!-- 我要捐款 -->
-            <a href="https://tlea.neticrm.tw/civicrm/contribute/transact?reset=1&id=3" target="_blank" rel="noopener noreferrer" title="我要捐款" class="btn-donation">我要<br>捐款</a>
+            <a href="https://tlea.neticrm.tw/civicrm/contribute/transact?reset=1&id=3" target="_blank" rel="noopener noreferrer" title="我要捐款(另開視窗)" class="btn-donation">我要<br>捐款</a>
             <!-- GoTop -->
-            <a href="#" title="Go Top" class="btn-gotop">
+            <a href="#" title="回到頂端" class="btn-gotop">
                 <i class="fa fa-caret-up"></i>
             </a>
             <!-- main-nav -->
@@ -36,7 +36,7 @@
                         <ul class="col-12 col-lg-8 nav justify-content-end">
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('story/special') }}" title="生命故事">生命故事</a>
-                                <a href="#nav-story" class="nav-plus collapsed" data-toggle="collapse"><i class="fa fa-chevron-right"></i></a>
+                                <a href="#nav-story" class="nav-plus collapsed" data-toggle="collapse"><i class="fa fa-chevron-right" title="展開/折疊選項"></i></a>
                                 <div class="sub-nav collapsed collapse" id="nav-story">
                                     <div class="sub-nav__box">
                                         <div class="sub-nav__item">
@@ -62,7 +62,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('/event') }}" title="課程與活動">課程與活動</a>
-                                <a href="#nav-event" class="nav-plus collapsed" data-toggle="collapse"><i class="fa fa-chevron-right"></i></a>
+                                <a href="#nav-event" class="nav-plus collapsed" data-toggle="collapse"><i class="fa fa-chevron-right" title="展開/折疊選項"></i></a>
                                 <div class="sub-nav collapsed collapse" id="nav-event">
                                     <div class="sub-nav__box">
                                         <div class="sub-nav__item">
@@ -82,7 +82,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('/law') }}" title="法規政策">法規政策</a>
-                                <a href="#nav-law" class="nav-plus collapsed" data-toggle="collapse"><i class="fa fa-chevron-right"></i></a>
+                                <a href="#nav-law" class="nav-plus collapsed" data-toggle="collapse"><i class="fa fa-chevron-right" title="展開/折疊選項"></i></a>
                                 <div class="sub-nav collapsed collapse" id="nav-law">
                                     <div class="sub-nav__box">
                                         <div class="sub-nav__item">
@@ -96,7 +96,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('/trend') }}" title="全球脈動">全球脈動</a>
-                                <a href="#nav-trend" class="nav-plus collapsed" data-toggle="collapse"><i class="fa fa-chevron-right"></i></a>
+                                <a href="#nav-trend" class="nav-plus collapsed" data-toggle="collapse"><i class="fa fa-chevron-right" title="展開/折疊選項"></i></a>
                                 <div class="sub-nav collapsed collapse" id="nav-trend">
                                     <div class="sub-nav__box">
                                         <div class="sub-nav__item">
@@ -116,7 +116,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('/news') }}" title="最新消息">最新消息</a>
-                                <a href="#nav-news" class="nav-plus collapsed" data-toggle="collapse"><i class="fa fa-chevron-right"></i></a>
+                                <a href="#nav-news" class="nav-plus collapsed" data-toggle="collapse"><i class="fa fa-chevron-right" title="展開/折疊選項"></i></a>
                                 <div class="sub-nav collapsed collapse" id="nav-news">
                                     <div class="sub-nav__box">
                                         <div class="sub-nav__item">

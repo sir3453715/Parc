@@ -1,4 +1,7 @@
 @extends('frontend.master.master')
+@section('title')
+<title>病人自主研究中心 | Patient Autonomy Research Center - 我要支持</title>
+@endsection
 @section('main')
 <!--main-->
 <main>
@@ -17,7 +20,7 @@
 <div class="container">
     <section class="bg-white">
         <div class="row justify-content-center p-5">
-            <a href="https://tlea.neticrm.tw/civicrm/contribute/transact?reset=1&id=3" target="_blank" rel="noopener noreferrer" class="col-6 col-lg-4 text-center p-2">
+            <a href="https://tlea.neticrm.tw/civicrm/contribute/transact?reset=1&id=3" title="我要捐款(另開視窗)" target="_blank" rel="noopener noreferrer" class="col-6 col-lg-4 text-center p-2">
                 <div class="service-lohas__icon">
                     <img src="{{ asset('assets/images/icon/icon-11.png') }}" class="img-fluid" alt="我要捐款" />
                 </div>

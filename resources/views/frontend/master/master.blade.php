@@ -2,22 +2,22 @@
 <html lang="zh-Hant-TW">
 
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126140124-1"></script>
+    <!-- Google Tag Manager -->
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        
-        gtag('config', 'UA-126140124-1');
-    </script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MRNRS9B');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="keywords" content="" />
     <meta name="description" content="" />
 
-    <title>病人自主研究中心 | Patient Autonomy Research Center</title>
+    {{-- <title>病人自主研究中心 | Patient Autonomy Research Center</title> --}}
+    @yield('title')
     <link rel="icon" href="{{ asset('assets/ico/favicon.ico') }}">
 
     <!-- CSS -->
@@ -34,6 +34,10 @@
     <!--<link rel="stylesheet" href="css/all.min.css">-->
 </head>
     <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRNRS9B"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
         <div class="wrap">
             <!-- circle -->
             <div class="circle">

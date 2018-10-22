@@ -1,5 +1,8 @@
 @extends('frontend.master.master')
 @inject('datePresenter','App\Presenters\datePresenter')
+@section('title')
+<title id="active_title">病人自主研究中心 | Patient Autonomy Research Center - 最新消息</title>
+@endsection
 @section('main')
         <!--main-->
         <main class="container px-0">
@@ -72,20 +75,24 @@
                     if( '{{Request::path()}}' == 'news/law')
                     {
                         $("#active_breadcrumb").append("法規政策動態")
+                        $("#active_title").append(" - 法規政策動態")
                         $("#law").addClass("active");
                     }
                     else if( '{{Request::path()}}' == 'news/event')
                     {
                         $("#active_breadcrumb").append("課程與活動動態")
+                        $("#active_title").append(" - 課程與活動動態")
                         $("#event").addClass("active");
                     }
                     else if( '{{Request::path()}}' == 'news/international')
                     {
                         $("#active_breadcrumb").append("國際動態")
+                        $("#active_title").append(" - 國際動態")
                         $("#international").addClass("active");
                     }
                     else{
                         $("#active_breadcrumb").append("中心動態")
+                        $("#active_title").append(" - 中心動態")
                         $("#center").addClass("active");
                     }
                 });

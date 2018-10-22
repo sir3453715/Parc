@@ -1,4 +1,7 @@
 @extends('frontend.master.master')
+@section('title')
+<title>病人自主研究中心 | Patient Autonomy Research Center - 首頁</title>
+@endsection
 @section('main')
         <!--main-->
         <main class="container">
@@ -6,7 +9,7 @@
             <!-- banner-main -->
             <div class="banner-main owl-carousel ">
                 @foreach($banner as $data)
-                <a href="{{$data->link}}" target="_blank" class="item banner-main__item" title="{{$data->title}}" style="background: url(/storage/{{$data->pic}}) no-repeat center;background-size: cover;">
+                <a href="{{$data->link}}" target="_blank" class="item banner-main__item" title="{{$data->title}}(另開視窗)" style="background: url(/storage/{{$data->pic}}) no-repeat center;background-size: cover;">
                     <div class="banner-main__label">
                     <div class="banner-main__title">{{$data->title}}</div>
                         <div class="banner-main__subtitle">{{$data->body}}</div>
@@ -30,19 +33,19 @@
             <div class="row justify-content-center px-2 px-lg-0">
                 <a href="{{ url('/about')}}" class="col-6 col-lg-4 banner-icon" title="什麼是病人自主權利法">
                     <div class="banner-icon__img">
-                        <img src="{{ asset('assets/images/icon/icon-01.png') }}" alt="什麼是病人自主權利法" class="img-fluid" />
+                        <img src="{{ asset('assets/images/icon/icon-01.png') }}" alt="" class="img-fluid" />
                     </div>
                     <div class="banner-icon__title">什麼是病人自主權利法</div>
                 </a>
                 <a href="{{ url('/exercise')}}" class="col-6 col-lg-4 banner-icon" title="如何行使權利">
                     <div class="banner-icon__img">
-                        <img src="{{ asset('assets/images/icon/icon-02.png') }}" alt="如何行使權利" class="img-fluid" />
+                        <img src="{{ asset('assets/images/icon/icon-02.png') }}" alt="" class="img-fluid" />
                     </div>
                     <div class="banner-icon__title">如何行使權利</div>
                 </a>
                 <a href="{{ url('/donate') }}" class="col-6 col-lg-4 banner-icon" title="我要支持">
                     <div class="banner-icon__img">
-                        <img src="{{ asset('assets/images/icon/icon-03.png') }}" alt="我要支持" class="img-fluid" />
+                        <img src="{{ asset('assets/images/icon/icon-03.png') }}" alt="" class="img-fluid" />
                     </div>
                     <div class="banner-icon__title">我要支持</div>
                 </a>

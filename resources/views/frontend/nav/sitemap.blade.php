@@ -1,4 +1,7 @@
 @extends('frontend.master.master')
+@section('title')
+<title>病人自主研究中心 | Patient Autonomy Research Center - 網站導覽</title>
+@endsection
 @section('main')
 <!--main-->
 <main class="container">
@@ -84,20 +87,20 @@
         <a href="{{ url('/faq') }}" class="col-12 sitemap__title">8.常見問題 </a>
 
         <a href="{{ url('/donate') }}" class="col-12 sitemap__title">9.我要支持 </a>
-        <a href="https://tlea.neticrm.tw/civicrm/contribute/transact?reset=1&id=3" target="_blank" rel="noopener noreferrer" class="col-6 col-lg-3 sitemap__item">9-1 我要捐款</a>
+        <a href="https://tlea.neticrm.tw/civicrm/contribute/transact?reset=1&id=3" title="我要捐款(另開視窗)" target="_blank" rel="noopener noreferrer" class="col-6 col-lg-3 sitemap__item">9-1 我要捐款</a>
         <a href="{{ url('/404') }}" class="col-6 col-lg-3 sitemap__item">9-2 成為志工</a>
         <a href="{{ url('/donate/story') }}" class="col-6 col-lg-3 sitemap__item">9-3 分享故事</a>
         <a href="{{ url('/404') }}" class="col-6 col-lg-3 sitemap__item">9-4 成為會員</a>
         <a href="{{ url('/donate/inquiry') }}" class="col-6 col-lg-3 sitemap__item">9-5 捐款徵信</a>
 
         <a href="#" class="col-12 sitemap__title">追蹤我們</a>
-        <a href="https://www.facebook.com/parc.tw/" class="col-6 col-lg-3 sitemap__item" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.facebook.com/parc.tw/" class="col-6 col-lg-3 sitemap__item" title="facebook(另開視窗)" target="_blank" rel="noopener noreferrer">
             <img src="{{ asset('assets/images/icon/btn-facebook.png') }}" alt="facebook" />
         </a>
-        {{-- <a href="#" class="col-6 col-lg-3 sitemap__item" target="_blank" rel="noopener noreferrer">
+        {{-- <a href="#" class="col-6 col-lg-3 sitemap__item" title="line(另開視窗)" target="_blank" rel="noopener noreferrer">
             <img src="{{ asset('assets/images/icon/btn-line.png') }}" alt="line" /> --}}
         </a>
-        <a href="https://www.youtube.com/channel/UCkJWN2WEhzH_EA5QM65GchQ" class="col-6 col-lg-3 sitemap__item" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.youtube.com/channel/UCkJWN2WEhzH_EA5QM65GchQ" class="col-6 col-lg-3 sitemap__item" title="youtube(另開視窗)"target="_blank" rel="noopener noreferrer">
             <img src="{{ asset('assets/images/icon/btn-youtube.png') }}" alt="youtube" />
         </a>
     </div>

@@ -1,5 +1,8 @@
 @extends('frontend.master.master')
 @inject('datePresenter','App\Presenters\datePresenter')
+@section('title')
+<title>病人自主研究中心 | Patient Autonomy Research Center - 標籤</title>
+@endsection
 @section('main')
 <!--main-->
 <main class="container">

@@ -1,4 +1,7 @@
 @extends('frontend.master.master')
+@section('title')
+<title>病人自主研究中心 | Patient Autonomy Research Center - 我要支持 - 捐款徵信</title>
+@endsection
 @section('main')
 <!--main-->
 <main class="container">
@@ -62,7 +65,7 @@
                             <label for="date_start" class="d-none">起始日期</label>
                             <input type="text" id="date_start" name="date_start" class="form-control" placeholder="起始日期" title="起始日期" value="{{$cookie->date_start ? $cookie->date_start : old('date_start') }}" >
                         </div>
-                        <i class="fa fa-minus"></i>
+                        <i class="fa fa-minus" title="至"></i>
                         <div class="col">
                             <label for="date_end" class="d-none">結束日期</label>
                             <input type="text" id="date_end" name="date_end" class="form-control" placeholder="結束日期" title="結束日期" value="{{$cookie->date_end ? $cookie->date_end : old('date_end') }}" >

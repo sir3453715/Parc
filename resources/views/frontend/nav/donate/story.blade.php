@@ -1,4 +1,7 @@
 @extends('frontend.master.master')
+@section('title')
+<title>病人自主研究中心 | Patient Autonomy Research Center - 我要支持 - 分享您的生命故事</title>
+@endsection
 @section('main')
 <!--main-->
 <!--main-->

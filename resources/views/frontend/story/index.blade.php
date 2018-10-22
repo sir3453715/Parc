@@ -1,4 +1,7 @@
 @extends('frontend.master.master')
+@section('title')
+<title id="active_title">病人自主研究中心 | Patient Autonomy Research Center - 最新消息</title>
+@endsection
 @section('main')
         <!--main-->
         <main class="container px-0">
@@ -71,30 +74,36 @@
                     if( '{{ $type }}' == 'story')
                     {
                         $("#active_breadcrumb").append("私房故事")
+                        $("#active_title").append(" - 私房故事")
                         $("#story").addClass("active");
                     }
                     else if( '{{ $type }}' == 'love')
                     {
                         $("#active_breadcrumb").append("親愛劇場")
+                        $("#active_title").append(" - 親愛劇場")
                         $("#love").addClass("active");
                     }
                     else if( '{{ $type }}' == 'doctor')
                     {
                         $("#active_breadcrumb").append("白袍診間")
+                        $("#active_title").append(" - 白袍診間")
                         $("#doctor").addClass("active");
                     }
                     else if( '{{ $type }}' == 'life')
                     {
                         $("#active_breadcrumb").append("生死迷藏")
+                        $("#active_title").append(" - 生死迷藏")
                         $("#life").addClass("active");
                     }
                     else if( '{{ $type }}' == 'expert')
                     {
                         $("#active_breadcrumb").append("權威觀點")
+                        $("#active_title").append(" - 權威觀點")
                         $("#expert").addClass("active");
                     }
                     else{
                         $("#active_breadcrumb").append("精選特輯")
+                        $("#active_title").append(" - 精選特輯")
                         $("#special").addClass("active");
                     }
                 });

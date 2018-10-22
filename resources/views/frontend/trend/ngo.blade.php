@@ -1,4 +1,7 @@
 @extends('frontend.master.master')
+@section('title')
+<title>病人自主研究中心 | Patient Autonomy Research Center - 全球脈動 - 國際NGO</title>
+@endsection
 @section('main')
 <!--main-->
 <main class="container">
@@ -29,7 +32,7 @@
                     </div>
                     <div class="service-lohas__box">
                         <div class="service-lohas__title">
-                            <a href="http://www.songenshi-kyokai.com/" target="_blank" rel="noopener noreferrer">
+                            <a href="http://www.songenshi-kyokai.com/" title="(另開視窗)" target="_blank" rel="noopener noreferrer">
                                 <h2>日本尊嚴死協會</h2>
                             </a>
                             <h6>(Japan Society for Dying With Dignity)</h6>
@@ -43,7 +46,7 @@
                     </div>
                     <div class="service-lohas__box">
                         <div class="service-lohas__title">
-                            <a href="http://www.npo-pure.npo-jp.net/" target="_blank" rel="noopener noreferrer">
+                            <a href="http://www.npo-pure.npo-jp.net/" title="(另開視窗)" target="_blank" rel="noopener noreferrer">
                                 <h2>千葉居家照護 市民網絡</h2>
                             </a>
                             <h6>(NPO PURE)</h6>
@@ -63,7 +66,7 @@
                     </div>
                     <div class="service-lohas__box">
                         <div class="service-lohas__title">
-                            <a href="http://www.carerights.org/sub/about.php" target="_blank" rel="noopener noreferrer">
+                            <a href="http://www.carerights.org/sub/about.php" title="(另開視窗)" target="_blank" rel="noopener noreferrer">
                                 <h2>南韓國際照護權組織</h2>
                             </a>
                             <h6>(Care Rights International)</h6>
@@ -77,7 +80,7 @@
                     </div>
                     <div class="service-lohas__box">
                         <div class="service-lohas__title">
-                            <a href="https://www.facebook.com/sasilmo/" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.facebook.com/sasilmo/" title="(另開視窗)" target="_blank" rel="noopener noreferrer">
                                 <h2>南韓預立醫療指示立法推動會</h2>
                             </a>
                             <h6>(Korean Initiative for Advance Directive)</h6>
@@ -97,7 +100,7 @@
                     </div>
                     <div class="service-lohas__box">
                         <div class="service-lohas__title">
-                            <a href="http://enable.hku.hk/tch/main/main.aspx?str_section=journey" target="_blank" rel="noopener noreferrer">
+                            <a href="http://enable.hku.hk/tch/main/main.aspx?str_section=journey" title="(另開視窗)" target="_blank" rel="noopener noreferrer">
                                 <h2>美善生命計畫</h2>
                             </a>
                             <h6>(香港大學行為健康教研中心)</h6>
@@ -117,7 +120,7 @@
                     </div>
                     <div class="service-lohas__box">
                         <div class="service-lohas__title">
-                            <a href="http://www.xzyzy.com/" target="_blank" rel="noopener noreferrer">
+                            <a href="http://www.xzyzy.com/" title="(另開視窗)" target="_blank" rel="noopener noreferrer">
                                 <h2>北京生前預囑推廣協會</h2>
                             </a>
                             <h6> </h6>
@@ -137,7 +140,7 @@
                     </div>
                     <div class="service-lohas__box">
                         <div class="service-lohas__title">
-                            <a href="https://singaporehospice.org.sg/" target="_blank" rel="noopener noreferrer">
+                            <a href="https://singaporehospice.org.sg/" title="(另開視窗)" target="_blank" rel="noopener noreferrer">
                                 <h2>新加坡慈懷理事會</h2>
                             </a>
                             <h6>(Singapore Hospice Council)</h6>
@@ -151,7 +154,7 @@
                     </div>
                     <div class="service-lohas__box">
                         <div class="service-lohas__title">
-                            <a href="https://www.hca.org.sg/" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.hca.org.sg/" title="(另開視窗)" target="_blank" rel="noopener noreferrer">
                                 <h2>HCA Hospice Care</h2>
                             </a>
                             <h6>(HCA)</h6>
@@ -171,7 +174,7 @@
                     </div>                     
                     <div class="service-lohas__box">
                         <div class="service-lohas__title">
-                            <a href="http://www.thaps.or.th/" target="_blank" rel="noopener noreferrer">
+                            <a href="http://www.thaps.or.th/" title="(另開視窗)" target="_blank" rel="noopener noreferrer">
                                 <h2>泰國安寧照護社群</h2>
                             </a>
                             <h6>(Thai Palliative Care Society : THAPS)</h6>
@@ -185,7 +188,7 @@
                     </div>
                     <div class="service-lohas__box">
                         <div class="service-lohas__title">
-                            <a href="http://happydeathday.co/" target="_blank" rel="noopener noreferrer">
+                            <a href="http://happydeathday.co/" title="(另開視窗)" target="_blank" rel="noopener noreferrer">
                                 <h2>平靜善終</h2>
                             </a>
                             <h6>(Happy Deathday)</h6>
@@ -205,7 +208,7 @@
                         </div>
                         <div class="service-lohas__box">
                             <div class="service-lohas__title">
-                                <a href="https://palliumindia.org/about/about-pallium-india/" target="_blank" rel="noopener noreferrer">
+                                <a href="https://palliumindia.org/about/about-pallium-india/" title="(另開視窗)" target="_blank" rel="noopener noreferrer">
                                     <h2>Pallium India</h2>
                                 </a>
                                 <h6> </h6>

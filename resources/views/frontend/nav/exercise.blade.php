@@ -1,4 +1,7 @@
 @extends('frontend.master.master')
+@section('title')
+<title>病人自主研究中心 | Patient Autonomy Research Center - 行使權利</title>
+@endsection
 @section('main')
 <!--main-->
 <main class="container">
@@ -44,8 +47,8 @@
         <div class="exercise__step-no">Step 2</div>
         <div class="exercise__step-title">如何進行</div>
         <div class="p-lg-5">
-            <img src="{{ asset('assets/images/icon/exercise-step2.png') }}" class="d-none d-lg-block img-fluid" alt="Step 2" />
-            <img src="{{ asset('assets/images/icon/exercise-step2v.png') }}" class="d-lg-none img-fluid" alt="Step 2" />
+            <img src="{{ asset('assets/images/icon/exercise-step2.png') }}" class="d-none d-lg-block img-fluid" alt="1:具備條件: 完全行為能力人: 已婚或20歲以上成年人(除受監護宣告者之外) 2:預約ACP:至醫療機構掛號預立醫療諮商(ACP) 3:進行ACP:帶著您的二親等內家屬及醫療委任代理人，前往醫療機構進行預立醫療照護諮商 4:簽屬AD:簽署預立醫療決定(AD)" />
+            <img src="{{ asset('assets/images/icon/exercise-step2v.png') }}" class="d-lg-none img-fluid" alt="1:具備條件: 完全行為能力人: 已婚或20歲以上成年人(除受監護宣告者之外) 2:預約ACP:至醫療機構掛號預立醫療諮商(ACP) 3:進行ACP:帶著您的二親等內家屬及醫療委任代理人，前往醫療機構進行預立醫療照護諮商 4:簽屬AD:簽署預立醫療決定(AD)" />
 
             <div class="exercise__acp">
                 {{-- <a href="{{ url('404')}}" class="exercise__acp-btn">預約ACP</a> --}}

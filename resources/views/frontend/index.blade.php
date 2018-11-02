@@ -5,11 +5,11 @@
 @section('main')
         <!--main-->
         <main class="container">
-            <a href="#C" title="中央內容區塊" id="AC" accesskey="C" name="C">:::</a>
+            <a href="#C" title="中央內容區塊" id="AC" accesskey="C" name="C" tabindex="2">:::</a>
             <!-- banner-main -->
             <div class="banner-main owl-carousel ">
                 @foreach($banner as $data)
-                <a href="{{$data->link}}" target="_blank" class="item banner-main__item" title="{{$data->title}}(另開視窗)" style="background: url(/storage/{{$data->pic}}) no-repeat center;background-size: cover;">
+                <a href="{{$data->link}}" target="_blank" class="item banner-main__item" title="{{$data->title}}(另開視窗)" style="background: url(/storage/{{$data->pic}}) no-repeat center;background-size: cover;" tabindex="3">
                     <div class="banner-main__label">
                     <div class="banner-main__title">{{$data->title}}</div>
                         <div class="banner-main__subtitle">{{$data->body}}</div>

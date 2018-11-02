@@ -9,14 +9,14 @@
     <!--breadcrumb-->
     <ol class="breadcrumb container">
         <li class="breadcrumb-item">
-            <a href="#C" title="中央內容區塊" id="AC" accesskey="C" name="C">:::</a>
-            <a href="{{ url('')}}" title="首頁">首頁</a>
+            <a href="#C" title="中央內容區塊" id="AC" accesskey="C" name="C" tabindex="2">:::</a>
+            <a href="{{ url('')}}" title="首頁" tabindex="2">首頁</a>
         </li>
         <li class="breadcrumb-item">
-            <a href="{{ url('/law')}}" title="法規政策">法規政策</a>
+            <a href="{{ url('/law')}}" title="法規政策" tabindex="2">法規政策</a>
         </li>
         <li class="breadcrumb-item">
-            <a href="{{ url('/law/policy')}}" title="政策研究">政策研究</a>
+            <a href="{{ url('/law/policy')}}" title="政策研究" tabindex="2">政策研究</a>
         </li>
         <li class="breadcrumb-item active" id="active_breadcrumb"></li>
     </ol>

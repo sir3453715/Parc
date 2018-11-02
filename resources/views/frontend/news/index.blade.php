@@ -10,11 +10,11 @@
                 <!--breadcrumb-->
                 <ol class="breadcrumb container">
                     <li class="breadcrumb-item">
-                        <a href="#C" title="中央內容區塊" id="AC" accesskey="C" name="C">:::</a>
-                        <a href="{{ url('')}}" title="首頁">首頁</a>
+                        <a href="#C" title="中央內容區塊" id="AC" accesskey="C" name="C" tabindex="2">:::</a>
+                        <a href="{{ url('')}}" title="首頁" tabindex="2">首頁</a>
                     </li>
                     <li class="breadcrumb-item">
-                        <a href="{{ url ('news')}}" title="最新消息">最新消息</a>
+                        <a href="{{ url ('news')}}" title="最新消息" tabindex="2">最新消息</a>
                     </li>
                     <li class="breadcrumb-item active" id="active_breadcrumb"></li>
                 </ol>
@@ -22,7 +22,7 @@
                 <!-- banner-main -->
                 <div class="banner-main owl-carousel ">
                     @foreach($slider as $data)
-                    <a href="{{ url('/'. $data->category_en(). '/'. $data->sub_category_en() .'/article/'. $data->id) }}" class="item banner-main__item" title="{{$data->title}}" style="background: url(/storage/{{$data->pic}}) no-repeat center;background-size: cover;">
+                    <a href="{{ url('/'. $data->category_en(). '/'. $data->sub_category_en() .'/article/'. $data->id) }}" class="item banner-main__item" title="{{$data->title}}" style="background: url(/storage/{{$data->pic}}) no-repeat center;background-size: cover;" tabindex="3">
                         <div class="banner-main__label">
                             <div class="banner-main__title">{{$data->title}}</div>
                             <div class="banner-main__subtitle">{{$data->description}}</div>

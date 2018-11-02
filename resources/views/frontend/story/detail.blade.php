@@ -10,18 +10,18 @@
             <!--breadcrumb-->
             <ol class="breadcrumb container">
                 <li class="breadcrumb-item">
-                    <a href="#C" title="中央內容區塊" id="AC" accesskey="C" name="C">:::</a>
-                    <a href="{{ url('')}}" title="首頁">首頁</a>
+                    <a href="#C" title="中央內容區塊" id="AC" accesskey="C" name="C" tabindex="2">:::</a>
+                    <a href="{{ url('')}}" title="首頁" tabindex="2">首頁</a>
                 </li>
                 <li class="breadcrumb-item">
-                    <a href="{{ url('/'.$article->category_en().'/') }}" title="{{$article->category()}}">{{$article->category()}}</a>
+                    <a href="{{ url('/'.$article->category_en().'/') }}" title="{{$article->category()}}" tabindex="2">{{$article->category()}}</a>
                 </li>
                 <li class="breadcrumb-item">
-                    <a href="{{ url('/'.$article->category_en().'/'.$article->sub_category_en()) }}" title="{{$article->sub_category()}}">{{$article->sub_category()}}</a>
+                    <a href="{{ url('/'.$article->category_en().'/'.$article->sub_category_en()) }}" title="{{$article->sub_category()}}" tabindex="2">{{$article->sub_category()}}</a>
                 </li>
                 @if($article->extra_sub_category_en())
                 <li class="breadcrumb-item">
-                    <a href="{{ url('/'.$article->category_en().'/'.$article->sub_category_en().'/'.$article->extra_sub_category_en()) }}" title="{{$article->extra_sub_category()}}">{{$article->extra_sub_category()}}</a>
+                    <a href="{{ url('/'.$article->category_en().'/'.$article->sub_category_en().'/'.$article->extra_sub_category_en()) }}" title="{{$article->extra_sub_category()}}" tabindex="2">{{$article->extra_sub_category()}}</a>
                 </li>
                 @endif
                 <li class="breadcrumb-item active">{{$article->title}}</li>

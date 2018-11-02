@@ -19,11 +19,11 @@
 <!--breadcrumb-->
     <ol class="breadcrumb container">
         <li class="breadcrumb-item">
-            <a href="#C" title="中央內容區塊" id="AC" accesskey="C" name="C">:::</a>
-            <a href="{{ url('') }}" title="首頁">首頁</a>
+            <a href="#C" title="中央內容區塊" id="AC" accesskey="C" name="C" tabindex="2">:::</a>
+            <a href="{{ url('') }}" title="首頁" tabindex="2">首頁</a>
         </li>
         <li class="breadcrumb-item">
-            <a href="{{ url('/donate') }}" title="我要支持">我要支持</a>
+            <a href="{{ url('/donate') }}" title="我要支持" tabindex="2">我要支持</a>
         </li>
         <li class="breadcrumb-item active">捐款徵信</li>
     </ol>
@@ -63,12 +63,12 @@
                     <div class="form-row input-daterange align-items-center">
                         <div class="col">
                             <label for="date_start" class="d-none">起始日期</label>
-                            <input type="text" id="date_start" name="date_start" class="form-control" placeholder="起始日期" title="起始日期" value="{{$cookie->date_start ? $cookie->date_start : old('date_start') }}" >
+                            <input type="text" id="date_start" name="date_start" class="form-control" placeholder="起始日期" title="起始日期" autocomplete= "off" value="{{$cookie->date_start ? $cookie->date_start : old('date_start') }}" >
                         </div>
                         <i class="fa fa-minus" title="至"></i>
                         <div class="col">
                             <label for="date_end" class="d-none">結束日期</label>
-                            <input type="text" id="date_end" name="date_end" class="form-control" placeholder="結束日期" title="結束日期" value="{{$cookie->date_end ? $cookie->date_end : old('date_end') }}" >
+                            <input type="text" id="date_end" name="date_end" class="form-control" placeholder="結束日期" title="結束日期" autocomplete= "off" value="{{$cookie->date_end ? $cookie->date_end : old('date_end') }}" >
                         </div>
                     </div>
                 </div>

@@ -9,8 +9,8 @@
     <!--breadcrumb-->
     <ol class="breadcrumb container">
         <li class="breadcrumb-item">
-            <a href="#C" title="中央內容區塊" id="AC" accesskey="C" name="C">:::</a>
-            <a href="{{ url('')}}" title="首頁">首頁</a>
+            <a href="#C" title="中央內容區塊" id="AC" accesskey="C" name="C" tabindex="2">:::</a>
+            <a href="{{ url('')}}" title="首頁" tabindex="2">首頁</a>
         </li>
         <li class="breadcrumb-item active">我要支持</li>
     </ol>
@@ -76,7 +76,7 @@
 
         <div class="text-center m-5 pb-5">
             <p>以定期定額或單筆捐款方式支持病人自主研究中心四大業務執行。
-                <a href="#">（線上捐款看更多）</a>
+                <a href="https://tlea.neticrm.tw/civicrm/contribute/transact?reset=1&id=3" title="線上捐款(另開視窗)" target="_blank" rel="noopener noreferrer">（線上捐款看更多）</a>
             </p>
             <p>投稿您深刻動人的生命經驗，分享您對醫療現場、臨床決定以及生命道別的私房故事。
                 <a href="{{ url('/donate/story')}}">（分享故事看更多）</a>

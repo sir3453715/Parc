@@ -8,8 +8,8 @@
 <!--breadcrumb-->
 <ol class="breadcrumb container">
     <li class="breadcrumb-item">
-        <a href="#C" title="中央內容區塊" id="AC" accesskey="C" name="C">:::</a>
-        <a href="{{ url('') }}" title="HOME">HOME</a>
+        <a href="#C" title="中央內容區塊" id="AC" accesskey="C" name="C" tabindex="2">:::</a>
+        <a href="{{ url('') }}" title="HOME" tabindex="2">HOME</a>
     </li>               
     <li class="breadcrumb-item active">About Us</li>
 </ol>

@@ -18,9 +18,9 @@
             <!-- 我要捐款 -->
             <a href="https://tlea.neticrm.tw/civicrm/contribute/transact?reset=1&id=3" target="_blank" rel="noopener noreferrer" title="我要捐款(另開視窗)" class="btn-donation" tabindex="4">我要<br>捐款</a>
             <!-- GoTop -->
-            <a href="#" title="回到頂端" class="btn-gotop" tabindex="-1">
+            {{-- <a href="#" title="回到頂端" class="btn-gotop" tabindex="-1">
                 <i class="fa fa-caret-up"></i>
-            </a>
+            </a> --}}
             <!-- main-nav -->
             <div class="menu collapse" id="main-nav">
                 <!-- nav-main -->

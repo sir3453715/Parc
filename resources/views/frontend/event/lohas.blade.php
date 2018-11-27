@@ -19,6 +19,7 @@
             <a href="{{ url('/event/lohas/video')}}" title="生命樂活" tabindex="2">生命樂活</a>
         </li>
         <li class="breadcrumb-item active" id="active_breadcrumb"></li>
+        <h2 class="d-none" id="h2"></h2>
     </ol>
 
     <!-- banner-main -->
@@ -74,6 +75,7 @@
             @foreach($lohas_extra_sub_category as $category)
             @if($type == $category->en_name)
             $("#active_breadcrumb").append("{{$category->name}}");
+            $("#h2").append("{{$category->name}}");
             $("#nav-{{ $category->en_name }}").addClass("active");
                 @break
             @endif

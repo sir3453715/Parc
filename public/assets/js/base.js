@@ -8,9 +8,22 @@
     // lectorCarousel
     lectorCarousel();
 
-    // checkInOutdatepicker
-    checkInOutdatepicker();
+   //tabSearch
+   tabSearch();
+
+
 });
+
+
+// tabSearch
+function tabSearch(){
+    $('#S').bind('blur', function(){        
+        $('.nav-item.search').toggleClass("hover");
+    });    
+    $('#S').bind('focus', function(){
+        $('.nav-item.search').toggleClass("hover");
+    });
+}
 
 
 // bannerMainCarousel
@@ -57,13 +70,13 @@ function lectorCarousel() {
     if ($('.banner-lector.owl-carousel')) {
         var lectorOwl = $('.banner-lector.owl-carousel');
         lectorOwl.owlCarousel({
-            margin: 0,                        
+            margin: 0,
             items: 1,
             navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
             responsive: {
                 0: {
                     dots: false,
-                    nav: true                    
+                    nav: true
                 },
                 768: {
                     dots: true,
@@ -74,37 +87,6 @@ function lectorCarousel() {
     }
 }
 
-// checkInOutdatepicker
-function checkInOutdatepicker(){
-
-    $('.input-daterange').each(function() {
-        $(this).datepicker(
-            {
-                endDate: 'today',
-                format : "yyyy/mm/dd",
-                language: "zh-TW",
-                orientation: "bottom auto",
-                autoclose: true
-            }
-        );
-    });
-
-    $("#startDate").datepicker({       
-        format : "yyyy/mm/dd",
-        language: "zh-TW",
-        orientation: "bottom auto",
-        autoclose: true
-    });
-
-    $("#endDate").datepicker({
-        endDate: 'today',
-        format : "yyyy/mm/dd",
-        language: "zh-TW",
-        orientation: "bottom auto",
-        autoclose: true
-    });
-
-}
 
 /* ========================================================================
  * Bootstrap: affix.js v3.3.5

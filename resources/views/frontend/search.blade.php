@@ -20,6 +20,7 @@
                         <a href="{{ url('')}}" title="首頁" tabindex="2">首頁</a>
                     </li>
                     <li class="breadcrumb-item active">搜尋結果</li>
+                    <h2 class="d-none" id="h2">搜尋結果</h2>
                 </ol>
     
                 <div class="title-black mb-3">搜尋結果</div>

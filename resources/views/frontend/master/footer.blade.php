@@ -1,5 +1,5 @@
 <!--footer-->
-<footer class="footer text-center text-lg-left">
+<footer class="footer text-center text-lg-left affix" data-spy="affix" data-offset-top="100">
     <div class="container footer-more">
         <a href="#Z" id="AZ" title="下方功能區塊" accesskey="Z" name="Z">:::</a>
         <div class="row">
@@ -31,6 +31,12 @@
         <div>中心地址 : 10617 台北市大安區羅斯福路四段1號
             <br class="d-lg-none"> 博雅教學館 生命教育中心</div>
         <div>病人自主研究中心 PARC © 2018. All Rights Reserved.</div>
+    </div>
+    <div class="container">
+        <!-- GoTop -->
+        <a href="#" title="Go Top" class="btn-gotop">
+            <i class="fa fa-caret-up"></i>
+        </a>
     </div>
 </footer>
 </div>

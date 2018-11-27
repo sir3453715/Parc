@@ -34,6 +34,12 @@
     <!--<link rel="stylesheet" href="css/all.min.css">-->
 </head>
     <body>
+        <a href="#C" title="跳到主要內容區塊" tabindex="1" style="color:rgb(248,248,248);">跳到主要內容區塊</a>
+        <noscript style="background-color:white;z-index: 5000;position: absolute;">
+            您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態
+            <br>
+            Sorry, your browser does not support JavaScript.Please enable Javascript in your browser settings.
+        </noscript>
         <!-- Google Tag Manager (noscript) -->
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRNRS9B"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

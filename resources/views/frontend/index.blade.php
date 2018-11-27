@@ -5,7 +5,7 @@
 @section('main')
         <!--main-->
         <main class="container">
-            <a href="#C" title="中央內容區塊" id="AC" accesskey="C" name="C" tabindex="2">:::</a>
+            <a href="#c" title="中央內容區塊" id="AC" accesskey="C" name="C" tabindex="2">:::</a>
             <!-- banner-main -->
             <div class="banner-main owl-carousel ">
                 @foreach($banner as $data)

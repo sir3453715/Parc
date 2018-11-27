@@ -12,6 +12,7 @@
         <a href="{{ url('') }}" title="首頁" tabindex="2">首頁</a>
     </li>
     <li class="breadcrumb-item active">網站導覽</li>
+    <h2 class="d-none" id="h2">網站導覽</h2>
 </ol>
 
 

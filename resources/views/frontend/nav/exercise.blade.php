@@ -12,6 +12,7 @@
         <a href="{{ url('')}}" title="首頁" tabindex="2">首頁</a>
     </li>
     <li class="breadcrumb-item active">行使權利</li>
+    <h2 class="d-none" id="h2">行使權利</h2>
 </ol>
 
 <div class="bg-white py-1 mb-5">

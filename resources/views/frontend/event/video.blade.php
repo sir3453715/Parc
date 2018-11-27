@@ -19,6 +19,7 @@
             <a href="{{ url('/event/video/')}}" title="線上影音課程" tabindex="2">線上影音課程</a>
         </li>
         <li class="breadcrumb-item active" id="active_breadcrumb"></li>
+        <h2 class="d-none" id="h2"></h2>
     </ol>
 
     <!-- banner-main -->
@@ -74,6 +75,7 @@
             @foreach($video_extra_sub_category as $category)
             @if($type == $category->en_name)
             $("#active_breadcrumb").append("{{$category->name}}");
+            $("#h2").append("{{$category->name}}");
             $("[id='nav-{{ $category->en_name }}']").addClass("active");
             //$("#nav-{{ $category->en_name }}").addClass("active");
                 @break

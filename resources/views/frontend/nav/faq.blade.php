@@ -12,6 +12,7 @@
                 <a href="{{ url('') }}" title="首頁" tabindex="2">首頁</a>
             </li>
             <li class="breadcrumb-item active">常見問題</li>
+            <h2 class="d-none" id="h2">常見問題</h2>
         </ol>
         <section>
             <div class="title-pattern">常見問題精選集</div>

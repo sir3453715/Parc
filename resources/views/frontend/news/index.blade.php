@@ -17,6 +17,7 @@
                         <a href="{{ url ('news')}}" title="最新消息" tabindex="2">最新消息</a>
                     </li>
                     <li class="breadcrumb-item active" id="active_breadcrumb"></li>
+                    <h2 class="d-none" id="h2"></h2>
                 </ol>
 
                 <!-- banner-main -->
@@ -75,23 +76,27 @@
                     if( '{{Request::path()}}' == 'news/law')
                     {
                         $("#active_breadcrumb").append("法規政策動態")
+                        $("#h2").append("法規政策動態")
                         $("#active_title").append(" - 法規政策動態")
                         $("#law").addClass("active");
                     }
                     else if( '{{Request::path()}}' == 'news/event')
                     {
                         $("#active_breadcrumb").append("課程與活動動態")
+                        $("#h2").append("課程與活動動態")
                         $("#active_title").append(" - 課程與活動動態")
                         $("#event").addClass("active");
                     }
                     else if( '{{Request::path()}}' == 'news/international')
                     {
                         $("#active_breadcrumb").append("國際動態")
+                        $("#h2").append("國際動態")
                         $("#active_title").append(" - 國際動態")
                         $("#international").addClass("active");
                     }
                     else{
                         $("#active_breadcrumb").append("中心動態")
+                        $("#h2").append("中心動態")
                         $("#active_title").append(" - 中心動態")
                         $("#center").addClass("active");
                     }

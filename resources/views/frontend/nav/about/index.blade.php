@@ -24,27 +24,27 @@
     <section class="container world">
 
         <div class="row justify-content-center m-2">
-            <a href="{{ url('/about') }}" class="col-6 col-lg-3 text-center ">
+            <a href="{{ url('/about') }}" class="col-6 col-lg-3 text-center " title="認識病主">
                 <div class="service-lohas__icon">
-                    <img src="{{ asset('assets/images/icon/icon-about-1.png') }}" class="img-fluid" alt="認識病主" />
+                    <img src="{{ asset('assets/images/icon/icon-about-1.png') }}" class="img-fluid" alt="" />
                 </div>
                 <h2>認識病主</h2>
             </a>
-            <a href="{{ url('/about/ceo') }}" class="col-6 col-lg-3 text-center ">
+            <a href="{{ url('/about/ceo') }}" class="col-6 col-lg-3 text-center " title="執行長的話">
                 <div class="service-lohas__icon">
-                    <img src="{{ asset('assets/images/icon/icon-about-2.png') }}" class="img-fluid" alt="執行長的話" />
+                    <img src="{{ asset('assets/images/icon/icon-about-2.png') }}" class="img-fluid" alt="" />
                 </div>
                 <h2>執行長的話</h2>
             </a>
-            <a href="{{ url('/about/organization') }}" class="col-6 col-lg-3 text-center ">
+            <a href="{{ url('/about/organization') }}" class="col-6 col-lg-3 text-center " title="組織簡介">
                 <div class="service-lohas__icon">
-                    <img src="{{ asset('assets/images/icon/icon-about-3.png') }}" class="img-fluid" alt="組織簡介" />
+                    <img src="{{ asset('assets/images/icon/icon-about-3.png') }}" class="img-fluid" alt="" />
                 </div>
                 <h2>組織簡介</h2>
             </a>
-            <a href="{{ url('/about/history') }}" class="col-6 col-lg-3 text-center ">
+            <a href="{{ url('/about/history') }}" class="col-6 col-lg-3 text-center " title="大事紀">
                 <div class="service-lohas__icon">
-                    <img src="{{ asset('assets/images/icon/icon-about-4.png') }}" class="img-fluid" alt="大事紀" />
+                    <img src="{{ asset('assets/images/icon/icon-about-4.png') }}" class="img-fluid" alt="" />
                 </div>
                 <h2>大事紀</h2>
             </a>
@@ -59,27 +59,27 @@
         <h2 class="world__title">您可以在這些地方認識病人自主</h2>
 
         <div class="row justify-content-center m-2">
-            <a href="{{ url('/story/special') }}" class="col-6 col-lg-3 text-center ">
+            <a href="{{ url('/story/special') }}" class="col-6 col-lg-3 text-center " title="生命故事">
                 <div class="service-lohas__icon">
-                    <img src="{{ asset('assets/images/icon/icon-04.png') }}" class="img-fluid" alt="生命故事" />
+                    <img src="{{ asset('assets/images/icon/icon-04.png') }}" class="img-fluid" alt="" />
                 </div>
                 <h2>生命故事</h2>
             </a>
-            <a href="{{ url('/law') }}" class="col-6 col-lg-3 text-center ">
+            <a href="{{ url('/law') }}" class="col-6 col-lg-3 text-center " title="法規政策">
                 <div class="service-lohas__icon">
-                    <img src="{{ asset('assets/images/icon/icon-06.png') }}" class="img-fluid" alt="法規政策" />
+                    <img src="{{ asset('assets/images/icon/icon-06.png') }}" class="img-fluid" alt="" />
                 </div>
                 <h2>法規政策</h2>
             </a>
-            <a href="{{ url('/exercise') }}" class="col-6 col-lg-3 text-center ">
+            <a href="{{ url('/exercise') }}" class="col-6 col-lg-3 text-center " title="行使權利">
                 <div class="service-lohas__icon">
-                    <img src="{{ asset('assets/images/icon/icon-02.png') }}" class="img-fluid" alt="行使權利" />
+                    <img src="{{ asset('assets/images/icon/icon-02.png') }}" class="img-fluid" alt="" />
                 </div>
                 <h2>行使權利</h2>
             </a>
-            <a href="{{ url('/event/video') }}" class="col-6 col-lg-3 text-center ">
+            <a href="{{ url('/event/video') }}" class="col-6 col-lg-3 text-center " title="線上影音">
                 <div class="service-lohas__icon">
-                    <img src="{{ asset('assets/images/icon/icon-08.png') }}" class="img-fluid" alt="線上影音" />
+                    <img src="{{ asset('assets/images/icon/icon-08.png') }}" class="img-fluid" alt="" />
                 </div>
                 <h2>線上影音</h2>
             </a>

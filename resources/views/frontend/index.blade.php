@@ -70,28 +70,28 @@
             <div class="row px-2 px-lg-0">
                 <a href="{{ url('/story') }}" class="col-6 col-lg-3 banner-icon">
                     <div class="banner-icon__img">
-                        <img src="{{ asset('assets/images/icon/icon-04.png') }}" alt="生命故事" class="img-fluid" />
+                        <img src="{{ asset('assets/images/icon/icon-04.png') }}" alt="" class="img-fluid" />
                     </div>
                     <div class="banner-icon__title">生命故事</div>
                     <div class="banner-icon__subtitle">聚集各界感動人心的故事，探問生命課題，啟發善終思考。</div>
                 </a>
                 <a href="{{ url('/event') }}" class="col-6 col-lg-3 banner-icon">
                     <div class="banner-icon__img">
-                        <img src="{{ asset('assets/images/icon/icon-05.png') }}" alt="課程與活動" class="img-fluid" />
+                        <img src="{{ asset('assets/images/icon/icon-05.png') }}" alt="" class="img-fluid" />
                     </div>
                     <div class="banner-icon__title">課程與活動</div>
                     <div class="banner-icon__subtitle">各類專業課程、生命育樂活動及跨界創作專案，精彩登場。</div>
                 </a>
                 <a href="{{ url('/law') }}" class="col-6 col-lg-3 banner-icon">
                     <div class="banner-icon__img">
-                        <img src="{{ asset('assets/images/icon/icon-06.png') }}" alt="法規政策" class="img-fluid" />
+                        <img src="{{ asset('assets/images/icon/icon-06.png') }}" alt="" class="img-fluid" />
                     </div>
                     <div class="banner-icon__title">法規政策</div>
                     <div class="banner-icon__subtitle">提供我國《病人自主權利法》最新動態及研究文獻。</div>
                 </a>
                 <a href="{{ url('/trend') }}" class="col-6 col-lg-3 banner-icon">
                     <div class="banner-icon__img">
-                        <img src="{{ asset('assets/images/icon/icon-07.png') }}" alt="全球脈動" class="img-fluid" />
+                        <img src="{{ asset('assets/images/icon/icon-07.png') }}" alt="" class="img-fluid" />
                     </div>
                     <div class="banner-icon__title">全球脈動</div>
                     <div class="banner-icon__subtitle">掌握各國病人自主權的發展現況，建立海外合作關係。</div>

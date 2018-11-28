@@ -22,31 +22,31 @@
         <div class="row justify-content-center p-5">
             <a href="https://tlea.neticrm.tw/civicrm/contribute/transact?reset=1&id=3" title="我要捐款(另開視窗)" target="_blank" rel="noopener noreferrer" class="col-6 col-lg-4 text-center p-2">
                 <div class="service-lohas__icon">
-                    <img src="{{ asset('assets/images/icon/icon-11.png') }}" class="img-fluid" alt="我要捐款" />
+                    <img src="{{ asset('assets/images/icon/icon-11.png') }}" class="img-fluid" alt="" />
                 </div>
                 <h2>我要捐款</h2>
             </a>
-            <a href="{{ url('/donate/story') }}" class="col-6 col-lg-4 text-center p-2">
+            <a href="{{ url('/donate/story') }}" class="col-6 col-lg-4 text-center p-2" title="分享故事">
                 <div class="service-lohas__icon">
-                    <img src="{{ asset('assets/images/icon/icon-12.png') }}" class="img-fluid" alt="分享故事" />
+                    <img src="{{ asset('assets/images/icon/icon-12.png') }}" class="img-fluid" alt="" />
                 </div>
                 <h2>分享故事</h2>
             </a>
-            <a href="{{ url('/404') }}" class="col-6 col-lg-4 text-center p-2">
+            <a href="{{ url('/404') }}" class="col-6 col-lg-4 text-center p-2" title="成為志工">
                 <div class="service-lohas__icon">
-                    <img src="{{ asset('assets/images/icon/icon-13.png') }}" class="img-fluid" alt="成為志工" />
+                    <img src="{{ asset('assets/images/icon/icon-13.png') }}" class="img-fluid" alt="" />
                 </div>
                 <h2>成為志工</h2>
             </a>
-            <a href="{{ url('/404') }}" class="col-6 col-lg-4 text-center p-2">
+            <a href="{{ url('/404') }}" class="col-6 col-lg-4 text-center p-2" title="成為會員">
                 <div class="service-lohas__icon">
-                    <img src="{{ asset('assets/images/icon/icon-14.png') }}" class="img-fluid" alt="成為會員" />
+                    <img src="{{ asset('assets/images/icon/icon-14.png') }}" class="img-fluid" alt="" />
                 </div>
                 <h2>成為會員</h2>
             </a>
-            <a href="{{ url('/donate/inquiry') }}" class="col-6 col-lg-4 text-center p-2">
+            <a href="{{ url('/donate/inquiry') }}" class="col-6 col-lg-4 text-center p-2" title="捐款徵信">
                 <div class="service-lohas__icon">
-                    <img src="{{ asset('assets/images/icon/icon-15.png') }}" class="img-fluid" alt="捐款徵信" />
+                    <img src="{{ asset('assets/images/icon/icon-15.png') }}" class="img-fluid" alt="" />
                 </div>
                 <h2>捐款徵信</h2>
             </a>

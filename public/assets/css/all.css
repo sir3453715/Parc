@@ -13921,6 +13921,7 @@ a.text-dark:hover, a.text-dark:focus {
   text-align: center;
   top: 50%;
   margin: -15px auto;
+  text-shadow: 3px 3px 5px black;
 }
 
 .banner-single__title-tl {
@@ -13965,7 +13966,8 @@ a.text-dark:hover, a.text-dark:focus {
       -ms-flex-align: center;
           align-items: center;
   border-bottom-left-radius: 36px;
-  background: linear-gradient(147deg, #f58764, #f16670 73%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, #c4465b), to(#f28263));
+  background: linear-gradient(top, #c4465b 70%, #f28263 100%);
 }
 
 .banner-right__title {
@@ -14306,7 +14308,7 @@ a.text-dark:hover, a.text-dark:focus {
     position: relative;
     display: block;
     color: #ffffff;
-    background-image: linear-gradient(55deg, #f28263, #f16670 47%);
+    background-image: linear-gradient(30deg, #f28263, #b03857 40%);
     padding: 15px;
   }
   .banner-lector__box:before {
@@ -14451,7 +14453,8 @@ a.text-dark:hover, a.text-dark:focus {
         -ms-flex-align: center;
             align-items: center;
     border-bottom-left-radius: 36px;
-    background: linear-gradient(147deg, #f58764, #f16670 73%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, #c4465b), to(#f28263));
+    background: linear-gradient(top, #c4465b 70%, #f28263 100%);
   }
   .banner-right__title {
     color: #ffffff;
@@ -17410,8 +17413,8 @@ header .sub-nav__item a {
 
 .exercise__subtitle {
   font-size: 1em;
-  font-weight: 300;
-  color: #f16670;
+  font-weight: bold;
+  color: #b03857;
   margin-bottom: 30px;
 }
 

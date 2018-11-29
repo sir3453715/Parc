@@ -9,7 +9,7 @@
             <!-- banner-main -->
             <div class="banner-main owl-carousel ">
                 @foreach($banner as $data)
-                <a href="{{$data->link}}" target="_blank" class="item banner-main__item" title="{{$data->title}}(另開視窗)" style="background: url(/storage/{{$data->pic}}) no-repeat center;background-size: cover;" tabindex="3">
+                <a href="{{$data->link}}" target="_blank" class="item banner-main__item" title="{{$data->title}}(另開視窗)" style="background: url(/storage/{{$data->pic}}) no-repeat center;background-size: cover;" tabindex="2">
                     <div class="banner-main__label">
                     <div class="banner-main__title">{{$data->title}}</div>
                         <div class="banner-main__subtitle">{{$data->body}}</div>
@@ -23,7 +23,7 @@
             <!-- photo-x3 -->
             <div class="photo-x3 owl-carousel">
                 @foreach($slider as $data)
-                <a href="{{ url('/'. $data->category_en(). '/'. $data->sub_category_en() .'/article/'. $data->id) }}" class="item photo-x3__item" title="{{$data->title}}">
+                <a href="{{ url('/'. $data->category_en(). '/'. $data->sub_category_en() .'/article/'. $data->id) }}" class="item photo-x3__item" title="{{$data->title}}" tabindex="0">
                     <div class="photo-x3__img" alt="{{$data->title}}" style="background: url(/storage/{{$data->pic}}) no-repeat center; background-size: cover;"></div>
                     <div class="photo-x3__title">{{$data->title}}</div>
                 </a>
@@ -54,7 +54,7 @@
             <!-- banner-lector -->
             <div class="banner-lector owl-carousel">
                 @foreach($quote as $data)
-                <a class="item banner-lector__item">
+                <a class="item banner-lector__item" tabindex="0">
                     <div class="banner-lector__img" alt="{{$data->body}}" style="background: url(/storage/{{$data->pic}}) no-repeat center; background-size: cover;"></div>
                         <div class="banner-lector__box">
                         <div class="banner-lector__title">{{$data->body}}</div>

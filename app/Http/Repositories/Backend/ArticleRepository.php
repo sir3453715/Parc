@@ -51,7 +51,7 @@ class ArticleRepository{
             $condition=$condition->where('created_at','<=',$request->date_end);
         }
         if($request->title){
-            $condition=$condition->where('title',$request->title);
+            $condition=$condition->where('title','like','%'.$request->title.'%');
         }
         if($request->sub_category != null){
             $condition=$condition->where('sub_category',$request->sub_category);

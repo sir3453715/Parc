@@ -50,7 +50,7 @@ function photoX3Carousel() {
         photoX3Owl.owlCarousel({
             margin: 10,
             nav: true,
-            navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+            navText: ['<i title="上一個" class="fa fa-angle-left" aria-hidden="true"></i>', '<i title="下一個" class="fa fa-angle-right" aria-hidden="true"></i>'],
             dots: false,
             responsiveClass: true,
             responsive: {
@@ -72,7 +72,7 @@ function lectorCarousel() {
         lectorOwl.owlCarousel({
             margin: 0,
             items: 1,
-            navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+            navText: ['<i title="上一個" class="fa fa-angle-left" aria-hidden="true"></i>', '<i title="下一個" class="fa fa-angle-right" aria-hidden="true"></i>'],
             responsive: {
                 0: {
                     dots: false,

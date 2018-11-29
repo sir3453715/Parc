@@ -17,7 +17,7 @@
                                     {{ csrf_field() }}
                                     <div class="form-group" >
                                     <label class="control-label" style="color:white;">標題 <br/>Title</label>
-                                        <input name="title"  type="text" class="form-control" value="">
+                                    <input name="title"  type="text" class="form-control" value="{{$datas["cookie"]->title ? $datas["cookie"]->title : "" }}">
                                     </div>
                                 <div class="form-group">
                                     <label class="control-label" style="color:white;">顯示於Banner <br/>Display on banner</label>

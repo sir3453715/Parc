@@ -18,7 +18,7 @@
                     <img src="{{ asset('assets/images/icon/icon-facebook.svg') }}" class="img-fluid" alt="" target="_blank" rel="noopener noreferrer"/>
                 </a>
                 {{-- <a href="#" title="line" class="footer-social" target="_blank" rel="noopener noreferrer">
-                    <img src="{{ asset('assets/images/icon/icon-line.svg') }}" class="img-fluid" alt="social line"/>
+                    <img src="{{ asset('assets/images/icon/icon-line.svg') }}" class="img-fluid" alt=""/>
                 </a> --}}
                 <a href="https://www.youtube.com/channel/UCkJWN2WEhzH_EA5QM65GchQ" title="youtube (另開視窗)" class="footer-social" target="_blank" rel="noopener noreferrer">
                     <img src="{{ asset('assets/images/icon/icon-youtube.svg') }}" class="img-fluid" alt=""/>

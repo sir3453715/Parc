@@ -60,16 +60,16 @@
             </div>
             <div class="social-bar">
                 <a href="https://www.facebook.com/sharer/sharer.php?u={{Request::url()}}" title="臉書分享(另開視窗)"target="_blank" rel="noopener noreferrer" >
-                    <img alt="臉書分享" src="{{ asset('assets/images/icon/icon-facebook-s.svg') }}" class="img-fluid" />
+                    <img alt="" src="{{ asset('assets/images/icon/icon-facebook-s.svg') }}" class="img-fluid" />
                 </a>
                 <a href="https://social-plugins.line.me/lineit/share?url={{Request::url()}}" title="Line分享(另開視窗)" target="_blank" rel="noopener noreferrer" >
-                    <img alt="Line分享" src="{{ asset('assets/images/icon/icon-line-s.svg') }}" class="img-fluid" />
+                    <img alt="" src="{{ asset('assets/images/icon/icon-line-s.svg') }}" class="img-fluid" />
                 </a>
                 <a href="https://plus.google.com/share?url={{Request::url()}}" target="_blank" title="Google+分享(另開視窗)" rel="noopener noreferrer">
-                    <img alt="Google+分享" src="{{ asset('assets/images/icon/icon-google-s.svg') }}" class="img-fluid" />
+                    <img alt="" src="{{ asset('assets/images/icon/icon-google-s.svg') }}" class="img-fluid" />
                 </a>
                 <a href="http://twitter.com/share?url={{Request::url()}}" target="_blank" title="Twitter分享(另開視窗)" rel="noopener noreferrer">
-                    <img alt="Twitter分享" src="{{ asset('assets/images/icon/icon-twitter-s.svg') }}" class="img-fluid" />
+                    <img alt="" src="{{ asset('assets/images/icon/icon-twitter-s.svg') }}" class="img-fluid" />
                 </a>
             </div>
 

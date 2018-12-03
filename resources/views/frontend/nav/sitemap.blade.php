@@ -96,13 +96,13 @@
 
         <a href="#" class="col-12 sitemap__title">追蹤我們</a>
         <a href="https://www.facebook.com/parc.tw/" class="col-6 col-lg-3 sitemap__item" title="facebook(另開視窗)" target="_blank" rel="noopener noreferrer">
-            <img src="{{ asset('assets/images/icon/btn-facebook.png') }}" alt="facebook" />
+            <img src="{{ asset('assets/images/icon/btn-facebook.png') }}" alt="" />
         </a>
         {{-- <a href="#" class="col-6 col-lg-3 sitemap__item" title="line(另開視窗)" target="_blank" rel="noopener noreferrer">
-            <img src="{{ asset('assets/images/icon/btn-line.png') }}" alt="line" /> --}}
+            <img src="{{ asset('assets/images/icon/btn-line.png') }}" alt="" /> --}}
         </a>
         <a href="https://www.youtube.com/channel/UCkJWN2WEhzH_EA5QM65GchQ" class="col-6 col-lg-3 sitemap__item" title="youtube(另開視窗)"target="_blank" rel="noopener noreferrer">
-            <img src="{{ asset('assets/images/icon/btn-youtube.png') }}" alt="youtube" />
+            <img src="{{ asset('assets/images/icon/btn-youtube.png') }}" alt="" />
         </a>
     </div>
 </section>

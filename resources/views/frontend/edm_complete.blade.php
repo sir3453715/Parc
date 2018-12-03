@@ -21,7 +21,7 @@
         <div class="c2">
             <div class="c2-main">
                 <div class="c2-main-img">
-                    <img src="{{ asset('assets/images/icon/icon-email.png') }}" class="img-fluid" />
+                    <img src="{{ asset('assets/images/icon/icon-email.png') }}" alt="Email圖示" class="img-fluid" />
                 </div>
                 <div class="c2-subtitle">您的訂閱即將完成，
                     <br> 請到您的Email查收信件，

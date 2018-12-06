@@ -51,12 +51,12 @@ Route::group(['namespace' => 'Frontend'], function () {
     Route::get('/about/organization', 'IndexController@aboutOrganization');
     
     Route::get('/tag/{tag}','IndexController@tagResult');
-    Route::view('/404', 'frontend.master.404');
+    // Route::view('/404', 'frontend.master.404');
     Route::view('/edm_complete', 'frontend.edm_complete');
     Route::view('/about-en','frontend.nav.about-en');
     Route::view('/search','frontend.search');
     Route::fallback(function(){
-        return view('frontend.master.404');
+        return response()->view('frontend.master.404', [], 404);
     });
 });
 

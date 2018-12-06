@@ -8,993 +8,1028 @@
 
 
 <url>
-  <loc>http://parc.tw/</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/special</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/special</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/love</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/love</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/doctor</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/doctor</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/life</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/life</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/expert</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/expert</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/story</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/story</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/course</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/course</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/lecturer</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/lecturer</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/video</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/video</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/lohas</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/lohas</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/act</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/act</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/policy</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/policy</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/trend</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/trend</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/trend/international</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/trend/international</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/trend/exchange</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/trend/exchange</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/trend/ngo</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/trend/ngo</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/trend/world</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/trend/world</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/news</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/news</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/news/center</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/news/center</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/news/law</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/news/law</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/news/event</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/news/event</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/news/international</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/news/international</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/sitemap</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/sitemap</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/about</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/about</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/exercise</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/exercise</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/donate</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/donate</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/faq</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/faq</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/about-en</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/about-en</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/expert/article/207</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/news/law/article/230</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/expert/article/206</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/news/law/article/218</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/expert/article/205</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/news/law/article/216</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/expert/article/213</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/news/law/article/215</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/news/law/article/216</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/news/law/article/214</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/news/law/article/215</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/news/center/article/202</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/news/law/article/214</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/news/center/article/202</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/donate/story</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://parc.tw/news/center/article/172</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://parc.tw/story/expert/article/212</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://parc.tw/story/expert/article/200</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://parc.tw/story/expert/article/199</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://parc.tw/story/love/article/170</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://parc.tw/story/expert/article/207</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://parc.tw/story/expert/article/206</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/news/event/article/149</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://parc.tw/story/expert/article/205</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://parc.tw/story/expert/article/155</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/donate/story</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://parc.tw/story/special?page=2</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/expert/article/212</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/love/article/169</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/expert/article/200</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/love/article/168</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/expert/article/199</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/love/article/167</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/love/article/170</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/love/article/166</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/expert/article/155</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/love/article/165</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/special?page=2</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/love?page=2</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/love/article/169</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/doctor/article/163</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/love/article/168</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/doctor/article/162</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/love/article/167</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/doctor/article/161</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/love/article/166</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/doctor/article/160</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/love/article/165</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/doctor/article/159</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/love?page=2</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/doctor/article/154</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/doctor/article/163</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/life/article/178</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/doctor/article/162</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/life/article/177</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/doctor/article/161</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/life/article/175</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/doctor/article/160</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/life/article/174</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/doctor/article/159</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/life/article/173</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/doctor/article/154</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/life/article/171</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/life/article/178</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/expert/article/213</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/life/article/177</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/expert/article/211</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/life/article/175</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/expert/article/210</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/life/article/174</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/expert/article/209</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/life/article/173</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/expert/article/208</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/life/article/171</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/expert?page=2</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/expert/article/211</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/expert?page=3</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/expert/article/210</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/expert?page=4</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/expert/article/209</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/expert?page=5</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/expert/article/208</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/story/article/196</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/expert?page=2</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/course/article/108</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/expert?page=3</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/course/article/36</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/expert?page=4</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/course/article/29</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/expert?page=5</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/course/article/28</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/story/article/196</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/course/article/106</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/course/article/108</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/course/article/105</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/course/article/36</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/course/article/104</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/course/article/29</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/course/article/103</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/course/article/28</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/course/article/102</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/course/article/106</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/video/article/47</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/course/article/105</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/video/article/46</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/course/article/104</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/video/article/45</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/course/article/103</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/video/article/44</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/course/article/102</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/video/article/43</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/video/article/47</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/video/article/42</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/video/article/46</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/lohas/video</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/video/article/45</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/lohas/books</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/video/article/44</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/lohas/articles</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/video/article/43</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/lohas/education</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/video/article/42</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/lohas/events</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/lohas/video</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/course/core</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/lohas/books</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/course?page=2</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/lohas/articles</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/course?page=3</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/lohas/education</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/lecturer?page=2</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/lohas/events</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/lecturer?page=3</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/course/core</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/lecturer?page=4</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/course?page=2</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/video/DebateOfEuthanasia</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/course?page=3</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/video/meeting</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/lecturer?page=2</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/act/228</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/lecturer?page=3</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/act/226</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/lecturer?page=4</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/act/222</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/video/DebateOfEuthanasia</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/act/221</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/video/meeting</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/act/220</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/act/26</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/act/21</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/act/25</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/act/20</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/act/24</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/act/19</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/act/21</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/act/18</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/act/20</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/act/17</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/act/19</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/act/16</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/act/18</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/act/15</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/act/17</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/act/14</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/act/16</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/policy/article/52</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/act/15</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/policy/article/51</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/act/14</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/policy/article/50</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/policy/article/52</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/policy/article</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/policy/article/51</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/policy/article/59</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/policy/article/50</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/policy/article/58</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/policy/article</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/policy/article/57</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/policy/article/59</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/policy/meeting</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/policy/article/58</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/policy/article/227</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/policy/article/57</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/policy/article/219</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/policy/meeting</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/policy/article/217</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/policy/article/60</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/policy/conference</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/policy/conference</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/policy/article/63</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/policy/article/63</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/policy/article/62</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/policy/article/62</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/policy/article/61</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/policy/article/61</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/policy/hospital</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/policy/hospital</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/policy/article/229</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/policy/article/137</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/policy/article/137</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/policy/article/136</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/policy/article/136</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/policy/article/135</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/policy/gov</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/policy/gov</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/policy/article/49</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/policy/article/49</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/policy/article/48</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/policy/article/48</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/trend/international/article/71</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/trend/international/article/71</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/trend/international/article/70</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/trend/international/article/70</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/trend/international/article/69</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/trend/international/article/69</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/trend/exchange/article/74</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/trend/exchange/article/74</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/trend/exchange/article/72</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/trend/exchange/article/72</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/trend/international/article/68</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/trend/international/article/68</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/trend/international/article/67</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/trend/international/article/67</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/trend/international/article/66</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/trend/international/article/66</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/news/center/article/172</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/news/center/article/143</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/news/event/article/149</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/news/event/article/142</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/news/center/article/143</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/news/event/article/141</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/news/event/article/142</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/news/international/article/146</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/news/event/article/141</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/news/international/article/145</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/news/international/article/146</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/news/international/article/76</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/news/international/article/145</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/about/ceo</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/news/international/article/76</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/about/organization</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/about/ceo</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/about/history</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/about/organization</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/404</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/about/history</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/donate/inquiry</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/donate/inquiry</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story?page=2</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story?page=2</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/expert/article/201</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/expert/article/201</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/special?page=1</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/special?page=1</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/love/article/164</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/love/article/164</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/love?page=1</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/love?page=1</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/expert?page=1</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/expert?page=1</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/expert/article/198</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/expert/article/198</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/expert/article/197</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/expert/article/197</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/expert/article/195</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/expert/article/195</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/expert/article/194</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/expert/article/194</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/expert/article/193</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/expert/article/193</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/expert/article/192</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/expert/article/192</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/expert/article/191</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/expert/article/191</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/expert/article/190</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/expert/article/190</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/expert/article/189</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/expert/article/189</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/expert/article/188</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/expert/article/188</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/expert/article/186</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/expert/article/186</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/expert/article/185</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/expert/article/185</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/expert/article/183</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/expert/article/183</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/expert/article/181</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/expert/article/181</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/expert/article/179</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/expert/article/179</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story/expert/article/158</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/story/expert/article/158</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/course/core?page=2</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/course/core?page=2</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/course/core?page=3</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/course/core?page=3</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/course/article/38</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/course/article/38</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/course/article/37</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/course/article/37</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/course/article/35</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/course/article/35</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/course/article/34</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/course/article/34</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/course/article/33</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/course/article/33</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/course?page=1</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/course?page=1</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/course/article/32</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/course/article/32</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/course/article/30</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/course/article/30</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/lecturer?page=1</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/lecturer?page=1</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/video/article/40</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/event/video/article/40</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/policy/article/56</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/policy/article/56</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/policy/article/55</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/policy/article/55</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/policy/article/54</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/policy/article/54</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/policy/meeting?page=2</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/policy/meeting?page=2</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/policy/article/134</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/policy/article/60</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/policy/article/133</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/policy/article/135</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/story?page=1</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/policy/article/134</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://parc.tw/event/course/core?page=1</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/policy/article/133</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://parc.tw/story?page=1</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://parc.tw/event/course/core?page=1</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/policy/article/53</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/policy/article/53</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>http://parc.tw/law/policy/meeting?page=1</loc>
-  <lastmod>2018-10-11T04:13:07+00:00</lastmod>
+  <loc>https://parc.tw/law/policy/meeting?page=1</loc>
+  <lastmod>2018-12-06T08:48:14+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 

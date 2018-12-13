@@ -19,18 +19,37 @@
 <section class="sitemap">
     <div class="title-black">網站導覽
         <p>本網站依無障礙網頁設計原則而建置，網站的主要樣版內容
-            <br>分為三個大區塊 (皆設有定位點)：</p>
+            <br>分為三個大區塊 (皆設有定位點)</p>
+        
     </div>
 
     <div class="container row">
-        <a href="#" class="col-12 sitemap__item">
-            <i class="fa fa-circle"></i> Alt+U　上方定位點(U) - 上方導覽連結區。</a>
-        <a href="#" class="col-12 sitemap__item">
-            <i class="fa fa-circle"></i> Alt+C　內容區塊定位點(C) - 此區塊呈現各網頁的網頁內容。</a>
-        <a href="#" class="col-12 sitemap__item">
-            <i class="fa fa-circle"></i> Alt+S　網站搜尋(S) - 網站搜尋。</a>
-        <a href="#" class="col-12 sitemap__item">
-            <i class="fa fa-circle"></i> Alt+Z　下方區塊定位點(Z) - 下方功能區塊。</a>
+            <p class="col-12">This website is constructed under the guidelines of accessibility web design.
+                    <br>The main template is assembly by 3 main parts (With anchor point)</p>
+        <a href="#U" class="col-12 sitemap__item">
+            <i class="fa fa-circle"></i> 
+             Alt+U　上方定位點 (U) - 上方導覽連結區。
+             <br>
+             Top anchor point (U) - Top navigation link section
+            </a>
+        <a href="#C" class="col-12 sitemap__item">
+            <i class="fa fa-circle"></i>
+             Alt+C　內容區塊定位點 (C) - 此區塊呈現各網頁的網頁內容
+             <br>
+             Main content anchor point (C) - Display the main content of the webpage
+        </a>
+        <a href="#S" class="col-12 sitemap__item">
+            <i class="fa fa-circle"></i>
+             Alt+S　網站搜尋 (S) - 網站搜尋。
+             <br>
+             In-site search (S) - In-site search
+        </a>
+        <a href="#Z" class="col-12 sitemap__item">
+            <i class="fa fa-circle"></i> 
+             Alt+Z　下方區塊定位點 (Z) - 下方功能區塊。
+             <br>
+             Bottom anchor point (Z) - Bottom function section
+        </a>
         <a href="{{ url('/story/special') }}" class="col-12 sitemap__title">1.生命故事</a>
         <a href="{{ url('/story/special') }}" class="col-6 col-lg-3 sitemap__item">1-1 精選特輯</a>
         <a href="{{ url('/story/love') }}" class="col-6 col-lg-3 sitemap__item">1-2 親愛劇場</a>

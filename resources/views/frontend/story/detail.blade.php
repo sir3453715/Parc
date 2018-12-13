@@ -45,9 +45,9 @@
 
             <h2 class="title mb-0">{{$article->title}}</h2>
             <div class="info-bar">
-                <img alt="時間 time" src="{{ asset('assets/images/icon/icon-clock.svg') }}" class="info-bar__icon img-fluid" />
+                <img alt="" src="{{ asset('assets/images/icon/icon-clock.svg') }}" class="info-bar__icon img-fluid" />
                 <span class="info-bar__text">{{$datePresenter->getChineseMonth($article->created_at->month).' '.$article->created_at->day.','.$article->created_at->year}} </span>
-                <img alt="標籤 tag" src="{{ asset('assets/images/icon/icon-tab.svg') }}" class="info-bar__icon img-fluid" />
+                <img alt="" src="{{ asset('assets/images/icon/icon-tab.svg') }}" class="info-bar__icon img-fluid" />
                 
                 @if($article->tags!=null)
                 @php

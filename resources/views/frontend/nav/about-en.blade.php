@@ -298,7 +298,7 @@
         <a href="#Z" id="AZ" title="Bottom function section" accesskey="Z" name="Z">:::</a>
         <div class="row">
             <div class="col-12 col-lg-4 text-center">
-                <img src="{{ asset('assets/images/icon/logo-footer.svg') }}" class="logo img-fluid" alt="病人自主Logo" />
+                <img src="{{ asset('assets/images/icon/logo-footer.svg') }}" class="logo img-fluid" alt="Patient Autonomy Research Center Logo" />
             </div>
             <div class="col-12 col-lg-4 text-center">
                 <div class="footer-title">即刻行動</div>

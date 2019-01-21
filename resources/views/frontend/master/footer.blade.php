@@ -28,9 +28,9 @@
     </div>
     <div class="container footer-copyright">
         <a href="mailto:service@parc.tw">電子信箱 : service@parc.tw</a>
-        <div>中心地址 : 10617 台北市大安區羅斯福路四段1號
-            <br class="d-lg-none"> 博雅教學館 生命教育中心</div>
-        <div>病人自主研究中心 PARC © 2018. All Rights Reserved.</div>
+        <div>中心地址 : 10617台北市大安區羅斯福路四段1號
+            <br class="d-lg-none"> 台大哲學系4F 404室</div>
+        <div>病人自主研究中心 PARC © 2019. All Rights Reserved.</div>
     </div>
     <div class="container">
         <!-- GoTop -->

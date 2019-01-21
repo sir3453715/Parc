@@ -1,6 +1,6 @@
 @extends('frontend.master.master')
 @section('title')
-<title>病人自主研究中心 | Patient Autonomy Research Center - 課程與活動 - 線上影音課程</title>
+<title>病人自主研究中心 | Patient Autonomy Research Center - 課程與資源 - 線上影音課程</title>
 @endsection
 @section('main')
 <!--main-->
@@ -13,7 +13,7 @@
             <a href="{{ url('')}}" title="首頁" tabindex="2">首頁</a>
         </li>
         <li class="breadcrumb-item">
-            <a href="{{ url('/event')}}" title="課程與活動" tabindex="2">課程與活動</a>
+            <a href="{{ url('/event')}}" title="課程與資源" tabindex="2">課程與資源</a>
         </li>
         <li class="breadcrumb-item">
             <a href="{{ url('/event/video/')}}" title="線上影音課程" tabindex="2">線上影音課程</a>

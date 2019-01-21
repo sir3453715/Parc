@@ -79,7 +79,7 @@
                     <div class="banner-icon__img">
                         <img src="{{ asset('assets/images/icon/icon-05.png') }}" alt="" class="img-fluid" />
                     </div>
-                    <div class="banner-icon__title">課程與活動</div>
+                    <div class="banner-icon__title">課程與資源</div>
                     <div class="banner-icon__subtitle">各類專業課程、生命育樂活動及跨界創作專案，精彩登場。</div>
                 </a>
                 <a href="{{ url('/law') }}" class="col-6 col-lg-3 banner-icon">

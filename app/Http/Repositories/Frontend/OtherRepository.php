@@ -121,6 +121,6 @@ class OtherRepository{
             return $result;
     }
     public function getDonateLastUpdatedDate(){
-        return donate::orderBy('created_at','desc')->first()->value('created_at');
+        return donate::orderBy('created_at','desc')->first()->created_at;
     }
 }

@@ -41,7 +41,7 @@
                         <a class="nav-link" id="law" href="{{ url('/news/law') }}" title="法規政策動態">法規政策動態</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="event" href="{{ url('/news/event') }}" title="課程與活動動態">課程與活動動態</a>
+                        <a class="nav-link" id="event" href="{{ url('/news/event') }}" title="課程與資源動態">課程與資源動態</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="international" href="{{ url('/news/international') }}" title="國際動態">國際動態</a>
@@ -82,9 +82,9 @@
                     }
                     else if( '{{Request::path()}}' == 'news/event')
                     {
-                        $("#active_breadcrumb").append("課程與活動動態")
-                        $("#h2").append("課程與活動動態")
-                        $("#active_title").append(" - 課程與活動動態")
+                        $("#active_breadcrumb").append("課程與資源動態")
+                        $("#h2").append("課程與資源動態")
+                        $("#active_title").append(" - 課程與資源動態")
                         $("#event").addClass("active");
                     }
                     else if( '{{Request::path()}}' == 'news/international')

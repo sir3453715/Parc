@@ -58,7 +58,7 @@
         <a href="{{ url('/story/expert') }}" class="col-6 col-lg-3 sitemap__item">1-5 權威觀點</a>
         <a href="{{ url('/story/story') }}" class="col-6 col-lg-3 sitemap__item">1-5 私房故事</a>
 
-        <a href="{{ url('/event') }}" class="col-12 sitemap__title">2.課程與活動</a>
+        <a href="{{ url('/event') }}" class="col-12 sitemap__title">2.課程與資源</a>
         <a href="{{ url('/event/course') }}" class="col-6 col-lg-3 sitemap__item">2-1 專業課程</a>
         {{-- spit out course 2,6 --}}
         @foreach($event_course_list as $data)
@@ -70,7 +70,7 @@
         @foreach($event_video_list as $data)
         <a href="{{ url('/event/video/'.$data->en_name) }}" class="col-6 col-lg-3 sitemap__item">2-3-{{$loop->iteration}} {{ $data->name }}</a>
         @endforeach
-        <a href="{{ url('/event/lohas') }}" class="col-6 col-lg-3 sitemap__item">2-4 生命樂活</a>
+        <a href="{{ url('/event/lohas') }}" class="col-6 col-lg-3 sitemap__item">2-4 知識工具</a>
         {{-- spit out lohas 2,9 --}}
         @foreach($event_lohas_list as $data)
         <a href="{{ url('/event/lohas/'.$data->en_name) }}" class="col-6 col-lg-3 sitemap__item">2-4-{{$loop->iteration}} {{ $data->name }}</a>
@@ -93,7 +93,7 @@
         <a href="{{ url('/news/center') }}" class="col-12 sitemap__title">5.最新消息</a>
         <a href="{{ url('/news/center') }}" class="col-6 col-lg-3 sitemap__item">5-1 中心動態</a>
         <a href="{{ url('/news/law') }}" class="col-6 col-lg-3 sitemap__item">5-2 法規政策動態</a>
-        <a href="{{ url('/news/event') }}" class="col-6 col-lg-3 sitemap__item">5-3 課程與活動動態</a>
+        <a href="{{ url('/news/event') }}" class="col-6 col-lg-3 sitemap__item">5-3 課程與資源動態</a>
         <a href="{{ url('/news/international') }}" class="col-6 col-lg-3 sitemap__item">5-4 國際動態</a>
 
         <a href="{{ url('/about') }}" class="col-12 sitemap__title">6.關於我們</a>

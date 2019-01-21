@@ -11,7 +11,7 @@
 		init: function( editor )
 		{
 			editor.addCommand( 'youtube', new CKEDITOR.dialogCommand( 'youtube', {
-				allowedContent: 'iframe[!title,!width,!height,!src,!frameborder,!allowfullscreen]; object param[*]'
+				allowedContent: 'div(*);iframe[!title,!width,!height,!src,!frameborder,!allowfullscreen]; object param[*]'
 			}));
 
 			editor.ui.addButton( 'Youtube',
@@ -66,54 +66,6 @@
 												}
 											}
 										},
-										{
-											type : 'text',
-											id : 'txtWidth',
-											width : '60px',
-											label : editor.lang.youtube.txtWidth,
-											'default' : '640',
-											validate : function ()
-											{
-												if ( this.getValue() )
-												{
-													var width = parseInt ( this.getValue() ) || 0;
-
-													if ( width === 0 )
-													{
-														alert( editor.lang.youtube.invalidWidth );
-														return false;	
-													}
-												}
-												else {
-													alert( editor.lang.youtube.noWidth );
-													return false;
-												}
-											}
-										},
-										{
-											type : 'text',
-											id : 'txtHeight',
-											width : '60px',
-											label : editor.lang.youtube.txtHeight,
-											'default' : '360',
-											validate : function ()
-											{
-												if ( this.getValue() )
-												{
-													var height = parseInt ( this.getValue() ) || 0;
-
-													if ( height === 0 )
-													{
-														alert( editor.lang.youtube.invalidHeight );
-														return false;	
-													}
-												}
-												else {
-													alert( editor.lang.youtube.noHeight );
-													return false;
-												}
-											}
-										}
 									]
 								},
 								{
@@ -174,8 +126,8 @@
 					{
 						var content = '';
 						var url = '//', params = [], startSecs;
-						var width = this.getValueOf( 'youtubePlugin', 'txtWidth' );
-						var height = this.getValueOf( 'youtubePlugin', 'txtHeight' );
+						var width = 640;
+						var height = 360;
 						var description = this.getValueOf( 'youtubePlugin', 'txtDescription' );
 
 						// no cookie
@@ -200,8 +152,11 @@
 						{
 							url = url + '?' + params.join( '&' );
 						}
-						content = '<iframe title="' + description + '" width="' + width + '" height="' + height + '" src="https:' + url + '" ';
-						content += 'frameborder="0" allowfullscreen></iframe>';	
+						content = '<div class="embed-responsive embed-responsive-16by9">';
+						content += '<iframe title="' + description + '" width="' + width + '" height="' + height + '" src="https:' + url + '" ';
+						content += 'frameborder="0" allowfullscreen></iframe>';
+						content += '</div>';
+						content += '&nbsp;';
 						var instance = this.getParentEditor();
 						instance.insertHtml( content );
 					}

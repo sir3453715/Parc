@@ -11,3 +11,5 @@ Homestead.yaml
 /storage/article_index.index
 /demo
 /public/photos
+error_log
+.htaccess

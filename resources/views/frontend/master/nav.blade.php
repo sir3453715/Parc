@@ -61,7 +61,7 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('/event') }}" title="課程與活動" tabindex="2">課程與活動</a>
+                                <a class="nav-link" href="{{ url('/event') }}" title="課程與資源" tabindex="2">課程與資源</a>
                                 <a href="#nav-event" class="nav-plus collapsed" data-toggle="collapse"><i class="fa fa-chevron-right" title="展開/折疊選項"></i></a>
                                 <div class="sub-nav collapsed collapse" id="nav-event">
                                     <div class="sub-nav__box">
@@ -75,7 +75,7 @@
                                             <a href="{{ url('/event/video') }}" title="線上影音課程" tabindex="2">線上影音課程</a>
                                         </div>
                                         <div class="sub-nav__item">
-                                            <a href="{{ url('/event/lohas') }}" title="生命樂活" tabindex="2">生命樂活</a>
+                                            <a href="{{ url('/event/lohas') }}" title="知識工具" tabindex="2">知識工具</a>
                                         </div>
                                     </div>
                                 </div>
@@ -126,7 +126,7 @@
                                             <a href="{{ url('news/law') }}" title="法規政策動態" tabindex="2">法規政策動態</a>
                                         </div>
                                         <div class="sub-nav__item">
-                                            <a href="{{ url('news/event') }}" title="課程與活動動態" tabindex="2">課程與活動動態</a>
+                                            <a href="{{ url('news/event') }}" title="課程與資源動態" tabindex="2">課程與資源動態</a>
                                         </div>
                                         <div class="sub-nav__item">
                                             <a href="{{ url('news/international') }}" title="國際動態" tabindex="2">國際動態</a>

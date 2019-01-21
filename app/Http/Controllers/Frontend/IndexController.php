@@ -85,7 +85,7 @@ class IndexController extends Controller
             $data['lohas'][$key->en_name] = $this->articleRepo->getArticleResult(3,2,9,$key->id);
         }
         // dd($data);
-        //抓有幾個生命樂活特殊分類再丟articlelist
+        //抓有幾個知識工具特殊分類再丟articlelist
         return view('frontend.event.index',$data);
     }
     public function eventCourseIndex($type = null, Request $request){
@@ -184,7 +184,7 @@ class IndexController extends Controller
             $data['article_list'] = $this->articleRepo->getArticleResult(null,5,16,null,null,9);
         }
         else if($request->type == 'event'){
-            //課程與活動動態
+            //課程與資源動態
             $data['article_list'] = $this->articleRepo->getArticleResult(null,5,18,null,null,9);
         }
         else if($request->type == 'international'){

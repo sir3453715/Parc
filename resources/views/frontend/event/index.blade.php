@@ -1,6 +1,6 @@
 @extends('frontend.master.master')
 @section('title')
-<title>病人自主研究中心 | Patient Autonomy Research Center - 課程與活動</title>
+<title>病人自主研究中心 | Patient Autonomy Research Center - 課程與資源</title>
 @endsection
 @section('main')
 <!--main-->
@@ -11,7 +11,7 @@
                 <a href="#C" title="中央內容區塊" id="AC" accesskey="C" name="C" tabindex="2">:::</a>
                 <a href="{{ url('') }}" title="首頁" tabindex="2">首頁</a>
             </li>
-            <li class="breadcrumb-item active">課程與活動</li>
+            <li class="breadcrumb-item active">課程與資源</li>
         </ol>
         <!-- banner-main -->
         <div class="banner-main owl-carousel ">
@@ -71,8 +71,8 @@
         </div>
 
 
-        <!-- 生命樂活 -->
-        <h2 class="title">生命樂活</h2>
+        <!-- 知識工具 -->
+        <h2 class="title">知識工具</h2>
         <div class="row justify-content-center text-center mb-5">
             @foreach($lohas_extra_sub_category as $category)
             <div class="col-12 col-lg-6 service-lohas__item">
@@ -95,7 +95,7 @@
         </div>
 
         <div class="btn-more-line">
-            <a href="{{ url('event/lohas') }}" class="btn-more">生命樂活看更多</a>
+            <a href="{{ url('event/lohas') }}" class="btn-more">知識工具看更多</a>
         </div>
 
     </main>

@@ -60,7 +60,7 @@
                                         <select class="form-control custom-select" form="copy" name="sub_category_copy" id="sub_category_copy">
                                                 <option id="法規政策動態copy" value="16">法規政策動態</option>
                                                 <option id="中心動態copy" value="17">中心動態</option>
-                                                <option id="課程與活動動態copy" value="18">課程與活動動態</option>
+                                                <option id="課程與資源動態copy" value="18">課程與資源動態</option>
                                                 <option id="國際動態copy" value="19">國際動態</option>
                                         </select>
                                     </div>

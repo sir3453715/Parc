@@ -42,7 +42,7 @@
                                                         <select class="custom-select form-control" name="sub_category" id="sub_category">
                                                             <option id="專業課程" class="課程活動" value="6" hidden>專業課程</option>
                                                             <option id="線上影音課程" class="課程活動" value="8" hidden>線上影音課程</option>
-                                                            <option id="生命樂活" class="課程活動" value="9" hidden>生命樂活</option>
+                                                            <option id="知識工具" class="課程活動" value="9" hidden>知識工具</option>
                                                             {{-- <option id="法規實務" class="法規政策" value="10" hidden>法規實務</option> --}}
                                                             <option id="政策研究" class="法規政策" value="11" hidden>政策研究</option>
                                                         </select>

@@ -16,7 +16,7 @@ $media-xl: 1200px !default;
 
 $color-greyish:#ababab;
 $color-warm-grey-two: #9b9b9b;
-$color-greyish-brown: #4a4a4a ;
+$color-greyish-brown: #4a4a4a;
 $color-black: #000000;
 $color-dull-orange: #c99a32;
 $color-brownish-orange: #b5861f;
@@ -28,12 +28,12 @@ $color-white: #ffffff;
 $color-white-two: #e5e5e5;
 $color-warm-grey: #999999;
 $color-grey: #666666;
-$color-dark-bule : #434e58;
+$color-dark-bule : #000; //#434e58;
 $color-charcoal-grey: #302f30;
-$color-orange: #f58764; // rgba(245,135,100,1)
+$color-orange: rgba(242,130,99,1);//#f58764; // rgba(245,135,100,1)
 $color-rosy-pink: #f16670;
 $color-pink: #EA686A;
-$color-rouge: #e3556d;  // rgba(241,102,112,1)
+$color-rouge: rgba(196,70,91,1); // #e3556d;  // rgba(241,102,112,1) rgba(186,70,91,1)
 $color-blood: #b03857;
 
 
@@ -68,4 +68,18 @@ $font-family-base: 'Arial', 'Cormorant Infant','PingFangTC', 'Microsoft JhengHei
         -webkit-text-fill-color: transparent;
       }
     }
+  }
+
+  :focus{
+    background: #FFBF47 !important;
+    border: 2px dashed $color-claret !important;
+  }
+
+  // CK-edit
+  .ckedit{
+    img{
+      height: auto;
+      width: 100%;
+    }
+
   }

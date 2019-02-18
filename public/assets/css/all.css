@@ -13260,6 +13260,11 @@ a.text-dark:hover, a.text-dark:focus {
   background: #FFBF47 !important;
   border: 2px dashed #590405 !important;
 }
+
+.ckedit img {
+  height: auto !important;
+  width: 100% !important;
+}
 .breadcrumb {
   display: block;
   padding: 0 0 0.25rem 0;

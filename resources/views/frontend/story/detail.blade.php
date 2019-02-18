@@ -75,10 +75,10 @@
 
             <section class="row justify-content-center py-5">
                 @if($article->lock == 1)
-                <div class="col-12 col-lg-10" oncontextmenu="return false" oncopy="return false" oncut="return false" onpaste="return false"
+                <div class="col-12 col-lg-10 ckedit" oncontextmenu="return false" oncopy="return false" oncut="return false" onpaste="return false"
                 style="-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-touch-callout: default ;-webkit-touch-callout: none;">
                 @else
-                <div class="col-12 col-lg-10">
+                <div class="col-12 col-lg-10 ckedit">
                 @endif
                     {!! $article->body !!}
                 </div>

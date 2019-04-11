@@ -1,6 +1,6 @@
 @extends('frontend.master.master')
 @section('title')
-<title>病人自主研究中心 | Patient Autonomy Research Center - 課程與資源 - 知識工具</title>
+<title>病人自主研究中心 | Patient Autonomy Research Center - 課程與資源 - 知識工具/下載</title>
 @endsection
 @section('main')
 <!--main-->
@@ -16,7 +16,7 @@
             <a href="{{ url('/event')}}" title="課程與資源" tabindex="2">課程與資源</a>
         </li>
         <li class="breadcrumb-item">
-            <a href="{{ url('/event/lohas/video')}}" title="知識工具" tabindex="2">知識工具</a>
+            <a href="{{ url('/event/lohas/video')}}" title="知識工具/下載" tabindex="2">知識工具/下載</a>
         </li>
         <li class="breadcrumb-item active" id="active_breadcrumb"></li>
         <h2 class="d-none" id="h2"></h2>

@@ -9,7 +9,7 @@
             <div class="col-12 col-lg-4 text-center">
                 <div class="footer-title">即刻行動</div>
                 <a href="{{ url('/donate/story') }}" title="分享故事" class="footer-link">分享故事</a> /
-                <a href="https://tlea.neticrm.tw/civicrm/contribute/transact?reset=1&id=3" target="_blank" rel="noopener noreferrer" title="我要捐款(另開視窗)" class="footer-link">我要捐款</a> /
+                <a href="{{ url('/donate#method') }}" title="我要捐款" class="footer-link">我要捐款</a> /
                 <a href="https://tlea.neticrm.tw/civicrm/profile/create?gid=15&reset=1" target="_blank" rel="noopener noreferrer" title="訂閱電子報(另開視窗)" class="footer-link">訂閱電子報</a>
             </div>
             <div class="col-12 col-lg-4 text-center">
@@ -28,8 +28,7 @@
     </div>
     <div class="container footer-copyright">
         <a href="mailto:service@parc.tw">電子信箱 : service@parc.tw</a>
-        <div>中心地址 : 10617台北市大安區羅斯福路四段1號
-            <br class="d-lg-none"> 台大哲學系4F 404室</div>
+        <div>中心地址 : 22099 新北市政府郵局第30-98號信箱
         <div>病人自主研究中心 PARC © 2019. All Rights Reserved.</div>
     </div>
     <div class="container">

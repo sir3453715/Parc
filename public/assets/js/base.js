@@ -82,7 +82,11 @@ function lectorCarousel() {
                     dots: true,
                     nav: false,
                 }
-            }
+            },
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 4000,
+            autoplaySpeed: true
         })
     }
 }

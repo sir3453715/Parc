@@ -16,7 +16,7 @@
                 </a>                 
             </div>
             <!-- 我要捐款 -->
-            <a href="https://tlea.neticrm.tw/civicrm/contribute/transact?reset=1&id=3" target="_blank" rel="noopener noreferrer" title="我要捐款(另開視窗)" class="btn-donation" tabindex="4">我要<br>捐款</a>
+            <a href="{{ url('/donate#method') }}" title="我要捐款" class="btn-donation" tabindex="4">我要<br>捐款</a>
             <!-- GoTop -->
             {{-- <a href="#" title="回到頂端" class="btn-gotop" tabindex="-1">
                 <i class="fa fa-caret-up"></i>
@@ -35,6 +35,23 @@
                         </h1>
                         <ul class="col-12 col-lg-8 nav justify-content-end">
                             <li class="nav-item">
+                                <a class="nav-link" href="{{ url('/love') }}" title="愛．活動" tabindex="2">愛．活動</a>
+                                <a href="#nav-story" class="nav-plus collapsed" data-toggle="collapse"><i class="fa fa-chevron-right" title="展開/折疊選項"></i></a>
+                                <div class="sub-nav collapsed collapse" id="nav-story">
+                                    <div class="sub-nav__box">
+                                        <div class="sub-nav__item">
+                                            <a href="{{ url('/story/love') }}" title="親愛劇場" tabindex="2">親愛劇場</a>
+                                        </div>
+                                        <div class="sub-nav__item">
+                                            <a href="{{ url('/story/doctor') }}" title="白袍診間" tabindex="2">白袍診間</a>
+                                        </div>
+                                        <div class="sub-nav__item">
+                                            <a href="{{ url('/story/life') }}" title="生死迷藏" tabindex="2">生死迷藏</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="{{ url('story/special') }}" title="生命故事" tabindex="2">生命故事</a>
                                 <a href="#nav-story" class="nav-plus collapsed" data-toggle="collapse"><i class="fa fa-chevron-right" title="展開/折疊選項"></i></a>
                                 <div class="sub-nav collapsed collapse" id="nav-story">
@@ -52,7 +69,7 @@
                                             <a href="{{ url('/story/life') }}" title="生死迷藏" tabindex="2">生死迷藏</a>
                                         </div>
                                         <div class="sub-nav__item">
-                                            <a href="{{ url('/story/expert') }}" title="權威觀點" tabindex="2">權威觀點</a>
+                                            <a href="{{ url('/story/expert') }}" title="為自己發聲" tabindex="2">為自己發聲</a>
                                         </div>
                                         <div class="sub-nav__item">
                                             <a href="{{ url('/story/story') }}" title="私房故事" tabindex="2">私房故事</a>
@@ -75,7 +92,7 @@
                                             <a href="{{ url('/event/video') }}" title="線上影音課程" tabindex="2">線上影音課程</a>
                                         </div>
                                         <div class="sub-nav__item">
-                                            <a href="{{ url('/event/lohas') }}" title="知識工具" tabindex="2">知識工具</a>
+                                            <a href="{{ url('/event/lohas') }}" title="知識工具/下載" tabindex="2">知識工具/下載</a>
                                         </div>
                                     </div>
                                 </div>
@@ -131,6 +148,9 @@
                                         <div class="sub-nav__item">
                                             <a href="{{ url('news/international') }}" title="國際動態" tabindex="2">國際動態</a>
                                         </div>
+                                        <div class="sub-nav__item">
+                                            <a href="{{ url('news/love_event') }}" title="活動動態" tabindex="2">活動動態</a>
+                                        </div>
                                     </div>
                                 </div>
                             </li>
@@ -153,7 +173,7 @@
                             <a class="nav-link" href="{{ url('/about') }}" title="關於我們" tabindex="1">關於我們</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/exercise') }}" title="行使權利" tabindex="1">行使權利</a>
+                            <a class="nav-link" href="{{ url('/exercise') }}" title="我要簽署" tabindex="1">我要簽署</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/donate') }}" title="我要支持" tabindex="1">我要支持</a>

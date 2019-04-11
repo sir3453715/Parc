@@ -36,6 +36,16 @@
 											</div>
 										</td>
 									</tr>
+									<!-- 欄位：Link -->
+									<tr>
+										<td class="header-require col-lg-2">連結<br/>Link</td>
+										<td>
+											<div class="col-lg-3 nopadding">
+													<input name="link" type="text" value="{{ old('link') }}"  id="link" class="form-control">
+												<label class="error" for="link"></label>
+											</div>
+										</td>
+									</tr>
 									{{-- 欄位：Pic Upload --}}
                                     <tr>
 										<td class="header-require col-lg-2">上傳圖片<br/>Upload Picture</td>

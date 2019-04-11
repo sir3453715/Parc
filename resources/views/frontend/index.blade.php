@@ -37,11 +37,11 @@
                     </div>
                     <div class="banner-icon__title">什麼是病人自主權利法</div>
                 </a>
-                <a href="{{ url('/exercise')}}" class="col-6 col-lg-4 banner-icon" title="如何行使權利">
+                <a href="{{ url('/exercise')}}" class="col-6 col-lg-4 banner-icon" title="我要簽署">
                     <div class="banner-icon__img">
                         <img src="{{ asset('assets/images/icon/icon-02.png') }}" alt="" class="img-fluid" />
                     </div>
-                    <div class="banner-icon__title">如何行使權利</div>
+                    <div class="banner-icon__title">我要簽署</div>
                 </a>
                 <a href="{{ url('/donate') }}" class="col-6 col-lg-4 banner-icon" title="我要支持">
                     <div class="banner-icon__img">
@@ -121,9 +121,20 @@
             <div class="row px-2 px-lg-0 banner-sponsor">
                 @foreach($partner as $data)
                 <div class="col-4 col-lg-3">
-                    <div class=" banner-sponsor__item">
-                        <img src="/storage/{{$data->pic}}" alt="{{$data->title}}" class="img-fluid" title="{{$data->title}}" />
-                    </div>
+                    @isset($data->link)
+                        <a href="{{ $data->link }}" target="_blank">
+                            <div class=" banner-sponsor__item">
+                                <img src="/storage/{{$data->pic}}" alt="{{$data->title}}" class="img-fluid" title="{{$data->title}}" />
+                            </div>
+                            <p align="center">{{$data->title}}</p>
+                        </a>
+                    @endisset
+                    @empty($data->link)
+                        <div class=" banner-sponsor__item">
+                            <img src="/storage/{{$data->pic}}" alt="{{$data->title}}" class="img-fluid" title="{{$data->title}}" />
+                        </div>
+                        <p align="center">{{$data->title}}</p>
+                    @endempty
                 </div>
                 @endforeach
             </div>

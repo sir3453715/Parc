@@ -62,7 +62,7 @@ class IndexController extends Controller
             $data['article_list'] = $this->articleRepo->getArticleResult(null,1,3,null,null,6);
         }
         else if($data['type'] == 'expert'){
-            //權威觀點
+            //為自己發聲
             $data['article_list'] = $this->articleRepo->getArticleResult(null,1,4,null,null,6);
         }
         else if($data['type'] == 'story'){
@@ -85,7 +85,7 @@ class IndexController extends Controller
             $data['lohas'][$key->en_name] = $this->articleRepo->getArticleResult(3,2,9,$key->id);
         }
         // dd($data);
-        //抓有幾個知識工具特殊分類再丟articlelist
+        //抓有幾個知識工具/下載特殊分類再丟articlelist
         return view('frontend.event.index',$data);
     }
     public function eventCourseIndex($type = null, Request $request){

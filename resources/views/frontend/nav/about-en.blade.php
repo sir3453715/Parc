@@ -116,7 +116,7 @@
                                         <a href="{{ url('/story/life') }}" title="Life and death" tabindex="2">生死迷藏</a>
                                     </div>
                                     <div class="sub-nav__item">
-                                        <a href="{{ url('/story/expert') }}" title="Experts' viewpoint" tabindex="2">權威觀點</a>
+                                        <a href="{{ url('/story/expert') }}" title="Experts' viewpoint" tabindex="2">為自己發聲</a>
                                     </div>
                                     <div class="sub-nav__item">
                                         <a href="{{ url('/story/story') }}" title="Stories" tabindex="2">私房故事</a>
@@ -139,7 +139,7 @@
                                         <a href="{{ url('/event/video') }}" title="Online video lessons" tabindex="2">線上影音課程</a>
                                     </div>
                                     <div class="sub-nav__item">
-                                        <a href="{{ url('/event/lohas') }}" title="Lohas" tabindex="2">知識工具</a>
+                                        <a href="{{ url('/event/lohas') }}" title="Lohas" tabindex="2">知識工具/下載</a>
                                     </div>
                                 </div>
                             </div>
@@ -217,7 +217,7 @@
                         <a class="nav-link" href="{{ url('/about') }}" title="About Us" tabindex="1">關於我們</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/exercise') }}" title="Exercise your rights" tabindex="1">行使權利</a>
+                        <a class="nav-link" href="{{ url('/exercise') }}" title="Exercise your rights" tabindex="1">我要簽署</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/donate') }}" title="Support and donation" tabindex="1">我要支持</a>
@@ -283,8 +283,7 @@
         <div class="world__box">
             <p class="mb-4"><b>Patient Autonomy Research Center</b></p>
             <p><b>Email：</b><a href="#">service@parc.tw</a></p>
-            <p><b>Address:</b> No.1, Sec. 4, Roosevelt Rd., Zhongzheng Dist., Taipei City 100, Taiwan (R.O.C.)</p>
-            <p><b> 　　　 　 </b>Liberal Education Classroom Building  Life Education Center.</p>
+            <p><b>Address:</b> P.O.BOX 30-98 Banciao New Taipei City 22099 Taiwan(R.O.C)</p>
         </div>
     
     
@@ -303,7 +302,7 @@
             <div class="col-12 col-lg-4 text-center">
                 <div class="footer-title">即刻行動</div>
                 <a href="{{ url('/donate/story') }}" title="Share your story" class="footer-link">分享故事</a> /
-                <a href="https://tlea.neticrm.tw/civicrm/contribute/transact?reset=1&id=3" target="_blank" rel="noopener noreferrer" title="我要捐款(另開視窗)" class="footer-link">我要捐款</a> /
+                <a href="{{ url('/donate#method') }}" title="我要捐款" class="footer-link">我要捐款</a> /
                 <a href="https://tlea.neticrm.tw/civicrm/profile/create?gid=15&reset=1" target="_blank" rel="noopener noreferrer" title="訂閱電子報(另開視窗)" class="footer-link">訂閱電子報</a>
             </div>
             <div class="col-12 col-lg-4 text-center">
@@ -322,8 +321,7 @@
     </div>
     <div class="container footer-copyright">
         <a href="mailto:service@parc.tw">電子信箱 : service@parc.tw</a>
-        <div>中心地址 : 10617 台北市大安區羅斯福路四段1號
-            <br class="d-lg-none"> 博雅教學館 生命教育中心</div>
+        <div>中心地址 : 22099 新北市政府郵局第30-98號信箱
         <div>病人自主研究中心 PARC © 2018. All Rights Reserved.</div>
     </div>
     <div class="container">

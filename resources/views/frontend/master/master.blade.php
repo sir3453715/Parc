@@ -34,7 +34,7 @@
     <!--<link rel="stylesheet" href="css/all.min.css">-->
 </head>
     <body>
-        <a href="#C" title="跳到主要內容區塊" tabindex="1" style="color:rgb(248,248,248);">跳到主要內容區塊</a>
+        <a href="#C" title="跳到主要內容區塊" tabindex="1" style="color:rgb(248,248,248);position:absolute;border:0;">跳到主要內容區塊</a>
         <noscript style="background-color:white;z-index: 5000;position: absolute;">
             您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態
             <br>

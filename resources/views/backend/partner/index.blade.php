@@ -21,6 +21,7 @@
                             <th style="width: 5%">順序<br/>Order</th>
                             <th style="width: 5%">有效<br/>Active</th>
                             <th>標題<br/>Title</th>
+                            <th>連結<br/>Link</th>
                             <th>圖片<br/>Picture</th>
                             <th>新增時間<br/>Created Time</th>
                             <th>修改時間<br/>Modify Time</th>
@@ -35,6 +36,7 @@
                                         <input type="checkbox" disabled {{ ($data->active == 1) ? "checked" : "" }}>
                                     </td>
                                     <td>{{ $data->title }}</td>
+                                    <td>{{ $data->link }}</td>
                                     <td>
                                         @if($data->pic)
                                             <img src="/storage/{{$data->pic}}" width="100%" style="padding: 10px;">

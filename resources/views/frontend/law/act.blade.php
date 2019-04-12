@@ -28,7 +28,7 @@
     <img src="{{ asset('assets/images/icon/exercise-step2.png') }}" class="img-fluid" alt="" />
 </h3>
 <div class="btn-more-line">
-    <a href="{{ url('/event/video')}}" class="btn-more">前往線上影音課程</a>
+    <a href="{{ url('/exercise')}}" class="btn-more">進一步瞭解病主法</a>
 </div>
 
 <section>

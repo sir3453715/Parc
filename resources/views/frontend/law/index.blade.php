@@ -21,6 +21,14 @@
     <div class="banner-single__subtitle">我國病人自主權法理資訊與政策動態即時掌握</div>
 </div>
 
+<h3 class="text-center">
+    <img src="{{ asset('assets/images/icon/exercise-step2.png') }}" class="img-fluid" alt="" />
+    <img src="{{ asset('assets/images/icon/exercise-step2.png') }}" class="img-fluid" alt="" />
+</h3>
+<div class="btn-more-line">
+    <a href="{{ url('/exercise')}}" class="btn-more">進一步瞭解病主法</a>
+</div>
+
 <section>
     <h2 class="title">相關法規</h2>
     @if(count($law_article_list)<=12)

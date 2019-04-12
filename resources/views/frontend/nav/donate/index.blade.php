@@ -100,7 +100,7 @@
                 <div class="title-black">定期定額郵局委託轉帳捐款</div>
                 <ul>
                     <li>
-                        (1)   請於線上下載 <a href="https://drive.google.com/open?id=1WVWRA3GBDOjZNETxoCVll_ggioC6gqz-" target="_blank" title="郵局委託轉帳捐款授權書(另開視窗)">「郵局委託轉帳捐款授權書」</a>
+                        (1)   請於線上下載 <a class="text-rosy-pink" href="https://drive.google.com/open?id=1WVWRA3GBDOjZNETxoCVll_ggioC6gqz-" target="_blank" title="郵局委託轉帳捐款授權書(另開視窗)">「郵局委託轉帳捐款授權書」</a>
                         ，授權書共兩聯，列印出來後請務必蓋上開戶印鑑章，填妥後將正本寄回台灣生命教育學會病人自主研究中心（22099 板橋郵局第30-98號信箱）。
                     </li>
                     <li>

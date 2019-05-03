@@ -37,6 +37,9 @@ class ArticleRepository{
             case "news":
                 $category=5;
                 break;
+            case "love":
+                $category=6;
+                break;
         }
         $sub_category = DB::table('sub_category')->where('category_id',$category)->get();
         // $condition=$condition->where('active', 1);

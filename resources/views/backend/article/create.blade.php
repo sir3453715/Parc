@@ -303,6 +303,10 @@
                 var category_id=5;
                 $("#categorygg").attr("value","5");
                 break;
+            case "love":
+                var category_id=6;
+                $("#categorygg").attr("value","6");
+                break;
         }
         
         if(category_id) {

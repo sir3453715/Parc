@@ -36,20 +36,6 @@
                         <ul class="col-12 col-lg-8 nav justify-content-end">
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('/love') }}" title="愛．活動" tabindex="2">愛．活動</a>
-                                <a href="#nav-story" class="nav-plus collapsed" data-toggle="collapse"><i class="fa fa-chevron-right" title="展開/折疊選項"></i></a>
-                                <div class="sub-nav collapsed collapse" id="nav-story">
-                                    <div class="sub-nav__box">
-                                        <div class="sub-nav__item">
-                                            <a href="{{ url('/story/love') }}" title="親愛劇場" tabindex="2">親愛劇場</a>
-                                        </div>
-                                        <div class="sub-nav__item">
-                                            <a href="{{ url('/story/doctor') }}" title="白袍診間" tabindex="2">白袍診間</a>
-                                        </div>
-                                        <div class="sub-nav__item">
-                                            <a href="{{ url('/story/life') }}" title="生死迷藏" tabindex="2">生死迷藏</a>
-                                        </div>
-                                    </div>
-                                </div>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('story/special') }}" title="生命故事" tabindex="2">生命故事</a>

@@ -75,6 +75,18 @@ class IndexController extends Controller
         }
         return view('frontend.story.index',$data);
     }
+
+    public function loveIndex($type = null, Request $request) {
+        if($type == null){
+            $type = $this->otherRepo->getFirstExtraSubCategory(20);
+        }
+        $data['type'] = $type;
+        $data['slider'] = $this->articleRepo->getArticleResult(4,6,20,null,true);
+        $data['article_list'] = $this->articleRepo->getArticleResult(null,6,20,$type,null,6);
+        $data['course_extra_sub_category'] = $this->otherRepo->getExtraSubCategory(20);
+        return view('frontend.love.index',$data);
+    }
+
     public function eventIndex(Request $request){
         $data['slider'] = $this->articleRepo->getArticleResult(4,2,null,null,true);
         $data['course_article_list'] = $this->articleRepo->getArticleResult(6,2,6,null,null);

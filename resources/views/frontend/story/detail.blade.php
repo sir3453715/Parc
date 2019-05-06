@@ -16,9 +16,11 @@
                 <li class="breadcrumb-item">
                     <a href="{{ url('/'.$article->category_en().'/') }}" title="{{$article->category()}}" tabindex="2">{{$article->category()}}</a>
                 </li>
+                @if($category != 'love')
                 <li class="breadcrumb-item">
                     <a href="{{ url('/'.$article->category_en().'/'.$article->sub_category_en()) }}" title="{{$article->sub_category()}}" tabindex="2">{{$article->sub_category()}}</a>
                 </li>
+                @endif
                 @if($article->extra_sub_category_en())
                 <li class="breadcrumb-item">
                     <a href="{{ url('/'.$article->category_en().'/'.$article->sub_category_en().'/'.$article->extra_sub_category_en()) }}" title="{{$article->extra_sub_category()}}" tabindex="2">{{$article->extra_sub_category()}}</a>

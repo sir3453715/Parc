@@ -15,9 +15,6 @@
             <li class="breadcrumb-item">
                 <a href="{{ url('/love')}}" title="愛．活動" tabindex="2">愛．活動</a>
             </li>
-            <li class="breadcrumb-item">
-                <a href="{{ url('/love')}}" title="愛-專業課程" tabindex="2">愛-專業課程</a>
-            </li>
             <li class="breadcrumb-item active" id="active_breadcrumb"></li>
             <h2 class="d-none" id="h2"></h2>
         </ol>
@@ -38,7 +35,7 @@
         <ul class="nav justify-content-center">
             @foreach($course_extra_sub_category as $category)
                 <li class="nav-item">
-                    <a class="nav-link" id="nav-{{ $category->en_name }}" href="{{ url('event/course/'.$category->en_name) }}" title="{{ $category->name }}">{{$category->name}}</a>
+                    <a class="nav-link" id="nav-{{ $category->en_name }}" href="{{ url('love/love-course/'.$category->en_name) }}" title="{{ $category->name }}">{{$category->name}}</a>
                 </li>
             @endforeach
         </ul>

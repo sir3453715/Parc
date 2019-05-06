@@ -18,6 +18,7 @@ Route::group(['namespace' => 'Frontend'], function () {
     Route::get('/{category}/{sub_category}/article/{id}' , 'ArticleController@getArticleDetail');
     
     Route::get('/love/{type?}' , 'IndexController@loveIndex');
+    Route::get('/love/love-course/{type?}' , 'IndexController@loveIndex');
 
     Route::get('/event' , 'IndexController@eventIndex');
     Route::get('/event/course/{type?}' , 'IndexController@eventCourseIndex');

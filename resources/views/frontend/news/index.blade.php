@@ -46,6 +46,9 @@
                     <li class="nav-item">
                         <a class="nav-link" id="international" href="{{ url('/news/international') }}" title="國際動態">國際動態</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="love-event" href="{{ url('/news/love-event') }}" title="愛．活動">愛．活動</a>
+                    </li>
                 </ul>
 
                 <div class="row">
@@ -93,6 +96,13 @@
                         $("#h2").append("國際動態")
                         $("#active_title").append(" - 國際動態")
                         $("#international").addClass("active");
+                    }
+                    else if( '{{Request::path()}}' == 'news/love-event')
+                    {
+                        $("#active_breadcrumb").append("愛．活動")
+                        $("#h2").append("愛．活動")
+                        $("#active_title").append(" - 愛．活動")
+                        $("#love-event").addClass("active");
                     }
                     else{
                         $("#active_breadcrumb").append("中心動態")

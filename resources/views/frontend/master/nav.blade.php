@@ -135,7 +135,7 @@
                                             <a href="{{ url('news/international') }}" title="國際動態" tabindex="2">國際動態</a>
                                         </div>
                                         <div class="sub-nav__item">
-                                            <a href="{{ url('news/love_event') }}" title="活動動態" tabindex="2">活動動態</a>
+                                            <a href="{{ url('news/love-event') }}" title="愛．活動" tabindex="2">愛．活動</a>
                                         </div>
                                     </div>
                                 </div>

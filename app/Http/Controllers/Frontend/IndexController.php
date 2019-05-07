@@ -203,6 +203,10 @@ class IndexController extends Controller
             //國際動態
             $data['article_list'] = $this->articleRepo->getArticleResult(null,5,19,null,null,9);
         }
+        else if($request->type == 'love-event'){
+            //愛．活動
+            $data['article_list'] = $this->articleRepo->getArticleResult(null,5,21,null,null,9);
+        }
         else{
             //中心動態
             $data['article_list'] = $this->articleRepo->getArticleResult(null,5,17,null,null,9);

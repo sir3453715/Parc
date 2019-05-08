@@ -27,7 +27,7 @@
     <div class="row justify-content-center">
         <div class="col-12 col-lg-7">
 
-            <h2 class="title">
+            <h2 class="title" style="line-height: 1.4;">
                 歡迎分享您對醫療現場、臨床決定或生命道別的深刻經驗，我們將刊登於<a class="text-rosy-pink" href="{{ url('/story/story') }}">生命故事專欄</a>。
             </h2>
 

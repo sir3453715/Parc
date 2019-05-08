@@ -31,6 +31,7 @@
     {{-- script --}}
     @include('frontend.master.script')
 
+    @yield('custom_css')
     <!--<link rel="stylesheet" href="css/all.min.css">-->
 </head>
     <body>
@@ -59,5 +60,6 @@
             @yield('main')
             <!--footer-->
             @include('frontend.master.footer')
+        </div>
     </body>
 </html>

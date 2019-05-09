@@ -85,7 +85,7 @@
                     <li>戶名：社團法人台灣生命教育學會</li>
                     <li>匯款帳號：154-10-000492-1</li>
                     <li>收款銀行：華南銀行臺大分行</li>
-                    <li>匯款/轉帳成功後請務必來信 <a href="donate/story" title="service@parc.tw">service@parc.tw</a> 告知捐款人資料，以便開立收據</li>
+                    <li>匯款/轉帳成功後請務必來信 <a href="mailto:service@parc.tw">service@parc.tw</a> 告知捐款人資料，以便開立收據</li>
                 </ul>
             </div>
             <div class="col-12 col-lg-6">
@@ -105,7 +105,7 @@
                     </li>
                     <li>
                         (2)   病主中心收到您的授權書後，將主動以電話與您確認，並依照您選擇的方式寄發捐款收據，
-                        您亦可來信 <a href="donate/story" title="service@parc.tw">service@parc.tw</a> 查詢。
+                        您亦可來信 <a href="mailto:service@parc.tw">service@parc.tw</a> 查詢。
                     </li>
                 </ul>
             </div>

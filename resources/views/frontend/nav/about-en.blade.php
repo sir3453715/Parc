@@ -283,7 +283,7 @@
         <div class="world__box">
             <p class="mb-4"><b>Patient Autonomy Research Center</b></p>
             <p><b>Email：</b><a href="#">service@parc.tw</a></p>
-            <p><b>Address:</b> P.O.BOX 30-98 Banciao New Taipei City 22099 Taiwan(R.O.C)</p>
+            <p><b>Address:</b> P.O.BOX 30-98 NewTaipei City Government, New Taipei City 22099, Taiwan (R.O.C.)</p>
         </div>
     
     

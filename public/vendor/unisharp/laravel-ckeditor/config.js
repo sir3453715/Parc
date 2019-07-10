@@ -31,7 +31,9 @@ CKEDITOR.editorConfig = function( config ) {
 	config.removeButtons = 'Templates,Save,NewPage,Preview,Print,Cut,Copy,Paste,PasteText,PasteFromWord,Undo,Redo,Find,Replace,SelectAll,Scayt,Form,Radio,TextField,Checkbox,Textarea,Select,Button,ImageButton,HiddenField,Subscript,Superscript,CopyFormatting,RemoveFormat,CreateDiv,BidiLtr,BidiRtl,Language,Unlink,Anchor,Flash,PageBreak,Iframe,ShowBlocks,About';
 
 	// Set the most common block elements.
-	config.format_tags = 'p;h1;h2;h3;pre';
+	config.format_tags = 'p;h1;h2;h3;h4;h5';
+
+    config.font_names = 'Arial;Arial Black;Comic Sans MS;Courier New;Tahoma;Times New Roman;Verdana;新細明體;細明體;標楷體;微軟正黑體';
 
 	// Simplify the dialog windows.
 	config.removeDialogTabs = 'image:advanced;image:Upload;link:advanced';

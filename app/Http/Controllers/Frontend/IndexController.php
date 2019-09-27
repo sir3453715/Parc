@@ -30,7 +30,7 @@ class IndexController extends Controller
         // $length = null ,$category = null ,$sub_category = null 
         // ,$extra_sub_category = null ,$pagination = null ,$order = false
         $data['slider'] = $this->articleRepo->getArticleResult(6,5);
-        $data['banner'] = $this->indexRepo->getBannerResult(4);
+        $data['banner'] = $this->indexRepo->getBannerResult(7);
         $data['quote'] = $this->indexRepo->getQuoteResult(4);
         $data['partner'] = $this->indexRepo->getPartnerResult();
         $data['video'] = $this->indexRepo->getVideo();
@@ -40,7 +40,7 @@ class IndexController extends Controller
     public function storyIndex($type = null,Request $request){
         //     $length = null , $category = null , $sub_category = null 
         // , $extra_sub_category = null , $display = null, $pagination = null , $order = false
-        $data['slider'] = $this->articleRepo->getArticleResult(4,1,null,null,true);
+        $data['slider'] = $this->articleRepo->getArticleResult(7,1,null,null,true);
         $data['type'] = $type;
         if($data['type'] == null){
             $data['type'] = "special";
@@ -81,14 +81,14 @@ class IndexController extends Controller
             $type = $this->otherRepo->getFirstExtraSubCategory(20);
         }
         $data['type'] = $type;
-        $data['slider'] = $this->articleRepo->getArticleResult(4,6,20,null,true);
+        $data['slider'] = $this->articleRepo->getArticleResult(7,6,20,null,true);
         $data['article_list'] = $this->articleRepo->getArticleResult(null,6,20,$type,null,6);
         $data['course_extra_sub_category'] = $this->otherRepo->getExtraSubCategory(20);
         return view('frontend.love.index',$data);
     }
 
     public function eventIndex(Request $request){
-        $data['slider'] = $this->articleRepo->getArticleResult(4,2,null,null,true);
+        $data['slider'] = $this->articleRepo->getArticleResult(7,2,null,null,true);
         $data['course_article_list'] = $this->articleRepo->getArticleResult(6,2,6,null,null);
         $data['lecturer_list'] = $this->otherRepo->getLecturerResult();
         $data['video_article_list'] = $this->articleRepo->getArticleResult(6,2,8,null,null);
@@ -105,7 +105,7 @@ class IndexController extends Controller
             $type = $this->otherRepo->getFirstExtraSubCategory(6);
         }
         $data['type'] = $type;
-        $data['slider'] = $this->articleRepo->getArticleResult(4,2,6,null,true);
+        $data['slider'] = $this->articleRepo->getArticleResult(7,2,6,null,true);
         $data['article_list'] = $this->articleRepo->getArticleResult(null,2,6,$type,null,6);
         $data['course_extra_sub_category'] = $this->otherRepo->getExtraSubCategory(6);
         return view('frontend.event.course',$data);
@@ -133,7 +133,7 @@ class IndexController extends Controller
             $type = $this->otherRepo->getFirstExtraSubCategory(9);
         }
         $data['type'] = $type;
-        $data['slider'] = $this->articleRepo->getArticleResult(4,2,9,null,true);
+        $data['slider'] = $this->articleRepo->getArticleResult(7,2,9,null,true);
         $data['article_list'] = $this->articleRepo->getArticleResult(null,2,9,$type,null,6);
         $data['lohas_extra_sub_category'] = $this->otherRepo->getExtraSubCategory(9);
         // dd($data);
@@ -186,7 +186,7 @@ class IndexController extends Controller
     public function newsIndex($type = null,Request $request){
         //     $length = null , $category = null , $sub_category = null 
         // , $extra_sub_category = null , $display = null, $pagination = null , $order = false
-        $data['slider'] = $this->articleRepo->getArticleResult(4,5,null,null,true);
+        $data['slider'] = $this->articleRepo->getArticleResult(7,5,null,null,true);
         if($request->type == 'center'){
             //中心動態
             $data['article_list'] = $this->articleRepo->getArticleResult(null,5,17,null,null,9);

@@ -89,7 +89,7 @@
                                 <div class="sub-nav collapsed collapse" id="nav-law">
                                     <div class="sub-nav__box">
                                         <div class="sub-nav__item">
-                                            <a href="{{ url('/law/act') }}" title="法規實務" tabindex="2">法規實務</a>
+                                            <a href="{{ url('/law/act') }}" title="相關法規" tabindex="2">相關法規</a>
                                         </div>
                                         <div class="sub-nav__item">
                                             <a href="{{ url('/law/policy') }}" title="政策研究" tabindex="2">政策研究</a>

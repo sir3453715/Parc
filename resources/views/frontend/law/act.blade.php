@@ -1,7 +1,9 @@
 @extends('frontend.master.master')
+
 @section('title')
-<title>病人自主研究中心 | Patient Autonomy Research Center - 法規政策 - 法規實務</title>
+<title>病人自主研究中心 | Patient Autonomy Research Center - 法規政策 - 相關法規</title>
 @endsection
+
 @section('main')
 <!--main-->
 <main class="container">
@@ -15,24 +17,28 @@
     <li class="breadcrumb-item">
         <a href="{{ url('/law')}}" title="法規政策" tabindex="2">法規政策</a>
     </li>
-    <li class="breadcrumb-item active">法規實務</li>
+    <li class="breadcrumb-item active">相關法規</li>
 </ol>
 
 <!-- banner-main -->
-<div class="banner-single owl-carousel px-0" title="法規實務" style="background: url({{ asset('assets/images/photo/banner-law-1.jpg') }}) no-repeat center;background-size: cover;">
-    <h2 class="banner-single__title">法規實務</h2>
+<div class="banner-single owl-carousel px-0" title="相關法規" style="background: url({{ asset('assets/images/photo/banner-law-1.jpg') }}) no-repeat center;background-size: cover;">
+    <h2 class="banner-single__title">相關法規</h2>
 </div>
 
+<!--
 <h3 class="text-center">
     <img src="{{ asset('assets/images/icon/exercise-step2.png') }}" class="img-fluid" alt="" />
     <img src="{{ asset('assets/images/icon/exercise-step2.png') }}" class="img-fluid" alt="" />
 </h3>
+
 <div class="btn-more-line">
     <a href="{{ url('/exercise')}}" class="btn-more">進一步瞭解病主法</a>
 </div>
+-->
 
 <section>
-    <h2 class="title">相關法規</h2>
+    {{--<h2 class="title">相關法規</h2>--}}
+
     @if(count($law_article_list)<=12)
         <div class="row">
             @foreach($law_article_list as $data)
@@ -73,7 +79,7 @@
     <script type="text/javascript">
         $(document).ready(function() {
             @if(count($law_article_list)>0 && $type == null)
-            showArticle({{$law_article_list[0]->id}});
+            showArticle({{$law_article_list[1]->id}});
             @endif
             @if($type != null)
             showArticle({{$type}});

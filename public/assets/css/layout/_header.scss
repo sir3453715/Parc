@@ -28,7 +28,8 @@ header {
     height: 50px;
     align-items: center;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75);
-    background: linear-gradient(to top, $color-rouge, $color-rosy-pink);
+    // background: linear-gradient(to top, $color-rouge, $color-rosy-pink);    
+    background: $color-rouge;
     .navbar-toggler {
       position: relative;
       cursor: pointer;
@@ -158,6 +159,7 @@ header {
       font-size: rem(50);
       opacity: 0.5;
       transition: all 0.8s ease-in-out;
+      &:focus,
       &:hover {
         opacity: 1;
       }
@@ -351,7 +353,7 @@ header {
         position: fixed;
         top: 160px;
         right: 10px;        
-        background-image: linear-gradient(147deg, #f16770, #eb4a69 41%);
+        background: linear-gradient(147deg, rgba(196,70,91,1), rgba(196,70,91,1) 41%);
         box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.5);
         width: 78px;
         height: 78px;
@@ -365,6 +367,7 @@ header {
         padding: 18px 18px 16px 18px;
         z-index: -1;
         transition: top 0.8s ease-in-out;
+        &:focus,
         &:hover {
           text-decoration: none;
           border: 1px solid rgba(255, 255, 255, 1);
@@ -379,6 +382,7 @@ header {
         line-height: 1;
         font-size: rem(80);
         opacity: 0.5;
+        &:focus,
         &:hover {
           opacity: 1;
         }
@@ -402,7 +406,8 @@ header {
         position: relative; // box-shadow: 0 0 5px 0 rgba(176,56,87,0.75);          
         display: inline-block;
         box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75);
-        background: linear-gradient(to top, $color-rouge, $color-rosy-pink);
+        // background: linear-gradient(to top, $color-rouge, $color-rosy-pink);
+        background: $color-rouge;
         border-bottom-right-radius: em(10);
         border-bottom-left-radius: em(10);
         font-size: em(14);
@@ -461,6 +466,7 @@ header {
           font-size: em(20);
           font-weight: bolder;
           color: $color-dark-bule;
+          &:focus,
           &:hover {
             color: $color-blood;
           }
@@ -469,6 +475,7 @@ header {
       &-item {
         position: relative;
         width: auto;
+        &:focus,
         &:hover {
           .sub-nav {
             display: block;
@@ -525,6 +532,8 @@ header {
           transition: all 0.8s ease;
           background: $color-white;
         }
+        &.hover,
+        &:focus,
         &:hover {
           #S {
             opacity: 1;

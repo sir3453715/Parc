@@ -30,36 +30,45 @@
 
             <div class="exercise__acp">
                 {{-- <a href="{{ url('404')}}" class="exercise__acp-btn">預約ACP</a> --}}
-                <p class="exercise__acp-btn">預約ACP</a>
+                {{--<p class="exercise__acp-btn">預約ACP</a>--}}
+                <div class="exercise__acp-item">
+                    <a href="https://parc.tw/law/policy/article/271" target="_blank" class="exercise__acp-pic exercise__acp-pic01"></a>
+                </div>
+                <div class="exercise__acp-item">
+                    <a href="#" target="_blank" class="exercise__acp-pic exercise__acp-pic02"></a>
+                </div>
+                <div class="exercise__acp-item">
+                    <a href="https://parc.tw/law/policy/article/240" target="_blank" class="exercise__acp-pic exercise__acp-pic03"></a>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="row exercise">
-            <div class="col-12 col-lg-4 exercise__1-1">
-                <div class="exercise__img">
-                    <img src="{{ asset('assets/images/icon/icon-16.png') }}" class="img-fluid" alt="遇到人生善終問題" />
-                </div>
-                <div class="exercise__title">遇到人生善終問題</div>
-                <a href="{{ url('/story/special') }}" class="exercise__subtitle">他們的生命故事</a>
-            </div>
-            <div class="col-12 col-lg-4 exercise__1-2">
+    {{--<section class="row exercise">--}}
+            {{--<div class="col-12 col-lg-4 exercise__1-1">--}}
+                {{--<div class="exercise__img">--}}
+                    {{--<img src="{{ asset('assets/images/icon/icon-16.png') }}" class="img-fluid" alt="遇到人生善終問題" />--}}
+                {{--</div>--}}
+                {{--<div class="exercise__title">遇到人生善終問題</div>--}}
+                {{--<a href="{{ url('/story/special') }}" class="exercise__subtitle">他們的生命故事</a>--}}
+            {{--</div>--}}
+            {{--<div class="col-12 col-lg-4 exercise__1-2">--}}
                 {{-- <div class="exercise__step-no">Step 1</div> --}}
-                <div class="exercise__step-title">更多工具包</div>
-                <div class="exercise__img">
-                    <img src="{{ asset('assets/images/icon/icon-17.png') }}" class="img-fluid" alt="大師解說病主法" />
-                </div>
-                <div class="exercise__title">大師解說病主法</div>
-                <a href="{{ url('/event/video') }}" class="exercise__subtitle">前往線上影音課程</a>
-            </div>
-            <div class="col-12 col-lg-4 exercise__1-3">
-                <div class="exercise__img">
-                    <img src="{{ asset('assets/images/icon/icon-18.png') }}" class="img-fluid" alt="與家人敞開心胸充分討論" />
-                </div>
-                <div class="exercise__title">與家人敞開心胸充分討論</div>
-                <a href="{{ url('/story/story') }}" class="exercise__subtitle">諮商實景</a>
-            </div>
-        </section>
+                {{--<div class="exercise__step-title">更多工具包</div>--}}
+                {{--<div class="exercise__img">--}}
+                    {{--<img src="{{ asset('assets/images/icon/icon-17.png') }}" class="img-fluid" alt="大師解說病主法" />--}}
+                {{--</div>--}}
+                {{--<div class="exercise__title">大師解說病主法</div>--}}
+                {{--<a href="{{ url('/event/video') }}" class="exercise__subtitle">前往線上影音課程</a>--}}
+            {{--</div>--}}
+            {{--<div class="col-12 col-lg-4 exercise__1-3">--}}
+                {{--<div class="exercise__img">--}}
+                    {{--<img src="{{ asset('assets/images/icon/icon-18.png') }}" class="img-fluid" alt="與家人敞開心胸充分討論" />--}}
+                {{--</div>--}}
+                {{--<div class="exercise__title">與家人敞開心胸充分討論</div>--}}
+                {{--<a href="{{ url('/story/story') }}" class="exercise__subtitle">諮商實景</a>--}}
+            {{--</div>--}}
+        {{--</section>--}}
 </div>
 
 </main>

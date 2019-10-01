@@ -11,15 +11,15 @@
                 @foreach($banner as $data)
                 <a href="{{$data->link}}" target="_blank" class="item banner-main__item" title="{{$data->title}}(另開視窗)" style="background: url(/storage/{{$data->pic}}) no-repeat center;background-size: cover;" tabindex="2">
                     <div class="banner-main__label">
-                    <div class="banner-main__title">{{$data->title}}</div>
-                        <div class="banner-main__subtitle">{{$data->body}}</div>
+                        <div class="banner-main__title">{{$data->title}}</div>
+                        {{--<div class="banner-main__subtitle">{{$data->body}}</div>--}}
                     </div>
                 </a>
                 @endforeach
             </div>
 
-            <!-- 最新消息 -->
-            <h2 class="title">最新消息</h2>
+            <!-- 重磅焦點 -->
+            <h2 class="title">重磅焦點</h2>
             <!-- photo-x3 -->
             <div class="photo-x3 owl-carousel">
                 @foreach($slider as $data)
@@ -29,8 +29,9 @@
                 </a>
                 @endforeach
             </div>
+
             <!-- banner-icon -->
-            <div class="row justify-content-center px-2 px-lg-0">
+            <!-- <div class="row justify-content-center px-2 px-lg-0">
                 <a href="{{ url('/about')}}" class="col-6 col-lg-4 banner-icon" title="什麼是病人自主權利法">
                     <div class="banner-icon__img">
                         <img src="{{ asset('assets/images/icon/icon-01.png') }}" alt="" class="img-fluid" />
@@ -49,10 +50,10 @@
                     </div>
                     <div class="banner-icon__title">我要支持</div>
                 </a>
-            </div>
+            </div> -->
 
             <!-- banner-lector -->
-            <div class="banner-lector owl-carousel">
+            <!-- <div class="banner-lector owl-carousel">
                 @foreach($quote as $data)
                 <a class="item banner-lector__item" tabindex="0">
                     <div class="banner-lector__img" alt="{{$data->body}}" style="background: url(/storage/{{$data->pic}}) no-repeat center; background-size: cover;"></div>
@@ -62,12 +63,12 @@
                     </div>
                 </a>
                 @endforeach
-            </div>
+            </div> -->
 
             <!-- 我們的服務 -->
-            <h2 class="title">我們的服務</h2>
+            <!-- <h2 class="title">我們的服務</h2>
             <!-- banner-icon -->
-            <div class="row px-2 px-lg-0">
+            <!-- <div class="row px-2 px-lg-0">
                 <a href="{{ url('/story') }}" class="col-6 col-lg-3 banner-icon">
                     <div class="banner-icon__img">
                         <img src="{{ asset('assets/images/icon/icon-04.png') }}" alt="" class="img-fluid" />
@@ -96,7 +97,66 @@
                     <div class="banner-icon__title">全球脈動</div>
                     <div class="banner-icon__subtitle">掌握各國病人自主權的發展現況，建立海外合作關係。</div>
                 </a>
+            </div> -->
+
+            <!-- 最新消息 -->
+            <h2 class="title">最新消息</h2>
+            <div class="news-main">
+                <a class="news-main__item">
+                    <div class="news-main__date">2019/09/25</div>
+                    <div class="news-main__category">中心動態</div>
+                    <div class="news-main__title">【從電影《與神同行》談《病人自主權利法》 楊玉欣鼓勵思考如何好好活</div>
+                </a>
+                <a class="news-main__item">
+                    <div class="news-main__date">2019/09/25</div>
+                    <div class="news-main__category">中心動態</div>
+                    <div class="news-main__title">《病人自主權利法》政策施行座談會</div>
+                </a>
+                <a class="news-main__item">
+                    <div class="news-main__date">2019/09/25</div>
+                    <div class="news-main__category">課程與活動動態</div>
+                    <div class="news-main__title">「生命自主．掌握善終」 病人自主權利法政策施行第二次座談會</div>
+                </a>
+                <a class="news-main__item">
+                    <div class="news-main__date">2019/09/25</div>
+                    <div class="news-main__category">法規政策動態</div>
+                    <div class="news-main__title">【新聞稿】「簽AD・有保庇」 病人自主權利法上路倒數三個月 善終不再只是想像</div>
+                </a>
+                <a class="news-main__item">
+                    <div class="news-main__date">2019/09/25</div>
+                    <div class="news-main__category">中心動態</div>
+                    <div class="news-main__title">媒體報導 | 康健雜誌-圓滿人生，自己掌握！你一定要認識《病主法》</div>
+                </a>
+                <a class="news-main__item">
+                    <div class="news-main__date">2019/09/25</div>
+                    <div class="news-main__category">法規政策動態</div>
+                    <div class="news-main__title">【新聞稿】「病主元年・全民好命運動」</div>
+                </a>
+                <a class="news-main__item">
+                    <div class="news-main__date">2019/09/25</div>
+                    <div class="news-main__category">國際動態</div>
+                    <div class="news-main__title">心智能力受損評估 臨床實務交流會</div>
+                </a>
+                <a class="news-main__item">
+                    <div class="news-main__date">2019/09/25</div>
+                    <div class="news-main__category">課程與活動動態</div>
+                    <div class="news-main__title">【新聞稿】「簽AD・有保庇」 病人自主權利法上路倒數三個月 善終不再只是想像</div>
+                </a>
+                <a class="news-main__item">
+                    <div class="news-main__date">2019/09/25</div>
+                    <div class="news-main__category">課程與活動動態</div>
+                    <div class="news-main__title">【新聞稿】「簽AD・有保庇」 病人自主權利法上路倒數三個月 善終不再只是想像</div>
+                </a>
+                <a class="news-main__item">
+                    <div class="news-main__date">2019/09/25</div>
+                    <div class="news-main__category">課程與活動動態</div>
+                    <div class="news-main__title">【新聞稿】「簽AD・有保庇」 病人自主權利法上路倒數三個月 善終不再只是想像</div>
+                </a>
+                <a class="news-main__more">
+                    <span data-text="More">更多消息</span>
+                </a>
             </div>
+
             @if($video != null)
             <!-- 影片上稿區  -->
             <div class="row tvcf-main">
@@ -114,13 +174,12 @@
             </div>
             @endif
 
-
             <!-- 合作單位 -->
             <h2 class="title">合作單位</h2>
             <!-- banner-sponsor -->
             <div class="row px-2 px-lg-0 banner-sponsor">
                 @foreach($partner as $data)
-                <div class="col-4 col-lg-3">
+                <div class="banner-sponsor__box">
                     @isset($data->link)
                         <a href="{{ $data->link }}" target="_blank">
                             <div class=" banner-sponsor__item">

@@ -13,7 +13,7 @@
                         <a href="{{ url('')}}" title="首頁" tabindex="2">首頁</a>
                     </li>
                     <li class="breadcrumb-item">
-                        <a href="{{ url ('story/special')}}" title="生命故事" tabindex="2">生命故事</a>
+                        <a title="生命故事" tabindex="2">生命故事</a>
                     </li>
                     <li class="breadcrumb-item active" id="active_breadcrumb"></li>
                     <h2 class="d-none" id="h2"></h2>

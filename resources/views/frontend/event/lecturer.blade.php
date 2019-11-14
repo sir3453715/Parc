@@ -33,9 +33,9 @@
                 <a href="{{ url('')}}" title="首頁" tabindex="2">首頁</a>
             </li>
             <li class="breadcrumb-item">
-                <a href="{{ url('/event')}}" title="課程與資源" tabindex="2">課程與資源</a>
+                <a title="課程與資源" tabindex="2">課程與資源</a>
             </li>
-            <li class="breadcrumb-item active">講師服務</li>
+            <li class="breadcrumb-item active">ACP諮商現場</li>
         </ol>
 
         <!-- banner-main -->

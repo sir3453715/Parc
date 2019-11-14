@@ -15,7 +15,7 @@
         <a href="{{ url('')}}" title="首頁" tabindex="2">首頁</a>
     </li>
     <li class="breadcrumb-item">
-        <a href="{{ url('/law')}}" title="法規政策" tabindex="2">法規政策</a>
+        <a title="法規政策" tabindex="2">法規政策</a>
     </li>
     <li class="breadcrumb-item active">相關法規</li>
 </ol>

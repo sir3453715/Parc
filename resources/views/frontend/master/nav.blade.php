@@ -16,7 +16,15 @@
                 </a>                 
             </div>
             <!-- 我要捐款 -->
-            <a href="{{ url('/donate#method') }}" title="我要捐款" class="btn-donation" tabindex="4">我要<br>捐款</a>
+            <a href="{{ url('/donate#method') }}" title="我要捐款" class="btn-fixed btn-donation" tabindex="4">
+                <img src="{{ asset('assets/images/icon/donate_icon.png') }}" class="d-none d-lg-block" alt="我要捐款">
+                <span class="d-lg-none">我要<br>捐款</span>
+            </a>
+            <!-- 熱血推廣 -->
+            <a href="#" title="熱血推廣" class="btn-fixed btn-push">
+                <img src="{{ asset('assets/images/icon/push_icon.png') }}" class="d-none d-lg-block" alt="熱血推廣">
+                <span class="d-lg-none">熱血<br>推廣</span>
+            </a>
             <!-- GoTop -->
             {{-- <a href="#" title="回到頂端" class="btn-gotop" tabindex="-1">
                 <i class="fa fa-caret-up"></i>
@@ -166,6 +174,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/faq') }}" title="常見問題" tabindex="1">常見問題</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('/sponsor') }}" title="友善單位">友善單位</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/about-en') }}" title="English" tabindex="1">English</a>

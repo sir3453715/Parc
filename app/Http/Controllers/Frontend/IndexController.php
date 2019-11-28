@@ -221,6 +221,10 @@ class IndexController extends Controller
     public function exercise(Request $request){
         return view('frontend.nav.exercise');
     }
+    public function sponsor(Request $request){
+        $data['partner'] = $this->indexRepo->getPartnerResult();
+        return view('frontend.nav.sponsor',$data);
+    }
     public function donate(Request $request){
         return view('frontend.nav.donate.index');
     }

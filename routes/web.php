@@ -42,6 +42,7 @@ Route::group(['namespace' => 'Frontend'], function () {
     Route::get('/faq' , 'IndexController@faq');
     Route::get('/sitemap' , 'IndexController@sitemap');
     Route::get('/exercise', 'IndexController@exercise');
+    Route::get('/sponsor', 'IndexController@sponsor');
 
     Route::get('/donate', 'IndexController@donate');
     Route::get('/donate/story', 'IndexController@donateStory');

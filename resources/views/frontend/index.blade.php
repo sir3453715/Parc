@@ -104,53 +104,23 @@
             <div class="news-main">
                 <a class="news-main__item">
                     <div class="news-main__date">2019/09/25</div>
-                    <div class="news-main__category">中心動態</div>
                     <div class="news-main__title">【從電影《與神同行》談《病人自主權利法》 楊玉欣鼓勵思考如何好好活</div>
                 </a>
                 <a class="news-main__item">
                     <div class="news-main__date">2019/09/25</div>
-                    <div class="news-main__category">中心動態</div>
                     <div class="news-main__title">《病人自主權利法》政策施行座談會</div>
                 </a>
                 <a class="news-main__item">
                     <div class="news-main__date">2019/09/25</div>
-                    <div class="news-main__category">課程與活動動態</div>
                     <div class="news-main__title">「生命自主．掌握善終」 病人自主權利法政策施行第二次座談會</div>
                 </a>
                 <a class="news-main__item">
                     <div class="news-main__date">2019/09/25</div>
-                    <div class="news-main__category">法規政策動態</div>
                     <div class="news-main__title">【新聞稿】「簽AD・有保庇」 病人自主權利法上路倒數三個月 善終不再只是想像</div>
                 </a>
                 <a class="news-main__item">
                     <div class="news-main__date">2019/09/25</div>
-                    <div class="news-main__category">中心動態</div>
                     <div class="news-main__title">媒體報導 | 康健雜誌-圓滿人生，自己掌握！你一定要認識《病主法》</div>
-                </a>
-                <a class="news-main__item">
-                    <div class="news-main__date">2019/09/25</div>
-                    <div class="news-main__category">法規政策動態</div>
-                    <div class="news-main__title">【新聞稿】「病主元年・全民好命運動」</div>
-                </a>
-                <a class="news-main__item">
-                    <div class="news-main__date">2019/09/25</div>
-                    <div class="news-main__category">國際動態</div>
-                    <div class="news-main__title">心智能力受損評估 臨床實務交流會</div>
-                </a>
-                <a class="news-main__item">
-                    <div class="news-main__date">2019/09/25</div>
-                    <div class="news-main__category">課程與活動動態</div>
-                    <div class="news-main__title">【新聞稿】「簽AD・有保庇」 病人自主權利法上路倒數三個月 善終不再只是想像</div>
-                </a>
-                <a class="news-main__item">
-                    <div class="news-main__date">2019/09/25</div>
-                    <div class="news-main__category">課程與活動動態</div>
-                    <div class="news-main__title">【新聞稿】「簽AD・有保庇」 病人自主權利法上路倒數三個月 善終不再只是想像</div>
-                </a>
-                <a class="news-main__item">
-                    <div class="news-main__date">2019/09/25</div>
-                    <div class="news-main__category">課程與活動動態</div>
-                    <div class="news-main__title">【新聞稿】「簽AD・有保庇」 病人自主權利法上路倒數三個月 善終不再只是想像</div>
                 </a>
                 <a class="news-main__more">
                     <span data-text="More">更多消息</span>
@@ -173,29 +143,5 @@
                 <div class="tvcf-main__circle-right"></div>
             </div>
             @endif
-
-            <!-- 合作單位 -->
-            <h2 class="title">合作單位</h2>
-            <!-- banner-sponsor -->
-            <div class="row px-2 px-lg-0 banner-sponsor">
-                @foreach($partner as $data)
-                <div class="banner-sponsor__box">
-                    @isset($data->link)
-                        <a href="{{ $data->link }}" target="_blank">
-                            <div class=" banner-sponsor__item">
-                                <img src="/storage/{{$data->pic}}" alt="{{$data->title}}" class="img-fluid" title="{{$data->title}}" />
-                            </div>
-                            <p align="center">{{$data->title}}</p>
-                        </a>
-                    @endisset
-                    @empty($data->link)
-                        <div class=" banner-sponsor__item">
-                            <img src="/storage/{{$data->pic}}" alt="{{$data->title}}" class="img-fluid" title="{{$data->title}}" />
-                        </div>
-                        <p align="center">{{$data->title}}</p>
-                    @endempty
-                </div>
-                @endforeach
-            </div>
         </main>
 @endsection

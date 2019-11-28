@@ -1,17 +1,6 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-    //前台專區
+// 前台
 Route::group(['namespace' => 'Frontend'], function () {
     Route::get('/' , 'IndexController@index');
     Route::get('/story/{type?}' , 'IndexController@storyIndex');
@@ -64,12 +53,7 @@ Route::group(['namespace' => 'Frontend'], function () {
     });
 });
 
-// Route::get('/', function () {
-//     return view('index');
-// });
-
-
-
+// 後台
 Route::group(['middleware' => 'web', 'prefix' => 'backend'], function () {
     Route::auth();
     Route::group(['middleware' => 'auth', 'namespace' => 'Backend'], function () {

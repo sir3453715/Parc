@@ -37,9 +37,7 @@ class IndexController extends Controller
         return view('frontend.index',$data);
     }
 
-    public function storyIndex($type = null,Request $request){
-        //     $length = null , $category = null , $sub_category = null 
-        // , $extra_sub_category = null , $display = null, $pagination = null , $order = false
+    public function storyIndex($type = null) {
         $data['slider'] = $this->articleRepo->getArticleResult(7,1,null,null,true);
         $data['type'] = $type;
         if($data['type'] == null){
@@ -62,7 +60,7 @@ class IndexController extends Controller
             $data['article_list'] = $this->articleRepo->getArticleResult(null,1,3,null,null,6);
         }
         else if($data['type'] == 'expert'){
-            //為自己發聲
+            //各界觀點
             $data['article_list'] = $this->articleRepo->getArticleResult(null,1,4,null,null,6);
         }
         else if($data['type'] == 'story'){
@@ -73,7 +71,8 @@ class IndexController extends Controller
             //精選特輯
             $data['article_list'] = $this->articleRepo->getArticleSpecial(null,6);
         }
-        return view('frontend.story.index',$data);
+
+        return view('frontend.story.index', $data);
     }
 
     public function loveIndex($type = null, Request $request) {

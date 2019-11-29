@@ -46,7 +46,7 @@
                         <a class="nav-link" id="life" href="{{ url('/story/life') }}" title="生死迷藏">生死迷藏</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="expert" href="{{ url('/story/expert') }}" title="為自己發聲">為自己發聲</a>
+                        <a class="nav-link" id="expert" href="{{ url('/story/expert') }}" title="各界觀點">各界觀點</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="story" href="{{ url('/story/story') }}" title="私房故事">私房故事</a>
@@ -102,9 +102,9 @@
                     }
                     else if( '{{ $type }}' == 'expert')
                     {
-                        $("#active_breadcrumb").append("為自己發聲")
-                        $("#h2").append("為自己發聲")
-                        $("#active_title").append(" - 為自己發聲")
+                        $("#active_breadcrumb").append("各界觀點")
+                        $("#h2").append("各界觀點")
+                        $("#active_title").append(" - 各界觀點")
                         $("#expert").addClass("active");
                     }
                     else{

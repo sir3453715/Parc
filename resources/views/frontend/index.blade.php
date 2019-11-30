@@ -22,7 +22,7 @@
     <!-- 重磅焦點 -->
     <h2 class="title">重磅焦點</h2>
     <div class="photo-x3 owl-carousel">
-        @foreach($slider as $data)
+        @foreach($focus as $data)
         <a href="{{ url('/'. $data->category_en(). '/'. $data->sub_category_en() .'/article/'. $data->id) }}" class="item photo-x3__item" title="{{$data->title}}" tabindex="0">
             <div class="photo-x3__img" style="background: url('/storage/{{$data->pic}}') no-repeat center; background-size: cover;"></div>
             <div class="photo-x3__title">{{$data->title}}</div>

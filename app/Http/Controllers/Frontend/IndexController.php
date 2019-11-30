@@ -23,6 +23,7 @@ class IndexController extends Controller
     public function index()
     {
         $data['banner'] = $this->indexRepo->getBannerResult(7);
+        $data['focus'] = $this->articleRepo->getArticleResult(null,2,9, 'education',null,6);
         $data['slider'] = $this->articleRepo->getArticleResult(6,5);
         $data['video'] = $this->indexRepo->getVideo();
 
@@ -119,8 +120,9 @@ class IndexController extends Controller
         $data['video_extra_sub_category'] = $this->otherRepo->getExtraSubCategory(8);
         return view('frontend.event.video',$data);
     }
-    public function eventLohasIndex($type = null, Request $request){
-        if($type == null){
+
+    public function eventLohasIndex($type = null){
+        if ($type == null) {
             $type = $this->otherRepo->getFirstExtraSubCategory(9);
         }
         $data['type'] = $type;
@@ -130,6 +132,7 @@ class IndexController extends Controller
         // dd($data);
         return view('frontend.event.lohas',$data);
     }
+
     public function lawIndex(Request $request){
         $data['law_article_list'] = $this->articleRepo->getArticleResult(null,3,10,"relatedAct");
         $data['policy_extra_sub_category'] = $this->otherRepo->getExtraSubCategory(11);

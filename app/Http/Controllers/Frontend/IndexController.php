@@ -213,9 +213,12 @@ class IndexController extends Controller
         $data['faq_list'] = $this->otherRepo->getFaqResult();
         return view('frontend.nav.faq',$data);
     }
-    public function exercise(Request $request){
+
+    public function exercise()
+    {
         return view('frontend.nav.exercise');
     }
+
     public function sponsor(Request $request){
         $data['partner'] = $this->indexRepo->getPartnerResult();
         return view('frontend.nav.sponsor',$data);

@@ -5,17 +5,11 @@ namespace App\Http\Controllers\Frontend;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
-
-
 use App\Http\Repositories\Frontend as Repo;
-use App\article;
 use App;
-
-
 
 class IndexController extends Controller
 {
-    //
     public $articleRepo, $indexRepo, $otherRepo;
 
     public function __construct(Repo\ArticleRepository $articleRepo, 
@@ -26,14 +20,12 @@ class IndexController extends Controller
         $this->otherRepo = $otherRepo;
     }
 
-    public function index(){
-        // $length = null ,$category = null ,$sub_category = null 
-        // ,$extra_sub_category = null ,$pagination = null ,$order = false
-        $data['slider'] = $this->articleRepo->getArticleResult(6,5);
+    public function index()
+    {
         $data['banner'] = $this->indexRepo->getBannerResult(7);
-        $data['quote'] = $this->indexRepo->getQuoteResult(4);
-        $data['partner'] = $this->indexRepo->getPartnerResult();
+        $data['slider'] = $this->articleRepo->getArticleResult(6,5);
         $data['video'] = $this->indexRepo->getVideo();
+
         return view('frontend.index',$data);
     }
 
@@ -182,9 +174,9 @@ class IndexController extends Controller
         $data['milestone'] = $this->otherRepo->getMilestoneResult();
         return view('frontend.trend.world',$data);
     }
-    public function newsIndex($type = null,Request $request){
-        //     $length = null , $category = null , $sub_category = null 
-        // , $extra_sub_category = null , $display = null, $pagination = null , $order = false
+
+    public function newsIndex($type = null, Request $request)
+    {
         $data['slider'] = $this->articleRepo->getArticleResult(7,5,null,null,true);
         if($request->type == 'center'){
             //中心動態
@@ -213,6 +205,7 @@ class IndexController extends Controller
         $data['type'] = $type;
         return view('frontend.news.index',$data);
     }
+
     public function faq(Request $request){
         $data['faq_list'] = $this->otherRepo->getFaqResult();
         return view('frontend.nav.faq',$data);

@@ -5,17 +5,11 @@ namespace App\Http\Controllers\Frontend;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
-
-
 use App\Http\Repositories\Frontend as Repo;
-use App\article;
 use App;
-
-
 
 class IndexController extends Controller
 {
-    //
     public $articleRepo, $indexRepo, $otherRepo;
 
     public function __construct(Repo\ArticleRepository $articleRepo, 
@@ -26,20 +20,17 @@ class IndexController extends Controller
         $this->otherRepo = $otherRepo;
     }
 
-    public function index(){
-        // $length = null ,$category = null ,$sub_category = null 
-        // ,$extra_sub_category = null ,$pagination = null ,$order = false
-        $data['slider'] = $this->articleRepo->getArticleResult(6,5);
+    public function index()
+    {
         $data['banner'] = $this->indexRepo->getBannerResult(7);
-        $data['quote'] = $this->indexRepo->getQuoteResult(4);
-        $data['partner'] = $this->indexRepo->getPartnerResult();
+        $data['focus'] = $this->articleRepo->getArticleResult(null,2,9, 'education',null,6);
+        $data['slider'] = $this->articleRepo->getArticleResult(6,5);
         $data['video'] = $this->indexRepo->getVideo();
+
         return view('frontend.index',$data);
     }
 
-    public function storyIndex($type = null,Request $request){
-        //     $length = null , $category = null , $sub_category = null 
-        // , $extra_sub_category = null , $display = null, $pagination = null , $order = false
+    public function storyIndex($type = null) {
         $data['slider'] = $this->articleRepo->getArticleResult(7,1,null,null,true);
         $data['type'] = $type;
         if($data['type'] == null){
@@ -62,7 +53,7 @@ class IndexController extends Controller
             $data['article_list'] = $this->articleRepo->getArticleResult(null,1,3,null,null,6);
         }
         else if($data['type'] == 'expert'){
-            //為自己發聲
+            //各界觀點
             $data['article_list'] = $this->articleRepo->getArticleResult(null,1,4,null,null,6);
         }
         else if($data['type'] == 'story'){
@@ -73,7 +64,8 @@ class IndexController extends Controller
             //精選特輯
             $data['article_list'] = $this->articleRepo->getArticleSpecial(null,6);
         }
-        return view('frontend.story.index',$data);
+
+        return view('frontend.story.index', $data);
     }
 
     public function loveIndex($type = null, Request $request) {
@@ -128,8 +120,9 @@ class IndexController extends Controller
         $data['video_extra_sub_category'] = $this->otherRepo->getExtraSubCategory(8);
         return view('frontend.event.video',$data);
     }
-    public function eventLohasIndex($type = null, Request $request){
-        if($type == null){
+
+    public function eventLohasIndex($type = null){
+        if ($type == null) {
             $type = $this->otherRepo->getFirstExtraSubCategory(9);
         }
         $data['type'] = $type;
@@ -139,6 +132,7 @@ class IndexController extends Controller
         // dd($data);
         return view('frontend.event.lohas',$data);
     }
+
     public function lawIndex(Request $request){
         $data['law_article_list'] = $this->articleRepo->getArticleResult(null,3,10,"relatedAct");
         $data['policy_extra_sub_category'] = $this->otherRepo->getExtraSubCategory(11);
@@ -183,9 +177,9 @@ class IndexController extends Controller
         $data['milestone'] = $this->otherRepo->getMilestoneResult();
         return view('frontend.trend.world',$data);
     }
-    public function newsIndex($type = null,Request $request){
-        //     $length = null , $category = null , $sub_category = null 
-        // , $extra_sub_category = null , $display = null, $pagination = null , $order = false
+
+    public function newsIndex($type = null, Request $request)
+    {
         $data['slider'] = $this->articleRepo->getArticleResult(7,5,null,null,true);
         if($request->type == 'center'){
             //中心動態
@@ -214,13 +208,17 @@ class IndexController extends Controller
         $data['type'] = $type;
         return view('frontend.news.index',$data);
     }
+
     public function faq(Request $request){
         $data['faq_list'] = $this->otherRepo->getFaqResult();
         return view('frontend.nav.faq',$data);
     }
-    public function exercise(Request $request){
+
+    public function exercise()
+    {
         return view('frontend.nav.exercise');
     }
+
     public function sponsor(Request $request){
         $data['partner'] = $this->indexRepo->getPartnerResult();
         return view('frontend.nav.sponsor',$data);

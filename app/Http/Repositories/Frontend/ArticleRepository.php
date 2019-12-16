@@ -12,30 +12,35 @@ use Cookie;
 use Session;
 
 
-class ArticleRepository{
+class ArticleRepository
+{
     protected $article;
 
     public function __construct(Article $article){
         $this->article=$article;
     }
 
-    public function getArticleResult($length = null , $category = null , $sub_category = null 
-    , $extra_sub_category = null , $display = null, $pagination = null , $order = false,$lang = "0"){
-
+    public function getArticleResult($length = null , $category = null , $sub_category = null,
+                                     $extra_sub_category = null , $display = null, $pagination = null ,
+                                     $order = false,$lang = "0")
+    {
         $result = article::where('active','1')->where('category',$category);
         $result = $result->where('lang',$lang);
+
         if($sub_category != null){
             $result = $result->where('sub_category',$sub_category);
         }
-        if($extra_sub_category != null){
-            if(is_string($extra_sub_category)){
-                $extra_sub_category_id = extra_sub_category::where('sub_category_id',$sub_category)->where('en_name',$extra_sub_category)->value('id');
-                $result = $result->where('extra_sub_category',$extra_sub_category_id);
+
+        if ($extra_sub_category != null) {
+            if (is_string($extra_sub_category)) {
+                $extra_sub_category_id = extra_sub_category::where('sub_category_id', $sub_category)->where('en_name', $extra_sub_category)->value('id');
+                $result = $result->where('extra_sub_category', $extra_sub_category_id);
             }
             else{
-                $result = $result->where('extra_sub_category',$extra_sub_category);
+                $result = $result->where('extra_sub_category', $extra_sub_category);
             }
         }
+
         if($display != null){
             $result = $result->where('display', '1');
         }

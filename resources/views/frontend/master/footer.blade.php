@@ -1,4 +1,3 @@
-<!--footer-->
 <footer class="footer text-center text-lg-left" data-spy="affix" data-offset-top="100">
     <div class="container footer-more">
         <a href="#Z" id="AZ" title="下方功能區塊" accesskey="Z" name="Z">:::</a>

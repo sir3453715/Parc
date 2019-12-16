@@ -25,7 +25,7 @@
                         <a href="https://parc.tw/law/policy/article/271" target="_blank" class="exercise__acp-pic exercise__acp-pic01"></a>
                     </div>
                     <div class="exercise__acp-item">
-                        <a href="{{ url('event/lecturer') }}" target="_blank" class="exercise__acp-pic exercise__acp-pic02"></a>
+                        <a href="{{ url('story/story') }}" target="_blank" class="exercise__acp-pic exercise__acp-pic02"></a>
                     </div>
                     <div class="exercise__acp-item">
                         <a href="https://parc.tw/law/policy/article/240" target="_blank" class="exercise__acp-pic exercise__acp-pic03"></a>

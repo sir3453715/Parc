@@ -49,7 +49,7 @@
                         <a class="nav-link" id="expert" href="{{ url('/story/expert') }}" title="各界觀點">各界觀點</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="story" href="{{ url('/story/story') }}" title="私房故事">私房故事</a>
+                        <a class="nav-link" id="story" href="{{ url('/story/story') }}" title="ACP諮商現場">ACP諮商現場</a>
                     </li>
                 </ul>
 
@@ -74,9 +74,9 @@
 
                     if( '{{ $type }}' == 'story')
                     {
-                        $("#active_breadcrumb").append("私房故事")
-                        $("#h2").append("私房故事")
-                        $("#active_title").append(" - 私房故事")
+                        $("#active_breadcrumb").append("ACP諮商現場")
+                        $("#h2").append("ACP諮商現場")
+                        $("#active_title").append(" - ACP諮商現場")
                         $("#story").addClass("active");
                     }
                     else if( '{{ $type }}' == 'love')

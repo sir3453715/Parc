@@ -25,10 +25,6 @@
                 <img src="{{ asset('assets/images/icon/push_icon.png') }}" class="d-none d-lg-block" alt="熱血推廣">
                 <span class="d-lg-none">熱血<br>推廣</span>
             </a>
-            <!-- GoTop -->
-            {{-- <a href="#" title="回到頂端" class="btn-gotop" tabindex="-1">
-                <i class="fa fa-caret-up"></i>
-            </a> --}}
             <!-- main-nav -->
             <div class="menu collapse" id="main-nav">
                 <!-- nav-main -->
@@ -53,9 +49,9 @@
                                         <div class="sub-nav__item">
                                             <a href="{{ url('/event/course') }}" title="懶人包系列" tabindex="2">懶人包系列</a>
                                         </div>
-                                        <div class="sub-nav__item">
-                                            <a href="{{ url('/event/lecturer') }}" title="ACP諮商現場" tabindex="2">ACP諮商現場</a>
-                                        </div>
+                                        {{--<div class="sub-nav__item">--}}
+                                            {{--<a href="{{ url('/event/lecturer') }}" title="ACP諮商現場" tabindex="2">ACP諮商現場</a>--}}
+                                        {{--</div>--}}
                                         <div class="sub-nav__item">
                                             <a href="{{ url('/event/video') }}" title="課程系列" tabindex="2">課程系列</a>
                                         </div>
@@ -86,7 +82,7 @@
                                             <a href="{{ url('/story/expert') }}" title="各界觀點" tabindex="2">各界觀點</a>
                                         </div>
                                         <div class="sub-nav__item">
-                                            <a href="{{ url('/story/story') }}" title="私房故事" tabindex="2">私房故事</a>
+                                            <a href="{{ url('/story/story') }}" title="ACP諮商現場" tabindex="2">ACP諮商現場</a>
                                         </div>
                                     </div>
                                 </div>

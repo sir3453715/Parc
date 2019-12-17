@@ -23,7 +23,7 @@ class IndexController extends Controller
     public function index()
     {
         $data['banner'] = $this->indexRepo->getBannerResult(7);
-        $data['focus'] = $this->articleRepo->getArticleResult(null,2,9, 'education',null,6);
+        $data['focus'] = $this->articleRepo->getArticleFocus(6);
         $data['slider'] = $this->articleRepo->getArticleResult(6,5);
         $data['video'] = $this->indexRepo->getVideo();
 

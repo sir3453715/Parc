@@ -111,6 +111,7 @@ class ArticleRepository{
         $article->lang=                 request('lang');
         $article->lock=                 request('lock') ? 1:0;
         $article->display=              request('display')? 1:0;
+        $article->focus=                request('focus')? 1:0;
         $article->user_id=              auth()->id();
         $article->expiry_date=          request('expiry_date');
         // $article->video_url=            request('video_url');
@@ -151,6 +152,7 @@ class ArticleRepository{
             'special'                   =>request('special') ? 1:0,
             'order'                     =>0,
             'display'                   =>request('display') ? 1:0,
+            'focus'                     =>request('focus') ? 1:0,
             'expiry_date'               =>request('expiry_date'),
             // 'video_url'                 =>request('video_url'),
         ]);

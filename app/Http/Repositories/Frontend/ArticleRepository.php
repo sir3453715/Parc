@@ -67,6 +67,20 @@ class ArticleRepository
         }
         return $result;
     }
+
+    public function getArticleFocus($length = null, $pagination = null)
+    {
+        $result = article::where('active', '1')->where('focus', '1');
+
+        if ($pagination !== null) {
+            $result = $result->orderBy('order', 'asc')->paginate($pagination);
+        } else {
+            $result = $result->orderBy('order', 'asc')->take($length)->get();
+        }
+
+        return $result;
+    }
+
     public function getArticleDetail($category =null, $sub_category = null, Article $id){
         $data['category'] = $category;
         $data['sub_category'] = $sub_category;

@@ -62,6 +62,7 @@
                             <th style="width: 5%">選取 <br/>Choose</th>
                             <th style="width: 5%">有效否 <br/>Active</th>
                             <th style="width: 5%">顯示於Banner<br/>On Banner</th>
+                            <th style="width: 5%">顯示於重磅焦點</th>
                             <th>標題<br/>Title</th>
                             <th>作者<br/>Author</th>
                             {{-- <th>內文<br/>Content</th> --}}
@@ -87,6 +88,9 @@
                                     </td>
                                     <td style="width: 5%">
                                         <input type="checkbox" disabled {{ ($data->display == 1) ? "checked" : "" }}>
+                                    </td>
+                                    <td style="width: 5%">
+                                        <input type="checkbox" disabled {{ ($data->focus == 1) ? "checked" : "" }}>
                                     </td>
                                     <td class="text" style="max-width: 200px;">
                                         <span style="white-space: nowrap;

@@ -13526,7 +13526,7 @@ a.text-dark:hover, a.text-dark:focus {
 .banner-main__item:before {
   content: '';
   display: block;
-  padding-top: 47.91667%;
+  padding-top: 56.25%;
 }
 
 .banner-main__item > img {
@@ -14079,7 +14079,7 @@ a.text-dark:hover, a.text-dark:focus {
   .banner-main__item:before {
     content: '';
     display: block;
-    padding-top: 47.91667%;
+    padding-top: 56.25%;
   }
   .banner-main__item > img {
     position: absolute;
@@ -14565,6 +14565,7 @@ a.text-dark:hover, a.text-dark:focus {
 .photo-x3__item {
   position: relative;
   overflow: hidden;
+  margin-bottom: 30px;
   position: relative;
   display: block;
 }
@@ -14572,7 +14573,7 @@ a.text-dark:hover, a.text-dark:focus {
 .photo-x3__item:before {
   content: '';
   display: block;
-  padding-top: 66.66667%;
+  padding-top: 56.25%;
 }
 
 .photo-x3__item > img {
@@ -14703,7 +14704,7 @@ a.text-dark:hover, a.text-dark:focus {
 .photo-x6__img:before {
   content: '';
   display: block;
-  padding-top: 66.66667%;
+  padding-top: 56.25%;
 }
 
 .photo-x6__img > img {
@@ -14810,13 +14811,14 @@ a.text-dark:hover, a.text-dark:focus {
   .photo-x3__item {
     position: relative;
     overflow: hidden;
+    margin-bottom: 30px;
     position: relative;
     display: block;
   }
   .photo-x3__item:before {
     content: '';
     display: block;
-    padding-top: 66.66667%;
+    padding-top: 56.25%;
   }
   .photo-x3__item > img {
     position: absolute;
@@ -15639,6 +15641,8 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .news-main__item:hover .news-main__title {
+  color: #b03857;
+  text-decoration: none;
   font-weight: bold;
 }
 
@@ -15673,7 +15677,8 @@ a.text-dark:hover, a.text-dark:focus {
 
 .news-main__item:active, .news-main__item:focus, .news-main__item:visited {
   background-color: transparent;
-  color: inherit;
+  color: #b03857;
+  text-decoration: none;
 }
 
 .news-main__item:first-child {
@@ -17801,6 +17806,16 @@ header .sub-nav__item a {
   height: 2px;
   width: 100%;
   background-image: linear-gradient(147deg, #f58764, #f16670 73%);
+}
+
+.world__link {
+  color: #4291d0;
+  display: block;
+}
+
+.world__link:hover {
+  color: #4291d0;
+  text-decoration: underline;
 }
 
 .world__text {

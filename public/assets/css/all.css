@@ -15640,6 +15640,10 @@ a.text-dark:hover, a.text-dark:focus {
   line-height: 1.75em;
 }
 
+.news-main__item:hover {
+  text-decoration: none;
+}
+
 .news-main__item:hover .news-main__title {
   color: #b03857;
   text-decoration: none;

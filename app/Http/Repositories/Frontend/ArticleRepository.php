@@ -75,7 +75,7 @@ class ArticleRepository
         if ($pagination !== null) {
             $result = $result->orderBy('order', 'asc')->paginate($pagination);
         } else {
-            $result = $result->orderBy('order', 'asc')->take($length)->get();
+            $result = $result->orderBy('updated_at', 'desc')->take($length)->get();
         }
 
         return $result;

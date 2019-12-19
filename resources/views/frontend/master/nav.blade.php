@@ -16,7 +16,7 @@
                 </a>                 
             </div>
             <!-- 我要捐款 -->
-            <a href="{{ url('/donate#method') }}" title="我要捐款" class="btn-fixed btn-donation" tabindex="4">
+            <a href="https://tlea.neticrm.tw/civicrm/contribute/transact?reset=1&id=3" title="我要捐款" class="btn-fixed btn-donation" tabindex="4" target="_blank">
                 <img src="{{ asset('assets/images/icon/donate_icon.png') }}" class="d-none d-lg-block" alt="我要捐款">
                 <span class="d-lg-none">我要<br>捐款</span>
             </a>

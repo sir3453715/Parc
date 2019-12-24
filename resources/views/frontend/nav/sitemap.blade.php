@@ -55,7 +55,7 @@
         <a href="{{ url('/story/love') }}" class="col-6 col-lg-3 sitemap__item">1-2 親愛劇場</a>
         <a href="{{ url('/story/doctor') }}" class="col-6 col-lg-3 sitemap__item">1-3 白袍診間</a>
         <a href="{{ url('/story/life') }}" class="col-6 col-lg-3 sitemap__item">1-4 生死迷藏</a>
-        <a href="{{ url('/story/expert') }}" class="col-6 col-lg-3 sitemap__item">1-5 權威觀點</a>
+        <a href="{{ url('/story/expert') }}" class="col-6 col-lg-3 sitemap__item">1-5 為自己發聲</a>
         <a href="{{ url('/story/story') }}" class="col-6 col-lg-3 sitemap__item">1-5 私房故事</a>
 
         <a href="{{ url('/event') }}" class="col-12 sitemap__title">2.課程與資源</a>
@@ -70,7 +70,7 @@
         @foreach($event_video_list as $data)
         <a href="{{ url('/event/video/'.$data->en_name) }}" class="col-6 col-lg-3 sitemap__item">2-3-{{$loop->iteration}} {{ $data->name }}</a>
         @endforeach
-        <a href="{{ url('/event/lohas') }}" class="col-6 col-lg-3 sitemap__item">2-4 知識工具</a>
+        <a href="{{ url('/event/lohas') }}" class="col-6 col-lg-3 sitemap__item">2-4 知識工具/下載</a>
         {{-- spit out lohas 2,9 --}}
         @foreach($event_lohas_list as $data)
         <a href="{{ url('/event/lohas/'.$data->en_name) }}" class="col-6 col-lg-3 sitemap__item">2-4-{{$loop->iteration}} {{ $data->name }}</a>
@@ -97,17 +97,17 @@
         <a href="{{ url('/news/international') }}" class="col-6 col-lg-3 sitemap__item">5-4 國際動態</a>
 
         <a href="{{ url('/about') }}" class="col-12 sitemap__title">6.關於我們</a>
-        <a href="{{ url('/about') }}" class="col-6 col-lg-3 sitemap__item">6-1 認識病主</a>
+        <a href="{{ url('/about') }}" class="col-6 col-lg-3 sitemap__item">6-1 認識病主中心</a>
         <a href="{{ url('/about/ceo') }}" class="col-6 col-lg-3 sitemap__item">6-2 執行長的話</a>
-        <a href="{{ url('/about/organization') }}" class="col-6 col-lg-3 sitemap__item">6-3 組織簡介</a>
+        <a href="{{ url('/about/organization') }}" class="col-6 col-lg-3 sitemap__item">6-3 組織架構</a>
         <a href="{{ url('/about/history') }}" class="col-6 col-lg-3 sitemap__item">6-4 大事紀</a>
 
-        <a href="{{ url('/exercise') }}" class="col-12 sitemap__title">7.行使權利</a>
+        <a href="{{ url('/exercise') }}" class="col-12 sitemap__title">7.我要簽署</a>
 
         <a href="{{ url('/faq') }}" class="col-12 sitemap__title">8.常見問題 </a>
 
         <a href="{{ url('/donate') }}" class="col-12 sitemap__title">9.我要支持 </a>
-        <a href="https://tlea.neticrm.tw/civicrm/contribute/transact?reset=1&id=3" title="我要捐款(另開視窗)" target="_blank" rel="noopener noreferrer" class="col-6 col-lg-3 sitemap__item">9-1 我要捐款</a>
+        <a href="{{ url('/donate#method') }}" title="我要捐款" class="col-6 col-lg-3 sitemap__item">9-1 我要捐款</a>
         <a href="{{ url('/404') }}" class="col-6 col-lg-3 sitemap__item">9-2 成為志工</a>
         <a href="{{ url('/donate/story') }}" class="col-6 col-lg-3 sitemap__item">9-3 分享故事</a>
         <a href="{{ url('/404') }}" class="col-6 col-lg-3 sitemap__item">9-4 成為會員</a>

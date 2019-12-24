@@ -33,39 +33,39 @@
                 <a href="{{ url('')}}" title="首頁" tabindex="2">首頁</a>
             </li>
             <li class="breadcrumb-item">
-                <a href="{{ url('/event')}}" title="課程與資源" tabindex="2">課程與資源</a>
+                <a title="課程與資源" tabindex="2">課程與資源</a>
             </li>
-            <li class="breadcrumb-item active">講師服務</li>
+            <li class="breadcrumb-item active">ACP諮商現場</li>
         </ol>
 
         <!-- banner-main -->
         <div class="banner-single owl-carousel px-0" title="國際新知" style="background: url({{ asset('assets/images/photo/banner-lecturer-1.jpg') }}) no-repeat center;background-size: cover;">
             <h2 class="banner-single__title">講師服務</h2>
         </div>
-        <p class="text-center">本中心致力於病人自主權教育推廣，來自各領域的講師都具備專業資格及認證，
-            <br> 擁有豐富的病人自主權知識及宣講經驗，善於將理論融入實際情境。
-            <br> 透過講師經驗分享，您不只能夠瞭解自身權利，更有機會從此刻起，開始將病人自主權實踐於生活中！
-        </p>
+        {{--<p class="text-center">本中心致力於病人自主權教育推廣，來自各領域的講師都具備專業資格及認證，--}}
+            {{--<br> 擁有豐富的病人自主權知識及宣講經驗，善於將理論融入實際情境。--}}
+            {{--<br> 透過講師經驗分享，您不只能夠瞭解自身權利，更有機會從此刻起，開始將病人自主權實踐於生活中！--}}
+        {{--</p>--}}
 
-        <h2 class="text-center mt-5">講師陣容</h2>
+        {{--<h2 class="text-center mt-5">講師陣容</h2>--}}
 
-        <div class="row">
-            @foreach($lecturer_list as $data)
-            <div class="col-12 col-lg-4">
-                <a class="item photo-x6__item" title="{{ $data->name }}">
-                    <div class="photo-x6__box">
-                        <div class="photo-x6__img" alt="{{ $data->name }}" style="background: url(/storage/{{$data->pic}}) no-repeat center; background-size: cover;"></div>
-                    </div>
-                    <div class="photo-x6__title">{{ $data->name }}</div>
-                    <div class="photo-x6__text">{!! $data->title !!}</div>
-                </a>
-            </div>
-            @endforeach
-        </div>
+        {{--<div class="row">--}}
+            {{--@foreach($lecturer_list as $data)--}}
+            {{--<div class="col-12 col-lg-4">--}}
+                {{--<a class="item photo-x6__item" title="{{ $data->name }}">--}}
+                    {{--<div class="photo-x6__box">--}}
+                        {{--<div class="photo-x6__img" alt="{{ $data->name }}" style="background: url(/storage/{{$data->pic}}) no-repeat center; background-size: cover;"></div>--}}
+                    {{--</div>--}}
+                    {{--<div class="photo-x6__title">{{ $data->name }}</div>--}}
+                    {{--<div class="photo-x6__text">{!! $data->title !!}</div>--}}
+                {{--</a>--}}
+            {{--</div>--}}
+            {{--@endforeach--}}
+        {{--</div>--}}
         <!-- pagination -->
-        <nav>
-            {{$lecturer_list->links()}}
-        </nav>
+        {{--<nav>--}}
+            {{--{{$lecturer_list->links()}}--}}
+        {{--</nav>--}}
     </div>
     <section class="service-lecturer">
         <div class="container text-center">

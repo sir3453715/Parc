@@ -21,13 +21,11 @@
         font-size: em(25);
         font-weight: bolder;
         color: $color-white;
-        background: linear-gradient(8deg, $color-rosy-pink 22%, $color-orange 98%);
+        // background: linear-gradient(8deg, $color-rosy-pink 22%, $color-orange 98%);
+        background: linear-gradient(8deg, $color-rouge 22%, $color-orange 98%);
         border-bottom-right-radius: 30px;
         &:hover{
             color: $color-white;
         }
     }
-}
-@media (min-width: $media-lg) {
-    
 }

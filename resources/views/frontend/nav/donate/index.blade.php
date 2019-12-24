@@ -20,7 +20,7 @@
 <div class="container">
     <section class="bg-white">
         <div class="row justify-content-center p-5">
-            <a href="https://tlea.neticrm.tw/civicrm/contribute/transact?reset=1&id=3" title="我要捐款(另開視窗)" target="_blank" rel="noopener noreferrer" class="col-6 col-lg-4 text-center p-2">
+            <a href="{{ url('/donate#method') }}" title="我要捐款" class="col-6 col-lg-4 text-center p-2">
                 <div class="service-lohas__icon">
                     <img src="{{ asset('assets/images/icon/icon-11.png') }}" class="img-fluid" alt="" />
                 </div>
@@ -37,6 +37,12 @@
                     <img src="{{ asset('assets/images/icon/icon-13.png') }}" class="img-fluid" alt="" />
                 </div>
                 <h2>成為志工</h2>
+            </a>
+            <a href="{{ url('/404') }}" class="col-6 col-lg-4 text-center p-2" title="愛心義賣">
+                <div class="service-lohas__icon">
+                    <img src="{{ asset('assets/images/icon/icon-13.png') }}" class="img-fluid" alt="" />
+                </div>
+                <h2>愛心義賣</h2>
             </a>
             <a href="{{ url('/404') }}" class="col-6 col-lg-4 text-center p-2" title="成為會員">
                 <div class="service-lohas__icon">
@@ -62,37 +68,24 @@
 
 <div class="container">
 
-    <section class="bg-white">
-        <div class="text-center p-5 mx-lg-5">
-            <p>生老病死為人生歷程，然而在避諱死亡的社會與文化氛圍裡，「讓生命自然善終」卻成了需要倡議與爭取的課題。在台灣，當一個人成為重症病人或失去意識時，多半由家屬幫病人做決定，卻難以避免家屬對醫療決策意見分歧，或因投身照顧實務的親疏遠近，導致家庭失和。回過頭，我們要問：能不能讓醫療決策的自主權回到病人身上，讓病人有尊嚴地善終？</p>
+    <section class="bg-white" id="method">
+        <h2 class="title">全民好命 全民善終 需要您的支持
+            {{-- <br class="d-lg-none">您可以這樣支持我們：</h2> --}}
 
-            <p>《病人自主權利法》在2015年底經立法院三讀通過，標誌著亞洲第一個保障「病人自主權」的里程碑。這部法的核心理念，是讓病人自主意願的表達與善終權利，得到法律保障，讓病人有權利拒絕用加工醫療的方式維持生命，不再使用創傷性的治療，能夠以舒適、寧靜的方式圓滿善終。</p>
-
-            <p>病人自主研究中心將持續著力於病人自主權之大眾宣導、政策研究、教育訓練及醫療院所實行四大業務，整合政府與民間單位協力分工，落實《病人自主權利法》之服務機制，引領社會大眾思考尊嚴善終與生命價值。</p>
-        </div>
-
-        <h2 class="title">邀請您共同關懷病人自主權，
-            <br class="d-lg-none">您可以這樣支持我們：</h2>
-
-        <div class="text-center m-5 pb-5">
-            <p>以定期定額或單筆捐款方式支持病人自主研究中心四大業務執行。
-                <a href="https://tlea.neticrm.tw/civicrm/contribute/transact?reset=1&id=3" title="線上捐款(另開視窗)" target="_blank" rel="noopener noreferrer">（線上捐款看更多）</a>
-            </p>
-            <p>投稿您深刻動人的生命經驗，分享您對醫療現場、臨床決定以及生命道別的私房故事。
-                <a href="{{ url('/donate/story')}}">（分享故事看更多）</a>
-            </p>
-        </div>
-
-        <h2 class="title"> 其他捐款方式</h2>
+        <h2 class="title">多元捐款方式</h2>
 
         <div class="row m-lg-5 pb-5">
+            <div class="col-12 col-lg-6">
+                <div class="title-black">線上捐款</div>
+                <li><a href="https://tlea.neticrm.tw/civicrm/contribute/transact?reset=1&id=3" target="_blank" title="線上捐款(另開視窗)">線上捐款</a></li>
+            </div>
             <div class="col-12 col-lg-6">
                 <div class="title-black">銀行匯款、轉帳捐款</div>
                 <ul>
                     <li>戶名：社團法人台灣生命教育學會</li>
                     <li>匯款帳號：154-10-000492-1</li>
                     <li>收款銀行：華南銀行臺大分行</li>
-                    <li>匯款/轉帳成功後請務必來信 service@parc.tw 告知捐款人資料，以便開立收據</li>
+                    <li>匯款/轉帳成功後請務必來信 <a href="mailto:service@parc.tw">service@parc.tw</a> 告知捐款人資料，以便開立收據</li>
                 </ul>
             </div>
             <div class="col-12 col-lg-6">
@@ -103,9 +96,32 @@
                     <li>通訊欄：請填妥捐款人之基本資料，以利收據之寄發</li>
                 </ul>
             </div>
+            <div class="col-12 col-lg-6">
+                <div class="title-black">定期定額郵局委託轉帳捐款</div>
+                <ul>
+                    <li>
+                        (1)   請於線上下載 <a class="text-rosy-pink" href="https://drive.google.com/open?id=1WVWRA3GBDOjZNETxoCVll_ggioC6gqz-" target="_blank" title="郵局委託轉帳捐款授權書(另開視窗)">「郵局委託轉帳捐款授權書」</a>
+                        ，授權書共兩聯，列印出來後請務必蓋上開戶印鑑章，填妥後將正本寄回台灣生命教育學會病人自主研究中心（22099 新北市政府郵局第30-98號信箱）。
+                    </li>
+                    <li>
+                        (2)   病主中心收到您的授權書後，將主動以電話與您確認，並依照您選擇的方式寄發捐款收據，
+                        您亦可來信 <a href="mailto:service@parc.tw">service@parc.tw</a> 查詢。
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
 </div>
 
 </main>
+@endsection
+
+@section('custom_css')
+    <style>
+        section:before {
+            height: 54px;
+            content: "";
+            display:block;
+        }
+    </style>
 @endsection

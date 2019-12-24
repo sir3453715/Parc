@@ -20,6 +20,7 @@ class PartnerRepository{
         $partner=partner::create([
             'active'    =>request('active') ? 1:0,
             'title'     =>request('title'),
+            'link'      =>request('link'),
             'order'     =>(partner::latest()->value("order")+1)
         ]);
         //save pic path
@@ -35,6 +36,7 @@ class PartnerRepository{
     public function update(Request $request,partner $partner){
         $partner->active  = request('active')? 1:0 ;
         $partner->title   = request('title');
+        $partner->link    = request('link');
         if($request->pic){
             if($partner->pic){
                 Storage::delete('public/'.$partner->pic);

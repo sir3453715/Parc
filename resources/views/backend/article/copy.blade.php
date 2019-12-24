@@ -62,6 +62,7 @@
                                                 <option id="中心動態copy" value="17">中心動態</option>
                                                 <option id="課程與資源動態copy" value="18">課程與資源動態</option>
                                                 <option id="國際動態copy" value="19">國際動態</option>
+                                                <option id="愛．活動copy" value="21">愛．活動</option>
                                         </select>
                                     </div>
                                     <div class="col-md-2" style="margin-top: 35px">

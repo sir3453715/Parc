@@ -59,7 +59,7 @@
         height: em(300);
         right: 0;
         top: 0;
-        background: linear-gradient(147deg, $color-orange, $color-rosy-pink 73%);
+        background: linear-gradient(147deg, $color-orange, $color-rouge 73%);
         -webkit-animation: rotating-r 60s ease infinite;
         -moz-animation: rotating-r 60s ease infinite;
         -o-animation: rotating-r 60s ease infinite;
@@ -82,7 +82,7 @@
     position: absolute;
     width: 40px;
     height: 40px;
-    background-image: linear-gradient(147deg, $color-orange, $color-rosy-pink 73%);
+    background: linear-gradient(147deg, $color-orange, $color-rouge 73%);
     top: 50px;
     left: 10px;
     border-radius: 50%;
@@ -96,7 +96,7 @@
     width: 60vw;
     height: 60vw;
     color: $color-white;
-    background-image: linear-gradient(147deg, $color-orange, $color-rosy-pink 73%);
+    background: linear-gradient(147deg, $color-orange, $color-rouge 73%);
     &:before {
         position: absolute;
         display: block;
@@ -164,7 +164,7 @@
     border-radius: 50%;
     width: 100px;
     height: 100px;
-    background-image: linear-gradient(147deg, $color-orange, $color-rosy-pink 73%);
+    background: linear-gradient(147deg, $color-orange, $color-rouge 73%);
     p {
         font-size: em(20);;
         font-weight: bolder;
@@ -252,7 +252,7 @@
             height: em(900);
             right: 0;
             top: 0;
-            background: linear-gradient(147deg, $color-orange, $color-rosy-pink 73%);
+            background: linear-gradient(147deg, $color-orange, $color-rouge 73%);
             -webkit-animation: rotating-r 60s ease infinite;
             -moz-animation: rotating-r 60s ease infinite;
             -o-animation: rotating-r 60s ease infinite;
@@ -270,7 +270,7 @@
       position: absolute;
       width: 70px;
       height: 70px;
-      background-image: linear-gradient(147deg, $color-orange, $color-rosy-pink 73%);
+      background: linear-gradient(147deg, $color-orange, $color-rouge 73%);
       top: 50px;
       left: 10px;
       border-radius: 50%;
@@ -284,7 +284,7 @@
       width: 30vw;
       height: 30vw;
       color: $color-white;
-      background-image: linear-gradient(147deg, $color-orange, $color-rosy-pink 73%);
+      background: linear-gradient(147deg, $color-orange, $color-rouge 73%);
       &:before {
           position: absolute;
           display: block;
@@ -351,7 +351,7 @@
       border-radius: 50%;
       width: 214px;
       height: 214px;
-      background-image: linear-gradient(147deg, $color-orange, $color-rosy-pink 73%);
+      background: linear-gradient(147deg, $color-orange, $color-rouge 73%);
       p {
           font-size: em(32);
           font-weight: bolder;

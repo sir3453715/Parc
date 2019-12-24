@@ -13,7 +13,7 @@
                         <a href="{{ url('')}}" title="首頁" tabindex="2">首頁</a>
                     </li>
                     <li class="breadcrumb-item">
-                        <a href="{{ url ('story/special')}}" title="生命故事" tabindex="2">生命故事</a>
+                        <a title="生命故事" tabindex="2">生命故事</a>
                     </li>
                     <li class="breadcrumb-item active" id="active_breadcrumb"></li>
                     <h2 class="d-none" id="h2"></h2>
@@ -46,10 +46,10 @@
                         <a class="nav-link" id="life" href="{{ url('/story/life') }}" title="生死迷藏">生死迷藏</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="expert" href="{{ url('/story/expert') }}" title="權威觀點">權威觀點</a>
+                        <a class="nav-link" id="expert" href="{{ url('/story/expert') }}" title="各界觀點">各界觀點</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="story" href="{{ url('/story/story') }}" title="私房故事">私房故事</a>
+                        <a class="nav-link" id="story" href="{{ url('/story/story') }}" title="ACP諮商現場">ACP諮商現場</a>
                     </li>
                 </ul>
 
@@ -74,9 +74,9 @@
 
                     if( '{{ $type }}' == 'story')
                     {
-                        $("#active_breadcrumb").append("私房故事")
-                        $("#h2").append("私房故事")
-                        $("#active_title").append(" - 私房故事")
+                        $("#active_breadcrumb").append("ACP諮商現場")
+                        $("#h2").append("ACP諮商現場")
+                        $("#active_title").append(" - ACP諮商現場")
                         $("#story").addClass("active");
                     }
                     else if( '{{ $type }}' == 'love')
@@ -102,9 +102,9 @@
                     }
                     else if( '{{ $type }}' == 'expert')
                     {
-                        $("#active_breadcrumb").append("權威觀點")
-                        $("#h2").append("權威觀點")
-                        $("#active_title").append(" - 權威觀點")
+                        $("#active_breadcrumb").append("各界觀點")
+                        $("#h2").append("各界觀點")
+                        $("#active_title").append(" - 各界觀點")
                         $("#expert").addClass("active");
                     }
                     else{

@@ -43,7 +43,17 @@
                                                 <label class="error" for="display"></label>
                                             </div>
                                         </td>
-                                    </tr>  
+                                    </tr>
+                                    <!-- 欄位：focus -->
+                                    <tr class="hide_at_law">
+                                        <td class="header-require col-lg-2">顯示於重磅焦點</td>
+                                        <td>
+                                            <div class="col-lg-3 nopadding">
+                                                <input name="focus" type="checkbox" id="focus" class="form-control" {{($datas["article"]->focus == 1) ? "checked" : "" }}>
+                                                <label class="error" for="focus"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
                                     <!-- 欄位：Special -->
                                     @if(Request::segment(3)=="story")
                                         <tr>

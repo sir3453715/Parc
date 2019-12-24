@@ -20,11 +20,11 @@
     <section class="container world">
 
         <div class="row justify-content-center m-2">
-            <a href="{{ url('/about') }}" class="col-6 col-lg-3 text-center " title="認識病主">
+            <a href="{{ url('/about') }}" class="col-6 col-lg-3 text-center " title="認識病主中心">
                 <div class="service-lohas__icon">
                     <img src="{{ asset('assets/images/icon/icon-about-1.png') }}" class="img-fluid" alt="" />
                 </div>
-                <h2>認識病主</h2>
+                <h2>認識病主中心</h2>
             </a>
             <a href="{{ url('/about/ceo') }}" class="col-6 col-lg-3 text-center " title="執行長的話">
                 <div class="service-lohas__icon">
@@ -32,11 +32,11 @@
                 </div>
                 <h2>執行長的話</h2>
             </a>
-            <a href="{{ url('/about/organization') }}" class="col-6 col-lg-3 text-center " title="組織簡介">
+            <a href="{{ url('/about/organization') }}" class="col-6 col-lg-3 text-center " title="組織架構">
                 <div class="service-lohas__icon">
                     <img src="{{ asset('assets/images/icon/icon-about-3.png') }}" class="img-fluid" alt="" />
                 </div>
-                <h2>組織簡介</h2>
+                <h2>組織架構</h2>
             </a>
             <a href="{{ url('/about/history') }}" class="col-6 col-lg-3 text-center " title="大事紀">
                 <div class="service-lohas__icon">
@@ -70,7 +70,7 @@
                 <p class="text-center m-5">你如何思考死亡？這件事離我們並不遙遠，帶上這個思考，可以改變我們看待世界的眼光，將這趟人生旅程過得更清明、更有感。我們從此開始關照：在生命終點之前，應該做些什麼？哪些被我們遺落的關係需要拾起與和解？哪些人值得深深感激，哪些愛還未開口表達？若此虔誠地叩問內心，你終將明白：生命是一份禮物，活著的每時每刻都值得慶祝，而死亡更蘊含著一種永恆的祝福，只因曾經展現的愛與關懷，都將成為後世心靈文化的養分。因此，如何讓死亡成為再創生命高峰的契機？我們必須回頭思考：活著，要帶給世界什麼？</p>
 
                 <h2 class="world__title-r m-5">一路愛到掛，創新社會價值</h2>
-                <p class="text-center m-5">什麼時候，生命意義與價值會成為你最在乎的課題？現在就邀請你，跟我們一起探索生命的意義，思考生命的尊嚴，啟動生命最後一哩路的企劃，進而勾勒出每一個生命階段的價值藍圖與具體行動。《病人自主權利法》不只是醫療政策的改革，更是一場感恩生命、為愛自主的社會運動。讓愛領路，讓行動即刻展開，我們熱切地歡迎你共創美好的新生活！</p>
+                <p class="text-center m-5">什麼時候，生命意義與價值會成為你最在乎的課題？現在就邀請你，跟我們一起探索生命的意義，思考生命的尊嚴，啟動生命最後一哩路的企劃，進而勾勒出每一個生命階段的價值藍圖與具體行動。《病人自主權利法》不只是符合時代、人權平等，人類文明進步的ㄧ重大醫療政策改革，同時也是一場感恩生命、為愛自主的社會運動。讓愛領路，讓行動即刻展開，我們熱切地歡迎你共創美好的新生活！</p>
 
 
     </section>

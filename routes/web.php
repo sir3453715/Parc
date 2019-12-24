@@ -1,22 +1,14 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-    //前台專區
+// 前台
 Route::group(['namespace' => 'Frontend'], function () {
     Route::get('/' , 'IndexController@index');
     Route::get('/story/{type?}' , 'IndexController@storyIndex');
     Route::get('/{category}/{sub_category}/article/{id}' , 'ArticleController@getArticleDetail');
     
+    Route::get('/love/{type?}' , 'IndexController@loveIndex');
+    Route::get('/love/love-course/{type?}' , 'IndexController@loveIndex');
+
     Route::get('/event' , 'IndexController@eventIndex');
     Route::get('/event/course/{type?}' , 'IndexController@eventCourseIndex');
     Route::get('/event/lecturer/' , 'IndexController@eventLecturerIndex');
@@ -39,6 +31,7 @@ Route::group(['namespace' => 'Frontend'], function () {
     Route::get('/faq' , 'IndexController@faq');
     Route::get('/sitemap' , 'IndexController@sitemap');
     Route::get('/exercise', 'IndexController@exercise');
+    Route::get('/sponsor', 'IndexController@sponsor');
 
     Route::get('/donate', 'IndexController@donate');
     Route::get('/donate/story', 'IndexController@donateStory');
@@ -60,12 +53,7 @@ Route::group(['namespace' => 'Frontend'], function () {
     });
 });
 
-// Route::get('/', function () {
-//     return view('index');
-// });
-
-
-
+// 後台
 Route::group(['middleware' => 'web', 'prefix' => 'backend'], function () {
     Route::auth();
     Route::group(['middleware' => 'auth', 'namespace' => 'Backend'], function () {

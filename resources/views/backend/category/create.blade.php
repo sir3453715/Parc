@@ -21,8 +21,9 @@
                                             <div class="col-lg-3 nopadding">
                                                     <div class="form-group">
                                                         <select id="category_select" name="category_select" class="custom-select form-control">
-                                                                <option id="課程活動" value="2">課程活動</option>
+                                                                <option id="課程與資源" value="2">課程與資源</option>
                                                                 <option id="法規政策" value="3">法規政策</option>
+                                                                <option id="愛．活動" value="6">愛．活動</option>
                                                         </select>
                                                         {{-- <select id="category_select" name="category_select" class="custom-select form-control">
                                                             @foreach($datas["categories"] as $category)
@@ -40,11 +41,12 @@
                                             <div class="col-lg-3 nopadding">
                                                     <div class="form-group">
                                                         <select class="custom-select form-control" name="sub_category" id="sub_category">
-                                                            <option id="專業課程" class="課程活動" value="6" hidden>專業課程</option>
-                                                            <option id="線上影音課程" class="課程活動" value="8" hidden>線上影音課程</option>
-                                                            <option id="知識工具" class="課程活動" value="9" hidden>知識工具</option>
+                                                            <option id="懶人包系列" class="課程與資源" value="6" hidden>懶人包系列</option>
+                                                            <option id="課程系列" class="課程與資源" value="8" hidden>課程系列</option>
+                                                            <option id="病主法工具箱" class="課程與資源" value="9" hidden>病主法工具箱</option>
                                                             {{-- <option id="法規實務" class="法規政策" value="10" hidden>法規實務</option> --}}
                                                             <option id="政策研究" class="法規政策" value="11" hidden>政策研究</option>
+                                                            <option id="愛-專業課程" class="愛．活動" value="20" hidden>愛-專業課程</option>
                                                         </select>
                                                     </div>
                                             </div>
@@ -107,9 +109,7 @@
 @endsection
 
 @section('extjs')
-
-
-	<script>
+<script>
 	$(document).ready(function() {
 		//Back
 		$("#btnBackTo2").click(function() {
@@ -118,6 +118,7 @@
 		$("#btnBackTo2_foot").click(function() {
 			location.href='{{ url('backend/category') }}';
 		});
+
 		//初始化需要偵錯的表格
 		$('#EditForm').validate();
 		//正規表達驗證初始化
@@ -214,45 +215,51 @@
             document.getElementById("extra_sub_category_description").value="";
         }
     }     
-    </script>
+</script>
 
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('select[name="category_select"]').on('change', function() {
-                var category_id = $(this).val();
-                if(category_id == 2) {
-                    $('.課程活動').show();
-                    $('.法規政策').hide();
-                    $('select[name="sub_category"]').val($('.課程活動').first().val());                
-                    //hide 10,11
-                }else if(category_id == 3){
-                    $('.課程活動').hide();
-                    $('.法規政策').show(); 
-                    $('select[name="sub_category"]').val($('.法規政策').first().val());                
-                    // $('select[name="sub_category"]').val($('select[name="sub_category"] option:first').val());                
-                    //display 6,8,9
-                    //hide 10,11
-                }
-                $('select[name="sub_category"]').trigger("change");
-
-            });
-            $('select[name="category_select"]').trigger("change");
-
-            $('select[name="sub_category"]').on('change', function() {
-                var sub_category_id = $(this).val();
-                if(sub_category_id == 9 || sub_category_id == 11) {
-                    $('#upload_hide').show();
-                }else{
-                    $('#upload_hide').hide();
-                    // $('select[name="sub_category"]').val($('select[name="sub_category"] option:first').val());                
-                    //display 6,8,9
-                    //hide 10,11
-                }
-            });
-
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('select[name="category_select"]').on('change', function() {
+            var category_id = $(this).val();
+            if(category_id == 2) {
+                $('.課程與資源').show();
+                $('.法規政策').hide();
+                $('.愛．活動').hide();
+                $('select[name="sub_category"]').val($('.課程與資源').first().val());
+                //hide 10,11
+            }else if(category_id == 3){
+                $('.課程與資源').hide();
+                $('.法規政策').show();
+                $('.愛．活動').hide();
+                $('select[name="sub_category"]').val($('.法規政策').first().val());
+                // $('select[name="sub_category"]').val($('select[name="sub_category"] option:first').val());
+                //display 6,8,9
+                //hide 10,11
+            }else if(category_id == 6){
+                $('.課程與資源').hide();
+                $('.法規政策').hide();
+                $('.愛．活動').show();
+                $('select[name="sub_category"]').val($('.愛．活動').first().val());
+                // $('select[name="sub_category"]').val($('select[name="sub_category"] option:first').val());
+                //display 6,8,9
+                //hide 10,11
+            }
             $('select[name="sub_category"]').trigger("change");
-            
-
         });
-    </script>
+        $('select[name="category_select"]').trigger("change");
+
+        $('select[name="sub_category"]').on('change', function() {
+            var sub_category_id = $(this).val();
+            if(sub_category_id == 9 || sub_category_id == 11) {
+                $('#upload_hide').show();
+            }else{
+                $('#upload_hide').hide();
+                // $('select[name="sub_category"]').val($('select[name="sub_category"] option:first').val());
+                //display 6,8,9
+                //hide 10,11
+            }
+        });
+        $('select[name="sub_category"]').trigger("change");
+    });
+ </script>
 @endsection

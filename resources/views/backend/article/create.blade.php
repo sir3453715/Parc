@@ -37,7 +37,16 @@
                                             </div>
                                         </td>
                                     </tr>
-                                    @endif  
+                                    @endif
+                                    <tr class="hide_at_law">
+                                        <td class="header-require col-lg-2">顯示於重磅焦點</td>
+                                        <td>
+                                            <div class="col-lg-3 nopadding">
+                                                <input name="focus" type="checkbox" id="focus" class="form-control">
+                                                <label class="error" for="focus"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
                                     <!-- 欄位：Special -->
                                     @if(Request::segment(3)=="story")
                                         <tr>
@@ -302,6 +311,10 @@
             case "news":
                 var category_id=5;
                 $("#categorygg").attr("value","5");
+                break;
+            case "love":
+                var category_id=6;
+                $("#categorygg").attr("value","6");
                 break;
         }
         

@@ -79,8 +79,18 @@
                 <strong style="display: none;">Patient Autonomy Research Center</strong>
             </a>                 
         </div>
+
         <!-- 我要捐款 -->
-        <a href="https://tlea.neticrm.tw/civicrm/contribute/transact?reset=1&id=3" target="_blank" rel="noopener noreferrer" title="I am willing to donate(in new window)" class="btn-donation" tabindex="4">我要<br>捐款</a>
+        <a href="{{ url('/donate#method') }}" title="我要捐款" class="btn-fixed btn-donation" tabindex="4">
+            <img src="{{ asset('assets/images/icon/donate_icon.png') }}" class="d-none d-lg-block" alt="我要捐款">
+            <span class="d-lg-none">我要<br>捐款</span>
+        </a>
+        <!-- 熱血推廣 -->
+        <a href="#" title="熱血推廣" class="btn-fixed btn-push">
+            <img src="{{ asset('assets/images/icon/push_icon.png') }}" class="d-none d-lg-block" alt="熱血推廣">
+            <span class="d-lg-none">熱血<br>推廣</span>
+        </a>
+
         <!-- GoTop -->
         {{-- <a href="#" title="回到頂端" class="btn-gotop" tabindex="-1">
             <i class="fa fa-caret-up"></i>
@@ -116,7 +126,7 @@
                                         <a href="{{ url('/story/life') }}" title="Life and death" tabindex="2">生死迷藏</a>
                                     </div>
                                     <div class="sub-nav__item">
-                                        <a href="{{ url('/story/expert') }}" title="Experts' viewpoint" tabindex="2">權威觀點</a>
+                                        <a href="{{ url('/story/expert') }}" title="Experts' viewpoint" tabindex="2">為自己發聲</a>
                                     </div>
                                     <div class="sub-nav__item">
                                         <a href="{{ url('/story/story') }}" title="Stories" tabindex="2">私房故事</a>
@@ -139,7 +149,7 @@
                                         <a href="{{ url('/event/video') }}" title="Online video lessons" tabindex="2">線上影音課程</a>
                                     </div>
                                     <div class="sub-nav__item">
-                                        <a href="{{ url('/event/lohas') }}" title="Lohas" tabindex="2">知識工具</a>
+                                        <a href="{{ url('/event/lohas') }}" title="Lohas" tabindex="2">知識工具/下載</a>
                                     </div>
                                 </div>
                             </div>
@@ -217,7 +227,7 @@
                         <a class="nav-link" href="{{ url('/about') }}" title="About Us" tabindex="1">關於我們</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/exercise') }}" title="Exercise your rights" tabindex="1">行使權利</a>
+                        <a class="nav-link" href="{{ url('/exercise') }}" title="Exercise your rights" tabindex="1">我要簽署</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/donate') }}" title="Support and donation" tabindex="1">我要支持</a>
@@ -256,38 +266,40 @@
     <div class="banner-single owl-carousel px-0" title="About Us" style="background: url({{ asset('assets/images/photo/banner-about.jpg') }}) no-repeat center;background-size: cover;">
         <h2 class="banner-single__title-tl">About Us</h2>
     </div>
-    
+
     <section class="container world">
-    
-    
-        <h2 class="world__title-r">What Patient Autonomy Is</h2>
-    
+
+
+        <h2 class="world__title-r">Patient Autonomy Act</h2>
+
         <p class="text-center m-5">
-            The core concept of patient autonomy is that a patient has the right to make their own medical decisions. This is closely related to three human values: Respecting patient autonomy in healthcare; safeguarding patients' rights to a good death; and promoting a harmonious physician-patient relationship. Through advancements in modern medicine, we have become able to extend our lifespans with the help of various medical treatments when we are terminally ill or have lost consciousness. However, these extensions may come at the expense of quality of life and dignity. This also brings pain to family members when they need to make medical decisions for us. For these reasons, we advocate that patients should have the right to refuse treatment and to have a dignified end of life. It is our hope that society will empower patients, and respect and trust patients' autonomous wishes. We also hope that everyone will think more deeply about having dignity at the end of life, and that the concept will form a new cultural atmosphere and way of nurturing life.
+            The core concept of patient autonomy is that a patient has the right to make their own medical decisions. This is closely related to three human values: Respecting patient autonomy in healthcare; safeguarding patients' rights to a good death; and promoting a harmonious physician-patient relationship. Patient autonomy has been implemented in many countries in the West for a long time, and it is seen as a universal human right. After passing the Patient Right to Autonomy Act near the end of 2015, Taiwan became the leader in Asia in implementing patient autonomy. The core concept of the Act is to ensure legal protection for the patient's right to autonomous wishes and to a dignified end. Through signing an Advance Decision, everyone will be able to make medical decisions for themselves before they become terminally ill, and thus spare themselves and their loved ones from pain.
         </p>
-    
-        <h2 class="world__title-r">Patient Right to Autonomy Act: an Introduction</h2>
-    
+
+        <h2 class="world__title-r">Introduction to Patient Autonomy Act</h2>
+
         <p class="text-center m-5">
-            Patient autonomy has been implemented in many countries in the West for a long time, and it is seen as a universal human right. After passing the Patient Right to Autonomy Act near the end of 2015, Taiwan became the leader in Asia in implementing patient autonomy. The core concept of the Act is to ensure legal protection for the patient's right to autonomous wishes and to a dignified end. Through signing an Advance Decision, everyone will be able to make medical decisions for themselves before they become terminally ill, and thus spare themselves and their loved ones from pain.
+            <a class="world__link" href="https://parc.tw/law/policy/article/292" target="_blank">Interpretation of the “Patient Right to Autonomy Act</a>
+            <a class="world__link" href="https://parc.tw/law/act" target="_blank">Full Document of Patient Autonomy Act</a>
+            <a class="world__link" href="https://parc.tw/law/policy/article/293" target="_blank">Summary of Patient Autonomy Act in PPT</a>
+
         </p>
-    
+
         <h2 class="world__title-r">Patient Autonomy Research Center: About Us</h2>
-        <p class="text-center m-5">Honorary Consultant to the Legislative Yuan Yang Yu-hsin realizes the importance of serving the "last leg of life's journey", and of keeping life education and good end of life care as core concepts. For these reasons, she fought for a long-term organization specifically responsible for fighting for these benefits on behalf of the people. Therefore, in 2017, the Patient Autonomy Research Center was established. Our goals are to become a bridge between the medical field and the general public, by engaging the public with a series of creative activities that get people to think about patient autonomy and then take action.</p>
+        <p class="text-center m-5">Honorary Consultant to the Legislative Yuan Yang Yu-Hsin realizes the importance of serving the "last leg of life's journey", and of keeping life education and good end of life care as core concepts. For these reasons, she fought for a long-term organization specifically responsible for fighting for these benefits on behalf of the people. Therefore, in 2017, the Patient Autonomy Research Center was established. Our goals are to become a bridge between the medical field and the general public, by engaging the public with a series of creative activities that get people to think about patient autonomy and then take action.</p>
         <p class="text-center m-5">Our long-term vision is to continue promoting life education and the concept of having a dignified end, now that the Patient Right to Autonomy Act has formally come into effect. These new ways of thinking about the end of life will make Taiwan a good example for other Asian societies to follow.</p>
-        
+
         <h2 class="world__title-r">Our Mission</h2>
         <p class="text-center m-5">Our work focuses on policy research, educational training, implementation in medical facilities, and public promotion. Through planning, coordinating, communicating, and promoting with various parties, we hope to integrate and maximize the efforts of agencies from both the governmental sector and the private sector to promote the Patient Right to Autonomy Act. By doing so, the public will be encouraged to think about the value of both a dignified end and of life.</p>
-    
+
         <h2 class="world__title">We welcome people from all fields to contact us and share their views.<br>You can reach us via the methods below.</h2>
         <div class="world__box">
             <p class="mb-4"><b>Patient Autonomy Research Center</b></p>
             <p><b>Email：</b><a href="#">service@parc.tw</a></p>
-            <p><b>Address:</b> No.1, Sec. 4, Roosevelt Rd., Zhongzheng Dist., Taipei City 100, Taiwan (R.O.C.)</p>
-            <p><b> 　　　 　 </b>Liberal Education Classroom Building  Life Education Center.</p>
+            <p><b>Address:</b> P.O.BOX 30-98 NewTaipei City Government, New Taipei City 22099, Taiwan (R.O.C.)</p>
         </div>
-    
-    
+
+
     </section>
     
     </main>
@@ -303,7 +315,7 @@
             <div class="col-12 col-lg-4 text-center">
                 <div class="footer-title">即刻行動</div>
                 <a href="{{ url('/donate/story') }}" title="Share your story" class="footer-link">分享故事</a> /
-                <a href="https://tlea.neticrm.tw/civicrm/contribute/transact?reset=1&id=3" target="_blank" rel="noopener noreferrer" title="我要捐款(另開視窗)" class="footer-link">我要捐款</a> /
+                <a href="{{ url('/donate#method') }}" title="我要捐款" class="footer-link">我要捐款</a> /
                 <a href="https://tlea.neticrm.tw/civicrm/profile/create?gid=15&reset=1" target="_blank" rel="noopener noreferrer" title="訂閱電子報(另開視窗)" class="footer-link">訂閱電子報</a>
             </div>
             <div class="col-12 col-lg-4 text-center">
@@ -322,8 +334,7 @@
     </div>
     <div class="container footer-copyright">
         <a href="mailto:service@parc.tw">電子信箱 : service@parc.tw</a>
-        <div>中心地址 : 10617 台北市大安區羅斯福路四段1號
-            <br class="d-lg-none"> 博雅教學館 生命教育中心</div>
+        <div>中心地址 : 22099 新北市政府郵局第30-98號信箱
         <div>病人自主研究中心 PARC © 2018. All Rights Reserved.</div>
     </div>
     <div class="container">

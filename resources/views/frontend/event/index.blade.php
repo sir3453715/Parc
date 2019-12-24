@@ -71,8 +71,8 @@
         </div>
 
 
-        <!-- 知識工具 -->
-        <h2 class="title">知識工具</h2>
+        <!-- 知識工具/下載 -->
+        <h2 class="title">知識工具/下載</h2>
         <div class="row justify-content-center text-center mb-5">
             @foreach($lohas_extra_sub_category as $category)
             <div class="col-12 col-lg-6 service-lohas__item">
@@ -95,7 +95,7 @@
         </div>
 
         <div class="btn-more-line">
-            <a href="{{ url('event/lohas') }}" class="btn-more">知識工具看更多</a>
+            <a href="{{ url('event/lohas') }}" class="btn-more">知識工具/下載看更多</a>
         </div>
 
     </main>

@@ -21,11 +21,11 @@
     <section class="container world">
 
         <div class="row justify-content-center m-2">
-            <a href="{{ url('/about') }}" class="col-6 col-lg-3 text-center " title="認識病主">
+            <a href="{{ url('/about') }}" class="col-6 col-lg-3 text-center " title="認識病主中心">
                 <div class="service-lohas__icon">
                     <img src="{{ asset('assets/images/icon/icon-about-1.png') }}" class="img-fluid" alt="" />
                 </div>
-                <h2>認識病主</h2>
+                <h2>認識病主中心</h2>
             </a>
             <a href="{{ url('/about/ceo') }}" class="col-6 col-lg-3 text-center " title="執行長的話">
                 <div class="service-lohas__icon">
@@ -33,11 +33,11 @@
                 </div>
                 <h2>執行長的話</h2>
             </a>
-            <a href="{{ url('/about/organization') }}" class="col-6 col-lg-3 text-center " title="組織簡介">
+            <a href="{{ url('/about/organization') }}" class="col-6 col-lg-3 text-center " title="組織架構">
                 <div class="service-lohas__icon">
                     <img src="{{ asset('assets/images/icon/icon-about-3.png') }}" class="img-fluid" alt="" />
                 </div>
-                <h2>組織簡介</h2>
+                <h2>組織架構</h2>
             </a>
             <a href="{{ url('/about/history') }}" class="col-6 col-lg-3 text-center " title="大事紀">
                 <div class="service-lohas__icon">

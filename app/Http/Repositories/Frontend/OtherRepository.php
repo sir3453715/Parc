@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
-
+use Carbon\Carbon;
 
 use Cookie;
 use Session;
@@ -120,7 +120,16 @@ class OtherRepository{
             }
             return $result;
     }
-    public function getDonateLastUpdatedDate(){
+
+    public function getDonateLastUpdatedDate()
+    {
+        $model = donate::orderBy('created_at','desc')->first();
+
+        if (is_null($model)) {
+            return Carbon::today();
+        }
+
         return donate::orderBy('created_at','desc')->first()->created_at;
     }
+
 }

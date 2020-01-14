@@ -81,12 +81,12 @@
         </div>
 
         <!-- 我要捐款 -->
-        <a href="{{ url('/donate#method') }}" title="我要捐款" class="btn-fixed btn-donation" tabindex="4">
+        <a href="https://tlea.neticrm.tw/civicrm/contribute/transact?reset=1&id=3" title="我要捐款" class="btn-fixed btn-donation" tabindex="4" target="_blank">
             <img src="{{ asset('assets/images/icon/donate_icon.png') }}" class="d-none d-lg-block" alt="我要捐款">
             <span class="d-lg-none">我要<br>捐款</span>
         </a>
         <!-- 熱血推廣 -->
-        <a href="#" title="熱血推廣" class="btn-fixed btn-push">
+        <a href="https://parc.tw/love/love-course/love-core" title="熱血推廣" class="btn-fixed btn-push">
             <img src="{{ asset('assets/images/icon/push_icon.png') }}" class="d-none d-lg-block" alt="熱血推廣">
             <span class="d-lg-none">熱血<br>推廣</span>
         </a>
@@ -109,104 +109,107 @@
                     </h1>
                     <ul class="col-12 col-lg-8 nav justify-content-end">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('story/special') }}" title="Life Story" tabindex="2">生命故事</a>
-                            <a href="#nav-story" class="nav-plus collapsed" data-toggle="collapse"><i class="fa fa-chevron-right" title="展開/折疊選項"></i></a>
-                            <div class="sub-nav collapsed collapse" id="nav-story">
-                                <div class="sub-nav__box">
-                                    <div class="sub-nav__item">
-                                        <a href="{{ url('/story/special') }}" title="Editors' choice" tabindex="2">精選特輯</a>
-                                    </div>
-                                    <div class="sub-nav__item">
-                                        <a href="{{ url('/story/love') }}" title="Family and love" tabindex="2">親愛劇場</a>
-                                    </div>
-                                    <div class="sub-nav__item">
-                                        <a href="{{ url('/story/doctor') }}" title="Words from doctors" tabindex="2">白袍診間</a>
-                                    </div>
-                                    <div class="sub-nav__item">
-                                        <a href="{{ url('/story/life') }}" title="Life and death" tabindex="2">生死迷藏</a>
-                                    </div>
-                                    <div class="sub-nav__item">
-                                        <a href="{{ url('/story/expert') }}" title="Experts' viewpoint" tabindex="2">為自己發聲</a>
-                                    </div>
-                                    <div class="sub-nav__item">
-                                        <a href="{{ url('/story/story') }}" title="Stories" tabindex="2">私房故事</a>
-                                    </div>
-                                </div>
-                            </div>
+                            <a class="nav-link" href="{{ url('/love') }}" title="愛．活動" tabindex="2">愛．活動</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/event') }}" title="Lectures and events" tabindex="2">課程與資源</a>
+                            <a class="nav-link" title="課程與資源" tabindex="2">課程與資源</a>
                             <a href="#nav-event" class="nav-plus collapsed" data-toggle="collapse"><i class="fa fa-chevron-right" title="展開/折疊選項"></i></a>
                             <div class="sub-nav collapsed collapse" id="nav-event">
                                 <div class="sub-nav__box">
                                     <div class="sub-nav__item">
-                                        <a href="{{ url('/event/course') }}" title="Professional lessons" tabindex="2">專業課程</a>
+                                        <a href="{{ url('/event/course') }}" title="懶人包系列" tabindex="2">懶人包系列</a>
                                     </div>
                                     <div class="sub-nav__item">
-                                        <a href="{{ url('/event/lecturer') }}" title="Lecturer service" tabindex="2">講師服務</a>
+                                        <a href="{{ url('/event/video') }}" title="課程系列" tabindex="2">課程系列</a>
                                     </div>
                                     <div class="sub-nav__item">
-                                        <a href="{{ url('/event/video') }}" title="Online video lessons" tabindex="2">線上影音課程</a>
-                                    </div>
-                                    <div class="sub-nav__item">
-                                        <a href="{{ url('/event/lohas') }}" title="Lohas" tabindex="2">知識工具/下載</a>
+                                        <a href="{{ url('/event/lohas') }}" title="病主法工具箱" tabindex="2">病主法工具箱</a>
                                     </div>
                                 </div>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/law') }}" title="Laws and policies" tabindex="2">法規政策</a>
+                            <a class="nav-link" title="生命故事" tabindex="2">生命故事</a>
+                            <a href="#nav-story" class="nav-plus collapsed" data-toggle="collapse"><i class="fa fa-chevron-right" title="展開/折疊選項"></i></a>
+                            <div class="sub-nav collapsed collapse" id="nav-story">
+                                <div class="sub-nav__box">
+                                    <div class="sub-nav__item">
+                                        <a href="{{ url('/story/special') }}" title="精選特輯" tabindex="2">精選特輯</a>
+                                    </div>
+                                    <div class="sub-nav__item">
+                                        <a href="{{ url('/story/love') }}" title="親愛劇場" tabindex="2">親愛劇場</a>
+                                    </div>
+                                    <div class="sub-nav__item">
+                                        <a href="{{ url('/story/doctor') }}" title="白袍診間" tabindex="2">白袍診間</a>
+                                    </div>
+                                    <div class="sub-nav__item">
+                                        <a href="{{ url('/story/life') }}" title="生死迷藏" tabindex="2">生死迷藏</a>
+                                    </div>
+                                    <div class="sub-nav__item">
+                                        <a href="{{ url('/story/expert') }}" title="各界觀點" tabindex="2">各界觀點</a>
+                                    </div>
+                                    <div class="sub-nav__item">
+                                        <a href="{{ url('/story/story') }}" title="ACP諮商現場" tabindex="2">ACP諮商現場</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" title="法規政策" tabindex="2">法規政策</a>
                             <a href="#nav-law" class="nav-plus collapsed" data-toggle="collapse"><i class="fa fa-chevron-right" title="展開/折疊選項"></i></a>
                             <div class="sub-nav collapsed collapse" id="nav-law">
                                 <div class="sub-nav__box">
                                     <div class="sub-nav__item">
-                                        <a href="{{ url('/law/act') }}" title="Laws" tabindex="2">法規實務</a>
+                                        <a href="{{ url('/law/act') }}" title="相關法規" tabindex="2">相關法規</a>
                                     </div>
                                     <div class="sub-nav__item">
-                                        <a href="{{ url('/law/policy') }}" title="Policies" tabindex="2">政策研究</a>
+                                        <a href="{{ url('/law/policy') }}" title="政策研究" tabindex="2">政策研究</a>
                                     </div>
                                 </div>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/trend') }}" title="World movement" tabindex="2">全球脈動</a>
-                            <a href="#nav-trend" class="nav-plus collapsed" data-toggle="collapse"><i class="fa fa-chevron-right" title="展開/折疊選項"></i></a>
-                            <div class="sub-nav collapsed collapse" id="nav-trend">
-                                <div class="sub-nav__box">
-                                    <div class="sub-nav__item">
-                                        <a href="{{ url('/trend/international') }}" title="World news" tabindex="2">國際新知</a>
-                                    </div>
-                                    <div class="sub-nav__item">
-                                        <a href="{{ url('/trend/exchange') }}" title="World collaboration" tabindex="2">合作交流</a>
-                                    </div>
-                                    <div class="sub-nav__item">
-                                        <a href="{{ url('/trend/ngo') }}" title="International NGOs" tabindex="2">國際NGO</a>
-                                    </div>
-                                    <div class="sub-nav__item">
-                                        <a href="{{ url('/trend/world') }}" title="World trend" tabindex="2">世界趨勢</a>
-                                    </div>
-                                </div>
-                            </div>
+                            <a class="nav-link" href="{{ url('/trend') }}" title="全球脈動" tabindex="2">全球脈動</a>
+                            {{--<a href="#nav-trend" class="nav-plus collapsed" data-toggle="collapse"><i class="fa fa-chevron-right" title="展開/折疊選項"></i></a>--}}
+                            {{--<div class="sub-nav collapsed collapse" id="nav-trend">--}}
+                            {{--<div class="sub-nav__box">--}}
+                            {{--<div class="sub-nav__item">--}}
+                            {{--<a href="{{ url('/trend/international') }}" title="國際新知" tabindex="2">國際新知</a>--}}
+                            {{--</div>--}}
+                            {{--<div class="sub-nav__item">--}}
+                            {{--<a href="{{ url('/trend/exchange') }}" title="合作交流" tabindex="2">合作交流</a>--}}
+                            {{--</div>--}}
+                            {{--<div class="sub-nav__item">--}}
+                            {{--<a href="{{ url('/trend/ngo') }}" title="國際NGO" tabindex="2">國際NGO</a>--}}
+                            {{--</div>--}}
+                            {{--<div class="sub-nav__item">--}}
+                            {{--<a href="{{ url('/trend/world') }}" title="世界趨勢" tabindex="2">世界趨勢</a>--}}
+                            {{--</div>--}}
+                            {{--</div>--}}
+                            {{--</div>--}}
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/news') }}" title="Latest news" tabindex="2">最新消息</a>
-                            <a href="#nav-news" class="nav-plus collapsed" data-toggle="collapse"><i class="fa fa-chevron-right" title="展開/折疊選項"></i></a>
-                            <div class="sub-nav collapsed collapse" id="nav-news">
-                                <div class="sub-nav__box">
-                                    <div class="sub-nav__item">
-                                        <a href="{{ url('news/center') }}" title="Center movement" tabindex="2">中心動態</a>
-                                    </div>
-                                    <div class="sub-nav__item">
-                                        <a href="{{ url('news/law') }}" title="Law and policy movement" tabindex="2">法規政策動態</a>
-                                    </div>
-                                    <div class="sub-nav__item">
-                                        <a href="{{ url('news/event') }}" title="Lecture and events movement" tabindex="2">課程與資源動態</a>
-                                    </div>
-                                    <div class="sub-nav__item">
-                                        <a href="{{ url('news/international') }}" title="World movement" tabindex="2">國際動態</a>
-                                    </div>
-                                </div>
-                            </div>
+                            <a class="nav-link" href="{{ url('/news') }}" title="最新消息" tabindex="2">最新消息</a>
+                            {{--<a href="#nav-news" class="nav-plus collapsed" data-toggle="collapse"><i class="fa fa-chevron-right" title="展開/折疊選項"></i></a>--}}
+                            {{--<div class="sub-nav collapsed collapse" id="nav-news">--}}
+                            {{--<div class="sub-nav__box">--}}
+                            {{--<div class="sub-nav__item">--}}
+                            {{--<a href="{{ url('news/center') }}" title="中心動態" tabindex="2">中心動態</a>--}}
+                            {{--</div>--}}
+                            {{--<div class="sub-nav__item">--}}
+                            {{--<a href="{{ url('news/law') }}" title="法規政策動態" tabindex="2">法規政策動態</a>--}}
+                            {{--</div>--}}
+                            {{--<div class="sub-nav__item">--}}
+                            {{--<a href="{{ url('news/event') }}" title="課程與資源動態" tabindex="2">課程與資源動態</a>--}}
+                            {{--</div>--}}
+                            {{--<div class="sub-nav__item">--}}
+                            {{--<a href="{{ url('news/international') }}" title="國際動態" tabindex="2">國際動態</a>--}}
+                            {{--</div>--}}
+                            {{--<div class="sub-nav__item">--}}
+                            {{--<a href="{{ url('news/love-event') }}" title="愛．活動" tabindex="2">愛．活動</a>--}}
+                            {{--</div>--}}
+                            {{--</div>--}}
+                            {{--</div>--}}
                         </li>
                     </ul>
                 </div>

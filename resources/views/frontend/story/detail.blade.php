@@ -13,9 +13,17 @@
                     <a href="#C" title="中央內容區塊" id="AC" accesskey="C" name="C" tabindex="2">:::</a>
                     <a href="{{ url('')}}" title="首頁" tabindex="2">首頁</a>
                 </li>
-                <li class="breadcrumb-item">
-                    <a href="{{ url('/'.$article->category_en().'/') }}" title="{{$article->category()}}" tabindex="2">{{$article->category()}}</a>
-                </li>
+
+                @if ($category != 'event' && $category != 'story' && $category != 'law')
+                    <li class="breadcrumb-item">
+                        <a href="{{ url('/'.$article->category_en().'/') }}" title="{{$article->category()}}" tabindex="2">{{$article->category()}}</a>
+                    </li>
+                @else
+                    <li class="breadcrumb-item">
+                        <a title="{{$article->category()}}" tabindex="2">{{$article->category()}}</a>
+                    </li>
+                @endif
+
                 @if($category != 'love')
                 <li class="breadcrumb-item">
                     <a href="{{ url('/'.$article->category_en().'/'.$article->sub_category_en()) }}" title="{{$article->sub_category()}}" tabindex="2">{{$article->sub_category()}}</a>

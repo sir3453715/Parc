@@ -21,7 +21,7 @@
                 <span class="d-lg-none">我要<br>捐款</span>
             </a>
             <!-- 熱血推廣 -->
-            <a href="#" title="熱血推廣" class="btn-fixed btn-push">
+            <a href="https://parc.tw/love/love-course/love-core" title="熱血推廣" class="btn-fixed btn-push">
                 <img src="{{ asset('assets/images/icon/push_icon.png') }}" class="d-none d-lg-block" alt="熱血推廣">
                 <span class="d-lg-none">熱血<br>推廣</span>
             </a>
@@ -49,9 +49,6 @@
                                         <div class="sub-nav__item">
                                             <a href="{{ url('/event/course') }}" title="懶人包系列" tabindex="2">懶人包系列</a>
                                         </div>
-                                        {{--<div class="sub-nav__item">--}}
-                                            {{--<a href="{{ url('/event/lecturer') }}" title="ACP諮商現場" tabindex="2">ACP諮商現場</a>--}}
-                                        {{--</div>--}}
                                         <div class="sub-nav__item">
                                             <a href="{{ url('/event/video') }}" title="課程系列" tabindex="2">課程系列</a>
                                         </div>

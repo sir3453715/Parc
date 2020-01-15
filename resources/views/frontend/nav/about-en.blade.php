@@ -218,34 +218,37 @@
             <div class="nav-tool order-lg-1 ">
                 <ul class="nav justify-content-lg-end">
                     <li class="nav-item">
-                        <a class="nav-link" href="#U" id="AU" name="U" title="Top right corner function section" accesskey="U" tabindex="1">:::</a>
+                        <a class="nav-link" href="#U" id="AU" name="U" title="右上方功能區塊" accesskey="U" tabindex="1">:::</a>
                     </li>
                     {{-- <li class="nav-item">
                         <a class="nav-link" href="#" title="線上諮詢">線上諮詢</a>
                     </li> --}}
+                    {{--<li class="nav-item">--}}
+                    {{--<a class="nav-link" href="{{ url('/sitemap') }}" title="網站導覽" tabindex="1">網站導覽</a>--}}
+                    {{--</li>--}}
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/sitemap') }}" title="Sitemap" tabindex="1">網站導覽</a>
+                        <a class="nav-link" href="{{ url('/about') }}" title="關於我們" tabindex="1">關於我們</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/about') }}" title="About Us" tabindex="1">關於我們</a>
+                        <a class="nav-link" href="{{ url('/exercise') }}" title="我要簽署" tabindex="1">我要簽署</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/exercise') }}" title="Exercise your rights" tabindex="1">我要簽署</a>
+                        <a class="nav-link" href="{{ url('/donate') }}" title="我要支持" tabindex="1">我要支持</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/donate') }}" title="Support and donation" tabindex="1">我要支持</a>
+                        <a class="nav-link" href="{{ url('/faq') }}" title="常見問題" tabindex="1">常見問題</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/faq') }}" title="Frequently asked questions" tabindex="1">常見問題</a>
+                        <a class="nav-link" href="{{ url('/sponsor') }}" title="友善單位">友善單位</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/about-en') }}" title="English" tabindex="1">English</a>
                     </li>
                     <li class="nav-item search">
-                        <form action="{{ url('search')}}" method="get" name="search-form" id="search-form" title="Search" >
-                            <label for="S" class="d-none">Search: </label>
-                            <input type="text" id="S" accesskey="S" name="q" placeholder="Enter keyword" title="Search" value="{{ old('q')}}" tabindex="1">
-                            <div class="fa fa-search" onclick="document.getElementById('search-form').submit();" title="Search" tabindex="1"></div>
+                        <form action="{{ url('search')}}" method="get" name="search-form" id="search-form" title="搜尋" >
+                            <label for="S" class="d-none">關鍵字搜尋: </label>
+                            <input type="text" id="S" accesskey="S" name="q" placeholder="關鍵字搜尋" title="關鍵字" value="{{ old('q')}}" tabindex="1">
+                            <div class="fa fa-search" onclick="document.getElementById('search-form').submit();" title="搜尋" tabindex="1"></div>
                             <input type="submit" value="Submit" class="btn-submit" title="Submit">
                         </form>
                     </li>
@@ -273,18 +276,18 @@
     <section class="container world">
 
 
-        <h2 class="world__title-r">Patient Autonomy Act</h2>
+        <h2 class="world__title-r">Patient Right to Autonomy Act</h2>
 
         <p class="text-center m-5">
             The core concept of patient autonomy is that a patient has the right to make their own medical decisions. This is closely related to three human values: Respecting patient autonomy in healthcare; safeguarding patients' rights to a good death; and promoting a harmonious physician-patient relationship. Patient autonomy has been implemented in many countries in the West for a long time, and it is seen as a universal human right. After passing the Patient Right to Autonomy Act near the end of 2015, Taiwan became the leader in Asia in implementing patient autonomy. The core concept of the Act is to ensure legal protection for the patient's right to autonomous wishes and to a dignified end. Through signing an Advance Decision, everyone will be able to make medical decisions for themselves before they become terminally ill, and thus spare themselves and their loved ones from pain.
         </p>
 
-        <h2 class="world__title-r">Introduction to Patient Autonomy Act</h2>
+        <h2 class="world__title-r">Introduction to Patient Right to Autonomy Act</h2>
 
         <p class="text-center m-5">
             <a class="world__link" href="https://parc.tw/law/policy/article/292" target="_blank">Interpretation of the “Patient Right to Autonomy Act</a>
-            <a class="world__link" href="https://parc.tw/law/act" target="_blank">Full Document of Patient Autonomy Act</a>
-            <a class="world__link" href="https://parc.tw/law/policy/article/293" target="_blank">Summary of Patient Autonomy Act in PPT</a>
+            <a class="world__link" href="https://parc.tw/law/act" target="_blank">Full Document of Patient Right to Autonomy Act</a>
+            <a class="world__link" href="https://parc.tw/law/policy/article/293" target="_blank">Summary of Patient Right to Autonomy Act in PPT</a>
 
         </p>
 

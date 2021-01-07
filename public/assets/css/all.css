@@ -13526,7 +13526,8 @@ a.text-dark:hover, a.text-dark:focus {
 .banner-main__item:before {
   content: '';
   display: block;
-  padding-top: 56.25%;
+  padding-top: 43%;
+  /*padding-top: 56.25%;*/
 }
 
 .banner-main__item > img {
@@ -13937,15 +13938,14 @@ a.text-dark:hover, a.text-dark:focus {
 .banner-single__title-tl {
   position: absolute;
   display: inline-block;
-  color: #c4465b;
+  color: #fff;
   font-size: 1.5625em;
   font-weight: bolder;
   text-align: center;
   top: 0;
-  left: 15px;
-  padding: 35px 40px 60px 40px;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(42%, rgba(229, 228, 228, 0.99)), to(rgba(255, 255, 255, 0)));
-  background-image: linear-gradient(180deg, rgba(229, 228, 228, 0.99) 42%, rgba(255, 255, 255, 0) 100%);
+  left: 25px;
+  padding: 15px 20px;
+  background: rgba(255,178,158,0.7);
 }
 
 .banner-single__subtitle {
@@ -14079,7 +14079,8 @@ a.text-dark:hover, a.text-dark:focus {
   .banner-main__item:before {
     content: '';
     display: block;
-    padding-top: 56.25%;
+    padding-top: 43%;
+    /*padding-top: 56.25%;*/
   }
   .banner-main__item > img {
     position: absolute;
@@ -14907,8 +14908,29 @@ a.text-dark:hover, a.text-dark:focus {
 .tvcf-main__box {
   padding: 0;
 }
+.tvcf-main__box h2 {
+  position: relative;
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom:60px;
+  margin-left:15px;
+  
+}
+
+.tvcf-main__box h2::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  bottom: 0;
+  left: 25%;
+  background: linear-gradient(55deg, #f28263, #c4465b 47%);
+}
 
 .tvcf-main__title {
+  align-items:center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16525,7 +16547,7 @@ header .sub-nav__item a {
     display: block;
     width: 300px;
     height: 55px;
-    margin-top: -10px;
+    margin-top: -20px;
     -webkit-transition: all 0.8s ease-in-out;
     transition: all 0.8s ease-in-out;
   }
@@ -16869,8 +16891,8 @@ header .sub-nav__item a {
     opacity: 1;
   }
   .footer .logo {
-    height: 48px;
-    margin-top: 5px;
+    height: 79px;
+    margin-top: 10px;
   }
   .footer-title {
     font-size: 1.25em;
@@ -16904,8 +16926,9 @@ header .sub-nav__item a {
     margin-bottom: 140px;
   }
   .footer-copyright {
+    margin-top:15px;
     text-align: left;
-    font-size: 0.9375em;
+    font-size: 1.15em;
     color: #666666;
     padding-bottom: 0;
   }

@@ -16,7 +16,7 @@
             <a title="課程與資源" tabindex="2">課程與資源</a>
         </li>
         <li class="breadcrumb-item">
-            <a href="{{ url('/event/course')}}" title="專業課程" tabindex="2">懶人包系列</a>
+            <a href="{{ url('/event/course')}}" title="文宣出版品" tabindex="2">文宣出版品</a>
         </li>
         <li class="breadcrumb-item active" id="active_breadcrumb"></li>
         <h2 class="d-none" id="h2"></h2>

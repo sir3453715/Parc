@@ -28,7 +28,7 @@
                         <a href="{{ url('story/story') }}" target="_blank" class="exercise__acp-pic exercise__acp-pic02"></a>
                     </div>
                     <div class="exercise__acp-item">
-                        <a href="https://parc.tw/law/policy/article/240" target="_blank" class="exercise__acp-pic exercise__acp-pic03"></a>
+                        <a href="https://parc.tw/event/lohas/article/328" target="_blank" class="exercise__acp-pic exercise__acp-pic03"></a>
                     </div>
                 </div>
             </div>

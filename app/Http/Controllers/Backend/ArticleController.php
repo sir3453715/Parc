@@ -97,29 +97,10 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        $messages = [
-            'pic.image'         => '上傳檔案非圖片 Please upload valid image',
-            'title.required'    => '請輸入標題 Please input title',
-            'title.max'         => '標題需為200字以內 The title may not be greater than 200 characters',
-            'description.max'   => '敘述需為56字以內 The description may not be greater than 56 characters',
-            'pic.max'           => '圖片大小需小於4MB Image file size may not be greater than 4MB',            
-        ];
-        $validate = Validator::make($request->all(), [
-            'pic' => 'nullable|image|max:4000',
-            'title' => 'required|max:200',
-            'description' => 'max:56',
-            
-        ], $messages);
-
-        if ($validate->fails()) {
-            return redirect()->back()
-                ->withInput($request->all)
-                ->withErrors($validate);
-        }
-        else{
+  
             $this->articleRepository->store($request);   
             return redirect('/backend/article/'.$request->segment(3));
-        }
+        
     }
 
     /**
@@ -155,29 +136,11 @@ class ArticleController extends Controller
      */
     public function update(Request $request, $category=null, article $article)
     {
-        $messages = [
-            'pic.image'         => '上傳檔案非圖片 Please upload valid image',
-            'title.required'    => '請輸入標題 Please input title',
-            'title.max'         => '標題需為200字以內 The title may not be greater than 200 characters',
-            'description.max'   => '敘述需為56字以內 The description may not be greater than 56 characters',
-            'pic.max'           => '圖片大小需小於4MB Image file size may not be greater than 4MB',            
-        ];
-        $validate = Validator::make($request->all(), [
-            'pic' => 'nullable|image|max:4000',
-            'title' => 'required|max:200',
-            'description' => 'max:56',
-            
-        ], $messages);
-
-        if ($validate->fails()) {
-            return redirect()->back()
-                ->withInput($request->all)
-                ->withErrors($validate);
-        }
-        else{
+       
+       
             $this->articleRepository->update($request,$article);
             return redirect('/backend/article/'.$request->segment(3));
-        }
+        
     }
     public function copy_list(Request $request){
         $datas=$this->articleRepository->copy_list($request);

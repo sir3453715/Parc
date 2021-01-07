@@ -38,3 +38,50 @@
 [06-Oct-2018 20:31:18 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 32768 bytes) in /home/patientarc/public_html/vendor/intervention/image/src/Intervention/Image/Gd/Decoder.php on line 136
 [06-Oct-2018 20:32:18 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 32768 bytes) in /home/patientarc/public_html/vendor/intervention/image/src/Intervention/Image/Gd/Decoder.php on line 136
 [06-Oct-2018 20:33:25 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 32768 bytes) in /home/patientarc/public_html/vendor/intervention/image/src/Intervention/Image/Gd/Decoder.php on line 136
+[02-May-2019 08:54:21 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) in /home/patientarc/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php on line 67
+[02-May-2019 08:54:35 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) in /home/patientarc/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php on line 67
+[02-Jun-2020 07:53:39 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 20480 bytes) in /home/patientarc/public_html/vendor/intervention/image/src/Intervention/Image/Gd/Decoder.php on line 136
+[12-Jul-2020 08:06:19 UTC] PHP Fatal error:  Uncaught Symfony\Component\HttpFoundation\File\Exception\FileNotFoundException: The file "/tmp/phpk80c4t" does not exist in /home/patientarc/public_html/vendor/symfony/http-foundation/File/File.php:37
+Stack trace:
+#0 /home/patientarc/public_html/vendor/symfony/http-foundation/File/UploadedFile.php(66): Symfony\Component\HttpFoundation\File\File->__construct('/tmp/phpk80c4t', true)
+#1 /home/patientarc/public_html/vendor/symfony/http-foundation/FileBag.php(87): Symfony\Component\HttpFoundation\File\UploadedFile->__construct('/tmp/phpk80c4t', 'up.php', '', 1340, 0)
+#2 /home/patientarc/public_html/vendor/symfony/http-foundation/FileBag.php(52): Symfony\Component\HttpFoundation\FileBag->convertFileInformation(Array)
+#3 /home/patientarc/public_html/vendor/symfony/http-foundation/FileBag.php(61): Symfony\Component\HttpFoundation\FileBag->set('ATTARI', Array)
+#4 /home/patientarc/public_html/vendor/symfony/http-foundation/FileBag.php(40): Symfony\Component\HttpFoundation\FileBag->add(Array)
+#5 /home/patientarc/public_ in /home/patientarc/public_html/vendor/symfony/http-foundation/File/File.php on line 37
+[12-Jul-2020 08:06:20 UTC] PHP Fatal error:  Uncaught Symfony\Component\HttpFoundation\File\Exception\FileNotFoundException: The file "/tmp/phpw9MdPp" does not exist in /home/patientarc/public_html/vendor/symfony/http-foundation/File/File.php:37
+Stack trace:
+#0 /home/patientarc/public_html/vendor/symfony/http-foundation/File/UploadedFile.php(66): Symfony\Component\HttpFoundation\File\File->__construct('/tmp/phpw9MdPp', true)
+#1 /home/patientarc/public_html/vendor/symfony/http-foundation/FileBag.php(87): Symfony\Component\HttpFoundation\File\UploadedFile->__construct('/tmp/phpw9MdPp', 'up.php', '', 1340, 0)
+#2 /home/patientarc/public_html/vendor/symfony/http-foundation/FileBag.php(52): Symfony\Component\HttpFoundation\FileBag->convertFileInformation(Array)
+#3 /home/patientarc/public_html/vendor/symfony/http-foundation/FileBag.php(61): Symfony\Component\HttpFoundation\FileBag->set('data_image', Array)
+#4 /home/patientarc/public_html/vendor/symfony/http-foundation/FileBag.php(40): Symfony\Component\HttpFoundation\FileBag->add(Array)
+#5 /home/patientarc/pub in /home/patientarc/public_html/vendor/symfony/http-foundation/File/File.php on line 37
+[12-Jul-2020 08:06:22 UTC] PHP Fatal error:  Uncaught Symfony\Component\HttpFoundation\File\Exception\FileNotFoundException: The file "/tmp/phpF42ece" does not exist in /home/patientarc/public_html/vendor/symfony/http-foundation/File/File.php:37
+Stack trace:
+#0 /home/patientarc/public_html/vendor/symfony/http-foundation/File/UploadedFile.php(66): Symfony\Component\HttpFoundation\File\File->__construct('/tmp/phpF42ece', true)
+#1 /home/patientarc/public_html/vendor/symfony/http-foundation/FileBag.php(87): Symfony\Component\HttpFoundation\File\UploadedFile->__construct('/tmp/phpF42ece', 'up.php', '', 1340, 0)
+#2 /home/patientarc/public_html/vendor/symfony/http-foundation/FileBag.php(52): Symfony\Component\HttpFoundation\FileBag->convertFileInformation(Array)
+#3 /home/patientarc/public_html/vendor/symfony/http-foundation/FileBag.php(61): Symfony\Component\HttpFoundation\FileBag->set('uploadimage', Array)
+#4 /home/patientarc/public_html/vendor/symfony/http-foundation/FileBag.php(40): Symfony\Component\HttpFoundation\FileBag->add(Array)
+#5 /home/patientarc/pu in /home/patientarc/public_html/vendor/symfony/http-foundation/File/File.php on line 37
+[12-Jul-2020 08:06:23 UTC] PHP Fatal error:  Uncaught Symfony\Component\HttpFoundation\File\Exception\FileNotFoundException: The file "/tmp/phpLc1dI4" does not exist in /home/patientarc/public_html/vendor/symfony/http-foundation/File/File.php:37
+Stack trace:
+#0 /home/patientarc/public_html/vendor/symfony/http-foundation/File/UploadedFile.php(66): Symfony\Component\HttpFoundation\File\File->__construct('/tmp/phpLc1dI4', true)
+#1 /home/patientarc/public_html/vendor/symfony/http-foundation/FileBag.php(87): Symfony\Component\HttpFoundation\File\UploadedFile->__construct('/tmp/phpLc1dI4', 'up.php', '', 1340, 0)
+#2 /home/patientarc/public_html/vendor/symfony/http-foundation/FileBag.php(52): Symfony\Component\HttpFoundation\FileBag->convertFileInformation(Array)
+#3 /home/patientarc/public_html/vendor/symfony/http-foundation/FileBag.php(61): Symfony\Component\HttpFoundation\FileBag->set('uploadimage', Array)
+#4 /home/patientarc/public_html/vendor/symfony/http-foundation/FileBag.php(40): Symfony\Component\HttpFoundation\FileBag->add(Array)
+#5 /home/patientarc/pu in /home/patientarc/public_html/vendor/symfony/http-foundation/File/File.php on line 37
+[12-Jul-2020 08:06:24 UTC] PHP Fatal error:  Uncaught Symfony\Component\HttpFoundation\File\Exception\FileNotFoundException: The file "/tmp/phpwLRRk4" does not exist in /home/patientarc/public_html/vendor/symfony/http-foundation/File/File.php:37
+Stack trace:
+#0 /home/patientarc/public_html/vendor/symfony/http-foundation/File/UploadedFile.php(66): Symfony\Component\HttpFoundation\File\File->__construct('/tmp/phpwLRRk4', true)
+#1 /home/patientarc/public_html/vendor/symfony/http-foundation/FileBag.php(87): Symfony\Component\HttpFoundation\File\UploadedFile->__construct('/tmp/phpwLRRk4', 'up.php', '', 1340, 0)
+#2 /home/patientarc/public_html/vendor/symfony/http-foundation/FileBag.php(52): Symfony\Component\HttpFoundation\FileBag->convertFileInformation(Array)
+#3 /home/patientarc/public_html/vendor/symfony/http-foundation/FileBag.php(61): Symfony\Component\HttpFoundation\FileBag->set('userfile', Array)
+#4 /home/patientarc/public_html/vendor/symfony/http-foundation/FileBag.php(40): Symfony\Component\HttpFoundation\FileBag->add(Array)
+#5 /home/patientarc/publi in /home/patientarc/public_html/vendor/symfony/http-foundation/File/File.php on line 37
+[26-Nov-2020 12:22:23 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 24576 bytes) in /home/patientarc/public_html/vendor/intervention/image/src/Intervention/Image/Gd/Decoder.php on line 136
+[26-Nov-2020 12:22:24 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 32768 bytes) in /home/patientarc/public_html/vendor/intervention/image/src/Intervention/Image/Gd/Decoder.php on line 136
+[26-Nov-2020 12:22:52 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 24576 bytes) in /home/patientarc/public_html/vendor/intervention/image/src/Intervention/Image/Gd/Decoder.php on line 136
+[26-Nov-2020 12:22:54 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 32768 bytes) in /home/patientarc/public_html/vendor/intervention/image/src/Intervention/Image/Gd/Decoder.php on line 136

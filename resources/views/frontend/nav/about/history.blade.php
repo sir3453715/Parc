@@ -16,32 +16,35 @@
         </li>
         <li class="breadcrumb-item active">大事紀</li>
     </ol>
-
+    <div class="banner-single owl-carousel px-0" title="關於我們"
+        style="background: url({{ asset('assets/images/photo/new-banner-about.jpg') }}) no-repeat center;background-size: cover;">
+        <h2 class="banner-single__title-tl">關於我們</h2>
+    </div>
     <!-- 病人自主權大事紀 -->
     <section class="container world">
 
-        <div class="row justify-content-center m-2">
+    <div class="row justify-content-center m-2">
             <a href="{{ url('/about') }}" class="col-6 col-lg-3 text-center " title="認識病主中心">
                 <div class="service-lohas__icon">
-                    <img src="{{ asset('assets/images/icon/icon-about-1.png') }}" class="img-fluid" alt="" />
+                    <img src="{{ asset('assets/images/icon/new-icon-about-1.png') }}" class="img-fluid" alt="" />
                 </div>
                 <h2>認識病主中心</h2>
             </a>
             <a href="{{ url('/about/ceo') }}" class="col-6 col-lg-3 text-center " title="執行長的話">
                 <div class="service-lohas__icon">
-                    <img src="{{ asset('assets/images/icon/icon-about-2.png') }}" class="img-fluid" alt="" />
+                    <img src="{{ asset('assets/images/icon/new-icon-about-2.png') }}" class="img-fluid" alt="" />
                 </div>
                 <h2>執行長的話</h2>
             </a>
-            <a href="{{ url('/about/organization') }}" class="col-6 col-lg-3 text-center " title="組織架構">
+            <a href="{{ url('/about/organization') }}" class="col-6 col-lg-3 text-center " title="我們的任務">
                 <div class="service-lohas__icon">
-                    <img src="{{ asset('assets/images/icon/icon-about-3.png') }}" class="img-fluid" alt="" />
+                    <img src="{{ asset('assets/images/icon/new-icon-about-3.png') }}" class="img-fluid" alt="" />
                 </div>
-                <h2>組織架構</h2>
+                <h2>我們的任務</h2>
             </a>
             <a href="{{ url('/about/history') }}" class="col-6 col-lg-3 text-center " title="大事紀">
                 <div class="service-lohas__icon">
-                    <img src="{{ asset('assets/images/icon/icon-about-4.png') }}" class="img-fluid" alt="" />
+                    <img src="{{ asset('assets/images/icon/new-icon-about-4.png') }}" class="img-fluid" alt="" />
                 </div>
                 <h2>大事紀</h2>
             </a>

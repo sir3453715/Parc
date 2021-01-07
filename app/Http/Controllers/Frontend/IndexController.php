@@ -133,6 +133,12 @@ class IndexController extends Controller
         return view('frontend.event.lohas',$data);
     }
 
+     public function eventCertindex(Request $request){
+        return view('frontend.event.cert');
+    }
+
+
+
     public function lawIndex(Request $request){
         $data['law_article_list'] = $this->articleRepo->getArticleResult(null,3,10,"relatedAct");
         $data['policy_extra_sub_category'] = $this->otherRepo->getExtraSubCategory(11);

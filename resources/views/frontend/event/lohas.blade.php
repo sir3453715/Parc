@@ -16,7 +16,7 @@
             <a title="課程與資源" tabindex="2">課程與資源</a>
         </li>
         <li class="breadcrumb-item">
-            <a href="{{ url('/event/lohas')}}" title="病主法工具箱" tabindex="2">病主法工具箱</a>
+            <a href="{{ url('/event/lohas')}}" title="ACP工具下載" tabindex="2">ACP工具下載</a>
         </li>
         <li class="breadcrumb-item active" id="active_breadcrumb"></li>
         <h2 class="d-none" id="h2"></h2>

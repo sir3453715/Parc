@@ -7,6 +7,7 @@
     "require": {
         "php": ">=5.6.4",
         "aws/aws-sdk-php-laravel": "~3.0",
+        "hisorange/browser-detect": "^4.2",
         "intervention/image": "^2.3",
         "laravel/framework": "5.5.*",
         "laravel/scout": "^4.0",
@@ -60,5 +61,11 @@
     "config": {
         "preferred-install": "dist",
         "sort-packages": true
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
     }
 }

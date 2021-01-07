@@ -42,8 +42,9 @@
                 <div class="banner-right__box">
                     <h2 class="banner-right__title">{{$article->sub_category()}}</h2>
                 </div>
-                @if($sub_category == "video")
+                @if($sub_category == "video" && $article->video_url != null )
                 <!-- video -->
+              
                 <div class="embed-responsive embed-responsive-16by9">
                     <iframe title="{{ $article->title }}" class="embed-responsive-item" src="https://www.youtube.com/embed/{{ $article->video_url }}?rel=0" frameborder="0"
                     allow="autoplay; encrypted-media" allowfullscreen></iframe>

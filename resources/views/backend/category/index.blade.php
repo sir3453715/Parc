@@ -27,18 +27,18 @@
                                     <label class="control-label" style="color:white;">次分類</label>
                                     <select id="sub_category" name="sub_category" class="custom-select form-control">
                                         @if($datas["request"]->sub_category == '6')
-                                        <option id="專業課程" class="課程活動 cookie" value="6" hidden>專業課程</option>
+                                        <option id="文宣出版品" class="課程活動 cookie" value="6" hidden>文宣出版品</option>
                                         @endif
                                         @if($datas["request"]->sub_category == '8')
                                         <option id="線上影音課程" class="課程活動 cookie" value="8" hidden>線上影音課程</option>
                                         @endif
                                         @if($datas["request"]->sub_category == '9')
-                                        <option id="知識工具/下載" class="課程活動 cookie" value="9" hidden>知識工具/下載</option>
+                                        <option id="ACP工具下載" class="課程活動 cookie" value="9" hidden>ACP工具下載</option>
                                         @endif
                                         <option id="nochoose2" value="" hidden>不拘</option>
-                                        <option id="專業課程" class="課程活動" value="6" hidden>專業課程</option>
+                                        <option id="文宣出版品" class="課程活動" value="6" hidden>文宣出版品</option>
                                         <option id="線上影音課程" class="課程活動" value="8" hidden>線上影音課程</option>
-                                        <option id="知識工具/下載" class="課程活動" value="9" hidden>知識工具/下載</option>
+                                        <option id="ACP工具下載" class="課程活動" value="9" hidden>ACP工具下載</option>
                                         {{-- <option id="法規實務" class="法規政策" value="10" hidden>法規實務</option> --}}
                                         <option id="政策研究" class="法規政策" value="11" hidden @if($datas["request"]->sub_category == '11')selected @endif>政策研究</option>
                                     </select>

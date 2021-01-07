@@ -41,9 +41,9 @@
                                             <div class="col-lg-3 nopadding">
                                                     <div class="form-group">
                                                         <select class="custom-select form-control" name="sub_category" id="sub_category">
-                                                            <option id="懶人包系列" class="課程與資源" value="6" hidden>懶人包系列</option>
+                                                            <option id="文宣出版品" class="課程與資源" value="6" hidden>文宣出版品</option>
                                                             <option id="課程系列" class="課程與資源" value="8" hidden>課程系列</option>
-                                                            <option id="病主法工具箱" class="課程與資源" value="9" hidden>病主法工具箱</option>
+                                                            <option id="ACP工具下載" class="課程與資源" value="9" hidden>ACP工具下載</option>
                                                             {{-- <option id="法規實務" class="法規政策" value="10" hidden>法規實務</option> --}}
                                                             <option id="政策研究" class="法規政策" value="11" hidden>政策研究</option>
                                                             <option id="愛-專業課程" class="愛．活動" value="20" hidden>愛-專業課程</option>

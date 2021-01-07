@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
 
+<html lang="zh-Hant-TW">
 <head>
     <!-- Google Tag Manager -->
     <script>
@@ -16,7 +16,7 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
 
-   <meta property="og:title" content="病人自主研究中心">
+    <meta property="og:title" content="病人自主研究中心">
     <meta property="og:description" content="病主中心｜為愛自主 全民幸福">
     <meta property="og:image" content="/assets/images/photo/parc.jpg">
 
@@ -44,21 +44,25 @@
     <script src="{{ asset('assets/js/index.js') }}"></script>
 
     <!--<link rel="stylesheet" href="css/all.min.css">-->
-</head>
-    <body>
-        <a href="#C" title="Navigate to main content" tabindex="1" style="color:rgb(248,248,248);">Navigate to main content</a>
-        <noscript style="background-color:white;z-index: 5000;position: absolute;">
-            您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態
-            <br>
-            Sorry, your browser does not support JavaScript.Please enable Javascript in your browser settings.
-        </noscript>
-        <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe title="google_tag_manager" src="https://www.googletagmanager.com/ns.html?id=GTM-WH3577T"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
 
-            {{-- navigation bar --}}
-            <!--header-->
+
+</head>
+<body>
+
+<a href="#C" title="跳到主要內容區塊" tabindex="1" style="color:rgb(248,248,248);position:absolute;border:0;">跳到主要內容區塊</a>
+    <noscript style="background-color:white;z-index: 5000;position: absolute;">
+        您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態
+        <br>
+        Sorry, your browser does not support JavaScript.Please enable Javascript in your browser settings.
+    </noscript>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe title="google_tag_manager" src="https://www.googletagmanager.com/ns.html?id=GTM-WH3577T"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    
+        
+      <!--header-->
 <header data-spy="affix" data-offset-top="100">
         <div class="container">
             <!--menu-bar-->
@@ -248,57 +252,176 @@
             </div>
         </div>
     </header>
-            <!--main-->
+
+
+        <!--main-->
 <!--main-->
 <main class="container">
-    <!--breadcrumb-->
-    <ol class="breadcrumb container">
+<!--breadcrumb-->
+ <ol class="breadcrumb container">
         <li class="breadcrumb-item">
-            <a href="#C" title="Main content" id="AC" accesskey="C" name="C" tabindex="2">:::</a>
-            <a href="{{ url('') }}" title="HOME" tabindex="2">HOME</a>
-        </li>               
-        <li class="breadcrumb-item active">About Us</li>
+            <a href="#C" title="中央內容區塊" id="AC" accesskey="C" name="C" tabindex="2">:::</a>
+            <a href="https://parc.tw" title="首頁" tabindex="2">首頁</a>
+        </li>
+        <li class="breadcrumb-item">
+            <a title="課程與資源" tabindex="2">課程與資源</a>
+        </li>
+        <li class="breadcrumb-item">
+            <a href="https://parc.tw/event/cert" title="時數認證申請" tabindex="2">時數認證申請</a>
+        </li>
+        <h2 class="d-none" id="h2"></h2>
     </ol>
-    
-    <div class="banner-single owl-carousel px-0" title="About Us" style="background: url({{ asset('assets/images/photo/banner-about.jpg') }}) no-repeat center;background-size: cover;">
-        <h2 class="banner-single__title-tl">About Us</h2>
-    </div>
 
-    <section class="container world">
+<div class="banner-single owl-carousel mb-0" title="時數認證申請" style="background: url(/assets/images/photo/banner-cert.png) no-repeat center;background-size: cover;">
+    <h2 class="banner-single__title">時數認證申請</h2>
+</div>
 
+<h2 class="title" style="font-size:26px">病主法全攻略線上課程時數認證申請</h2>
 
-        <h2 class="world__title-r">Patient Right to Autonomy Act</h2>
+@mobile
+<p align="center"><img alt="" src="/assets/images/photo/20200512.png" style="height:auto;width:50%" /></p>
+<table cellspacing="0" class="MsoTableGrid" style="background:666666; border-collapse:collapse; border:none; width:100%">
+	<tbody>
+		<tr>
+			<td style="height:auto; vertical-align:top; width:100%">
+                    <p><span style="font-size:20px"><strong>認證項目：</strong>預立醫療照護諮商人員訓練時數／繼續教育積分</span></p>
+			<p><span style="font-size:20px"><strong>申請資格：</strong>醫師、護理人員、心理師、社工人員(其他職類人員尚未開放)</span></p>
 
-        <p class="text-center m-5">
-            The core concept of patient autonomy is that a patient has the right to make their own medical decisions. This is closely related to three human values: Respecting patient autonomy in healthcare; safeguarding patients' rights to a good death; and promoting a harmonious physician-patient relationship. Patient autonomy has been implemented in many countries in the West for a long time, and it is seen as a universal human right. After passing the Patient Right to Autonomy Act near the end of 2015, Taiwan became the leader in Asia in implementing patient autonomy. The core concept of the Act is to ensure legal protection for the patient's right to autonomous wishes and to a dignified end. Through signing an Advance Decision, everyone will be able to make medical decisions for themselves before they become terminally ill, and thus spare themselves and their loved ones from pain.
-        </p>
+			<p><span style="font-size:20px"><strong>申請條件（符合其中一項即可）：</strong></span></p>
+                             
+			<ul>
+				<p><li><span style="font-size:20px">於長照數位學習平台選修「病主法全攻略線上課程」並通過課程者</span></li></p>
+                         
+				
+				<p><li><span style="font-size:20px">於護理師護士公會全聯會雲端學習中心選修「預立醫療照護諮商人員訓練課程」並通過課程者</span></li></p>
+	
+</ul>
+		<p style="margin-left:20px"><span style="font-size:20px"><strong>前往申請：</strong><a href="https://tlea.neticrm.tw/civicrm/event/register?reset=1&id=11" target="_blank" style="color:#2f81b7">醫師點我申請【4小時認證】</a></span></p>
+                        <p style="margin-left:120px"><span style="font-size:20px"><a href="https://tlea.neticrm.tw/civicrm/event/register?reset=1&id=10" target="_blank" style="color:#2f81b7">護理人員、社心人員點我申請【6小時認證】</a></span></p>
+<p style="margin-left:10px"><span style="font-size:20px"><strong>【提交申請後，審核時間約1-3工作天，請留意您的Email信箱】</strong></span></p>
+ <br>
+<br>
 
-        <h2 class="world__title-r">Introduction to Patient Right to Autonomy Act</h2>
+			<p align=right><strong><span style="font-size:18px">▶︎<a href="https://parc.tw/event/video/ExpertCourses" target="_blank" style="color:blue">瞭解更多</a></strong></span></p>
+<hr>
+@endmobile
 
-        <p class="text-center m-5">
-            <a class="world__link" href="https://parc.tw/law/policy/article/344" target="_blank">Interpretation of the “Patient Right to Autonomy Act</a>
-            <a class="world__link" href="https://parc.tw/law/act/228" target="_blank">Full Document of Patient Right to Autonomy Act</a>
-            <a class="world__link" href="https://parc.tw/law/policy/article/293" target="_blank">Summary of Patient Right to Autonomy Act in PPT</a>
+@tablet
+<p align="center"><img alt="" src="/assets/images/photo/20200512.png" style="height:auto;width:50%" /></p>
+<table cellspacing="0" class="MsoTableGrid" style="background:666666; border-collapse:collapse; border:none; width:100%">
+	<tbody>
+		<tr>
+			<td style="height:auto; vertical-align:top; width:100%">
+                    <p><span style="font-size:20px"><strong>認證項目：</strong>預立醫療照護諮商人員訓練時數／繼續教育積分</span></p>
+			<p><span style="font-size:20px"><strong>申請資格：</strong>醫師、護理人員、心理師、社工人員(其他職類人員尚未開放)</span></p>
 
-        </p>
+			<p><span style="font-size:20px"><strong>申請條件（符合其中一項即可）：</strong></span></p>
+                             
+			<ul>
+				<p><li><span style="font-size:20px">於長照數位學習平台選修「病主法全攻略線上課程」並通過課程者</span></li></p>
+                         
+				
+				<p><li><span style="font-size:20px">於護理師護士公會全聯會雲端學習中心選修「預立醫療照護諮商人員訓練課程」並通過課程者</span></li></p>
+			
+</ul>
 
-        <h2 class="world__title-r">Patient Autonomy Research Center: About Us</h2>
-        <p class="text-center m-5">Honorary Consultant to the Legislative Yuan Yang Yu-Hsin realizes the importance of serving the "last leg of life's journey", and of keeping life education and good end of life care as core concepts. For these reasons, she fought for a long-term organization specifically responsible for fighting for these benefits on behalf of the people. Therefore, in 2017, the Patient Autonomy Research Center was established. Our goals are to become a bridge between the medical field and the general public, by engaging the public with a series of creative activities that get people to think about patient autonomy and then take action.</p>
-        <p class="text-center m-5">Our long-term vision is to continue promoting life education and the concept of having a dignified end, now that the Patient Right to Autonomy Act has formally come into effect. These new ways of thinking about the end of life will make Taiwan a good example for other Asian societies to follow.</p>
+			
+		<p style="margin-left:20px"><span style="font-size:20px"><strong>前往申請：</strong><a href="https://tlea.neticrm.tw/civicrm/event/register?reset=1&id=11" target="_blank" style="color:#2f81b7">醫師點我申請【4小時認證】</a></span></p>
+                        <p style="margin-left:120px"><span style="font-size:20px"><a href="https://tlea.neticrm.tw/civicrm/event/register?reset=1&id=10" target="_blank" style="color:#2f81b7">護理人員、社心人員點我申請【6小時認證】</a></span></p>
+<p style="margin-left:10px"><span style="font-size:20px"><strong>【提交申請後，審核時間約1-3工作天，請留意您的Email信箱】</strong></span></p>
+ <br>
+<br>
 
-        <h2 class="world__title-r">Our Mission</h2>
-        <p class="text-center m-5">Our work focuses on policy research, educational training, implementation in medical facilities, and public promotion. Through planning, coordinating, communicating, and promoting with various parties, we hope to integrate and maximize the efforts of agencies from both the governmental sector and the private sector to promote the Patient Right to Autonomy Act. By doing so, the public will be encouraged to think about the value of both a dignified end and of life.</p>
-
-        <h2 class="world__title">We welcome people from all fields to contact us and share their views.<br>You can reach us via the methods below.</h2>
-        <div class="world__box">
-            <p class="mb-4"><b>Patient Autonomy Research Center</b></p>
-            <p><b>Email：</b><a href="#">service@parc.tw</a></p>
-            <p><b>Address:</b> P.O.BOX 30-98 NewTaipei City Government, New Taipei City 22099, Taiwan (R.O.C.)</p>
-        </div>
-
-
-    </section>
-    
-    </main>
-            <!--footer-->
+			<p align=right><strong><span style="font-size:18px">▶︎<a href="https://parc.tw/event/video/ExpertCourses" target="_blank" style="color:blue">瞭解更多</a></strong></span></p>
+<hr>
    
+@endtablet
+
+@desktop
+
+<table cellspacing="0" class="MsoTableGrid" style="background:666666; border-collapse:collapse; border:none; width:100%">
+	<tbody>
+		<tr>
+<td style="vertical-align:top;height:auto;width:25%">
+			<p><img alt="" src="/assets/images/photo/20200512.png" style="height:auto;width:100%" /></p>
+			</td>
+
+
+
+			<td style="height:auto; vertical-align:top; width:100%">
+                    <p style="margin-left:20px;margin-top:10px"><span style="font-size:20px"><strong>認證項目：</strong>預立醫療照護諮商人員訓練時數／繼續教育積分</span></p>
+			<p style="margin-left:20px"><span style="font-size:20px"><strong>申請資格：</strong>醫師、護理人員、心理師、社工人員(其他職類人員尚未開放)</span></p>
+
+			<p style="margin-left:20px"><span style="font-size:20px"><strong>申請條件（符合其中一項即可）：</strong></span></p>
+                             
+			<ul>
+				<p style="margin-left:20px"><li><span style="font-size:20px">於長照數位學習平台選修「病主法全攻略線上課程」並通過課程者</span></li></p>
+                         
+				
+				<p style="margin-left:20px"><li><span style="font-size:20px">於護理師護士公會全聯會雲端學習中心選修「預立醫療照護諮商人員訓練課程」並通過課程者</span></li></p>
+			
+</ul>
+
+		<p style="margin-left:20px"><span style="font-size:20px"><strong>前往申請：</strong><a href="https://tlea.neticrm.tw/civicrm/event/register?reset=1&id=11" target="_blank" style="color:#2f81b7">醫師點我申請【4小時認證】</a></span></p>
+                        <p style="margin-left:120px"><span style="font-size:20px"><a href="https://tlea.neticrm.tw/civicrm/event/register?reset=1&id=10" target="_blank" style="color:#2f81b7">護理人員、社心人員點我申請【6小時認證】</a></span></p>
+                <p style="margin-left:10px"><span style="font-size:20px"><strong>【提交申請後，審核時間約1-3工作天，請留意您的Email信箱】</strong></span></p>
+<br>
+<br>
+
+			<p align=right><strong><span style="font-size:18px">▶︎<a href="https://parc.tw/event/video/ExpertCourses" target="_blank" style="color:blue">瞭解更多</a></strong></span></p>
+
+			
+</td>
+		</tr>
+	</tbody>
+</table>
+
+<hr>   
+@enddesktop
+
+
+</main>
+        <!--footer-->
+      <footer class="footer text-center text-lg-left" data-spy="affix" data-offset-top="100">
+    <div class="container footer-more">
+       
+        <div class="row">
+            <div class="col-12 col-lg-4 text-center">
+                <img src="{{ asset('assets/images/icon/parc-logo.png') }}" class="logo img-fluid" alt="病人自主Logo"/>
+            </div>
+            <div class="col-12 col-lg-5 footer-copyright style="margin-top:30px;">
+                <a href="mailto:service@parc.tw">電子信箱 : service@parc.tw</a>
+                <div>中心地址 : 22099 新北市政府郵局第30-98號信箱</div>
+                <div>病人自主研究中心PARC © 2018. All Rights Reserved.</div>
+                <!-- <div class="footer-title">即刻行動</div>
+                <a href="#" title="分享故事" class="footer-link">分享故事</a> /
+                <a href="#" title="我要捐款" class="footer-link">我要捐款</a> /
+                <a href="#" title="訂閱電子報" class="footer-link">訂閱電子報</a> -->
+            </div>
+            <div class="col-12 col-lg-3 text-center">
+                <div class="footer-title">追蹤我們</div>         
+
+                <p><a href="https://www.facebook.com/parc.tw/" target="_blank" title="病人自主中心粉絲專頁(另開視窗)" class="footer-FB" rel="noopener noreferrer" >
+                    <img src="{{ asset('/assets/images/photo/fb.png') }}" width=40px height=41px>
+                </a>
+                <a href="https://lin.ee/5ySHOyq" target="_blank" title="加入Line好友(另開視窗)" class="footer-FB" rel="noopener noreferrer" >
+                    <img src="{{ asset('/assets/images/photo/line.png') }}" width=40px height=40px>
+                </a>
+                 <a href="https://www.youtube.com/channel/UCkJWN2WEhzH_EA5QM65GchQ" target="_blank" title="前往病人自主中心Youtube頻道(另開視窗)" class="footer-FB" rel="noopener noreferrer">
+                    <img src="{{ asset('/assets/images/photo/youtube.png') }}">
+                </a>
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <!-- GoTop -->
+        <a href="#" title="至頂端" class="btn-gotop">
+            <i class="fa fa-caret-up"></i>
+        </a>
+    </div>
+</footer>
+</div>

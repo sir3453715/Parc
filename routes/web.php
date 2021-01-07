@@ -15,6 +15,7 @@ Route::group(['namespace' => 'Frontend'], function () {
     Route::post('/event/lecturer/' , 'IndexController@eventLecturerPost');
     Route::get('/event/video/{type?}' , 'IndexController@eventVideoIndex');
     Route::get('/event/lohas/{type?}' , 'IndexController@eventLohasIndex');
+    Route::get('/event/cert' , 'IndexController@eventCertIndex');
 
     Route::get('/law/policy/{type?}' , 'IndexController@lawPolicyIndex');
     Route::get('/law' , 'IndexController@lawIndex');

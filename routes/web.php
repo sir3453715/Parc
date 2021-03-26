@@ -52,6 +52,12 @@ Route::group(['namespace' => 'Frontend'], function () {
     Route::fallback(function(){
         return response()->view('frontend.master.404', [], 404);
     });
+
+    Route::get('love-event','IndexController@LoveEvent')->name('love-event');
+    Route::get('event-news/{id}','IndexController@EventNews')->name('event-news');
+    Route::get('event-join/{id}','IndexController@EventJoin')->name('event-join');
+    Route::get('event-post/{id}','IndexController@EventPost')->name('event-post');
+
 });
 
 // 後台
@@ -191,7 +197,20 @@ Route::group(['middleware' => 'web', 'prefix' => 'backend'], function () {
         Route::get('/partner/order','PartnerController@order');
         Route::post('/partner/order','PartnerController@orderUpdate');
         Route::delete('/partner/delete/{partner}','PartnerController@destroy');
-        
+
+
+        Route::resource('love-event','LoveEventController',['except'=>'show']);
+        Route::group(['as' => 'love-event.'], function(){
+            Route::get('love-event-video','LoveEventController@viedo')
+                ->name('video');
+            Route::post('event-video-update','LoveEventController@viedoUpdate')
+                ->name('video-update');
+            Route::post('delete_selected','LoveEventController@deleteSelected')
+                ->name('delete-selected');
+        });
+        Route::resource('event-term','EventTermController',['except'=>'show']);
+
+
     });
     
 });

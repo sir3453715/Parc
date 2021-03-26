@@ -65,6 +65,8 @@ class FunMenu extends Model
 			";
 
         $result = DB::select($sql);
+        unset($result[9]);//移除掉原先預設愛活動MENU (保留原本製作的內容)
+
         return $result;
     }
 }

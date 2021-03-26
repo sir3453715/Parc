@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\TermLink;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use App\Http\Repositories\Frontend as Repo;
 use App;
+use App\LoveEvent;
 
 class IndexController extends Controller
 {
@@ -295,4 +297,41 @@ class IndexController extends Controller
         $data['tag'] = $tag;
         return view('frontend.tag',$data);
     }
+    public function LoveEvent(){
+        $events = LoveEvent::where('active','1')->get();
+
+        return view('frontend.love-event.index',[
+            'events'=>$events,
+        ]);
+    }
+    public function EventNews($id = null){
+        $event = LoveEvent::find($id);
+        $terms = ['最新消息'];
+        return view('frontend.love-event.post',[
+            'event'=>$event,
+            'terms'=>$terms,
+        ]);
+    }
+    public function EventJoin($id = null){
+        $event = LoveEvent::find($id);
+        $terms = ['報名資訊'];
+        return view('frontend.love-event.post',[
+            'event'=>$event,
+            'terms'=>$terms,
+        ]);
+    }
+    public function EventPost($id = null){
+        $terms = ['活動花絮'];
+        $event = LoveEvent::find($id);
+        $TermLinks = TermLink::where('event_id',$id)->whereNotIn('term_id',[1,2])->get();
+        foreach ($TermLinks as $termLink){
+            $terms[]=$termLink->Term->title;
+        }
+        return view('frontend.love-event.post',[
+            'event'=>$event,
+            'terms'=>$terms,
+        ]);
+    }
+
+
 }

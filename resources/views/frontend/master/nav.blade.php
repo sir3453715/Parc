@@ -17,7 +17,7 @@
             </div>
             @mobile
             <!-- 我要捐款 -->
-               <a href="https://tlea.neticrm.tw/civicrm/contribute/transact?reset=1&id=9" title="我要捐款" class="btn-fixed btn-donation" tabindex="4" target="_blank">
+               <a href="https://neti.cc/Ww4qVlW" title="我要捐款" class="btn-fixed btn-donation" tabindex="4" target="_blank">
                  <img src="{{ asset('assets/images/icon/donate_icon.png') }}" class="d-none d-lg-block" alt="我要捐款">
                    <span class="d-lg-none">我要<br>捐款</span>
             </a>
@@ -25,7 +25,7 @@
  
               @tablet
             <!-- 我要捐款 -->
-               <a href="https://tlea.neticrm.tw/civicrm/contribute/transact?reset=1&id=9" title="我要捐款" class="btn-fixed btn-donation" tabindex="4" target="_blank">
+               <a href="https://neti.cc/Ww4qVlW" title="我要捐款" class="btn-fixed btn-donation" tabindex="4" target="_blank">
                  <img src="{{ asset('assets/images/icon/donate_icon.png') }}" class="d-none d-lg-block" alt="我要捐款">
                    <span class="d-lg-none">我要<br>捐款</span>
             </a>
@@ -142,7 +142,7 @@
                             </li>
            
 @desktop
-<div style="margin-top:10px;"><a href="https://tlea.neticrm.tw/civicrm/contribute/transact?reset=1&id=9" title="我要捐款" tabindex="2" target="_blank"><img src="/assets/images/index/donation.png" height="auto" width=140px class="img-fluid"></a></div>
+<div style="margin-top:10px;"><a href="https://neti.cc/Ww4qVlW" title="我要捐款" tabindex="2" target="_blank"><img src="/assets/images/index/donation.png" height="auto" width=140px class="img-fluid"></a></div>
 @enddesktop 
 
                         </ul>

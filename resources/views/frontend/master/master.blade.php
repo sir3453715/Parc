@@ -35,6 +35,7 @@
 
     <!-- Script -->
     @include('frontend.master.script')
+    @stack('custom-styles')
 </head>
 <body>
 

@@ -5,7 +5,7 @@
             <div class="col-12 col-lg-4 text-center">
                 <img src="{{ asset('assets/images/icon/parc-logo.png') }}" class="logo img-fluid" alt="病人自主Logo"/>
             </div>
-            <div class="col-12 col-lg-5 footer-copyright style="margin-top:30px;">
+            <div class="col-12 col-lg-5 footer-copyright" style="margin-top:30px;">
                 <a href="mailto:service@parc.tw">電子信箱 : service@parc.tw</a>
                 <div>中心地址 : 22099 新北市政府郵局第30-98號信箱</div>
                 <div>病人自主研究中心PARC © 2018. All Rights Reserved.</div>
@@ -27,9 +27,6 @@
                     <img src="{{ asset('/assets/images/photo/youtube.png') }}">
                 </a>
 
-
-
-
             </div>
         </div>
     </div>
@@ -39,5 +36,6 @@
             <i class="fa fa-caret-up"></i>
         </a>
     </div>
+
+    <div class="fb-customerchat" page_id="702149076622699" theme_color="#EC7070" minimized="true"></div>
 </footer>
-</div>

@@ -30,6 +30,31 @@
                 @endfor
                 </ul></li>
             @endforeach
+			<li class="nav-parent">
+				<a href="" class="parent-name">
+					<i class="fa fa-graduation-cap"></i><span>愛．活動</span>
+				</a>
+				<ul class="children">
+					<li id="love_event_video" data-level="two">
+						<a href="{{route('love-event.video')}}">
+							<i class="fa fa-caret-right"></i>
+							<span>活動影片管理</span>
+						</a>
+					</li>
+					<li id="love_event_article" data-level="two">
+						<a href="{{route('love-event.index')}}">
+							<i class="fa fa-caret-right"></i>
+							<span>文章管理</span>
+						</a>
+					</li>
+					<li id="activity_term" data-level="two">
+						<a href="{{route('event-term.index')}}">
+							<i class="fa fa-caret-right"></i>
+							<span>活動花絮分類管理</span>
+						</a>
+					</li>
+				</ul>
+			</li>
 		</ul>
 	</div>
 	<!-- leftpanelinner -->
